@@ -1,5 +1,5 @@
 "use strict";
-  import {pressedRight} from '../../../Controller/Controller_main/controller_main.js'
+  import {pressedRight} from 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/Controller/Controller_main/controller_main.js'
 window.addEventListener('load',()=>{
 
 const cvs = document.querySelector('#canvas');
@@ -37,17 +37,17 @@ const loop = ()=>{
    
     
     const img = new Image();
-    img.src = '/project Hill Climb/src/view/view_main/png/pngEather.png'
+    img.src = 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/pngEather.png'
     const imgCloud = new Image();
-    imgCloud.src = '/project Hill Climb/src/view/view_main/svg/cloud.svg'
+    imgCloud.src = 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg'
     const imgCloud2 = new Image();
-    imgCloud2.src = '/project Hill Climb/src/view/view_main/svg/cloud2.svg'
+    imgCloud2.src = 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg'
     const imgBush = new Image();
-    imgBush.src = '/project Hill Climb/src/view/view_main/svg/bush.svg'
+    imgBush.src = 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/bush.svg'
     const imgPetrole = new Image();
-    imgPetrole.src = '/project Hill Climb/src/view/view_main/svg/stationPetrol.svg'
+    imgPetrole.src = 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/stationPetrol.svg'
     const imgCar = new Image();
-    imgCar.src = '/project Hill Climb/src/view/view_main/svg/Sedan-car.svg'
+    imgCar.src = 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/Sedan-car.svg'
     for( let i = 0; i <= cvs.width; i++){
         
 
