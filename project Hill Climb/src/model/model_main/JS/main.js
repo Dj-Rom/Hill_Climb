@@ -41,7 +41,7 @@ var player = new function () {
 	this.rSpeed = 0;
 
 	this.img = new Image();
-	this.img.src = "ttps://dj-rom.github.io/project Hill Climb/src/view/view_main/svg/Car15Silver.svg"
+	this.img.src = "https://dj-rom.github.io/project Hill Climb/src/view/view_main/svg/Car15Silver.svg"
 	this.draw = function () {
 		var p1 = cvs.height - noise(t + this.x) * 0.95;
 		var p2 = cvs.height - noise(t + 5 + this.x) * 0.95;
