@@ -1,6 +1,6 @@
 "use strict";
   import {pressedRight} from 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/Controller/Controller_main/controller_main.js'
-window.addEventListener('load',()=>{
+
 
 
 window.onscroll = function () { window.scrollTo(0, 0); };
@@ -185,10 +185,4 @@ function restart() {
 
 }
 loop();
-
-})
-
-
-
-
 
