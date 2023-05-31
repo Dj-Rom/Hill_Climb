@@ -3,3 +3,13 @@
     margin: 0;
     padding: 0;
 }
+.alert {
+    display:none;
+    }
+    @media only screen 
+    and (max-device-width : 768px) 
+    and (orientation : portrait) {
+    .alert {
+    display:block
+    }
+}
