@@ -3,9 +3,17 @@
 window.addEventListener('load',()=>{
 
 
-
 window.onscroll = function () { window.scrollTo(0, 0); };
-
+launchFullScreen(document.body);
+function launchFullScreen(element) {
+    if(element.requestFullScreen) {
+        element.requestFullScreen();
+    } else if(element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+    } else if(element.webkitRequestFullScreen) {
+        element.webkitRequestFullScreen();
+    }
+}
 var cvs = document.querySelector("#canvas");
 var ctx = cvs.getContext("2d");
 cvs.width = window.innerWidth;
@@ -179,6 +187,7 @@ function restart() {
 
 }
 loop();
+
 
 })
 
