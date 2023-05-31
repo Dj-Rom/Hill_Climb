@@ -10,9 +10,9 @@ function launchFullScreen(element) {
         element.requestFullScreen();
     } else if(element.mozRequestFullScreen) {
         element.mozRequestFullScreen();
-    } else if(element.webkitRequestFullScreen) {
-        element.webkitRequestFullScreen();
-    }
+    } //else if(element.webkitRequestFullScreen) {
+//element.webkitRequestFullScreen();
+    //}
 }
 var cvs = document.querySelector("#canvas");
 var ctx = cvs.getContext("2d");
