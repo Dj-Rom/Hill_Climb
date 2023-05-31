@@ -3,6 +3,7 @@
 window.addEventListener('load',()=>{
 
 
+
 window.onscroll = function () { window.scrollTo(0, 0); };
 
 var cvs = document.querySelector("#canvas");
@@ -128,6 +129,32 @@ function loop() {
 	ctx.lineTo(cvs.width, cvs.height);
 	ctx.fill();
 
+
+	ctx.beginPath();
+	ctx.fillStyle = "#527b52";
+	ctx.moveTo(0, cvs.height);
+	for (let i = 0; i < cvs.width; i++)
+		ctx.lineTo(i, cvs.height - noise(t + i) * .75);
+	ctx.lineTo(cvs.width, cvs.height);
+	ctx.fill();
+
+
+	ctx.beginPath();
+	ctx.fillStyle = "#c89566";
+	ctx.moveTo(0, cvs.height);
+	for (let i = 0; i < cvs.width; i++)
+		ctx.lineTo(i, cvs.height - noise(t + i) * .65);
+	ctx.lineTo(cvs.width, cvs.height);
+	ctx.fill();
+
+
+	ctx.beginPath();
+	ctx.fillStyle = "#a9794d";
+	ctx.moveTo(0, cvs.height);
+	for (let i = 0; i < cvs.width; i++)
+		ctx.lineTo(i, cvs.height - noise(t + i) * .25);
+	ctx.lineTo(cvs.width, cvs.height);
+	ctx.fill();
 
 	player.draw();
 	if (player.x < 0)
