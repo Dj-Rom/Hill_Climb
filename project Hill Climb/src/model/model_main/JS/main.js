@@ -86,7 +86,7 @@ var player = new function () {
 var t = 0;
 var speed = 0;
 var playing = true;
-var k = { ArrowUp: 0, ArrowDown: 0, ArrowLeft: 0, ArrowRight: 0 };
+
 function loop() {
 
 	speed -= (speed - (k.ArrowUp - k.ArrowDown)) * 0.01;
@@ -173,9 +173,7 @@ function loop() {
 
 
 
-document.addEventListener('keydown', d => k[d.key] = 1)
 
-onkeyup = d => k[d.key] = 0;
 
 function restart() {
 
@@ -187,7 +185,4 @@ function restart() {
 
 }
 loop();
-
-
-})
 
