@@ -1,7 +1,6 @@
 "use strict";
  
 
-
 window.onscroll = function () { window.scrollTo(0, 0); };
 launchFullScreen(document.body);
 function launchFullScreen(element) {
@@ -9,10 +8,14 @@ function launchFullScreen(element) {
         element.requestFullScreen();
     } else if(element.mozRequestFullScreen) {
         element.mozRequestFullScreen();
-    } //else if(element.webkitRequestFullScreen) {
-//element.webkitRequestFullScreen();
-    //}
+    // 
+
 }
+	//  else if(element.webkitRequestFullScreen) {
+    //     element.webkitRequestFullScreen();
+    // }
+}
+export var k = { ArrowUp: 0, ArrowDown: 0, ArrowLeft: 0, ArrowRight: 0 };
 var cvs = document.querySelector("#canvas");
 var ctx = cvs.getContext("2d");
 cvs.width = window.innerWidth;
@@ -40,7 +43,7 @@ var player = new function () {
 	this.rSpeed = 0;
 
 	this.img = new Image();
-	this.img.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/Car15Silver.svg";
+	this.img.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/Car15Silver.svg"
 	this.draw = function () {
 		var p1 = cvs.height - noise(t + this.x) * 0.95;
 		var p2 = cvs.height - noise(t + 5 + this.x) * 0.95;
@@ -184,4 +187,7 @@ function restart() {
 
 }
 loop();
+
+
+
 
