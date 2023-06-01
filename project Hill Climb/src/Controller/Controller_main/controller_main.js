@@ -41,9 +41,9 @@ document.addEventListener("keyup",()=>{
 
 window.addEventListener('deviceorientation', function(event) {
     if (event.beta > '30' ) {
-        k.ArrowLeft = 1
+        k.ArrowRight = 1
     } else if (event.beta < '-30' ) {
-        k.ArrowRight = 1  
+          k.ArrowLeft = 1
     }
 
 });
