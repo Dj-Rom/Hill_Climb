@@ -1,0 +1,785 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-snap-stop: 0;
+    background-color: #CBE0FF;
+}
+@font-face {
+    font-family: "Bungee";
+    src: url("../font/Bungee-Regular.ttf");
+}
+.contener{
+    
+    display: flex;
+    justify-content: center;
+    
+    border: none;;
+  
+
+width: 100%;
+height: 100%;
+
+}
+h1{
+    position: absolute;
+    display: block;
+    
+font-family: 'Bungee';
+font-style: normal;
+font-weight: 900;
+font-size: 530%;
+color: rgb(187, 0, 255);
+background: none;
+z-index: 1;
+}
+#menu_New_Game{
+    position: absolute;
+    width: 433px;
+    height: 96px;
+top: 20%;
+
+
+
+font-family: 'Bungee';
+font-style: normal;
+font-weight: 400;
+font-size: 80px;
+line-height: 96px;
+/* identical to box height */
+
+text-align: center;
+background: none;
+color: #f9fd17;
+
+border: none;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 1;
+}
+
+#menu_Сontinue_Game{
+    position: absolute;
+    width: 696px;
+    height: 96px;
+top: 35%;
+
+background: none;
+font-family: 'Bungee';
+font-style: normal;
+font-weight: 400;
+font-size: 80px;
+line-height: 96px;
+/* identical to box height */
+
+text-align: center;
+
+color: #FF3541;
+
+border: none;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+}
+#menu_World_Result{
+    position: absolute;
+    width: 379px;
+    height: 96px;
+
+height: 96px;
+background: none;
+font-family: 'Bungee';
+font-style: normal;
+font-weight: 400;
+font-size: 80px;
+line-height: 96px;
+/* identical to box height */
+
+text-align: center;
+
+color: #6C84FF;
+
+border: none;
+
+/* Inside auto layout */
+
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 1;
+}
+#menu_Setting{
+    position: absolute;
+    width: 427px;
+    height: 96px;
+    top: 65%;
+
+height: 96px;
+background: none;
+font-family: 'Bungee';
+font-style: normal;
+font-weight: 400;
+font-size: 80px;
+line-height: 96px;
+/* identical to box height */
+
+text-align: center;
+
+color: #13a844;
+
+border: none;
+
+/* Inside auto layout */
+
+flex: none;
+order: 3;
+flex-grow: 0;
+z-index: 1;
+}
+#cloud1{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    background: none;
+
+}
+#cloud2{
+    position: absolute;
+    top: 5%;
+    background: none;
+    left: 55%;
+}
+#cloud3{
+    position: absolute;
+    top: 10%;
+    left: 75%;
+    background: none;
+}
+#frame{
+    position: absolute;
+    display: block;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: none;
+}
+
+#tree1{
+    position: absolute;
+    left: 3%;
+    bottom: 20%;
+    z-index: 0;
+    background: none;
+}
+
+#bush{
+    position: absolute;
+    left: 3%;
+    bottom: 20%;
+    background: none;
+}
+
+
+#bush2{
+    position: absolute;
+    left: 83%;
+    bottom: 12%;
+    background: none;
+}
+
+@media only screen and (max-width: 390px) {
+    .contener{
+    
+    display: flex;
+    justify-content: center;
+    
+    border: none;;
+  
+
+width: 100%;
+height: 100%;
+
+}
+    h1{
+        position: absolute;
+        left: 45%;
+        top: 20%;
+        display: block;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 48px;
+    
+ 
+    color: rgb(187, 0, 255);
+    background: none;
+    z-index: 1;
+    }
+    #menu_New_Game{
+        width: 225px;
+height: 48px;
+left: 45%;
+top: 36%;
+font-family: 'Bungee';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 48px;
+/* identical to box height */
+
+text-align: center;
+color: #f9fd17;
+flex: none;
+order: 0;
+flex-grow: 0;
+    border: none;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 1;
+    }
+    
+    #menu_Сontinue_Game{
+        position: absolute;
+        width: 358px;
+height: 48px;
+left: 25%;
+top: 45%;
+font-family: 'Bungee';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 48px;
+/* identical to box height */
+
+text-align: center;
+
+color: #FF3541;
+
+
+    border: none;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 1;
+    }
+    #menu_World_Result{
+        position: absolute;
+        width: 300px;
+        height: 48px;
+        top: 55%;
+        left: 32%;
+        font-family: 'Bungee';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 48px;
+        /* identical to box height */
+        
+        text-align: center;
+        
+        color: #6C84FF;
+        
+    
+    border: none;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    z-index: 1;
+    }
+    #menu_Setting{
+        position: absolute;
+        left: 45%;
+        top: 65%;
+        width: 227px;
+        height: 48px;
+        
+        font-family: 'Bungee';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 48px;
+        /* identical to box height */
+        
+        text-align: center;
+        
+    color: #13a844;
+    
+    border: none;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+    z-index: 1;
+    }
+    #cloud1{
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        background: none;
+    
+    }
+    #cloud2{
+        position: absolute;
+        top: 5%;
+        background: none;
+        left: 55%;
+    }
+    #cloud3{
+        position: absolute;
+        top: 10%;
+        left: 75%;
+        background: none;
+    }
+    #frame{
+        position: absolute;
+       
+        width: 135%;
+        left: 0;
+     
+        top: 128%;
+        background: none;
+    }
+    
+    #tree1{
+        position: absolute;
+        left: 3%;
+        bottom: 20%;
+        top: 90%;
+        z-index: 0;
+        background: none;
+    }
+    
+    #bush{
+        position: absolute;
+        left: 3%;
+        top: 119%;
+        bottom: 20%;
+        background: none;
+    }
+    
+    
+    #bush2{
+        display: none;
+        background: none;
+    }
+    
+  }
+
+
+
+
+  
+@media only screen and (max-width: 890px) {
+    .contener{
+    
+    display: flex;
+    justify-content: center;
+    
+    border: none;;
+  
+
+width: 100%;
+height: 100%;
+
+}
+    h1{
+        position: absolute;
+        left: 45%;
+        top: 20%;
+        display: block;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 48px;
+    
+ 
+    color: rgb(187, 0, 255);
+    background: none;
+    z-index: 1;
+    }
+    #menu_New_Game{
+        width: 225px;
+height: 48px;
+left: 45%;
+top: 36%;
+font-family: 'Bungee';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 48px;
+/* identical to box height */
+
+text-align: center;
+color: #f9fd17;
+flex: none;
+order: 0;
+flex-grow: 0;
+    border: none;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 1;
+    }
+    
+    #menu_Сontinue_Game{
+        position: absolute;
+        width: 358px;
+height: 48px;
+left: 35%;
+top: 45%;
+font-family: 'Bungee';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 48px;
+/* identical to box height */
+
+text-align: center;
+
+color: #FF3541;
+
+
+    border: none;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 1;
+    }
+    #menu_World_Result{
+        position: absolute;
+        width: 300px;
+        height: 48px;
+        top: 55%;
+        left: 40%;
+        font-family: 'Bungee';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 48px;
+        /* identical to box height */
+        
+        text-align: center;
+        
+        color: #6C84FF;
+        
+    
+    border: none;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    z-index: 1;
+    }
+    #menu_Setting{
+        position: absolute;
+        left: 45%;
+        top: 65%;
+        width: 227px;
+        height: 48px;
+        
+        font-family: 'Bungee';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 48px;
+        /* identical to box height */
+        
+        text-align: center;
+        
+    color: #13a844;
+    
+    border: none;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+    z-index: 1;
+    }
+    #cloud1{
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        background: none;
+    
+    }
+    #cloud2{
+        position: absolute;
+        top: 5%;
+        background: none;
+        left: 55%;
+    }
+    #cloud3{
+        position: absolute;
+        top: 10%;
+        left: 75%;
+        background: none;
+    }
+    #frame{
+        position: absolute;
+       
+        width: 135%;
+        left: 0;
+     
+        top: 100%;
+        background: none;
+    }
+    
+    #tree1{
+        position: absolute;
+        left: 3%;
+        bottom: 20%;
+        top: 70%;
+        z-index: 0;
+        background: none;
+    }
+    
+    #bush{
+        position: absolute;
+        left: 87%;
+        top: 92%;
+        width: 20%;
+        bottom: 20%;
+        background: none;
+    }
+    
+    
+    #bush2{
+        display: none;
+        background: none;
+    }
+    
+  }
+
+
+
+
+
+  @media only screen and (max-width: 1190px) {
+    .contener{
+    
+    display: flex;
+    justify-content: center;
+    
+    border: none;;
+  
+
+width: 100%;
+height: 100%;
+
+}
+    h1{
+        position: absolute;
+        left: 45%;
+        top: 20%;
+        display: block;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 48px;
+    
+ 
+    color: rgb(187, 0, 255);
+    background: none;
+    z-index: 1;
+    }
+    #menu_New_Game{
+        width: 225px;
+height: 48px;
+left: 45%;
+top: 36%;
+font-family: 'Bungee';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 48px;
+/* identical to box height */
+
+text-align: center;
+color: #f9fd17;
+flex: none;
+order: 0;
+flex-grow: 0;
+    border: none;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 1;
+    }
+    
+    #menu_Сontinue_Game{
+        position: absolute;
+        width: 358px;
+height: 48px;
+left: 35%;
+top: 45%;
+font-family: 'Bungee';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 48px;
+/* identical to box height */
+
+text-align: center;
+
+color: #FF3541;
+
+
+    border: none;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 1;
+    }
+    #menu_World_Result{
+        position: absolute;
+        width: 300px;
+        height: 48px;
+        top: 55%;
+        left: 40%;
+        font-family: 'Bungee';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 48px;
+        /* identical to box height */
+        
+        text-align: center;
+        
+        color: #6C84FF;
+        
+    
+    border: none;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    z-index: 1;
+    }
+    #menu_Setting{
+        position: absolute;
+        left: 45%;
+        top: 65%;
+        width: 227px;
+        height: 48px;
+        
+        font-family: 'Bungee';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 48px;
+        /* identical to box height */
+        
+        text-align: center;
+        
+    color: #13a844;
+    
+    border: none;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+    z-index: 1;
+    }
+    #cloud1{
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        background: none;
+    
+    }
+    #cloud2{
+        position: absolute;
+        top: 5%;
+        background: none;
+        left: 55%;
+    }
+    #cloud3{
+        position: absolute;
+        top: 10%;
+        left: 75%;
+        background: none;
+    }
+    #frame{
+        position: absolute;
+       
+        width: 135%;
+        left: 0;
+     
+        top: 92%;
+        background: none;
+    }
+    
+    #tree1{
+        position: absolute;
+        left: 3%;
+        bottom: 20%;
+        top: 70%;
+        z-index: 0;
+        background: none;
+    }
+    
+    #bush{
+        position: absolute;
+        left: 87%;
+        top: 86%;
+        width: 20%;
+        bottom: 20%;
+        background: none;
+    }
+    
+    
+    #bush2{
+        display: none;
+        background: none;
+    }
+    
+  }
