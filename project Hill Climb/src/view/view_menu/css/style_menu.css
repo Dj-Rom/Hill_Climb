@@ -5,6 +5,10 @@
     scroll-snap-stop: 0;
     background-color: #CBE0FF;
 }
+
+html, body {
+  overflow: hidden;
+}
 @font-face {
     font-family: "Bungee";
     src: url("../font/Bungee-Regular.ttf");
