@@ -200,6 +200,9 @@ z-index: 1;
 }
 
 @media only screen and (max-width: 490px) {
+    html, body {
+  overflow: hidden;
+}
     .contener{
     
     display: flex;
