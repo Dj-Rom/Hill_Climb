@@ -10,3 +10,11 @@ menuNewGame.addEventListener('click', () => location=('https://dj-rom.github.io/
 menuСontinueGame.addEventListener('click', () => location=('https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/main_game_start.html'))
 menuSetting.addEventListener('click', () => location=('https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_setting/seting.html'))
 menuWorldResult.addEventListener('click', () => location=('https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_result/result.html'))
+
+
+
+menuNewGame.addEventListener('touchend', () => location=('https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/main_game_start.html'))
+menuСontinueGame.addEventListener('touchend', () => location=('https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/main_game_start.html'))
+menuSetting.addEventListener('touchend', () => location=('https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_setting/seting.html'))
+menuWorldResult.addEventListener('touchend', () => location=('https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_result/result.html'))
+
