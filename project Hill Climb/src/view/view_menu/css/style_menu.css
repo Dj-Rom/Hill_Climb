@@ -359,7 +359,7 @@ color: #FF3541;
         background: none;
     }
     #frame{
-        position: absolute;
+        position: fixed;
        
         
         left: 0;
@@ -369,7 +369,7 @@ color: #FF3541;
     }
     
     #tree1{
-        position: absolute;
+        position: fixed;
         left: 3%;
         bottom: 2%;
         
@@ -378,7 +378,7 @@ color: #FF3541;
     }
     
     #bush{
-        position: absolute;
+        position: fixed;
         left: 3%;
         bottom: 2%;
         
