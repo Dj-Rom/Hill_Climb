@@ -71,7 +71,7 @@ z-index: 1;
     position: absolute;
     width: 696px;
     height: 96px;
-top: 35%;
+top: 30%;
 
 background: none;
 font-family: 'Bungee';
@@ -96,10 +96,10 @@ z-index: 1;
 }
 #menu_World_Result{
     position: absolute;
-    width: 379px;
+    width: 397px;
     height: 96px;
 
-height: 96px;
+top: 41%;
 background: none;
 font-family: 'Bungee';
 font-style: normal;
@@ -125,7 +125,7 @@ z-index: 1;
     position: absolute;
     width: 427px;
     height: 96px;
-    top: 65%;
+    top: 52%;
 
 height: 96px;
 background: none;
