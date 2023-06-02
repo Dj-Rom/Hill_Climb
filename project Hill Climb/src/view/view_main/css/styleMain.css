@@ -10,6 +10,13 @@
 alert {
     display:none;
     }
+
+html, body {
+ 
+    overflow-y: hidden;
+}
+
+
     @media only screen 
     and (max-device-width : 768px) 
     and (orientation : portrait) {
