@@ -1,5 +1,5 @@
 "use strict";
- window.addeventlistner('load', ()=>{
+ 
 
 window.onscroll = function () { window.scrollTo(0, 0); };
 launchFullScreen(document.body);
@@ -190,4 +190,4 @@ loop();
 
 
 
- })
+ 
