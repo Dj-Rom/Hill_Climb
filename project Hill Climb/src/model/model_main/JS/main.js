@@ -15,6 +15,43 @@ function launchFullScreen(element) {
     //     element.webkitRequestFullScreen();
     // }
 }
+
+
+
+// sound block
+
+const soundAudioFon = document.createElement('audio');
+soundAudioFon.id = "fon"
+soundAudioFon.loop = "loop"
+
+const soundAudioGaz = document.createElement('audio');
+soundAudioGaz.id = "gaz"
+soundAudioGaz.loop = "loop"
+document.body.append(soundAudioGaz)
+document.body.append(soundAudioFon)
+
+
+let fon = document.getElementById("fon"); 
+fon = new Audio("https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/music_main/phantom.mp3")
+
+let gaz = document.getElementById("gaz"); 
+gaz = new Audio("https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/music_main/gas.ogg")
+
+
+ 
+
+
+
+function playAudio(elem) { 
+  elem.play(); 
+} 
+
+function pauseAudio(elem) { 
+  elem.pause(); 
+} 
+
+
+
 export var k = { ArrowUp: 0, ArrowDown: 0, ArrowLeft: 0, ArrowRight: 0 };
 var cvs = document.querySelector("#canvas");
 var ctx = cvs.getContext("2d");
@@ -167,20 +204,26 @@ function loop() {
 	ctx.fill();
 
 	player.draw();
-	if (player.x < 0)
+	if (player.x < 500){
+		fon.pause() 
+	pauseAudio(fon)
+
+		
+		
 		restart();
+	} 
 	requestAnimationFrame(loop);
+
+	if(k.ArrowUp===1){
+		playAudio(fon)
+		playAudio(gaz)
+	}else {pauseAudio(gaz)}
+
 }
 
 
-
-
-
-
 function restart() {
-
-	player = new player();
-	t = 0;
+	t = false;
 	speed = 0;
 	playing = true;
 	k = { ArrowUp: 0, ArrowDown: 0, ArrowLeft: 0, ArrowRight: 0 };
