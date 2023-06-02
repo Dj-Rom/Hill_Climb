@@ -3,13 +3,17 @@
     margin: 0;
     padding: 0;
 }
-.alert {
+@font-face {
+    font-family: "Bungee";
+    src: url("../font/Bungee-Regular.ttf");
+}
+alert {
     display:none;
     }
     @media only screen 
     and (max-device-width : 768px) 
     and (orientation : portrait) {
-    .alert {
+    alert {
     display:block
     }
 }
