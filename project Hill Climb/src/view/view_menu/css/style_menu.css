@@ -195,22 +195,19 @@ z-index: 1;
     background: none;
 }
 
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 490px) {
     .contener{
     
     display: flex;
     justify-content: center;
     
     border: none;;
-  
 
-width: 100%;
-height: 100%;
 
 }
     h1{
         position: absolute;
-        left: 45%;
+    
         top: 20%;
         display: block;
         flex: none;
@@ -229,7 +226,7 @@ height: 100%;
     #menu_New_Game{
         width: 225px;
 height: 48px;
-left: 45%;
+
 top: 36%;
 font-family: 'Bungee';
 font-style: normal;
@@ -257,7 +254,7 @@ flex-grow: 0;
         position: absolute;
         width: 358px;
 height: 48px;
-left: 25%;
+
 top: 45%;
 font-family: 'Bungee';
 font-style: normal;
@@ -285,7 +282,7 @@ color: #FF3541;
         width: 300px;
         height: 48px;
         top: 55%;
-        left: 32%;
+        
         font-family: 'Bungee';
         font-style: normal;
         font-weight: 400;
@@ -309,7 +306,7 @@ color: #FF3541;
     }
     #menu_Setting{
         position: absolute;
-        left: 45%;
+        
         top: 65%;
         width: 227px;
         height: 48px;
@@ -336,8 +333,8 @@ color: #FF3541;
     }
     #cloud1{
         position: absolute;
-        top: 10%;
-        left: 5%;
+        top: 2%;
+        left: 2%;
         background: none;
     
     }
@@ -356,18 +353,18 @@ color: #FF3541;
     #frame{
         position: absolute;
        
-        width: 135%;
+        
         left: 0;
      
-        top: 128%;
+        bottom: 0%;
         background: none;
     }
     
     #tree1{
         position: absolute;
         left: 3%;
-        bottom: 20%;
-        top: 90%;
+        bottom: 2%;
+        
         z-index: 0;
         background: none;
     }
@@ -375,8 +372,8 @@ color: #FF3541;
     #bush{
         position: absolute;
         left: 3%;
-        top: 119%;
-        bottom: 20%;
+        bottom: 2%;
+        
         background: none;
     }
     
@@ -391,395 +388,3 @@ color: #FF3541;
 
 
 
-  
-@media only screen and (max-width: 890px) {
-    .contener{
-    
-    display: flex;
-    justify-content: center;
-    
-    border: none;;
-  
-
-width: 100%;
-height: 100%;
-
-}
-    h1{
-        position: absolute;
-        left: 45%;
-        top: 20%;
-        display: block;
-        flex: none;
-        order: 1;
-        flex-grow: 0;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 48px;
-    
- 
-    color: rgb(187, 0, 255);
-    background: none;
-    z-index: 1;
-    }
-    #menu_New_Game{
-        width: 225px;
-height: 48px;
-left: 45%;
-top: 36%;
-font-family: 'Bungee';
-font-style: normal;
-font-weight: 400;
-font-size: 40px;
-line-height: 48px;
-/* identical to box height */
-
-text-align: center;
-color: #f9fd17;
-flex: none;
-order: 0;
-flex-grow: 0;
-    border: none;
-    
-    /* Inside auto layout */
-    
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    z-index: 1;
-    }
-    
-    #menu_Сontinue_Game{
-        position: absolute;
-        width: 358px;
-height: 48px;
-left: 35%;
-top: 45%;
-font-family: 'Bungee';
-font-style: normal;
-font-weight: 400;
-font-size: 40px;
-line-height: 48px;
-/* identical to box height */
-
-text-align: center;
-
-color: #FF3541;
-
-
-    border: none;
-    
-    /* Inside auto layout */
-    
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    z-index: 1;
-    }
-    #menu_World_Result{
-        position: absolute;
-        width: 300px;
-        height: 48px;
-        top: 55%;
-        left: 40%;
-        font-family: 'Bungee';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 30px;
-        line-height: 48px;
-        /* identical to box height */
-        
-        text-align: center;
-        
-        color: #6C84FF;
-        
-    
-    border: none;
-    
-    /* Inside auto layout */
-    
-    flex: none;
-    order: 2;
-    flex-grow: 0;
-    z-index: 1;
-    }
-    #menu_Setting{
-        position: absolute;
-        left: 45%;
-        top: 65%;
-        width: 227px;
-        height: 48px;
-        
-        font-family: 'Bungee';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 40px;
-        line-height: 48px;
-        /* identical to box height */
-        
-        text-align: center;
-        
-    color: #13a844;
-    
-    border: none;
-    
-    /* Inside auto layout */
-    
-    flex: none;
-    order: 3;
-    flex-grow: 0;
-    z-index: 1;
-    }
-    #cloud1{
-        position: absolute;
-        top: 10%;
-        left: 5%;
-        background: none;
-    
-    }
-    #cloud2{
-        position: absolute;
-        top: 5%;
-        background: none;
-        left: 55%;
-    }
-    #cloud3{
-        position: absolute;
-        top: 10%;
-        left: 75%;
-        background: none;
-    }
-    #frame{
-        position: absolute;
-       
-        width: 135%;
-        left: 0;
-     
-        top: 100%;
-        background: none;
-    }
-    
-    #tree1{
-        position: absolute;
-        left: 3%;
-        bottom: 20%;
-        top: 70%;
-        z-index: 0;
-        background: none;
-    }
-    
-    #bush{
-        position: absolute;
-        left: 87%;
-        top: 92%;
-        width: 20%;
-        bottom: 20%;
-        background: none;
-    }
-    
-    
-    #bush2{
-        display: none;
-        background: none;
-    }
-    
-  }
-
-
-
-
-
-  @media only screen and (max-width: 1190px) {
-    .contener{
-    
-    display: flex;
-    justify-content: center;
-    
-    border: none;;
-  
-
-width: 100%;
-height: 100%;
-
-}
-    h1{
-        position: absolute;
-        left: 45%;
-        top: 20%;
-        display: block;
-        flex: none;
-        order: 1;
-        flex-grow: 0;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 48px;
-    
- 
-    color: rgb(187, 0, 255);
-    background: none;
-    z-index: 1;
-    }
-    #menu_New_Game{
-        width: 225px;
-height: 48px;
-left: 45%;
-top: 36%;
-font-family: 'Bungee';
-font-style: normal;
-font-weight: 400;
-font-size: 40px;
-line-height: 48px;
-/* identical to box height */
-
-text-align: center;
-color: #f9fd17;
-flex: none;
-order: 0;
-flex-grow: 0;
-    border: none;
-    
-    /* Inside auto layout */
-    
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    z-index: 1;
-    }
-    
-    #menu_Сontinue_Game{
-        position: absolute;
-        width: 358px;
-height: 48px;
-left: 35%;
-top: 45%;
-font-family: 'Bungee';
-font-style: normal;
-font-weight: 400;
-font-size: 40px;
-line-height: 48px;
-/* identical to box height */
-
-text-align: center;
-
-color: #FF3541;
-
-
-    border: none;
-    
-    /* Inside auto layout */
-    
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    z-index: 1;
-    }
-    #menu_World_Result{
-        position: absolute;
-        width: 300px;
-        height: 48px;
-        top: 55%;
-        left: 40%;
-        font-family: 'Bungee';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 30px;
-        line-height: 48px;
-        /* identical to box height */
-        
-        text-align: center;
-        
-        color: #6C84FF;
-        
-    
-    border: none;
-    
-    /* Inside auto layout */
-    
-    flex: none;
-    order: 2;
-    flex-grow: 0;
-    z-index: 1;
-    }
-    #menu_Setting{
-        position: absolute;
-        left: 45%;
-        top: 65%;
-        width: 227px;
-        height: 48px;
-        
-        font-family: 'Bungee';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 40px;
-        line-height: 48px;
-        /* identical to box height */
-        
-        text-align: center;
-        
-    color: #13a844;
-    
-    border: none;
-    
-    /* Inside auto layout */
-    
-    flex: none;
-    order: 3;
-    flex-grow: 0;
-    z-index: 1;
-    }
-    #cloud1{
-        position: absolute;
-        top: 10%;
-        left: 5%;
-        background: none;
-    
-    }
-    #cloud2{
-        position: absolute;
-        top: 5%;
-        background: none;
-        left: 55%;
-    }
-    #cloud3{
-        position: absolute;
-        top: 10%;
-        left: 75%;
-        background: none;
-    }
-    #frame{
-        position: absolute;
-       
-        width: 135%;
-        left: 0;
-     
-     bottom : 0px;
-        background: none;
-    }
-    
-    #tree1{
-        position: absolute;
-        left: 3%;
-        bottom: 20%;
-        top: 70%;
-        z-index: 0;
-        background: none;
-    }
-    
-    #bush{
-        position: absolute;
-        left: 87%;
-        top: 86%;
-        width: 20%;
-        bottom: 20%;
-        background: none;
-    }
-    
-    
-    #bush2{
-        display: none;
-        background: none;
-    }
-    
-  }
