@@ -173,7 +173,7 @@ function loop() {
 
 	earthFunc(cvs.height);
 
-if (player.x < cvs.width/4.5) {
+if (player.x < cvs.width/4.9) {
 		fon.pause();
 		pauseAudio(fon);
 
