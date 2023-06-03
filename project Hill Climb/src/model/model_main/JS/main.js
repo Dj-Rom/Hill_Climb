@@ -117,16 +117,14 @@ function loop() {
 
 	for (let f = 0; f < 3; f++) {
 		const imgCloud = new Image();
-		imgCloud.src =
-			"https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
+		imgCloud.src ="https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
 		ctx.drawImage(
 			imgCloud,
 			cvs.width - cvs.width + 500 * f,
 			cvs.height - cvs.height + 250 * f
 		);
 		const imgCloud2 = new Image();
-		imgCloud2.src =
-			"https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
+		imgCloud2.src ="https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
 		ctx.drawImage(
 			imgCloud2,
 			cvs.width - cvs.width / 2 + 500 * f,
@@ -143,8 +141,7 @@ function loop() {
 		);
 
 		const imgCloud4 = new Image();
-		imgCloud4.src =
-			"https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
+		imgCloud4.src ="https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
 		ctx.drawImage(imgCloud4, 150 + 500 * f, cvs.height - 750 - 50 * f);
 	}
 
@@ -272,8 +269,7 @@ function launchFullScreen(element) {
 
 function final() {
 	const finalPng = new Image();
-	finalPng.src =
-		"/Hill_Climb/project Hill Climb/src/view/view_main/png/fin.png";
+	finalPng.src ="https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/fin.png";
 
 	ctx.drawImage(finalPng, cvs.width / 2, cvs.height / 6);
 }
