@@ -40,9 +40,9 @@ document.addEventListener("keyup",()=>{
 
 
 window.addEventListener('deviceorientation', function(event) {
-    if (event.beta > '30' ) {
+    if (event.beta > '10' ) {
         k.ArrowRight = 1
-    } else if (event.beta < '-30' ) {
+    } else if (event.beta < '-10' ) {
           k.ArrowLeft = 1
     }
 
@@ -50,7 +50,7 @@ window.addEventListener('deviceorientation', function(event) {
 
 
 
-    var el = document.getElementById("canvas");
+    const el = document.getElementById("canvas");
     el.addEventListener("touchstart",   ()=>{  k.ArrowUp = 1}, false);
     el.addEventListener("touchend",  ()=>{  k.ArrowUp = 0}, false);
     
