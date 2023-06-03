@@ -2,7 +2,7 @@ const soundAudio = document.createElement("audio");
 soundAudio.id = "audioT";
 soundAudio.loop = "loop";
 soundAudio.autoplay = 'autoplay'
-soundAudio.controls = 'controls'
+
 document.body.append(soundAudio);
 
 let aud = document.getElementById("audioT").muted;
