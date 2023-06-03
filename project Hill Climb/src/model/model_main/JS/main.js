@@ -1,47 +1,36 @@
 "use strict";
 export let kontrole = { ArrowUp: 0, ArrowDown: 0, ArrowLeft: 0, ArrowRight: 0 };
-const cvs = document.querySelector("#canvas")
 
-  window.onload = mobileKontrole()
+window.onload = mobileKontrole();
 
-
-
-function mobileKontrole(){
-
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i
-    .test(navigator.userAgent)) {
-           if(  window.orientation == 0 ){
-			const user = confirm("this game needs a rotated device")
-			 user?window.location.reload(true):window.location.reload(true);
-		} else {
-			game ()
-			cvs.width = window.innerWidth;
-		cvs.height = window.innerHeight;
-		}}
-		
-// if (window.orientation > 0 ){
-// 	game ()
-// 			cvs.width = window.innerWidth;
-// 		cvs.height = window.innerHeight;
-// 		}else{ mobileKontrole() }
+function mobileKontrole() {
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+      navigator.userAgent
+    ) &&
+    window.orientation == 0
+  ) {
+    const user = confirm("this game needs a rotated device");
+    user ? window.location.reload(true) : window.location.reload(true);
+  } else {
+    game();
+  }
 }
 
-
 window.onscroll = function () {
-	window.scrollTo(0, 0);
+  window.scrollTo(0, 0);
 };
 
-
-function game () {
-	
-const cvs = document.querySelector("#canvas")
-
-const ctx = cvs.getContext("2d");
-let t = 0;
-let speed = 0;
-let playing = true;
-let perm = [];
-let val;
+function game() {
+  const cvs = document.querySelector("#canvas");
+  cvs.width = window.innerWidth;
+  cvs.height = window.innerHeight;
+  const ctx = cvs.getContext("2d");
+  let t = 0;
+  let speed = 0;
+  let playing = true;
+  let perm = [];
+  let val;
 	let fon = document.getElementById("fon");
 fon = new Audio(
 	"https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/music_main/phantom.mp3"
