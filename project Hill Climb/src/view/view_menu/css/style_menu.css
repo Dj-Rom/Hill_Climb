@@ -42,7 +42,7 @@ h1 {
     color: rgb(187, 0, 255);
     background: none;
     z-index: 1;
-    width: 89%;
+    width: 68%;
 }
 
 #menu_New_Game {
@@ -261,6 +261,7 @@ h1 {
         color: rgb(187, 0, 255);
         background: none;
         z-index: 1;
+            width: 68%;
     }
 
     #menu_New_Game {
