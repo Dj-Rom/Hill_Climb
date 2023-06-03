@@ -34,7 +34,7 @@ document.addEventListener("keyup", () => {
 });
 
 window.addEventListener("deviceorientation", function (event) {
-    if (event.beta > 20") {
+    if (event.beta > "20") {
         kontrole.ArrowRight = 1;
     } else if (event.beta < "-20") {
         kontrole.ArrowLeft = 1;
