@@ -210,7 +210,7 @@ function earthFunc(params) {
 	ctx.fill();
 	player.draw();
 }else{
-	player.cvsHeightt = 0.55
+	player.cvsHeightt = 0.75
 	
 	ctx.fillStyle = "#70c100";
 	ctx.beginPath();
