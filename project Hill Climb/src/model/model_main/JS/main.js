@@ -78,12 +78,12 @@ var player = new function () {
 	this.ySpeed = 0;
 	this.rot = 0;
 	this.rSpeed = 0;
-
+	this.cvsHeight = 0.95;
 	this.img = new Image();
 	this.img.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/Car15Silver.svg"
 	this.draw = function () {
-		var p1 = cvs.height - noise(t + this.x) * 0.95;
-		var p2 = cvs.height - noise(t + 5 + this.x) * 0.95;
+		var p1 = cvs.height - noise(t + this.x) * this.cvsHeight;
+		var p2 = cvs.height - noise(t + 5 + this.x) * this.cvsHeight;
 
 		var grounded = 0;
 		if (p1 - 12 > this.y) {
@@ -210,7 +210,7 @@ function earthFunc(params) {
 	ctx.fill();
 	player.draw();
 }else{
-	player.screenHeight = 0.65
+	player.cvsHeightt = 0.65
 	
 	ctx.fillStyle = "#70c100";
 	ctx.beginPath();
