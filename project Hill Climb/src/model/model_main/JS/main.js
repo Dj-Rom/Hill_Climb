@@ -1,14 +1,48 @@
 "use strict";
+export let kontrole = { ArrowUp: 0, ArrowDown: 0, ArrowLeft: 0, ArrowRight: 0 };
+const cvs = document.querySelector("#canvas")
+
+  window.onload = mobileKontrole()
+
+
+
+function mobileKontrole(){
+
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i
     .test(navigator.userAgent)) {
-document.body.style.transform = 'rotate(90deg)'
-} 
+           if(  window.orientation == 0 ){
+			const user = confirm("this game needs a rotated device")
+			 user?window.location.reload(true):window.location.reload(true);
+		} else {
+			game ()
+			cvs.width = window.innerWidth;
+		cvs.height = window.innerHeight;
+		}}
+		
+// if (window.orientation > 0 ){
+// 	game ()
+// 			cvs.width = window.innerWidth;
+// 		cvs.height = window.innerHeight;
+// 		}else{ mobileKontrole() }
+}
+
+
 window.onscroll = function () {
 	window.scrollTo(0, 0);
 };
-launchFullScreen(window);
 
-let fon = document.getElementById("fon");
+
+function game () {
+	
+const cvs = document.querySelector("#canvas")
+
+const ctx = cvs.getContext("2d");
+let t = 0;
+let speed = 0;
+let playing = true;
+let perm = [];
+let val;
+	let fon = document.getElementById("fon");
 fon = new Audio(
 	"https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/music_main/phantom.mp3"
 );
@@ -28,14 +62,9 @@ function pauseAudio(elem) {
 	elem.pause();
 }
 
-export let kontrole = { ArrowUp: 0, ArrowDown: 0, ArrowLeft: 0, ArrowRight: 0 };
-const cvs = document.querySelector("#canvas");
-const ctx = cvs.getContext("2d");
-cvs.width = window.innerWidth;
-cvs.height = window.innerHeight;
 
-let perm = [];
-let val;
+
+
 while (perm.length < 255) {
 	while (perm.includes((val = Math.floor(Math.random() * 255))));
 	perm.push(val);
@@ -96,9 +125,7 @@ let player = new function () {
 	};
 }();
 
-let t = 0;
-let speed = 0;
-let playing = true;
+
 
 function loop() {
 	speed -= (speed - (kontrole.ArrowUp - kontrole.ArrowDown)) * 0.009;
@@ -120,14 +147,16 @@ function loop() {
 
 	for (let f = 0; f < 3; f++) {
 		const imgCloud = new Image();
-		imgCloud.src ="https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
+		imgCloud.src =
+			"https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
 		ctx.drawImage(
 			imgCloud,
 			cvs.width - cvs.width + 500 * f,
 			cvs.height - cvs.height + 250 * f
 		);
 		const imgCloud2 = new Image();
-		imgCloud2.src ="https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
+		imgCloud2.src =
+			"https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
 		ctx.drawImage(
 			imgCloud2,
 			cvs.width - cvs.width / 2 + 500 * f,
@@ -144,7 +173,8 @@ function loop() {
 		);
 
 		const imgCloud4 = new Image();
-		imgCloud4.src ="https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
+		imgCloud4.src =
+			"https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
 		ctx.drawImage(imgCloud4, 150 + 500 * f, cvs.height - 750 - 50 * f);
 	}
 
@@ -259,7 +289,7 @@ function earthFunc(params) {
 		player.draw();
 	}
 }
-
+launchFullScreen(window);
 function launchFullScreen(element) {
 	if (element.requestFullScreen) {
 		element.requestFullScreen();
@@ -272,7 +302,8 @@ function launchFullScreen(element) {
 
 function final() {
 	const finalPng = new Image();
-	finalPng.src ="https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/fin.png";
+	finalPng.src =
+		"https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/fin.png";
 
 	ctx.drawImage(finalPng, cvs.width / 2, cvs.height / 6);
 }
@@ -283,4 +314,4 @@ function restart() {
 	playing = true;
 	kontrole = { ArrowUp: 0, ArrowDown: 0, ArrowLeft: 0, ArrowRight: 0 };
 }
-loop();
+loop();}
