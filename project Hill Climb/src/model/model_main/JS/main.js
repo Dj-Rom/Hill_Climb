@@ -22,6 +22,18 @@ window.onscroll = function () {
 };
 
 function game() {
+	let secGame = 0;
+				const visualGameTime = document.createElement('div');
+				visualGameTime.id ="visualGameTime" ;
+				document.body.append(visualGameTime)
+				function gameTime (){
+					
+					
+					secGame = t*0.2 ;
+					return secGame
+			
+				}
+
   const cvs = document.querySelector("#canvas");
   cvs.width = window.innerWidth;
   cvs.height = window.innerHeight;
@@ -117,6 +129,8 @@ let player = new function () {
 
 
 function loop() {
+	gameTime ()
+	visualGameTime.innerHTML = secGame.toFixed(0)
 	speed -= (speed - (kontrole.ArrowUp - kontrole.ArrowDown)) * 0.009;
 	t += 10 * speed;
 	ctx.fillStyle = "#91EBFF";
