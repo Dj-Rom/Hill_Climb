@@ -164,14 +164,14 @@ function loop() {
 
 
 
-	ctx.lineTo(cvs.width, cvs.height);
-	ctx.fill();
 
 	earthFunc(cvs.height)
 	
 	
 function earthFunc(params) {
 	if(params > 400){
+	ctx.lineTo(cvs.width, cvs.height);
+	ctx.fill();
 
 	ctx.fillStyle = "#70c100";
 	ctx.beginPath();
@@ -210,7 +210,10 @@ function earthFunc(params) {
 	ctx.fill();
 	player.draw();
 }else{
-	player.cvsHeightt = 0.75
+		ctx.lineTo(cvs.width, cvs.height);
+	ctx.fill();
+
+	player.cvsHeightt = 0.65
 	
 	ctx.fillStyle = "#70c100";
 	ctx.beginPath();
