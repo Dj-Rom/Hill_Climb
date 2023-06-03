@@ -45,14 +45,14 @@ var el = document.getElementById("canvas");
 el.addEventListener(
     "touchstart",
     () => {
-        k.ArrowUp = 1;
+        kontrole.ArrowUp = 1;
     },
     false
 );
 el.addEventListener(
     "touchend",
     () => {
-        k.ArrowUp = 0;
+        kontrole.ArrowUp = 0;
     },
     false
 );
