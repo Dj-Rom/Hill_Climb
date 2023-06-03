@@ -1,78 +1,50 @@
 "use strict";
- 
 
-window.onscroll = function () { window.scrollTo(0, 0); };
-launchFullScreen(document.body);
-function launchFullScreen(element) {
-    if(element.requestFullScreen) {
-        element.requestFullScreen();
-    } else if(element.mozRequestFullScreen) {
-        element.mozRequestFullScreen();
-    // 
+window.onscroll = function () {
+	window.scrollTo(0, 0);
+};
+launchFullScreen(window);
 
+let fon = document.getElementById("fon");
+fon = new Audio(
+	"https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/music_main/phantom.mp3"
+);
+
+let gaz = document.getElementById("gaz");
+gaz = new Audio(
+	"https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/music_main/gas.ogg"
+);
+
+sound();
+
+function playAudio(elem) {
+	elem.play();
 }
-	//  else if(element.webkitRequestFullScreen) {
-    //     element.webkitRequestFullScreen();
-    // }
+
+function pauseAudio(elem) {
+	elem.pause();
 }
 
-
-
-// sound block
-
-const soundAudioFon = document.createElement('audio');
-soundAudioFon.id = "fon"
-soundAudioFon.loop = "loop"
-
-const soundAudioGaz = document.createElement('audio');
-soundAudioGaz.id = "gaz"
-soundAudioGaz.loop = "loop"
-document.body.append(soundAudioGaz)
-document.body.append(soundAudioFon)
-
-
-let fon = document.getElementById("fon"); 
-fon = new Audio("https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/music_main/phantom.mp3")
-
-let gaz = document.getElementById("gaz"); 
-gaz = new Audio("https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/music_main/gas.ogg")
-
-
- 
-
-
-
-function playAudio(elem) { 
-  elem.play(); 
-} 
-
-function pauseAudio(elem) { 
-  elem.pause(); 
-} 
-
-
-
-export var k = { ArrowUp: 0, ArrowDown: 0, ArrowLeft: 0, ArrowRight: 0 };
-var cvs = document.querySelector("#canvas");
-var ctx = cvs.getContext("2d");
+export let kontrole = { ArrowUp: 0, ArrowDown: 0, ArrowLeft: 0, ArrowRight: 0 };
+const cvs = document.querySelector("#canvas");
+const ctx = cvs.getContext("2d");
 cvs.width = window.innerWidth;
 cvs.height = window.innerHeight;
 
-
-var perm = [];
+let perm = [];
 let val;
 while (perm.length < 255) {
-	while (perm.includes(val = Math.floor(Math.random() * 255)));
+	while (perm.includes((val = Math.floor(Math.random() * 255))));
 	perm.push(val);
 }
 
-var lerp = (a, b, t) => a + (b - a) * (1 - Math.cos(t * Math.PI)) / 2;
-var noise = x => {
+let lerp = (a, b, t) => a + (b - a) * (1 - Math.cos(t * Math.PI)) / 2;
+let noise = x => {
 	x = x / 155;
 	return lerp(perm[Math.floor(x)], perm[Math.ceil(x)], x - Math.floor(x));
-}
+};
 
-var player = new function () {
+let player = new function () {
 	this.x = cvs.width / 2;
 	this.y = cvs.height / 2;
 	this.ySpeed = 0;
@@ -80,36 +52,36 @@ var player = new function () {
 	this.rSpeed = 0;
 	this.cvsHeight = 0.95;
 	this.img = new Image();
-	this.img.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/Car15Silver.svg"
+	this.img.src =
+		"https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/Car15Silver.svg";
 	this.draw = function () {
-		var p1 = cvs.height - noise(t + this.x) * this.cvsHeight;
-		var p2 = cvs.height - noise(t + 5 + this.x) * this.cvsHeight;
+		let p1 = cvs.height - noise(t + this.x) * this.cvsHeight;
+		let p2 = cvs.height - noise(t + 5 + this.x) * this.cvsHeight;
 
-		var grounded = 0;
+		let grounded = 0;
 		if (p1 - 12 > this.y) {
-			this.ySpeed += .158;
+			this.ySpeed += 0.158;
 		} else {
 			this.ySpeed -= this.y - (p1 - 12);
 			this.y = p1 - 12;
 			grounded = 1.99;
 		}
 
-		var angle = Math.atan2((p2 - 12) - this.y, (this.x + 5) - this.x);
+		let angle = Math.atan2(p2 - 12 - this.y, this.x + 5 - this.x);
 		this.y += this.ySpeed;
 
-		if (!playing || grounded && Math.abs(this.rot) > Math.PI * 0.5) {
+		if (!playing || (grounded && Math.abs(this.rot) > Math.PI * 0.5)) {
 			playing = false;
 			this.rSpeed = 1;
-			k.ArrowUp = 0.12;
+			kontrole.ArrowUp = 0.12;
 			this.x -= speed * 5;
 		}
-
 
 		if (grounded && playing) {
 			this.rot -= (this.rot - angle) * 0.65;
 			this.rSpeed = this.rSpeed - (angle - this.rot);
 		}
-		this.rSpeed += (k.ArrowLeft - k.ArrowRight) * 0.05;
+		this.rSpeed += (kontrole.ArrowLeft - kontrole.ArrowRight) * 0.05;
 		this.rot -= this.rSpeed * 0.1;
 		if (this.rot > Math.PI) this.rot = -Math.PI;
 		if (this.rot < -Math.PI) this.rot = Math.PI;
@@ -118,169 +90,198 @@ var player = new function () {
 		ctx.rotate(this.rot);
 		ctx.drawImage(this.img, -20, -20, 45, 45);
 		ctx.restore();
-	}
-}
+	};
+}();
 
-
-var t = 0;
-var speed = 0;
-var playing = true;
+let t = 0;
+let speed = 0;
+let playing = true;
 
 function loop() {
-
-	speed -= (speed - (k.ArrowUp - k.ArrowDown)) * 0.009;
+	speed -= (speed - (kontrole.ArrowUp - kontrole.ArrowDown)) * 0.009;
 	t += 10 * speed;
 	ctx.fillStyle = "#91EBFF";
 	ctx.fillRect(0, 0, cvs.width, cvs.height);
 
 	ctx.beginPath();
-	ctx.arc(cvs.width / 4, cvs.height / 6, Math.floor(cvs.width / 15), 0, 2 * Math.PI);
+	ctx.arc(
+		cvs.width / 4,
+		cvs.height / 6,
+		Math.floor(cvs.width / 15),
+		0,
+		2 * Math.PI
+	);
 	ctx.stroke();
-	ctx.fillStyle = "#ecef54"
-	ctx.strokeStyle = "#ecef54"
+	ctx.fillStyle = "#ecef54";
+	ctx.strokeStyle = "#ecef54";
 
-	for (let f = 0; f < 5; f++) {
+	for (let f = 0; f < 3; f++) {
 		const imgCloud = new Image();
-		imgCloud.src = 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg'
-		ctx.drawImage(imgCloud, cvs.width - cvs.width + (500 * f), cvs.height - cvs.height + 250 * f)
+		imgCloud.src =
+			"https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
+		ctx.drawImage(
+			imgCloud,
+			cvs.width - cvs.width + 500 * f,
+			cvs.height - cvs.height + 250 * f
+		);
 		const imgCloud2 = new Image();
-		imgCloud2.src = 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg'
-		ctx.drawImage(imgCloud2, cvs.width - cvs.width / 2 + (500 * f), cvs.height - cvs.height + 150 * f)
+		imgCloud2.src =
+			"https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
+		ctx.drawImage(
+			imgCloud2,
+			cvs.width - cvs.width / 2 + 500 * f,
+			cvs.height - cvs.height + 150 * f
+		);
 
 		const imgCloud3 = new Image();
-		imgCloud3.src = 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg'
-		ctx.drawImage(imgCloud, cvs.width - cvs.width / 2.5 + (500 * f), cvs.height - cvs.height + 10 * f)
+		imgCloud3.src =
+			"https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
+		ctx.drawImage(
+			imgCloud,
+			cvs.width - cvs.width / 2.5 + 500 * f,
+			cvs.height - cvs.height + 10 * f
+		);
 
 		const imgCloud4 = new Image();
-		imgCloud4.src = 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg'
-		ctx.drawImage(imgCloud4, 150 + (500 * f), cvs.height - 750 - (50 * f))
-
+		imgCloud4.src =
+			"https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
+		ctx.drawImage(imgCloud4, 150 + 500 * f, cvs.height - 750 - 50 * f);
 	}
 
+	if (t > 30000) {
+		final();
+	}
 
+	earthFunc(cvs.height);
 
+	if (player.x < 500) {
+		fon.pause();
+		pauseAudio(fon);
 
-
-
-
-
-
-	earthFunc(cvs.height)
-	
-	
-function earthFunc(params) {
-	if(params > 400){
-	ctx.lineTo(cvs.width, cvs.height);
-	ctx.fill();
-
-	ctx.fillStyle = "#70c100";
-	ctx.beginPath();
-
-	ctx.moveTo(0, cvs.height);
-	for (let i = 0; i < cvs.width; i++)
-		ctx.lineTo(i, cvs.height - noise(t + i) * .95);
-	ctx.lineTo(cvs.width, cvs.height);
-	ctx.fill();
-
-
-	ctx.beginPath();
-	ctx.fillStyle = "#527b52";
-	ctx.moveTo(0, cvs.height);
-	for (let i = 0; i < cvs.width; i++)
-		ctx.lineTo(i, cvs.height - noise(t + i) * .75);
-	ctx.lineTo(cvs.width, cvs.height);
-	ctx.fill();
-
-
-	ctx.beginPath();
-	ctx.fillStyle = "#c89566";
-	ctx.moveTo(0, cvs.height);
-	for (let i = 0; i < cvs.width; i++)
-		ctx.lineTo(i, cvs.height - noise(t + i) * .65);
-	ctx.lineTo(cvs.width, cvs.height);
-	ctx.fill();
-
-
-	ctx.beginPath();
-	ctx.fillStyle = "#a9794d";
-	ctx.moveTo(0, cvs.height);
-	for (let i = 0; i < cvs.width; i++)
-		ctx.lineTo(i, cvs.height - noise(t + i) * .25);
-	ctx.lineTo(cvs.width, cvs.height);
-	ctx.fill();
-	player.draw();
-}else{
-		ctx.lineTo(cvs.width, cvs.height);
-	ctx.fill();
-
-	player.cvsHeightt = 0.65
-	
-	ctx.fillStyle = "#70c100";
-	ctx.beginPath();
-
-	ctx.moveTo(0, cvs.height);
-	for (let i = 0; i < cvs.width; i++)
-		ctx.lineTo(i, cvs.height - noise(t + i) * .65);
-	ctx.lineTo(cvs.width, cvs.height);
-	ctx.fill();
-
-
-	ctx.beginPath();
-	ctx.fillStyle = "#527b52";
-	ctx.moveTo(0, cvs.height);
-	for (let i = 0; i < cvs.width; i++)
-		ctx.lineTo(i, cvs.height - noise(t + i) * .45);
-	ctx.lineTo(cvs.width, cvs.height);
-	ctx.fill();
-
-
-	ctx.beginPath();
-	ctx.fillStyle = "#c89566";
-	ctx.moveTo(0, cvs.height);
-	for (let i = 0; i < cvs.width; i++)
-		ctx.lineTo(i, cvs.height - noise(t + i) * .35);
-	ctx.lineTo(cvs.width, cvs.height);
-	ctx.fill();
-
-
-	ctx.beginPath();
-	ctx.fillStyle = "#a9794d";
-	ctx.moveTo(0, cvs.height);
-	for (let i = 0; i < cvs.width; i++)
-		ctx.lineTo(i, cvs.height - noise(t + i) * .5);
-	ctx.lineTo(cvs.width, cvs.height);
-	ctx.fill();
-	player.draw();
-}
-}
-
-	if (player.x < 500){
-		fon.pause() 
-	pauseAudio(fon)
-
-		
-		
 		restart();
-	} 
+	}
 	requestAnimationFrame(loop);
 
-	if(k.ArrowUp===1){
-		playAudio(fon)
-		playAudio(gaz)
-	}else {pauseAudio(gaz)}
-
+	if (kontrole.ArrowUp === 1) {
+		playAudio(fon);
+		playAudio(gaz);
+	} else {
+		pauseAudio(gaz);
+	}
 }
 
+function sound() {
+	const soundAudioFon = document.createElement("audio");
+	soundAudioFon.id = "fon";
+	soundAudioFon.loop = "loop";
+
+	const soundAudioGaz = document.createElement("audio");
+	soundAudioGaz.id = "gaz";
+	soundAudioGaz.loop = "loop";
+	document.body.append(soundAudioGaz);
+	document.body.append(soundAudioFon);
+}
+
+function earthFunc(params) {
+	if (params > 400) {
+		ctx.lineTo(cvs.width, cvs.height);
+		ctx.fill();
+		ctx.fillStyle = "#70c100";
+		ctx.beginPath();
+
+		ctx.moveTo(0, cvs.height);
+		for (let i = 0; i < cvs.width; i++)
+			ctx.lineTo(i, cvs.height - noise(t + i) * 0.95);
+		ctx.lineTo(cvs.width, cvs.height);
+		ctx.fill();
+
+		ctx.beginPath();
+		ctx.fillStyle = "#527b52";
+		ctx.moveTo(0, cvs.height);
+		for (let i = 0; i < cvs.width; i++)
+			ctx.lineTo(i, cvs.height - noise(t + i) * 0.75);
+		ctx.lineTo(cvs.width, cvs.height);
+		ctx.fill();
+
+		ctx.beginPath();
+		ctx.fillStyle = "#c89566";
+		ctx.moveTo(0, cvs.height);
+		for (let i = 0; i < cvs.width; i++)
+			ctx.lineTo(i, cvs.height - noise(t + i) * 0.65);
+		ctx.lineTo(cvs.width, cvs.height);
+		ctx.fill();
+
+		ctx.beginPath();
+		ctx.fillStyle = "#a9794d";
+		ctx.moveTo(0, cvs.height);
+		for (let i = 0; i < cvs.width; i++)
+			ctx.lineTo(i, cvs.height - noise(t + i) * 0.25);
+		ctx.lineTo(cvs.width, cvs.height);
+		ctx.fill();
+		player.draw();
+	} else {
+		ctx.lineTo(cvs.width, cvs.height);
+		ctx.fill();
+		player.cvsHeight = 0.65;
+
+		ctx.fillStyle = "#70c100";
+		ctx.beginPath();
+
+		ctx.moveTo(0, cvs.height);
+		for (let i = 0; i < cvs.width; i++)
+			ctx.lineTo(i, cvs.height - noise(t + i) * 0.65);
+		ctx.lineTo(cvs.width, cvs.height);
+		ctx.fill();
+
+		ctx.beginPath();
+		ctx.fillStyle = "#527b52";
+		ctx.moveTo(0, cvs.height);
+		for (let i = 0; i < cvs.width; i++)
+			ctx.lineTo(i, cvs.height - noise(t + i) * 0.45);
+		ctx.lineTo(cvs.width, cvs.height);
+		ctx.fill();
+
+		ctx.beginPath();
+		ctx.fillStyle = "#c89566";
+		ctx.moveTo(0, cvs.height);
+		for (let i = 0; i < cvs.width; i++)
+			ctx.lineTo(i, cvs.height - noise(t + i) * 0.35);
+		ctx.lineTo(cvs.width, cvs.height);
+		ctx.fill();
+
+		ctx.beginPath();
+		ctx.fillStyle = "#a9794d";
+		ctx.moveTo(0, cvs.height);
+		for (let i = 0; i < cvs.width; i++)
+			ctx.lineTo(i, cvs.height - noise(t + i) * 0.5);
+		ctx.lineTo(cvs.width, cvs.height);
+		ctx.fill();
+		player.draw();
+	}
+}
+
+function launchFullScreen(element) {
+	if (element.requestFullScreen) {
+		element.requestFullScreen();
+	} else if (element.mozRequestFullScreen) {
+		element.mozRequestFullScreen();
+	} else if (element.webkitRequestFullScreen) {
+		element.webkitRequestFullScreen();
+	}
+}
+
+function final() {
+	const finalPng = new Image();
+	finalPng.src =
+		"/Hill_Climb/project Hill Climb/src/view/view_main/png/fin.png";
+
+	ctx.drawImage(finalPng, cvs.width / 2, cvs.height / 6);
+}
 
 function restart() {
 	t = false;
 	speed = 0;
 	playing = true;
-	k = { ArrowUp: 0, ArrowDown: 0, ArrowLeft: 0, ArrowRight: 0 };
-
+	kontrole = { ArrowUp: 0, ArrowDown: 0, ArrowLeft: 0, ArrowRight: 0 };
 }
 loop();
-
-
-
- 
