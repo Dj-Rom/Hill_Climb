@@ -1,7 +1,7 @@
 const soundAudio = document.createElement("audio");
 soundAudio.id = "audioT";
 soundAudio.loop = "loop";
-soundAudio.soundAudio = 'soundAudio'
+soundAudio.autoplay = 'autoplay'
 soundAudio.controls = 'controls'
 document.body.append(soundAudio);
 
