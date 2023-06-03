@@ -16,4 +16,4 @@ function playAudio(elem) {
 function pauseAudio(elem) { 
   elem.pause(); 
 } 
-
+playAudio(audioT)
