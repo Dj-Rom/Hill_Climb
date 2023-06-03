@@ -24,3 +24,15 @@ html, body {
     display:block
     }
 }
+#visualGameTime{
+    position: absolute;
+    top: 5%;
+    left: 45%;
+    font-family: 'Bungee';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 530%;
+    color: rgb(241, 176, 12);
+    background: none;
+    z-index: 1;
+}
