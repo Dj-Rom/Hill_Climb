@@ -7,8 +7,6 @@ let audioT = document.getElementById("audioT");
 audioT = new Audio("https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/music/menu.mp3")
 
 
-
-
 function playAudio(elem) { 
   elem.play(); 
 } 
