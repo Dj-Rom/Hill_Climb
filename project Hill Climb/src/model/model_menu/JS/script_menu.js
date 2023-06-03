@@ -3,7 +3,7 @@ soundAudio.id = "audioT";
 soundAudio.loop = "loop";
 document.body.append(soundAudio);
 
-let aud = document.getElementById("audioT");
+let aud = document.getElementById("audioT").muted;
 aud = new Audio("https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/music/menu.mp3");
 
 function playAudio() {
