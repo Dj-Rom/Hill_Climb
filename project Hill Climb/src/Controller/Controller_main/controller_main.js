@@ -46,17 +46,17 @@ window.addEventListener('deviceorientation', function(event) {
     clearTimeout(timer);
   timer = setTimeout(function() {
     timer = null;
-    if (angle >20) {
+    if (angle >10) {
        kontrole.ArrowRight = 1;
         kontrole.ArrowLeft = 0
-    } else if (angle < -20) {
+    } else if (angle < -10) {
         kontrole.ArrowRight = 0;
       kontrole.ArrowLeft = 1;
-    }else if (angle < 20 && angle > -20 ){
+    }else if (angle < 10 && angle > -10 ){
         kontrole.ArrowRight = 0;
       kontrole.ArrowLeft = 0;
   }
-      else if (angle > 20 && angle < -20 ){
+      else if (angle > 10 && angle < -10 ){
         kontrole.ArrowRight = 0;
       kontrole.ArrowLeft = 0;}}, 16);
 });
