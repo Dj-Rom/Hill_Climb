@@ -52,8 +52,13 @@ window.addEventListener('deviceorientation', function(event) {
     } else if (angle < -20) {
         kontrole.ArrowRight = 0;
       kontrole.ArrowLeft = 1;
-    }
-  }, 500);
+    }else if (angle < 20 && angle > -20 ){
+        kontrole.ArrowRight = 0;
+      kontrole.ArrowLeft = 0;
+  }
+      else if (angle > 20 && angle < -20 ){
+        kontrole.ArrowRight = 0;
+      kontrole.ArrowLeft = 0;, 16);
 });
 
 
