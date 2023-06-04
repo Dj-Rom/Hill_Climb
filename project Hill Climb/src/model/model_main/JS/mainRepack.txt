@@ -23,25 +23,25 @@ window.onscroll = function () {
 
 
 
-function game() {
-
-  let secGame = 0;
-  const visualGameTime = document.createElement('div');
-  visualGameTime.id = "visualGameTime";
-  document.body.append(visualGameTime)
-  function gameTime() {
-
-
-    secGame = t * 0.2;
-    return secGame
-
-  }
+			function game() {
+        
+				let secGame = 0;
+				const visualGameTime = document.createElement('div');
+				visualGameTime.id ="visualGameTime" ;
+				document.body.append(visualGameTime)
+				function gameTime (){
+					
+					
+					secGame = t*0.2 ;
+					return secGame
+			
+				}
 
   const cvs = document.querySelector("#canvas");
   cvs.width = window.innerWidth;
   cvs.height = window.innerHeight;
   const ctx = cvs.getContext("2d");
-  cloud()
+  cloud ()
   let t = 0;
   let speed = 0;
   let playing = true;
@@ -54,7 +54,7 @@ function game() {
 
   let gaz = document.getElementById("gaz");
   gaz = new Audio(
-    "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/music_main/gas.mp3"
+    "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/music_main/gas.ogg"
   );
 
   sound();
@@ -80,13 +80,13 @@ function game() {
     return lerp(perm[Math.floor(x)], perm[Math.ceil(x)], x - Math.floor(x));
   };
 
-  const IProgress = document.createElement('div');
-  const IProgressPers = document.createElement('div');
-  IProgress.id = "IProgress"
-  IProgressPers.id = "IProgressPers"
-  document.body.append(IProgress)
-  document.body.append(IProgressPers)
-
+ const IProgress = document.createElement('div');
+ const IProgressPers = document.createElement('div');
+ IProgress.id = "IProgress"
+ IProgressPers.id = "IProgressPers"
+document.body.append(IProgress)
+document.body.append(IProgressPers)
+  
 
 
 
@@ -143,17 +143,17 @@ function game() {
   })();
 
   function loop() {
-    gameTime()
-    cloud()
-    musicFonAndGaz()
-    visualGameTime.innerHTML = secGame.toFixed(0)
-
-    if (secGame < 30000) {
-      const perc = Math.round(secGame / 30000 * 100);
-      document.getElementById('IProgressPers').style.width = perc + "%";
-      console.log(perc);
+    gameTime ()
+  cloud ()
+  musicFonAndGaz()
+	visualGameTime.innerHTML = secGame.toFixed(0)
+ 
+    if (secGame<30000 ) {
+        const perc=Math.round(secGame/30000 * 100);
+        document.getElementById('IProgressPers').style.width=perc+"%";
+        console.log(perc);
     }
-
+  
     speed -= (speed - (kontrole.ArrowUp - kontrole.ArrowDown)) * 0.009;
     t += 10 * speed;
     ctx.fillStyle = "#91EBFF";
@@ -166,7 +166,7 @@ function game() {
       0,
       2 * Math.PI
     );
-    cloud()
+    cloud ()
     ctx.stroke();
     ctx.fillStyle = "#ecef54";
     ctx.strokeStyle = "#ecef54";
@@ -188,42 +188,42 @@ function game() {
 
 
   }
-  function cloud() {
+  function cloud (){
+    
+      const imgCloud = new Image();
+      imgCloud.src =
+        "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
+      ctx.drawImage(
+        imgCloud,
+        cvs.width - cvs.width + 500 ,
+        cvs.height - cvs.height + 250 
+      );
+      const imgCloud2 = new Image();
+      imgCloud2.src =
+        "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
+      ctx.drawImage(
+        imgCloud2,
+        cvs.width - cvs.width / 2 + 500 ,
+        cvs.height - cvs.height + 150 
+      );
 
-    const imgCloud = new Image();
-    imgCloud.src =
-      "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
-    ctx.drawImage(
-      imgCloud,
-      cvs.width - cvs.width + 500,
-      cvs.height - cvs.height + 250
-    );
-    const imgCloud2 = new Image();
-    imgCloud2.src =
-      "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
-    ctx.drawImage(
-      imgCloud2,
-      cvs.width - cvs.width / 2 + 500,
-      cvs.height - cvs.height + 150
-    );
+      const imgCloud3 = new Image();
+      imgCloud3.src =
+        "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
+      ctx.drawImage(
+        imgCloud,
+        cvs.width - cvs.width / 2.5 + 500 ,
+        cvs.height - cvs.height + 10 
+      );
 
-    const imgCloud3 = new Image();
-    imgCloud3.src =
-      "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
-    ctx.drawImage(
-      imgCloud,
-      cvs.width - cvs.width / 2.5 + 500,
-      cvs.height - cvs.height + 10
-    );
-
-    const imgCloud4 = new Image();
-    imgCloud4.src =
-      "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
-    ctx.drawImage(imgCloud4, 150 + 500, cvs.height - 750 - 50);
+      const imgCloud4 = new Image();
+      imgCloud4.src =
+        "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
+      ctx.drawImage(imgCloud4, 150 + 500 , cvs.height - 750 - 50 );
 
 
-    return
-
+       
+    
   }
 
   function sound() {
@@ -237,7 +237,7 @@ function game() {
     document.body.append(soundAudioGaz);
     document.body.append(soundAudioFon);
 
-
+    
   }
 
   function earthFunc(params) {
@@ -342,13 +342,14 @@ function game() {
     playing = true;
     kontrole = { ArrowUp: 0, ArrowDown: 0, ArrowLeft: 0, ArrowRight: 0 };
   }
-  function musicFonAndGaz() {
-    if (kontrole.ArrowUp === 1) {
-      playAudio(fon);
-      playAudio(gaz);
-    } else {
-      pauseAudio(gaz);
-    } return
-  }
+function musicFonAndGaz(){
+  if (kontrole.ArrowUp === 1) {
+    playAudio(fon);
+    playAudio(gaz);
+  } else {
+    pauseAudio(gaz);
+  }return
+}
   loop();
 }
+
