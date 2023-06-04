@@ -64,7 +64,7 @@ window.addEventListener('deviceorientation', function(event) {
 
 const imgGaz = document.getElementById("imgGaz");
 
-imgGaz.addEventListener("touch", () => {
+imgGaz.addEventListener("touchstart", () => {
     event.preventDefault()
         window.navigator.vibrate(200)
        return kontrole.ArrowUp = 1
@@ -79,7 +79,7 @@ imgGaz.addEventListener("touchend",
 
 const imgbr = document.getElementById("imgbr");
 
-imgbr.addEventListener("touch", () => {event.preventDefault()
+imgbr.addEventListener("touchstart", () => {event.preventDefault()
         window.navigator.vibrate(200)
        return kontrole.ArrowDown = 1
     }
