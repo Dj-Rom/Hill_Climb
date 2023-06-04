@@ -1,30 +1,49 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 @font-face {
     font-family: "Bungee";
-    src: url("../font/Bungee-Regular.ttf");
+    src: url("https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/font/Bungee-Regular.ttf");
 }
-alert {
-    display:none;
-    }
 
-html, body {
- 
+alert {
+    display: none;
+}
+
+html,
+body {
+
     overflow-y: hidden;
 }
 
+#IProgress {
+    position: absolute;
+    border: solid rgb(96, 52, 198)1px;
+    width: 100%;
+    height: 20px;
+    z-index: 5;
+    top: 5px;
+}
 
-    @media only screen 
-    and (max-device-width : 768px) 
-    and (orientation : portrait) {
+#IProgressPers {
+    position: absolute;
+    background-color: rgb(8, 19, 228);
+    height: 20px;
+    width: 0%;
+    z-index: 2;
+    top: 5px;
+}
+
+@media only screen and (max-device-width : 768px) and (orientation : portrait) {
     alert {
-    display:block
+        display: block
     }
 }
-#visualGameTime{
+
+#visualGameTime {
     position: absolute;
     top: 5%;
     left: 45%;
