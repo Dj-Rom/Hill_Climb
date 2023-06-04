@@ -1,13 +1,10 @@
 window.addEventListener("load",()=>{
-
 const welcom = document.createElement("div")
 welcom.id = "welcom";
 welcom.innerText = "Student project Hill Climb"
 welcom.style.opacity = 0.99
 document.body.append(welcom)
-
 let contener = document.querySelector(".contener");
-
  let welcomGet = document.querySelector('#welcom')
  let hw = 100
  welcomGet.style.height = hw+"%"
@@ -16,43 +13,28 @@ let contener = document.querySelector(".contener");
  contener.style.opacity = .01
 let timer = setInterval(()=>{
   contener.style.opacity *=1.07
-
   welcomGet.style.opacity -=0.00899999;
-
-
-
-if(welcomGet.style.opacity <= 0.00 && contener.style.opacity > 0.90 ){playAudio(aud); clearInterval(timer); 
+if(welcomGet.style.opacity <= 0.00 && contener.style.opacity > 0.90 ){playAudio(aud); welcomGet.style.display = "none"; clearInterval(timer); 
 }
 },20)
-
-
-
 const soundAudio = document.createElement("audio");
 soundAudio.id = "audioT";
 soundAudio.loop = "loop";
 document.body.append(soundAudio);
-
 let aud = document.getElementById("audioT").muted;
 aud = new Audio("https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/music/menu.mp3");
-
-
 function playAudio(elem) {
   elem.play()
-  
 }
-
 function pauseAudio() {
   aud.pause();
 }
-
 const on = document.getElementById("soundOn");
 const off = document.getElementById("soundOff");
 on.style.display = "none";
 off.style.display = "block";
-
 function soundControl() {
   requestAnimationFrame(soundControl);
-  
   if (off.style.display === "block") {
     playAudio(aud);
   }
@@ -61,8 +43,6 @@ function soundControl() {
   }
 }
 soundControl();
-
-
 const bodyM = document.querySelector('body')
 function openFullscreen(elem) {
   if (elem.requestFullscreen) {
