@@ -1,676 +1,528 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    scroll-snap-stop: 0;
-    background-color: #CBE0FF;
-}
-#welcom{
-   
-    display: flex;
-    justify-content: center;
-
-    font-family: 'Bungee';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 530%;
-    color: rgb(241, 176, 12);
-    background: none;
-    z-index: 1;
-    width: 69%;
-}
-html,
-body {
-
-    overflow-y: hidden;
-}
-
-@font-face {
-    font-family: "Bungee";
-    src: url("https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/font/Bungee-Regular.ttf");
-}
-
-.contener {
-
-    display: flex;
-    justify-content: center;
-
-    border: none;
-    ;
-
-
-    width: 100%;
-    height: 100%;
-
-}
-
-h1 {
-    position: absolute;
-    display: block;
-
-    font-family: 'Bungee';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 530%;
-    color: rgb(187, 0, 255);
-    background: none;
-    z-index: 1;
-    width: 69%;
-}
-
-#menu_New_Game {
-    position: absolute;
-    width: 433px;
-    height: 96px;
-    top: 20%;
-
-
-
-    font-family: 'Bungee';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 80px;
-    line-height: 96px;
-    /* identical to box height */
-
-    text-align: center;
-    background: none;
-    color: #f9fd17;
-
-    border: none;
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    z-index: 1;
-}
-
-#menu_Сontinue_Game {
-    position: absolute;
-    width: 696px;
-    height: 96px;
-    top: 30%;
-
-    background: none;
-    font-family: 'Bungee';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 80px;
-    line-height: 96px;
-    /* identical to box height */
-
-    text-align: center;
-
-    color: #FF3541;
-
-    border: none;
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    z-index: 1;
-}
-
-#menu_World_Result {
-    position: absolute;
-
-
-    top: 41%;
-    background: none;
-    font-family: 'Bungee';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 80px;
-    line-height: 96px;
-    /* identical to box height */
-
-    text-align: center;
-
-    color: #6C84FF;
-
-    border: none;
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 2;
-    flex-grow: 0;
-    z-index: 1;
-}
-
-#menu_Setting {
-    position: absolute;
-    width: 427px;
-    height: 96px;
-    top: 52%;
-
-    height: 96px;
-    background: none;
-    font-family: 'Bungee';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 80px;
-    line-height: 96px;
-    /* identical to box height */
-
-    text-align: center;
-
-    color: #13a844;
-
-    border: none;
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 3;
-    flex-grow: 0;
-    z-index: 1;
-}
-
-#cloud1 {
-    position: absolute;
-    top: 2%;
-    left: 2%;
-    background: none;
-
-}
-
-#cloud2 {
-    position: absolute;
-    top: -2%;
-    background: none;
-    left: 40%;
-}
-
-#cloud3 {
-    position: absolute;
-    top: 6%;
-    left: 20%;
-    background: none;
-}
-
-#frame {
-    position: absolute;
-    display: block;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    background: none;
-}
-
-#tree1 {
-    position: absolute;
-    left: 3%;
-    bottom: 20%;
-    z-index: 0;
-    background: none;
-}
-
-#bush {
-    position: absolute;
-    left: 3%;
-    bottom: 20%;
-    background: none;
-}
-
-
-#bush2 {
-    position: absolute;
-    left: 83%;
-    bottom: 12%;
-    background: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-#soundOn,
-#soundOff {
-    position: absolute;
-
-    top: 1%;
-    right: 3%;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 490px) {
-
-    html,
-    body {
-        overflow-y: hidden;
+    box-sizing:border-box;
+    scroll-snap-stop:0;
+    background-color:#CBE0FF;
+    margin:0;
+    padding:0;
     }
-
+    
+    #welcom {
+    position:absolute;
+    font-family:Bungee;
+    font-style:normal;
+    font-weight:900;
+    font-size:530%;
+    color:#f1b00c;
+    background:none;
+    z-index:1;
+    width:100%;
+    text-align:center;
+    margin:10%;
+    }
+    
+    html,body {
+    overflow-y:hidden;
+    }
+    
+    @font-face {
+    font-family:'Bungee';
+    src:url(https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/font/Bungee-Regular.ttf);
+    }
+    
     .contener {
-
-        display: flex;
-        justify-content: center;
-
-        border: none;
-        ;
-
-
+    display:flex;
+    justify-content:center;
+    border:none;
+    width:100%;
+    height:100%;
     }
-
+    
     h1 {
-        position: absolute;
-
-        top: 20%;
-        display: block;
-        flex: none;
-        order: 1;
-        flex-grow: 0;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 48px;
-
-
-        color: rgb(187, 0, 255);
-        background: none;
-        z-index: 1;
+    justify-content:center;
+    top:40%;
+    display:block;
+    flex:none;
+    order:1;
+    flex-grow:0;
+    font-family:Bungee;
+    font-style:normal;
+    font-weight:400;
+    font-size:450%;
+    line-height:48px;
+    z-index:1;
+    background:none;
+    text-align:center;
     }
-
+    
     #menu_New_Game {
-        width: 225px;
-        height: 48px;
-
-        top: 36%;
-        font-family: 'Bungee';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 40px;
-        line-height: 48px;
-        /* identical to box height */
-
-        text-align: center;
-        color: #f9fd17;
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-        border: none;
-
-        /* Inside auto layout */
-
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-        z-index: 1;
+    position:absolute;
+    width:433px;
+    height:96px;
+    top:20%;
+    font-family:Bungee;
+    font-style:normal;
+    font-weight:400;
+    font-size:56px;
+    line-height:96px;
+    text-align:center;
+    background:none;
+    color:#f9fd17;
+    border:none;
+    flex:none;
+    order:0;
+    flex-grow:0;
+    z-index:1;
     }
-
+    
     #menu_Сontinue_Game {
-        position: absolute;
-        width: 358px;
-        height: 48px;
-
-        top: 45%;
-        font-family: 'Bungee';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 40px;
-        line-height: 48px;
-        /* identical to box height */
-
-        text-align: center;
-
-        color: #FF3541;
-
-
-        border: none;
-
-        /* Inside auto layout */
-
-        flex: none;
-        order: 1;
-        flex-grow: 0;
-        z-index: 1;
+    position:absolute;
+    width:489px;
+    height:96px;
+    top:30%;
+    background:none;
+    font-family:Bungee;
+    font-style:normal;
+    font-weight:400;
+    font-size:56px;
+    line-height:96px;
+    text-align:center;
+    color:#FF3541;
+    border:none;
+    flex:none;
+    order:1;
+    flex-grow:0;
+    z-index:1;
     }
-
+    
     #menu_World_Result {
-        position: absolute;
-        width: 300px;
-        height: 48px;
-        top: 55%;
-
-        font-family: 'Bungee';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 30px;
-        line-height: 48px;
-        /* identical to box height */
-
-        text-align: center;
-
-        color: #6C84FF;
-
-
-        border: none;
-
-        /* Inside auto layout */
-
-        flex: none;
-        order: 2;
-        flex-grow: 0;
-        z-index: 1;
+    position:absolute;
+    top:41%;
+    background:none;
+    font-family:Bungee;
+    font-style:normal;
+    font-weight:400;
+    font-size:56px;
+    line-height:96px;
+    text-align:center;
+    color:#6C84FF;
+    border:none;
+    flex:none;
+    order:2;
+    flex-grow:0;
+    z-index:1;
     }
-
+    
     #menu_Setting {
-        position: absolute;
-
-        top: 65%;
-        width: 227px;
-        height: 48px;
-
-        font-family: 'Bungee';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 40px;
-        line-height: 48px;
-        /* identical to box height */
-
-        text-align: center;
-
-        color: #13a844;
-
-        border: none;
-
-        /* Inside auto layout */
-
-        flex: none;
-        order: 3;
-        flex-grow: 0;
-        z-index: 1;
+    position:absolute;
+    width:427px;
+    top:52%;
+    height:96px;
+    background:none;
+    font-family:Bungee;
+    font-style:normal;
+    font-weight:400;
+    font-size:56px;
+    line-height:96px;
+    text-align:center;
+    color:#13a844;
+    border:none;
+    flex:none;
+    order:3;
+    flex-grow:0;
+    z-index:1;
     }
-
+    
     #cloud1 {
-        position: absolute;
-        top: 2%;
-        left: 2%;
-        background: none;
-
+    position:absolute;
+    top:2%;
+    left:2%;
+    background:none;
     }
-
+    
     #cloud2 {
-        position: absolute;
-        top: 5%;
-        background: none;
-        left: 41%;
+    position:absolute;
+    top:-2%;
+    background:none;
+    left:40%;
     }
-
+    
     #cloud3 {
-        position: absolute;
-        top: 10%;
-        left: 32%;
-        background: none;
+    position:absolute;
+    top:6%;
+    left:20%;
+    background:none;
     }
-
+    
     #frame {
-        position: fixed;
-
-
-        left: 0;
-
-        bottom: 0%;
-        background: none;
+    position:absolute;
+    display:block;
+    width:100%;
+    left:0;
+    bottom:0;
+    background:none;
     }
-
+    
     #tree1 {
-        position: fixed;
-        left: 3%;
-        bottom: 2%;
-
-        z-index: 0;
-        background: none;
+    position:absolute;
+    left:3%;
+    bottom:20%;
+    z-index:0;
+    background:none;
     }
-
+    
     #bush {
-        position: fixed;
-        left: 3%;
-        bottom: 2%;
-
-        background: none;
+    position:absolute;
+    left:3%;
+    bottom:20%;
+    background:none;
     }
-
-
+    
     #bush2 {
-        display: none;
-        background: none;
+    position:absolute;
+    left:83%;
+    bottom:12%;
+    background:none;
     }
-
-}
-
-
-@media only screen and (max-height: 490px) {
-
-    html,
-    body {
-        overflow-y: hidden;
+    
+    #soundOn,#soundOff {
+    position:absolute;
+    top:1%;
+    right:3%;
+    width:35px;
+    height:35px;
+    border-radius:50%;
     }
-
+    
+    @media only screen and (max-width: 490px ){
+    html,body {
+    overflow-y:hidden;
+    }
+    
     .contener {
-
-        display: flex;
-        justify-content: center;
-
-        border: none;
-        ;
-
-
+    display:flex;
+    justify-content:center;
+    border:none;
     }
-
+    
+    #welcom {
+    position:absolute;
+    font-family:Bungee;
+    font-style:normal;
+    font-weight:400;
+    font-size:55px;
+    line-height:48px;
+    color:#f1b00c;
+    background:none;
+    z-index:1;
+    width:100%;
+    text-align:center;
+    margin:10%;
+    }
+    
     h1 {
-        position: absolute;
-        width: 27%;
-        top: 20%;
-        display: block;
-        flex: none;
-        order: 1;
-        flex-grow: 0;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 48px;
-
-
-        color: rgb(187, 0, 255);
-        background: none;
-        z-index: 1;
+    position:absolute;
+    top:20%;
+    display:block;
+    flex:none;
+    order:1;
+    flex-grow:0;
+    font-family:Bungee;
+    font-style:normal;
+    font-weight:400;
+    font-size:40px;
+    line-height:48px;
+    text-align:center;
+    color:#b0f;
+    background:none;
+    z-index:1;
     }
-
+    
     #menu_New_Game {
-        width: 225px;
-        height: 48px;
-
-        top: 36%;
-        font-family: 'Bungee';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 40px;
-        line-height: 48px;
-        /* identical to box height */
-
-        text-align: center;
-        color: #f9fd17;
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-        border: none;
-
-        /* Inside auto layout */
-
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-        z-index: 1;
+    width:225px;
+    height:48px;
+    top:36%;
+    font-family:Bungee;
+    font-style:normal;
+    font-weight:400;
+    font-size:40px;
+    line-height:48px;
+    text-align:center;
+    color:#f9fd17;
+    border:none;
+    flex:none;
+    order:0;
+    flex-grow:0;
+    z-index:1;
     }
-
+    
     #menu_Сontinue_Game {
-        position: absolute;
-        width: 358px;
-        height: 48px;
-
-        top: 45%;
-        font-family: 'Bungee';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 40px;
-        line-height: 48px;
-        /* identical to box height */
-
-        text-align: center;
-
-        color: #FF3541;
-
-
-        border: none;
-
-        /* Inside auto layout */
-
-        flex: none;
-        order: 1;
-        flex-grow: 0;
-        z-index: 1;
+    position:absolute;
+    width:358px;
+    height:48px;
+    top:45%;
+    font-family:Bungee;
+    font-style:normal;
+    font-weight:400;
+    font-size:40px;
+    line-height:48px;
+    text-align:center;
+    color:#FF3541;
+    border:none;
+    flex:none;
+    order:1;
+    flex-grow:0;
+    z-index:1;
     }
-
+    
     #menu_World_Result {
-        position: absolute;
-        width: 300px;
-        height: 48px;
-        top: 55%;
-
-        font-family: 'Bungee';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 30px;
-        line-height: 48px;
-        /* identical to box height */
-
-        text-align: center;
-
-        color: #6C84FF;
-
-
-        border: none;
-
-        /* Inside auto layout */
-
-        flex: none;
-        order: 2;
-        flex-grow: 0;
-        z-index: 1;
+    position:absolute;
+    width:300px;
+    height:48px;
+    top:55%;
+    font-family:Bungee;
+    font-style:normal;
+    font-weight:400;
+    font-size:30px;
+    line-height:48px;
+    text-align:center;
+    color:#6C84FF;
+    border:none;
+    flex:none;
+    order:2;
+    flex-grow:0;
+    z-index:1;
     }
-
+    
     #menu_Setting {
-        position: absolute;
-
-        top: 65%;
-        width: 227px;
-        height: 48px;
-
-        font-family: 'Bungee';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 40px;
-        line-height: 48px;
-        /* identical to box height */
-
-        text-align: center;
-
-        color: #13a844;
-
-        border: none;
-
-        /* Inside auto layout */
-
-        flex: none;
-        order: 3;
-        flex-grow: 0;
-        z-index: 1;
+    position:absolute;
+    top:65%;
+    width:227px;
+    height:48px;
+    font-family:Bungee;
+    font-style:normal;
+    font-weight:400;
+    font-size:40px;
+    line-height:48px;
+    text-align:center;
+    color:#13a844;
+    border:none;
+    flex:none;
+    order:3;
+    flex-grow:0;
+    z-index:1;
     }
-
+    
     #cloud1 {
-        position: absolute;
-        top: 2%;
-        left: 2%;
-        background: none;
-
+    position:absolute;
+    top:2%;
+    left:2%;
+    background:none;
     }
-
+    
     #cloud2 {
-        position: absolute;
-        top: 5%;
-        background: none;
-        left: 41%;
+    position:absolute;
+    top:5%;
+    background:none;
+    left:41%;
     }
-
+    
     #cloud3 {
-        position: absolute;
-        top: 10%;
-        left: 32%;
-        background: none;
+    position:absolute;
+    top:10%;
+    left:32%;
+    background:none;
     }
-
+    
     #frame {
-        position: fixed;
-height: 10%;
-
-        left: 0;
-
-        bottom: 0%;
-        background: none;
+    position:fixed;
+    left:0;
+    bottom:0;
+    background:none;
     }
-
+    
     #tree1 {
-        position: fixed;
-        left: 3%;
-        bottom: 2%;
-
-        z-index: 0;
-        background: none;
+    position:fixed;
+    left:3%;
+    bottom:2%;
+    z-index:0;
+    background:none;
     }
-
+    
     #bush {
-        position: fixed;
-        left: 3%;
-        bottom: 2%;
-
-        background: none;
+    position:fixed;
+    left:3%;
+    bottom:2%;
+    background:none;
     }
-
-
+    
     #bush2 {
-        display: none;
-        background: none;
+    display:none;
+    background:none;
     }
-
-}
+    }
+    
+    @media only screen and (max-height: 790px ){
+    html,body {
+    overflow-y:hidden;
+    }
+    
+    .contener {
+    display:flex;
+    justify-content:center;
+    border:none;
+    }
+    
+    #welcom {
+    position:absolute;
+    font-family:Bungee;
+    font-style:normal;
+    font-weight:400;
+    font-size:55px;
+    line-height:48px;
+    color:#f1b00c;
+    background:none;
+    z-index:1;
+    width:100%;
+    margin:0;
+    }
+    
+    h1 {
+    position:absolute;
+    width:60%;
+    text-align:center;
+    top:0;
+    display:block;
+    font-family:Bungee;
+    font-style:normal;
+    font-weight:400;
+    font-size:40px;
+    line-height:48px;
+    color:#b0f;
+    background:none;
+    z-index:1;
+    }
+    
+    #menu_New_Game {
+    width:225px;
+    height:48px;
+    top:32%;
+    font-family:Bungee;
+    font-style:normal;
+    font-weight:400;
+    font-size:40px;
+    line-height:48px;
+    text-align:center;
+    color:#f9fd17;
+    border:none;
+    flex:none;
+    order:0;
+    flex-grow:0;
+    z-index:1;
+    }
+    
+    #menu_Сontinue_Game {
+    position:absolute;
+    width:358px;
+    height:48px;
+    top:45%;
+    font-family:Bungee;
+    font-style:normal;
+    font-weight:400;
+    font-size:40px;
+    line-height:48px;
+    text-align:center;
+    color:#FF3541;
+    border:none;
+    flex:none;
+    order:1;
+    flex-grow:0;
+    z-index:1;
+    }
+    
+    #menu_World_Result {
+    position:absolute;
+    width:300px;
+    height:48px;
+    top:58%;
+    font-family:Bungee;
+    font-style:normal;
+    font-weight:400;
+    font-size:30px;
+    line-height:48px;
+    text-align:center;
+    color:#6C84FF;
+    border:none;
+    flex:none;
+    order:2;
+    flex-grow:0;
+    z-index:1;
+    }
+    
+    #menu_Setting {
+    position:absolute;
+    top:70%;
+    width:227px;
+    height:48px;
+    font-family:Bungee;
+    font-style:normal;
+    font-weight:400;
+    font-size:40px;
+    line-height:48px;
+    text-align:center;
+    color:#13a844;
+    border:none;
+    flex:none;
+    order:3;
+    flex-grow:0;
+    z-index:1;
+    }
+    
+    #cloud1 {
+    position:absolute;
+    top:2%;
+    left:2%;
+    background:none;
+    }
+    
+    #cloud2 {
+    position:absolute;
+    top:5%;
+    background:none;
+    left:41%;
+    }
+    
+    #cloud3 {
+    position:absolute;
+    top:10%;
+    left:32%;
+    background:none;
+    }
+    
+    #frame {
+    position:fixed;
+    height:10%;
+    left:0;
+    bottom:0;
+    background:none;
+    }
+    
+    #tree1 {
+    position:fixed;
+    left:3%;
+    bottom:2%;
+    z-index:0;
+    background:none;
+    }
+    
+    #bush {
+    position:fixed;
+    left:3%;
+    bottom:2%;
+    background:none;
+    }
+    
+    #bush2 {
+    display:none;
+    background:none;
+    }
+    }
