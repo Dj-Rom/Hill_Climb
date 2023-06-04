@@ -1,6 +1,6 @@
 "use strict";
 
-const menuNewGame = document.getElementById("menu_New_Game")";
+const menuNewGame = document.getElementById("menu_New_Game");
 const menuСontinueGame = document.getElementById("menu_Сontinue_Game");
 const menuSetting = document.getElementById("menu_Setting");
 const menuWorldResult = document.getElementById("menu_World_Result");
