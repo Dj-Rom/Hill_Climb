@@ -66,7 +66,7 @@ const imgGaz = document.getElementById("imgGaz");
 
 imgGaz.addEventListener("touch", () => {
     event.preventDefault()
-        
+        window.navigator.vibrate(200)
        return kontrole.ArrowUp = 1
     }
 
@@ -80,7 +80,7 @@ imgGaz.addEventListener("touchend",
 const imgbr = document.getElementById("imgbr");
 
 imgbr.addEventListener("touch", () => {event.preventDefault()
-        
+        window.navigator.vibrate(200)
        return kontrole.ArrowDown = 1
     }
 
@@ -92,7 +92,7 @@ imgbr.addEventListener("touchend",
 );
 
 
-window.navigator.vibrate(200)
+
 
 
 
