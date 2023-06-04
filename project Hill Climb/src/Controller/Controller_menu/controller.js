@@ -47,15 +47,19 @@ location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/
 });
 
 menuNewGame.addEventListener("touch",() =>{event.preventDefault();
-location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/main_game_start.html"
+location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/main_game_start.html";
+ window.navigator.vibrate(200)
 });
 menuСontinueGame.addEventListener("touch",() =>{event.preventDefault();
-location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/main_game_start.html"
+location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/main_game_start.html";
+window.navigator.vibrate(200)
 })
 menuSetting.addEventListener("touch",() => {event.preventDefault();
-        location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_setting/seting.html"}
-);
+        location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_setting/seting.html";
+ window.navigator.vibrate(200)
+ });
 menuWorldResult.addEventListener("touch", () => {
         event.preventDefault();
-        location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_result/result.html"
+        location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_result/result.html";
+    window.navigator.vibrate(200)
 });
