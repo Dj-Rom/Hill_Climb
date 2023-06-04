@@ -367,9 +367,8 @@ function game() {
     }
 
     function restart() {
-       return  setTimeout(
-        location ="https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";),500)
-       
+       return  setTimeout(()=>{
+        location ="https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html "},500)
     }
     function musicFonAndGaz() {
         if (kontrole.ArrowUp === 1) {
