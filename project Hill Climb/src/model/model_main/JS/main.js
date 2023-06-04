@@ -207,7 +207,7 @@ function game() {
 
         earthFunc(cvs.height);
 
-        if (player.x < cvs.width / 4.9 || t < 0) {
+    if (player.x < cvs.width / 2 - 1 || t < 0) {
             fon.pause();
             pauseAudio(fon);
             restart();
@@ -365,10 +365,8 @@ function game() {
     }
 
     function restart() {
-        t = false;
-        speed = 0;
-        playing = true;
-        kontrole = { ArrowUp: 0, ArrowDown: 0, ArrowLeft: 0, ArrowRight: 0 };
+        location =
+        "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";
     }
     function musicFonAndGaz() {
         if (kontrole.ArrowUp === 1) {
