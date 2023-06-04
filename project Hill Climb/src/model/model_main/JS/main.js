@@ -9,7 +9,7 @@ function mobileKontrole() {
         ) &&
         window.orientation == 0
     ) {
-        const user = confirm(&#8404; "You need to rotate your device!" &#8405;);
+        const user = confirm("You need to rotate your device!");
         user ? window.location.reload(true) : window.location.reload(true);
     } else {
         game();
