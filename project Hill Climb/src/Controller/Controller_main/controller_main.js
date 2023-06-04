@@ -33,8 +33,30 @@ document.addEventListener("keyup", () => {
     }
 });
 
+let timer = null;
+// На первое срабатывание реагируем всегда
+let oldAngle = 1000;
+window.addEventListener('deviceorientation', function(event) {
+  let angle = event.beta;
+  let delta = Math.abs(angle - oldAngle);
+  oldAngle = angle;
+  if (delta < 2)  // Если уголо наклона изменился не сильно
+    return;  // выходим
+  if (timer)
+    clearTimeout(timer);
+  timer = setTimeout(function() {
+    timer = null;
+    if (angle > 30) {
+       kontrole.ArrowRight = 1;
+        kontrole.ArrowLeft = 0
+    } else if (angle < -30) {
+        kontrole.ArrowRight = 0;
+      kontrole.ArrowLeft = 1;
+    }
+  }, 500);
+});
 // window.addEventListener("deviceorientation", function (event) {
-event.preventDefault()
+
 //     if (event.beta > "3") {
 //         kontrole.ArrowRight = 1;
 //     } else if (event.beta < "-3") {
