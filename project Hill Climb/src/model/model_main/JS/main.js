@@ -210,7 +210,9 @@ function game() {
   if (player.rSpeed === 1 || t < 0) {
             fon.pause();
             pauseAudio(fon);
+        const secGame = secGame
             restart();
+      return    secGame
         }
         requestAnimationFrame(loop);
 
@@ -365,9 +367,9 @@ function game() {
     }
 
     function restart() {
+       return  setTimeout(
+        location ="https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";),500)
        
-        location ="https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";
-        return
     }
     function musicFonAndGaz() {
         if (kontrole.ArrowUp === 1) {
