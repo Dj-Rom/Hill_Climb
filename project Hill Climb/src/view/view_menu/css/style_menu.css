@@ -55,6 +55,7 @@
     }
     
     #menu_New_Game {
+          cursor: pointer;
     position:absolute;
     width:433px;
     height:96px;
@@ -75,6 +76,7 @@
     }
     
     #menu_Сontinue_Game {
+          cursor: pointer;
     position:absolute;
     width:489px;
     height:96px;
@@ -95,6 +97,7 @@
     }
     
     #menu_World_Result {
+          cursor: pointer;
     position:absolute;
     top:41%;
     background:none;
@@ -113,6 +116,7 @@
     }
     
     #menu_Setting {
+          cursor: pointer;
     position:absolute;
     width:427px;
     top:52%;
