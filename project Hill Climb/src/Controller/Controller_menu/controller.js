@@ -6,6 +6,7 @@ const menuWorldResult = document.getElementById("menu_World_Result");
 const on = document.querySelector("#soundOn");
 const off = document.querySelector("#soundOff");
 
+
 on.addEventListener("click", () => {
     on.style.display = "none";
     off.style.display = "block";
