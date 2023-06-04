@@ -359,14 +359,15 @@ function game() {
     function final() {
         const finalPng = new Image();
         finalPng.src =
-            "/Hill_Climb/project Hill Climb/src/view/view_main/png/fin.png";
+            " https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/fin.png";
 
         ctx.drawImage(finalPng, cvs.width / 2, cvs.height / 6);
     }
 
     function restart() {
-        location =
-        "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";
+       
+        location ="https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";
+        return
     }
     function musicFonAndGaz() {
         if (kontrole.ArrowUp === 1) {
