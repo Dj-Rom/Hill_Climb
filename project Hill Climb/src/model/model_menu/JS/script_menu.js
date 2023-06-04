@@ -13,7 +13,7 @@ let contener = document.querySelector(".contener");
  contener.style.opacity = .01
 let timer = setInterval(()=>{
   contener.style.opacity *=1.07
-  welcomGet.style.opacity -=0.00899999;
+  welcomGet.style.opacity -=0.00999999;
 if(welcomGet.style.opacity <= 0.00 && contener.style.opacity > 0.90 ){playAudio(aud); welcomGet.style.display = "none"; clearInterval(timer); 
 }
 },20)
