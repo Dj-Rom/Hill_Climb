@@ -1,5 +1,4 @@
 "use strict";
-
 const menuNewGame = document.getElementById("menu_New_Game");
 const menuСontinueGame = document.getElementById("menu_Сontinue_Game");
 const menuSetting = document.getElementById("menu_Setting");
