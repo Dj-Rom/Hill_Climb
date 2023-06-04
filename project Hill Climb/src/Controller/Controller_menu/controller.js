@@ -17,12 +17,12 @@ off.addEventListener("click", () => {
     off.style.display = "none";
     on.style.display = "block";
 });
-on.addEventListener("touchstart", () => {
+on.addEventListener("touch", () => {
     event.preventDefault()
     on.style.display = "none";
     off.style.display = "block";
 });
-off.addEventListener("touchstart", () => {
+off.addEventListener("touch", () => {
    event.preventDefault()
     off.style.display = "none";
     on.style.display = "block";
@@ -55,25 +55,25 @@ menuWorldResult.addEventListener(
 );
 
 menuNewGame.addEventListener(
-    "touchstart",
+    "touch",
     () =>
     ( event.preventDefault() location =
         "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/main_game_start.html")
 );
 menuСontinueGame.addEventListener(
-    "touchstart",
+    "touch",
     () =>
     ( event.preventDefault() location =
         "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/main_game_start.html")
 );
 menuSetting.addEventListener(
-    "touchstart",
+    "touch",
     () =>
     ( event.preventDefault() location =
         "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_setting/seting.html")
 );
 menuWorldResult.addEventListener(
-    "touchstart",
+    "touch",
     () =>
     ( event.preventDefault() location =
         "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_result/result.html")
