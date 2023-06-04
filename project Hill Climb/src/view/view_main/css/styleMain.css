@@ -42,7 +42,18 @@ body {
         display: block
     }
 }
-
+#imgGaz{
+    position: absolute;
+    bottom: -5%;
+    right: 2%;
+    
+}
+#imgbr{
+    position: absolute;
+    bottom: -5%;
+left: 2%;
+    
+}
 #visualGameTime {
     position: absolute;
     top: 5%;
