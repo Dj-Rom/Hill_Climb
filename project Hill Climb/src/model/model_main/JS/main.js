@@ -210,7 +210,7 @@ function game() {
   if (player.rSpeed === 1 || t < 0) {
             fon.pause();
             pauseAudio(fon);
-        const secGame = secGame
+
             restart();
       return    secGame
         }
