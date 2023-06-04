@@ -40,9 +40,7 @@ body {
 }
 
 @media only screen and (max-device-width : 1200px) and (orientation : portrait) {
-    alert {
-        display: block
-    }
+   
 }
 #imgGaz{
     position: absolute;
@@ -62,7 +60,7 @@ left: 2%;
     position: absolute;
     top: 5%;
     left: 45%;
-    font-family: 'Bungee';
+    font-family: "Bungee";
     font-style: normal;
     font-weight: 900;
     font-size: 530%;
