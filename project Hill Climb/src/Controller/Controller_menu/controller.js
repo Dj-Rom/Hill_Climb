@@ -1,11 +1,11 @@
 "use strict";
 
-const menuNewGame = document.getElementById("menu_New_Game").style.cursor="pointer";
-const menuСontinueGame = document.getElementById("menu_Сontinue_Game").style.cursor="pointer";
-const menuSetting = document.getElementById("menu_Setting").style.cursor="pointer";
-const menuWorldResult = document.getElementById("menu_World_Result").style.cursor="pointer";
-const on = document.querySelector("#soundOn").style.cursor="pointer";
-const off = document.querySelector("#soundOff").style.cursor="pointer";
+const menuNewGame = document.getElementById("menu_New_Game")";
+const menuСontinueGame = document.getElementById("menu_Сontinue_Game");
+const menuSetting = document.getElementById("menu_Setting");
+const menuWorldResult = document.getElementById("menu_World_Result");
+const on = document.querySelector("#soundOn");
+const off = document.querySelector("#soundOff");
 
 on.addEventListener("click", () => {
     on.style.display = "none";
