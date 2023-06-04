@@ -207,7 +207,7 @@ function game() {
 
         earthFunc(cvs.height);
 
-    if (player.x < cvs.width / 2 - 1 || t < 0) {
+  if (player.rSpeed === 1 || t < 0) {
             fon.pause();
             pauseAudio(fon);
             restart();
