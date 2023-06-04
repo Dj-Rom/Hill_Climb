@@ -1,6 +1,6 @@
-
 import { kontrole } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/JS/main.js";
 
+console.log(kontrole);
 document.addEventListener("keydown", () => {
     event.preventDefault();
     if (event.key === "ArrowRight") {
@@ -33,25 +33,28 @@ document.addEventListener("keyup", () => {
 });
 
 window.addEventListener("deviceorientation", function (event) {
-    if (event.beta > "100") {
+    if (event.beta > "3") {
         kontrole.ArrowRight = 1;
-    } else if (event.beta < "80") {
+    } else if (event.beta < "-3") {
         kontrole.ArrowLeft = 1;
     }
 });
 
-var el = document.getElementById("canvas");
-el.addEventListener(
-    "touchstart",
-    () => {
-        kontrole.ArrowUp = 1;
-    },
-    false
+
+document.addEventListener("touchstart", () => {
+        
+       return kontrole.ArrowUp = 1, console.log(kontrole);
+    }
+
 );
-el.addEventListener(
-    "touchend",
+document.addEventListener("touchend",
     () => {
         kontrole.ArrowUp = 0;
-    },
-    false
+    }
 );
+window.navigator.vibrate(200)
+
+
+
+
+
