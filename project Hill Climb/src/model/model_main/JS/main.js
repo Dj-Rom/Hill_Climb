@@ -380,26 +380,27 @@ function game() {
     
     
 
-    
+    object.MozTransform;
+object.webkitTransform;
     
     function musicFonAndGaz() {
         if (kontrole.ArrowUp === 1) {
-            imgGazM.style.transform = "rotateX(47deg)"; imgGazM.style.webkitTransform = "rotateX(47deg)" ; imgGazM.style.mozTransform = "rotateX(47deg)"
+            imgGazM.style.transform = "rotateX(47deg)"; imgGazM.style.webkitTransform = "rotateX(47deg)" ; imgGazM.style.MozTransform = "rotateX(47deg)"
             
             playAudio(fon);
             playAudio(gaz);
         } else {
-            imgGazM.style.transform = "rotateX(17deg)" ; imgGazM.style.webkitTransform = "rotateX(17deg)" ; imgGazM.style.mozTransform = "rotateX(17deg)"
+            imgGazM.style.transform = "rotateX(17deg)" ; imgGazM.style.webkitTransform = "rotateX(17deg)" ; imgGazM.style.MozTransform = "rotateX(17deg)"
             
             pauseAudio(gaz);
         }
         if (kontrole.ArrowDown === 1) {
-            imgbrM.style.transform = "rotateX(47deg) ; imgbrM.style.webkitTransform = "rotateX(47deg)" ; imgbrM.style.mozTransform = "rotateX(47deg)";
+            imgbrM.style.transform = "rotateX(47deg)" ; imgbrM.style.webkitTransform = "rotateX(47deg)" ; imgbrM.style.MozTransform = "rotateX(47deg)";
             playAudio(fon);
             pauseAudio(gaz)
             playAudio(br);
         } else {
-            imgbrM.style.transform = "rotateX(17deg)" ; imgbrM.style.webkitTransform: = "rotateX(17deg)" ; imgbrM.style.mozTransform = "rotateX(17deg)";
+            imgbrM.style.transform = "rotateX(17deg)" ; imgbrM.style.webkitTransform: = "rotateX(17deg)" ; imgbrM.style.MozTransform = "rotateX(17deg)";
           
             pauseAudio(br);
         } return
