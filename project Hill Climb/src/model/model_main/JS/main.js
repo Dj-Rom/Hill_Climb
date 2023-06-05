@@ -42,8 +42,8 @@ function game() {
    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
         navigator.userAgent
     )) {
-        cvs.width = window.screen.widthWidth;
-        cvs.height = window.screen.widthHeight;
+        cvs.width = window.screen.width;
+        cvs.height = window.screen.height;
         imgGazM.style.display = "block"
         imgbrM.style.display = "block"
     }else{cvs.width = window.innerWidth;
