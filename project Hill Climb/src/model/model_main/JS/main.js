@@ -400,7 +400,7 @@ object.webkitTransform;
             pauseAudio(gaz)
             playAudio(br);
         } else {
-            imgbrM.style.transform = "rotateX(17deg)" ; imgbrM.style.webkitTransform: = "rotateX(17deg)" ; imgbrM.style.MozTransform = "rotateX(17deg)";
+            imgbrM.style.transform = "rotateX(17deg)" ; imgbrM.style.webkitTransform = "rotateX(17deg)" ; imgbrM.style.MozTransform = "rotateX(17deg)";
           
             pauseAudio(br);
         } return
