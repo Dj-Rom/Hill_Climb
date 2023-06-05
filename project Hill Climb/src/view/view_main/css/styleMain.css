@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
      width: 100%;
-   
+    -webkit-user-drag: none;
 height: 100%
 }
 @font-face {
