@@ -43,7 +43,7 @@ body {
     top: 5px;
 }
 
-@media only screen and (max-device-width : 1200px) and (orientation : portrait) {
+@media only screen and (max-device-width : 2200px) and (orientation : portrait) {
    
 }
 #imgGaz{
