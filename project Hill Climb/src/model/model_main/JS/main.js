@@ -1,6 +1,7 @@
 "use strict";
 export let kontrole = { ArrowUp: 0, ArrowDown: 0, ArrowLeft: 0, ArrowRight: 0 };
 window.onload = mobileKontrole();
+screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 
 function mobileKontrole() {
     if (
