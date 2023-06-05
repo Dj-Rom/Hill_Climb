@@ -31,6 +31,8 @@ function game() {
     imgGaz.style.position = "absolute";
     imgGaz.style.right = "4%";
     imgGaz.style.bottom = "4%";
+    imgGaz.style.zIndex= "10";
+    imgGaz.style.opacity = "0.56";
     document.body.append(imgGaz)
 
     const imgbr = document.createElement("img");
@@ -40,6 +42,10 @@ function game() {
     imgbr.style.position = "absolute";
     imgbr.style.left = "4%";
     imgbr.style.bottom = "4%";
+    imgbr.style.zIndex= "10";
+    imgbr.style.opacity = "0.56";
+
+       
     document.body.append(imgbr)
     const imgGazM = document.getElementById("imgGaz");
     const imgbrM = document.getElementById("imgbr");
