@@ -2,7 +2,7 @@ window.addEventListener("load",()=>{
 const welcom = document.createElement("div")
 welcom.id = "welcom";
 welcom.innerText = "Student project Hill Climb"
-welcom.style.opacity = 0.99
+welcom.style.opacity = 0.98
 document.body.append(welcom)
 let contener = document.querySelector(".contener");
  let welcomGet = document.querySelector('#welcom')
