@@ -35,8 +35,7 @@ function game() {
     imgbr.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/br.png";
     imgbr.style.display = "none"
   
-    const imgGazM = document.getElementById("imgGaz");
-    const imgbrM = document.getElementById("imgbr");
+   
     const cvs = document.querySelector("#canvas");
     const ctx = cvs.getContext("2d");
    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
@@ -44,6 +43,8 @@ function game() {
     )) {
            document.body.append(imgGaz)
     document.body.append(imgbr)
+        const imgGazM = document.getElementById("imgGaz");
+    const imgbrM = document.getElementById("imgbr");
         cvs.width = window.clientWidth;
         cvs.height = window.clientHeight;
         imgGazM.style.display = "block"
