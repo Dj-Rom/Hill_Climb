@@ -372,19 +372,23 @@ function game() {
     function musicFonAndGaz() {
         if (kontrole.ArrowUp === 1) {
             imgGazM.style.transform = "rotateX(47deg)";
+            imgGazM.style.-webkit-transform = "rotateX(47deg)";
             playAudio(fon);
             playAudio(gaz);
         } else {
             imgGazM.style.transform = "rotateX(17deg)";
+            imgGazM.style.-webkit-transform = "rotateX(17deg)";
             pauseAudio(gaz);
         }
         if (kontrole.ArrowDown === 1) {
             imgbrM.style.transform = "rotateX(47deg)";
+            imgbrM.style.-webkit-transform = "rotateX(47deg)";
             playAudio(fon);
             pauseAudio(gaz)
             playAudio(br);
         } else {
             imgbrM.style.transform = "rotateX(17deg)";
+            imgbrM.style.-webkit-transform = "rotateX(17deg)";
             pauseAudio(br);
         } return
     }
