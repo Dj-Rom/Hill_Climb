@@ -34,14 +34,14 @@ function game() {
     imgbr.id = "imgbr"
     imgbr.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/br.png";
     imgbr.style.display = "none"
-  
-   
+    document.body.append(imgGaz)
+    document.body.append(imgbr)
+   const imgGazM = document.getElementById("imgGaz");
+   const imgbrM = document.getElementById("imgbr");
     const cvs = document.querySelector("#canvas");
     const ctx = cvs.getContext("2d");
-       document.body.append(imgGaz)
-    document.body.append(imgbr)
-        const imgGazM = document.getElementById("imgGaz");
-    const imgbrM = document.getElementById("imgbr");
+       
+        
    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
         navigator.userAgent
     )) {
@@ -181,7 +181,7 @@ function game() {
         if (secGame < 30000) {
             const perc = Math.round(secGame / 30000 * 100);
             document.getElementById('IProgressPers').style.width = perc + "%";
-            console.log(perc);
+          
         }
 
         speed -= (speed - (kontrole.ArrowUp - kontrole.ArrowDown)) * 0.009;
