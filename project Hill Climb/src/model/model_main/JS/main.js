@@ -26,13 +26,13 @@ function game() {
 
    const imgGaz = document.createElement("img");
     imgGaz.id = "imgGaz"
-    imgGaz.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/gaz.png";
+    imgGaz.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/forward.svg";
     imgGaz.style.display = "none"
     document.body.append(imgGaz)
 
     const imgbr = document.createElement("img");
     imgbr.id = "imgbr"
-    imgbr.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/br.png";
+    imgbr.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/back.svg";
     imgbr.style.display = "none"
     document.body.append(imgbr)
     const imgGazM = document.getElementById("imgGaz");
