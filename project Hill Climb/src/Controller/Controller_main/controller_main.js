@@ -83,11 +83,7 @@ imgGaz.addEventListener("click", () => {
     }
 
 );
-imgGaz.addEventListener("touchend",
-    () => {event.preventDefault()
-        kontrole.ArrowUp = 0;
-    }
-);
+
 
 
 const imgbr = document.getElementById("imgbr");
@@ -110,11 +106,7 @@ imgbr.addEventListener("click", () => {event.preventDefault()
     }
 
 );
-imgbr.addEventListener("touchend",
-    () => {event.preventDefault()
-        kontrole.ArrowDown = 0;
-    }
-);
+
 
 
 
