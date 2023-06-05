@@ -362,11 +362,13 @@ function game() {
     launchFullScreen(window);
     function launchFullScreen(element) {
         if (element.requestFullScreen) {
-            element.requestFullScreen();
+            element.requestFullScreen("hide");
         } else if (element.mozRequestFullScreen) {
-            element.mozRequestFullScreen();
+            element.mozRequestFullScreen("hide");
         } else if (element.webkitRequestFullScreen) {
-            element.webkitRequestFullScreen();
+            element.webkitRequestFullScreen("hide");
+        } else if (element.msRequestFullScreen) {
+            element.msRequestFullScreen("hide");
         }
     }
 
