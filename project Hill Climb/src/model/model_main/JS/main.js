@@ -28,13 +28,13 @@ function game() {
     imgGaz.id = "imgGaz"
     imgGaz.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/gaz.png";
     imgGaz.style.display = "none"
-    document.body.append(imgGaz)
+  
 
     const imgbr = document.createElement("img");
     imgbr.id = "imgbr"
     imgbr.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/br.png";
     imgbr.style.display = "none"
-    document.body.append(imgbr)
+  
     const imgGazM = document.getElementById("imgGaz");
     const imgbrM = document.getElementById("imgbr");
     const cvs = document.querySelector("#canvas");
@@ -42,6 +42,8 @@ function game() {
    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
         navigator.userAgent
     )) {
+           document.body.append(imgGaz)
+    document.body.append(imgbr)
         cvs.width = window.clientWidth;
         cvs.height = window.clientHeight;
         imgGazM.style.display = "block"
