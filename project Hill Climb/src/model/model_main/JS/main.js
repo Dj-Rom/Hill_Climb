@@ -38,13 +38,14 @@ function game() {
    
     const cvs = document.querySelector("#canvas");
     const ctx = cvs.getContext("2d");
-   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-        navigator.userAgent
-    )) {
-           document.body.append(imgGaz)
+       document.body.append(imgGaz)
     document.body.append(imgbr)
         const imgGazM = document.getElementById("imgGaz");
     const imgbrM = document.getElementById("imgbr");
+   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+        navigator.userAgent
+    )) {
+        
         cvs.width = window.clientWidth;
         cvs.height = window.clientHeight;
         imgGazM.style.display = "block"
