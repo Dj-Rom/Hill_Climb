@@ -37,7 +37,8 @@ function game() {
     document.body.append(imgbr)
     const imgGazM = document.getElementById("imgGaz");
     const imgbrM = document.getElementById("imgbr");
-
+    const cvs = document.querySelector("#canvas");
+    const ctx = cvs.getContext("2d");
    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
         navigator.userAgent
     )) {
@@ -61,9 +62,7 @@ function game() {
 
     }
 
-    const cvs = document.querySelector("#canvas");
-   
-    const ctx = cvs.getContext("2d");
+    
     cloud()
     let t = 0;
     let speed = 0;
