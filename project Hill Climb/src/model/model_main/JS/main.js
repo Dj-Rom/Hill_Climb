@@ -38,7 +38,7 @@ function game() {
     imgbr.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/br.png";
     imgbr.style.display = "none"
     imgbr.style.position = "absolute";
-    imgbr.style.right = "4%";
+    imgbr.style.left = "4%";
     imgbr.style.bottom = "4%";
     document.body.append(imgbr)
     const imgGazM = document.getElementById("imgGaz");
