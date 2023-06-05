@@ -380,8 +380,6 @@ function game() {
     
     
 
-    object.MozTransform;
-object.webkitTransform;
     
     function musicFonAndGaz() {
         if (kontrole.ArrowUp === 1) {
