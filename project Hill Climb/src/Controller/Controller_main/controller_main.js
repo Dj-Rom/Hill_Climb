@@ -68,19 +68,18 @@ imgGaz.addEventListener("touchstart", () => {
     event.preventDefault()
         window.navigator.vibrate(200)
        return kontrole.ArrowUp = 1
-    }
-
+    },false
 );
 imgGaz.addEventListener("touchend",
     () => {event.preventDefault()
         kontrole.ArrowUp = 0;
-    }
+    },false
 );
 imgGaz.addEventListener("click", () => {
     event.preventDefault()
         window.navigator.vibrate(200)
        return kontrole.ArrowUp = 1
-    }
+    },false
 
 );
 
@@ -91,19 +90,19 @@ const imgbr = document.getElementById("imgbr");
 imgbr.addEventListener("touchstart", () => {event.preventDefault()
         window.navigator.vibrate(200)
        return kontrole.ArrowDown = 1
-    }
+    },false
 
 );
 imgbr.addEventListener("touchend",
     () => {event.preventDefault()
         kontrole.ArrowDown = 0;
-    }
+    },false
 );
 
 imgbr.addEventListener("click", () => {event.preventDefault()
         window.navigator.vibrate(200)
        return kontrole.ArrowDown = 1
-    }
+    },false
 
 );
 
