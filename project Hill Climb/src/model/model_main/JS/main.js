@@ -38,15 +38,16 @@ function game() {
     const imgGazM = document.getElementById("imgGaz");
     const imgbrM = document.getElementById("imgbr");
 
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
         navigator.userAgent
     )) {
-
+        cvs.width = window.screen.widthWidth;
+        cvs.height = window.screen.widthHeight;
         imgGazM.style.display = "block"
         imgbrM.style.display = "block"
+    }else{cvs.width = window.innerWidth;
+        cvs.height = window.innerHeight;}
 
-
-    }
 
     let secGame = 0;
     const visualGameTime = document.createElement('div');
@@ -61,8 +62,7 @@ function game() {
     }
 
     const cvs = document.querySelector("#canvas");
-    cvs.width = window.innerWidth;
-    cvs.height = window.innerHeight;
+   
     const ctx = cvs.getContext("2d");
     cloud()
     let t = 0;
