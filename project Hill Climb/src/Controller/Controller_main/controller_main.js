@@ -76,6 +76,19 @@ imgGaz.addEventListener("touchend",
         kontrole.ArrowUp = 0;
     }
 );
+imgGaz.addEventListener("click", () => {
+    event.preventDefault()
+        window.navigator.vibrate(200)
+       return kontrole.ArrowUp = 1
+    }
+
+);
+imgGaz.addEventListener("touchend",
+    () => {event.preventDefault()
+        kontrole.ArrowUp = 0;
+    }
+);
+
 
 const imgbr = document.getElementById("imgbr");
 
@@ -91,7 +104,17 @@ imgbr.addEventListener("touchend",
     }
 );
 
+imgbr.addEventListener("click", () => {event.preventDefault()
+        window.navigator.vibrate(200)
+       return kontrole.ArrowDown = 1
+    }
 
+);
+imgbr.addEventListener("touchend",
+    () => {event.preventDefault()
+        kontrole.ArrowDown = 0;
+    }
+);
 
 
 
