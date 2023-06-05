@@ -24,16 +24,22 @@ window.onscroll = function () {
 
 function game() {
 
-   const imgGaz = document.createElement("img");
+     const imgGaz = document.createElement("img");
     imgGaz.id = "imgGaz"
-    imgGaz.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/forward (1).png";
-    imgGaz.style.display = "none"
+    imgGaz.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/gaz.png";
+    imgGaz.style.display = "none";
+    imgGaz.style.position = "absolute";
+    imgGaz.style.right = "4%";
+    imgGaz.style.bottom = "4%";
     document.body.append(imgGaz)
 
     const imgbr = document.createElement("img");
     imgbr.id = "imgbr"
-    imgbr.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/back.png";
+    imgbr.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/br.png";
     imgbr.style.display = "none"
+    imgbr.style.position = "absolute";
+    imgbr.style.right = "4%";
+    imgbr.style.bottom = "4%";
     document.body.append(imgbr)
     const imgGazM = document.getElementById("imgGaz");
     const imgbrM = document.getElementById("imgbr");
