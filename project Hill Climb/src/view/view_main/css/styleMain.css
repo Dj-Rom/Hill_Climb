@@ -44,7 +44,19 @@ body {
     z-index: 2;
     top: 5px;
 }
-
+#visualGameTime {
+    position: absolute;
+    top: 5%;
+    left: 45%;
+    height: auto;
+    width: auto;
+    font-family: "Bungee";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 430%;
+    color: rgb(241, 176, 12);
+    background: none;
+    z-index: 1;
 @media only screen and (max-device-width : 2200px) and (orientation : portrait) {
    
 }
@@ -72,10 +84,12 @@ left: 2%;
     position: absolute;
     top: 5%;
     left: 45%;
+    height: auto;
+    width: auto;
     font-family: "Bungee";
     font-style: normal;
     font-weight: 900;
-    font-size: 530%;
+    font-size: 230%;
     color: rgb(241, 176, 12);
     background: none;
     z-index: 1;
