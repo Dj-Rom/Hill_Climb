@@ -2,7 +2,7 @@ let forward1 = document.getElementById('Forward');
 let B_forward1 = document.getElementById('B_Forward');
 let back1 = document.getElementById('back');
 let B_Back1 = document.getElementById('B_Back');
-const settingBtn = document.getElementById('settingBtn')
+const settingBtn1 = document.getElementById('settingBtn')
 let settingGame = {
     forwardKey: 'ArrowUp',
     backKey: 'ArrowDown',
@@ -38,7 +38,7 @@ B_Back1.addEventListener('keydown', () => { event.preventDefault(); this.value =
 
 
 
-settingBtn.addEventListener('click', () => {
+settingBtn1.addEventListener('click', () => {
     event.preventDefault();
     settingGame.forwardKey = forward1.value
     settingGame.backKey = B_forward1.value
@@ -50,8 +50,7 @@ settingBtn.addEventListener('click', () => {
     B_forward1.value = settingGame.backKey
     back1.value = settingGame.B_forwardKey
     B_Back1.value = settingGame.B_BackKey
-
-    setTimeout(() => { location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html" }, 2000)
+    location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html" 
 
 
 })
