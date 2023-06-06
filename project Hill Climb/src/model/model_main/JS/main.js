@@ -361,7 +361,7 @@ function game() {
     }
     
     
-    var html = document.documentElement;
+    let html = document.documentElement;
 fullScreen(html);
 function fullScreen(element) {
   if(element.requestFullscreen) {
@@ -372,7 +372,6 @@ function fullScreen(element) {
     element.mozRequestFullScreen();
   }
 }
-    const html = document.documentElement;
 fullScreen(html);
     function final() {
         const finalPng = new Image();
