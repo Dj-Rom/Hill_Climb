@@ -2,7 +2,7 @@ let forward1 = document.getElementById('Forward');
 let Bforward1 = document.getElementById('B_Forward');
 let back1 = document.getElementById('back');
 let BBack1 = document.getElementById('B_Back');
-const settingBtn1 = document.getElementById('settingBtn')
+let settingBtn1 = document.getElementById('settingBtn')
 let settingGame = {
     forwardKey: 'ArrowUp',
     backKey: 'ArrowDown',
