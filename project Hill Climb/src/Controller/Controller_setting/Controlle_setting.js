@@ -6,8 +6,8 @@ const settingBtn1 = document.getElementById('settingBtn')
 let settingGame = {
     forwardKey: 'ArrowUp',
     backKey: 'ArrowDown',
-    B_forwardKey: 'ArrowRight',
-    B_BackKey: 'ArrowLeft'
+    BforwardKey: 'ArrowRight',
+    BBackKey: 'ArrowLeft'
 }
 
 
