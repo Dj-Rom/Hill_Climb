@@ -359,19 +359,21 @@ function game() {
             player.draw();
         }
     }
-    launchFullScreen(window);
-    function launchFullScreen(element) {
-        if (element.requestFullScreen) {
-            element.requestFullScreen("hide");
-        } else if (element.mozRequestFullScreen) {
-            element.mozRequestFullScreen("hide");
-        } else if (element.webkitRequestFullScreen) {
-            element.webkitRequestFullScreen("hide");
-        } else if (element.msRequestFullScreen) {
-            element.msRequestFullScreen("hide");
-        }
-    }
-
+    
+    
+    var html = document.documentElement;
+fullScreen(html);
+function fullScreen(element) {
+  if(element.requestFullscreen) {
+    element.requestFullscreen();
+  } else if(element.webkitrequestFullscreen) {
+    element.webkitRequestFullscreen();
+  } else if(element.mozRequestFullscreen) {
+    element.mozRequestFullScreen();
+  }
+}
+    const html = document.documentElement;
+fullScreen(html);
     function final() {
         const finalPng = new Image();
         finalPng.src =
