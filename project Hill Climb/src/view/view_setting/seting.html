@@ -1,1 +1,30 @@
-<h1>seting.html</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../view_setting/css/style_setting.css">
+    <title>Setting</title>
+</head>
+<body>
+    
+    <div class="contener">
+        <h2>setting</h2>
+        
+            <form action="">
+                
+                <label for="Forward" id="settingForward" >Forward</label><br><input type="text"class="inp" name="Forward" id="Forward" maxlength="1">
+                <br><label for="back" id="settingBack" >back</label><br><input type="text"class="inp" name="back" id="back" maxlength="1">
+                <br><label for="B_ForwardBForward" id="settingBForward" >Balance Forward</label><br><input class="inp" type="text" name="B_Forward" id="B_Forward"  maxlength="1"><br>
+               <label for="B_Back" id="settingBBack" >Balance Back</label><br><input type="text"class="inp" name="B_Back" id="B_Back"  maxlength="1"><br>
+               <br><br><br><input type="submit"  id="settingBtn" value="SAVE">
+            </form>
+        </div>
+   
+    <script src="../../model/model_setting/model_setting.js" defer></script>
+    <script src="../../Controller/Controller_setting/Controlle_setting.js"defer></script>
+</body>
+</html>
