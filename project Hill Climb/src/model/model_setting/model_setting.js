@@ -20,8 +20,8 @@ B_Back.value = settingGame.B_BackKey
 }else{
     let data = JSON.parse(localStorage["HillClimb"])
     forward.value = data.forwardKey
-B_forward.value = data.backKey
-back.value = data.B_forwardKey
+B_forward.value = data.B_forwardKey 
+back.value = data.backKey
 B_Back.value = data.B_BackKey
 }
 
