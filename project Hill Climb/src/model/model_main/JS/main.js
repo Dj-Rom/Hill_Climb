@@ -362,7 +362,7 @@ function game() {
     
     
     let html = document.documentElement;
-fullScreen(html);
+
 function fullScreen(element) {
   if(element.requestFullscreen) {
     element.requestFullscreen();
