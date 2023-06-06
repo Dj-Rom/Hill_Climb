@@ -31,17 +31,21 @@ off.addEventListener("touch", () => {
 
 menuNewGame.addEventListener("click", ()=>{
         event.preventDefault() 
+       menuNewGame.style.fontSize = "70px"
         location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/main_game_start.html"
 });
 menuСontinueGame.addEventListener(
     "click",() => {
         event.preventDefault(); 
+        menuСontinueGame.style.fontSize = "70px"
         location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/main_game_start.html"
     });
 menuSetting.addEventListener("click", () =>{event.preventDefault();
+                                            menuSetting.style.fontSize = "70px"
 location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_setting/seting.html"
 });
 menuWorldResult.addEventListener("click",() =>{event.preventDefault();
+                                               menuWorldResult.style.fontSize = "70px"
 location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_result/result.html"
 });
 
