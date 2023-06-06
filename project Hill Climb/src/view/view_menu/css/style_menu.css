@@ -405,7 +405,7 @@
     background:none;
     z-index:1;
     }
-    
+    #menu_New_Game:hover {font-size:45px}
     #menu_New_Game {
     width:225px;
     height:48px;
@@ -423,7 +423,7 @@
     flex-grow:0;
     z-index:1;
     }
-    
+    #menu_Сontinue_Game:hover {font-size:45px}
     #menu_Сontinue_Game {
     position:absolute;
     width:358px;
@@ -442,7 +442,7 @@
     flex-grow:0;
     z-index:1;
     }
-    
+    #menu_World_Result:hover {font-size:35px}
     #menu_World_Result {
     position:absolute;
     width:300px;
@@ -461,7 +461,7 @@
     flex-grow:0;
     z-index:1;
     }
-    
+     #menu_Setting:hover {font-size:50px}
     #menu_Setting {
     position:absolute;
     top:70%;
