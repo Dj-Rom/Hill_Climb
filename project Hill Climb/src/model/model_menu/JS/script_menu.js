@@ -31,8 +31,8 @@ function pauseAudio() {
 }
 const on = document.getElementById("soundOn");
 const off = document.getElementById("soundOff");
-on.style.display = "none";
-off.style.display = "block";
+on.style.display = "block";
+off.style.display = "none";
 function soundControl() {
   requestAnimationFrame(soundControl);
   if (off.style.display === "block") {
