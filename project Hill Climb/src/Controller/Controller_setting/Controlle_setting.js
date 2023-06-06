@@ -1,7 +1,7 @@
 let forward1 = document.getElementById('Forward');
-let B_forward1 = document.getElementById('B_Forward');
+let Bforward1 = document.getElementById('B_Forward');
 let back1 = document.getElementById('back');
-let B_Back1 = document.getElementById('B_Back');
+let BBack1 = document.getElementById('B_Back');
 const settingBtn1 = document.getElementById('settingBtn')
 let settingGame = {
     forwardKey: 'ArrowUp',
@@ -15,23 +15,23 @@ let settingGame = {
 localStorage["HillClimb"] = localStorage["HillClimb"] ? localStorage["HillClimb"] : JSON.stringify({})
 if (localStorage["HillClimb"] === JSON.stringify({})) {
     forward1.value = settingGame.forwardKey
-    B_forward1.value = settingGame.backKey
-    back1.value = settingGame.B_forwardKey
-    B_Back1.value = settingGame.B_BackKey
+    Bforward1.value = settingGame.backKey
+    back1.value = settingGame.BforwardKey
+    BBack1.value = settingGame.BBackKey
 } else {
     let data = JSON.parse(localStorage["HillClimb"])
     forward1.value = data.forwardKey
-    B_forward1.value = data.backKey
-    back1.value = data.B_forwardKey
-    B_Back1.value = data.B_BackKey
+    Bforward1.value = data.backKey
+    back1.value = data.BforwardKey
+    BBack1.value = data.BBackKey
 }
 
 
 
 forward1.addEventListener('keydown', () => { event.preventDefault(); this.value = event.key; settingGame.forwardKey = event.key })
-B_forward1.addEventListener('keydown', () => { event.preventDefault(); this.value = event.key; settingGame.backKey = event.key })
-back1.addEventListener('keydown', () => { event.preventDefault(); this.value = event.key; settingGame.B_forwardKey = event.key })
-B_Back1.addEventListener('keydown', () => { event.preventDefault(); this.value = event.key; settingGame.B_BackKey = event.key })
+Bforward1.addEventListener('keydown', () => { event.preventDefault(); this.value = event.key; settingGame.BforwardKey = event.key})
+back1.addEventListener('keydown', () => { event.preventDefault(); this.value = event.key; settingGame.backKey = event.key })
+BBack1.addEventListener('keydown', () => { event.preventDefault(); this.value = event.key; settingGame.BBackKey = event.key })
 
 
 
@@ -41,15 +41,15 @@ B_Back1.addEventListener('keydown', () => { event.preventDefault(); this.value =
 settingBtn1.addEventListener('click', () => {
     event.preventDefault();
     settingGame.forwardKey = forward1.value
-    settingGame.backKey = B_forward1.value
-    settingGame.B_forwardKey = back1.value
-    settingGame.B_BackKey = B_Back1.value
+    settingGame.backKey = Bforward1.value
+    settingGame.BforwardKey = back1.value
+    settingGame.BBackKey = BBack1.value
     let dataS = JSON.stringify(settingGame)
     localStorage["HillClimb"] = dataS
     forward1.value = settingGame.forwardKey
-    B_forward1.value = settingGame.backKey
-    back1.value = settingGame.B_forwardKey
-    B_Back1.value = settingGame.B_BackKey
+    Bforward1.value = settingGame.backKey
+    back1.value = settingGame.BforwardKey
+    BBack1.value = settingGame.BBackKey
     location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html" 
 
 
