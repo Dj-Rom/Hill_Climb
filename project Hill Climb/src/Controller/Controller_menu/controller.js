@@ -1,4 +1,3 @@
-"use strict";
 
 "use strict";
 const menuNewGame = document.getElementById("menu_New_Game");
