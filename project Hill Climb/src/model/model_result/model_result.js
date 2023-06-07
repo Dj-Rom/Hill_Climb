@@ -21,4 +21,4 @@ for(let i = 1; i <= 10; ){
 const btnR = document.createElement("button")
 btnR.id = "menuR"
 btnR.innerHTML= "MENU"
-setTimeout(cont.append(btnR),500)
+cont.append(btnR)
