@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Bungee';
+    src: url("https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/font/Bungee-Regular.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    
+    overflow: hidden;}
+.contener{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: #91EBFF;
+    
+}
+#result_tbl{
+    padding-top: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+    padding-left: 6%;
+    font-family: 'Bungee', Arial, 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+        text-align: center;
+  height: 40%;
+  width: 40%;
+    background-color:  #9BF471;
+    border-radius: 20px
+}
+
+#textR{
+    font-family: 'Bungee', Arial, 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+        text-align: center;
+}
+#menuR{bottom: 0%;}
+#menuR{
+   
+    position: absolute;
+  
+width: 199px;
+height: 66px;
+
+
+background: #FF3541;
+border-radius: 20px;
+position: absolute;
+  font-family: 'Bungee', Arial, 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+        text-align: center;
+}
+
+@media only screen and (max-width: 400px ){
+    #result_tbl{
+    
+        font-family: 'Bungee', Arial, 'Times New Roman', Times, serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+            text-align: center;
+      height: 40%;
+      width: 40%;
+        background-color:  #9BF471;
+        border-radius: 20px
+    }
+    #menuR{
+   
+        position: absolute;
+      
+    width: 99px;
+    height: 26px;
+    
+    
+    background: #FF3541;
+    border-radius: 20px;
+    position: absolute;
+      font-family: 'Bungee', Arial, 'Times New Roman', Times, serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+            text-align: center;
+    }
+}
+    @media only screen and (max-height: 900px ){
+        #result_tbl{
+        
+            font-family: 'Bungee', Arial, 'Times New Roman', Times, serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+                text-align: center;
+          height: 40%;
+          width: 40%;
+            background-color:  #9BF471;
+            border-radius: 20px
+        }
+        #menuR{
+   
+            position: absolute;
+            
+        width: 99px;
+        height: 26px;
+        
+        
+        background: #FF3541;
+        border-radius: 20px;
+        position: absolute;
+          font-family: 'Bungee', Arial, 'Times New Roman', Times, serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+                text-align: center;
+        }
+        
+}
+@media only screen and (max-height: 500px ){
+    #result_tbl{
+    
+    
+        font-family: 'Bungee', Arial, 'Times New Roman', Times, serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 9px;
+            text-align: center;
+      height: 40%;
+      width: 40%;
+        background-color:  #9BF471;
+        border-radius: 20px
+    }
+    #menuR{
+     
+        position: absolute;
+        
+    width: 99px;
+    height: 16px;
+    
+    
+    background: #FF3541;
+    border-radius: 20px;
+    position: absolute;
+      font-family: 'Bungee', Arial, 'Times New Roman', Times, serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 5px;
+            text-align: center;
+    }
+    
+}
