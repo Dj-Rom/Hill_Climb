@@ -126,7 +126,7 @@ background: #FFFFFF;
 border-radius: 20px;
 }
 
-
+#settingBtn:hover{width: 210px;}
 #settingBtn{
     position: absolute;
     width: 200px;
@@ -178,13 +178,24 @@ border-radius: 20px;
     }
     }
     form{
-
         position: relative;
-       
-       
-        
     }
-
+edia only screen and (max-height: 300px)
+.contener {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 292px;
+    background: #9BF471;
+    border-radius: 30px;
+}
+#settingBtn{
+    position: absolute;
+    width: 200px;
+left: 37%;
+background: #FF3541;
+border-radius: 20px;
+}
 
 
     @media only screen and (max-width: 400px ){
