@@ -54,7 +54,7 @@
     background:none;
     text-align:center;
     }
-     #menu_New_Game  :hover {font-size:60px}
+     #menu_New_Game:hover {font-size:60px}
     #menu_New_Game {
           cursor: pointer;
     position:absolute;
@@ -75,7 +75,7 @@
     flex-grow:0;
     z-index:1;
     }
-    #menu_Сontinue_Game :hover {font-size:60px}
+    #menu_Сontinue_Game:hover {font-size:60px}
     #menu_Сontinue_Game {
           cursor: pointer;
     position:absolute;
