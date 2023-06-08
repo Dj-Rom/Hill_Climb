@@ -35,10 +35,6 @@ const handleLocation = async ()=>{
 window.onpopstate = handleLocation;
 window.route = route;
 handleLocation()
-function () {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("contener").innerHTML = this.responseText;
-  }
+
   xhttp.open("GET", eo.target.href )
   xhttp.send()}
