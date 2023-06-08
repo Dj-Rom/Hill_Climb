@@ -50,7 +50,7 @@ settingBtn1.addEventListener('click', () => {
     Bforward1.value = settingGame.backKey
     back1.value = settingGame.BforwardKey
     BBack1.value = settingGame.BBackKey
-    location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html" 
+    location = "/Hill_Climb/project%20Hill%20Climb/src/" 
 
 
 })
