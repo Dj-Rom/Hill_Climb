@@ -4,8 +4,6 @@ document.addEventListener('click', eo =>{
     eo.preventDefault();
     
     if(eo.target.tagName == 'BUTTON' || eo.target.tagName == 'A' ){
-          
-        console.log(eo.target.href)
         route(eo);
     }
     
@@ -25,9 +23,9 @@ const routers = {
 }
 const handleLocation = async ()=>{
     const path = location.pathname;
-    const html1 = await fetch(routers[path]).then((data) => data.text());
-    console.log(html1)
-    document.querySelector('.contener').innerHTML = html1;
+    const html = await fetch(routers[path]).then((data) => data.text());
+   
+    document.querySelector('.contener').innerHTML = html;
 
 
 }
