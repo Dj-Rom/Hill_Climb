@@ -18,15 +18,9 @@ const route = (eo)=>{
 }
 const routers = {
     '/Hill_Climb/project%20Hill%20Climb/src/': "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html" ,
-    '/Hill_Climb/project%20Hill%20Climb/src/view/view_main/main_game_start.html':function () {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("contener").innerHTML = this.responseText;
-  }
-  xhttp.open("GET", eo.target.href )
-  xhttp.send()},
-        '/Hill_Climb/project%20Hill%20Climb/src/view/view_result/result.html': 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_result/result.html',
-        '/Hill_Climb/project%20Hill%20Climb/src/view/view_setting/seting.html': 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_setting/seting.html',
+    '/Hill_Climb/project%20Hill%20Climb/src/game.html':"https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/game.html",
+        '/Hill_Climb/project%20Hill%20Climb/src/result.html': 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/result.html',
+        '/Hill_Climb/project%20Hill%20Climb/src/seting.html': 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/seting.html',
     
 }
 const handleLocation = async ()=>{
@@ -41,3 +35,10 @@ const handleLocation = async ()=>{
 window.onpopstate = handleLocation;
 window.route = route;
 handleLocation()
+function () {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("contener").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", eo.target.href )
+  xhttp.send()}
