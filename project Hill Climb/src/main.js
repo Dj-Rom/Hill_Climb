@@ -16,7 +16,7 @@ const route = (eo)=>{
     handleLocation();
 }
 const routers = {
-    '/index.html': 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html',
+    'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/index.html': 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html',
     '/New game': 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/main_game_start'
 }
 const handleLocation = async ()=>{
