@@ -1,5 +1,4 @@
 "use strict";
-
 let canvasGame = document.createElement('canvas');
 canvasGame.id = "canvas";
 document.body.append(canvasGame);
