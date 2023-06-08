@@ -1,3 +1,6 @@
+document.addEventListener("DOMContentLoaded", () => {
+    alert("DOM готов!");
+  });
 let forward1 = document.getElementById('Forward');
 let Bforward1 = document.getElementById('B_Forward');
 let back1 = document.getElementById('back');
