@@ -17,14 +17,14 @@ const route = (eo)=>{
     handleLocation();
 }
 const routers = {
-    '/Hill_Climb/project%20Hill%20Climb/src/': function () {
+    '/Hill_Climb/project%20Hill%20Climb/src/': (function () {
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function() {
     document.getElementById("contener").innerHTML = this.responseText;
   }
   xhttp.open("GET", eo.target.href );
   xhttp.send();
-},
+}},
     '/Hill_Climb/project%20Hill%20Climb/src/view/view_main/main_game_start.html':function () {
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function() {
