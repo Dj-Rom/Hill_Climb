@@ -3,7 +3,7 @@ document.addEventListener('click', eo =>{
     target = eo.target || eo.srcElement
     eo.preventDefault();
     console.log(eo.target.tagName);
-    if(eo.target.tagName == 'BUTTON'){
+    if(eo.target.tagName == 'BUTTON' || eo.target.tagName == 'A' ){
         console.log(eo.target.tagName);
         route(eo);
     }
