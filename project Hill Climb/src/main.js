@@ -21,8 +21,8 @@ const routers = {
 }
 const handleLocation = async ()=>{
     const path = location.pathname;
-    const html = await fetch(routers[path]).then((data) => data.text());
-    document.querySelector('.contener').innerHTML = html;
+    const html1 = await fetch(routers[path]).then((data) => data.text());
+    document.querySelector('.contener').innerHTML = html1;
 
 
 }
