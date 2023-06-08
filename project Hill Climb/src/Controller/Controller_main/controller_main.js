@@ -111,10 +111,37 @@ imgbr.addEventListener("click", () => {
     window.navigator.vibrate(200)
     return kontrole.ArrowDown = 1
 }, false
+);
 
+imgGaz.addEventListener("mouseDown", () => {
+    event.preventDefault()
+    window.navigator.vibrate(200)
+    return kontrole.ArrowUp = 1
+}, false
+);
+imgGaz.addEventListener("MouseUp",
+    () => {
+        event.preventDefault()
+        kontrole.ArrowUp = 0;
+    }, false
 );
 
 
+
+
+imgbr.addEventListener("mouseDown", () => {
+    event.preventDefault()
+    window.navigator.vibrate(200)
+    return kontrole.ArrowDown = 1
+}, false
+
+);
+imgbr.addEventListener("mouseUp",
+    () => {
+        event.preventDefault()
+        kontrole.ArrowDown = 0;
+    }, false
+)
 
 
 
