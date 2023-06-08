@@ -15,9 +15,10 @@
   <title>Hill Climb</title>
 </head>
 <body>
-  <script>document.addEventListener("DOMContentLoaded", () => {
-    alert("DOM готов!");
-    });</script>
+  <script> if(!loaded) //Если страница ещё не загрузилась, то выводим сообщение о загрузке
+    {
+   	 page.body.innerHTML = "Loading...";
+    }</script>
   <div class="contener">
     <img id="soundOn" src="https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/png/no-sound.png" alt="off">
     <img id="soundOff" src="https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/png/sound.png" alt="on">
