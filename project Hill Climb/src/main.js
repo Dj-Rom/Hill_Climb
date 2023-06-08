@@ -36,5 +36,4 @@ window.onpopstate = handleLocation;
 window.route = route;
 handleLocation()
 
-  xhttp.open("GET", eo.target.href )
-  xhttp.send()}
+
