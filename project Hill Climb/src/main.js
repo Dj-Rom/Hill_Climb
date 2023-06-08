@@ -9,7 +9,6 @@ document.addEventListener('click', eo =>{
     }
     
 })
-
 const route = (eo)=>{
     eo = eo || window.event
     console.log(eo.target.href);
