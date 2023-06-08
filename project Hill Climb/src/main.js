@@ -4,14 +4,16 @@ document.addEventListener('click', eo =>{
     eo.preventDefault();
     console.log(eo.target.tagName);
     if(eo.target.tagName == 'BUTTON' || eo.target.tagName == 'A' ){
+            console.log(eo.target);
         console.log(eo.target.tagName);
+        console.log(eo.target.href)
         route(eo);
     }
     
 })
 const route = (eo)=>{
     eo = eo || window.event
-    console.log(eo.target.href);
+
     history.pushState({}, '', eo.target.href);
     handleLocation();
 }
