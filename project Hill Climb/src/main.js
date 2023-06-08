@@ -30,8 +30,8 @@ const routers = {
   xhttp.onload = function() {
     document.getElementById("contener").innerHTML = this.responseText;
   }
-  xhttp.open("GET", eo.target.href );
-  xhttp.send();,
+  xhttp.open("GET", eo.target.href )
+  xhttp.send()},
         '/Hill_Climb/project%20Hill%20Climb/src/view/view_result/result.html': 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_result/result.html',
         '/Hill_Climb/project%20Hill%20Climb/src/view/view_setting/seting.html': 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_setting/seting.html',
     
