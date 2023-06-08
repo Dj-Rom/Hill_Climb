@@ -1,7 +1,8 @@
 "use strict";
 document.addEventListener("DOMContentLoaded", () => {
-    alert("DOM готов!");
-  });
+let canvasGame = document.createElement('canvas');
+canvasGame.id = "canvas";
+document.body.append(canvasGame);
 export let kontrole = { ArrowUp: 0, ArrowDown: 0, ArrowLeft: 0, ArrowRight: 0 };
 window.onload = mobileKontrole();
 window.screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
@@ -424,3 +425,4 @@ fullScreen(html);
     }
     loop();
 }
+});
