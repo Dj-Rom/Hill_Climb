@@ -1,5 +1,5 @@
 "use strict";
-document.addEventListener("DOMContentLoaded", () => {
+
 let canvasGame = document.createElement('canvas');
 canvasGame.id = "canvas";
 document.body.append(canvasGame);
@@ -425,4 +425,4 @@ fullScreen(html);
     }
     loop();
 }
-});
+
