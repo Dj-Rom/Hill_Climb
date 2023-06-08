@@ -18,7 +18,7 @@ const route = (eo)=>{
     handleLocation();
 }
 const routers = {
-    '/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html': 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html',
+    '/Hill_Climb/project%20Hill%20Climb/src/': 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html',
     '/Hill_Climb/project%20Hill%20Climb/src/view/view_main/main_game_start.html': 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/main_game_start.html',
         '/Hill_Climb/project%20Hill%20Climb/src/view/view_result/result.html': 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_result/result.html',
         '/Hill_Climb/project%20Hill%20Climb/src/view/view_setting/seting.html': 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_setting/seting.html',
