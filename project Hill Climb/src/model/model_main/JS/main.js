@@ -389,7 +389,7 @@ fullScreen(html);
     
     function restart() {
        return  setTimeout(()=>{
-        location ="https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html "},500)
+        location ="/Hill_Climb/project%20Hill%20Climb/src/ "},500)
     }
     
     
