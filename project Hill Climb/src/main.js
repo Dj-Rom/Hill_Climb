@@ -18,9 +18,9 @@ const route = (eo)=>{
 }
 const routers = {
     '/Hill_Climb/project%20Hill%20Climb/src/': "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html" ,
-    '/Hill_Climb/project%20Hill%20Climb/src/game.html':"https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/game.html",
+    '/Hill_Climb/project%20Hill%20Climb/src/game':"https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/main_game_start.html",
         '/Hill_Climb/project%20Hill%20Climb/src/result.html': 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/result.html',
-        '/Hill_Climb/project%20Hill%20Climb/src/seting.html': 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/seting.html',
+        '/Hill_Climb/project%20Hill%20Climb/src/seting.html': 'https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/setting.html',
     
 }
 const handleLocation = async ()=>{
