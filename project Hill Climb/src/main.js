@@ -35,7 +35,7 @@ function SendRequest(query, link)
 {
     var xhr = new XMLHttpRequest(); //Создаём объект для отправки запроса
 
-    xhr.open("GET", "/spa/core.php" + query, true); //Открываем соединение
+    xhr.open("GET", "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src" , true); //Открываем соединение
 
     xhr.onreadystatechange = function() //Указываем, что делать, когда будет получен ответ от сервера
     {
