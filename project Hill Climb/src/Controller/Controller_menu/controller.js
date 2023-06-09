@@ -49,7 +49,7 @@ menuСontinueGame.addEventListener(
 menuSetting.addEventListener("click", (event) => {
     event = event || window.event; event.preventDefault();
 
-    location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_setting/seting.html"
+    location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_setting/setting.html"
 });
 menuWorldResult.addEventListener("click", (event) => {
     event = event || window.event; event.preventDefault();
