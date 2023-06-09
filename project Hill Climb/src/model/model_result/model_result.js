@@ -4,6 +4,13 @@ import { dataGetRecords } from "https://dj-rom.github.io/Hill_Climb/project%20Hi
 import { resultGetUserName } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model_main/JS/main.js";
 import { resultGetUserResult } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model_main/JS/main.js";
 
+
+
+import { storeInfo } from "/model/ajax.js";
+import { dataGetRecords } from "/model/ajax.js";
+import { resultGetUserName } from "../model_main/JS/main.js";
+import { resultGetUserResult } from "../model_main/JS/main.js";
+
 const tblRecord = document.getElementById("result_tbl");
 const cont = document.querySelector('.contener')
 let dataRecordPred = {nameRecord: resultGetUserName, score: resultGetUserResult}
