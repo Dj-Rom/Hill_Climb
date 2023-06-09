@@ -33,6 +33,17 @@ BBack.value = data.B_BackKey
  B_Back.addEventListener('keydown',()=>{this.value = event.key;settingGame.B_BackKey = event.key})
 
 
+settingBtn.addEventListener('click',()=>{
+    settingGame.forwardKey = forward.value
+    settingGame.backKey= B_forward.value
+    settingGame.B_forwardKey = back.value
+    settingGame.B_BackKey = B_Back.value
+    let dataS = JSON.stringify(settingGame)
+      localStorage["HillClimb"] = dataS
+    forward.value = settingGame.forwardKey
+B_forward.value = settingGame.backKey
+back.value = settingGame.B_forwardKey
+B_Back.value = settingGame.B_BackKey
 
 
 
