@@ -1,53 +1,58 @@
-const forward = document.getElementById('Forward');
-const Bforward = document.getElementById('B_Forward');
-const  back= document.getElementById('back');
-const  BBack= document.getElementById('B_Back');
-const settingBtn = document.getElementById('settingBtn')
-let  settingGame1  = {
+let forward = document.querySelector('#Forward');
+let Bforward = document.querySelector('#B_Forward');
+let  back= document.querySelector('#back');
+let  BBack= document.querySelector('#B_Back');
+const settingBtn1 = document.getElementById('settingBtn')
+let  settingGame  = {
     forwardKey: 'ArrowUp', 
        backKey: 'ArrowDown',
     B_forwardKey: 'ArrowRight',
-    B_BackKey: 'ArrowLeft'}
+    B_BackKey: 'ArrowLeft'};
 
 
 
 localStorage["HillClimb"] =  localStorage["HillClimb"]? localStorage["HillClimb"]: JSON.stringify({})
-if(localStorage["HillClimb"] === JSON.stringify({})){
-forward.value = settingGame.forwardKey
-B_forward.value = settingGame.backKey
-back.value = settingGame.B_forwardKey
-BBack.value = settingGame.B_BackKey
+if(localStorage["HillClimb"] == JSON.stringify({})){
+forward.value = settingGame.forwardKey;
+Bforward.value = settingGame.backKey;
+back.value = settingGame.B_forwardKey;
+BBack.value = settingGame.B_BackKey;
 }else{
     let data = JSON.parse(localStorage["HillClimb"])
-    forward.value = data.forwardKey
-B_forward.value = data.B_forwardKey 
-back.value = data.backKey
-BBack.value = data.B_BackKey
+    forward.value = data.forwardKey;
+Bforward.value = data.B_forwardKey ;
+back.value = data.backKey;
+BBack.value = data.B_BackKey;
 }
 
 
-    
- forward.addEventListener('keydown',()=>{this.value = event.key; settingGame.forwardKey = event.key})
- B_forward.addEventListener('keydown',()=>{this.value = event.key;settingGame.backKey = event.key})
- back.addEventListener('keydown',()=>{this.value = event.key;settingGame.B_forwardKey = event.key})
- B_Back.addEventListener('keydown',()=>{this.value = event.key;settingGame.B_BackKey = event.key})
+    forward.addEventListener('keyup', (event) => {event =event||window.event; 
+         forward.value = event.key; settingGame.forwardKey = event.key })
+Bforward.addEventListener('keyup', (event) => {event =event||window.event; 
+     Bforward.value = event.key; settingGame.B_forwardKey = event.key })
+back.addEventListener('keyup', (event) => {event =event||window.event; 
+     back.value = event.key; settingGame.backKey = event.key })
+BBack.addEventListener('keyup', (event) => {event =event||window.event; 
+     BBack.value = event.key; settingGame.B_BackKey = event.key })
 
 
-settingBtn.addEventListener('click',()=>{
+
+
+
+
+settingBtn1.addEventListener('click',()=>{
     settingGame.forwardKey = forward.value
-    settingGame.backKey= B_forward.value
+    settingGame.backKey= Bforward.value
     settingGame.B_forwardKey = back.value
-    settingGame.B_BackKey = B_Back.value
+    settingGame.B_BackKey = BBack.value
     let dataS = JSON.stringify(settingGame)
       localStorage["HillClimb"] = dataS
     forward.value = settingGame.forwardKey
-B_forward.value = settingGame.backKey
+Bforward.value = settingGame.backKey
 back.value = settingGame.B_forwardKey
-B_Back.value = settingGame.B_BackKey
+BBack.value = settingGame.B_BackKey
+location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html"
+
 })
-
-
-
-
 
 
