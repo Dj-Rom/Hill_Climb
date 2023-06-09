@@ -377,10 +377,23 @@ function game() {
     
     
     
-    
+    let LocalStoregeNameUser ='';
     function restart() {
+        
+        localStorage["HillClimbUser"] = localStorage["HillClimbUser"] ? localStorage["HillClimbUser"] : JSON.stringify({})
+if (localStorage["HillClimbUser"] === JSON.stringify({})) {
+    LocalStoregeNameUser = ' '
+} else {
+    let data1 = JSON.parse(localStorage["HillClimbUser"])
+    LocalStoregeNameUser = data1.name
+}
+       
+        let resultGetUserName = prompt("Please write your name here.", LocalStoregeNameUser);
+        localStorage["HillClimbUser"] = JSON.stringify({
+                    name: resultGetUserName
+                })
        return  setTimeout(()=>{
-        location ="/Hill_Climb/project%20Hill%20Climb/src/ "},500)
+        location ="https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html "},500)
     }
     
     
