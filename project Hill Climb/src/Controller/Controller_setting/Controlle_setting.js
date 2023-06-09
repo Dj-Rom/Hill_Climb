@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     alert("DOM готов!");
-  });
+});
 let forward1 = document.getElementById('Forward');
 let Bforward1 = document.getElementById('B_Forward');
 let back1 = document.getElementById('back');
@@ -12,8 +12,6 @@ let settingGame = {
     BforwardKey: 'ArrowRight',
     BBackKey: 'ArrowLeft'
 }
-
-
 
 localStorage["HillClimb"] = localStorage["HillClimb"] ? localStorage["HillClimb"] : JSON.stringify({})
 if (localStorage["HillClimb"] === JSON.stringify({})) {
@@ -29,17 +27,10 @@ if (localStorage["HillClimb"] === JSON.stringify({})) {
     BBack1.value = data.BBackKey
 }
 
-
-
 forward1.addEventListener('keydown', () => { event.preventDefault(); this.value = event.key; settingGame.forwardKey = event.key })
-Bforward1.addEventListener('keydown', () => { event.preventDefault(); this.value = event.key; settingGame.BforwardKey = event.key})
+Bforward1.addEventListener('keydown', () => { event.preventDefault(); this.value = event.key; settingGame.BforwardKey = event.key })
 back1.addEventListener('keydown', () => { event.preventDefault(); this.value = event.key; settingGame.backKey = event.key })
 BBack1.addEventListener('keydown', () => { event.preventDefault(); this.value = event.key; settingGame.BBackKey = event.key })
-
-
-
-
-
 
 settingBtn1.addEventListener('click', () => {
     event.preventDefault();
@@ -53,10 +44,6 @@ settingBtn1.addEventListener('click', () => {
     Bforward1.value = settingGame.backKey
     back1.value = settingGame.BforwardKey
     BBack1.value = settingGame.BBackKey
-    location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html" 
-
-
+    location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html"
 })
-
-
 
