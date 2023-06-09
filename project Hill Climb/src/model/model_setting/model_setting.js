@@ -44,7 +44,7 @@ settingBtn.addEventListener('click',()=>{
 B_forward.value = settingGame.backKey
 back.value = settingGame.B_forwardKey
 B_Back.value = settingGame.B_BackKey
-
+})
 
 
 
