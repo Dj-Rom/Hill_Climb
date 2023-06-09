@@ -30,18 +30,18 @@
 // back1.addEventListener('keydown', () => { event.preventDefault(); this.value = event.key; settingGame.backKey = event.key })
 // BBack1.addEventListener('keydown', () => { event.preventDefault(); this.value = event.key; settingGame.BBackKey = event.key })
 
-settingBtn1.addEventListener('click', () => {
-    event.preventDefault();
-    settingGame.forwardKey = forward1.value
-    settingGame.backKey = Bforward1.value
-    settingGame.BforwardKey = back1.value
-    settingGame.BBackKey = BBack1.value
-    let dataS = JSON.stringify(settingGame)
-    localStorage["HillClimb"] = dataS
-    forward1.value = settingGame.forwardKey
-    Bforward1.value = settingGame.backKey
-    back1.value = settingGame.BforwardKey
-    BBack1.value = settingGame.BBackKey
-    location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html"
-})
+// settingBtn1.addEventListener('click', () => {
+//     event.preventDefault();
+//     settingGame.forwardKey = forward1.value
+//     settingGame.backKey = Bforward1.value
+//     settingGame.BforwardKey = back1.value
+//     settingGame.BBackKey = BBack1.value
+//     let dataS = JSON.stringify(settingGame)
+//     localStorage["HillClimb"] = dataS
+//     forward1.value = settingGame.forwardKey
+//     Bforward1.value = settingGame.backKey
+//     back1.value = settingGame.BforwardKey
+//     BBack1.value = settingGame.BBackKey
+//     location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html"
+// })
 
