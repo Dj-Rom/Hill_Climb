@@ -69,7 +69,7 @@ menuСontinueGame.addEventListener("touch", (event) => {
 })
 menuSetting.addEventListener("touch", (event) => {
     event = event || window.event; event.preventDefault();
-    location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_setting/seting.html";
+    location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_setting/setting.html";
     window.navigator.vibrate(200)
 });
 menuWorldResult.addEventListener("touch", (event) => {
