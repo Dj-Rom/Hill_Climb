@@ -1,4 +1,6 @@
 "use strict";
+export let resultGetUserName;
+export let resultGetUserResult;
 let canvasGame = document.createElement('canvas');
 canvasGame.id = "canvas";
 document.body.append(canvasGame);
@@ -189,7 +191,7 @@ function game() {
         cloud()
         musicFonAndGaz()
         visualGameTime.innerHTML = secGame.toFixed(0)
-
+      
         if (secGame < 30000) {
             const perc = Math.round(secGame / 30000 * 100);
             document.getElementById('IProgressPers').style.width = perc + "%";
@@ -215,7 +217,7 @@ function game() {
 
 
 
-        if (t > 30000) {
+        if (secGame.toFixed(0) > 30000) {
             final();
         }
 
@@ -226,6 +228,7 @@ function game() {
             pauseAudio(fon);
 
             restart();
+            resultGetUserResult = secGame.toFixed(0)
       return    secGame
         }
         requestAnimationFrame(loop);
