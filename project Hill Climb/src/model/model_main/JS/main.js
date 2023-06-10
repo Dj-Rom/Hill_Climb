@@ -81,7 +81,7 @@ function game() {
     }
 
     
-    cloud()
+    
     let t = 0;
     let speed = 0;
     let playing = true;
@@ -210,7 +210,7 @@ function game() {
             0,
             2 * Math.PI
         );
-        cloud()
+        
         ctx.stroke();
         ctx.fillStyle = "#ecef54";
         ctx.strokeStyle = "#ecef54";
