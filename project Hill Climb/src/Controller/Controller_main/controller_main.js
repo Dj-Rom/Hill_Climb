@@ -6,9 +6,10 @@ export let settingGame1 = {
     B_BackKey: 'ArrowLeft'
   };
   let dataS = JSON.stringify(settingGame1);
-  let dataQ = localStorage["HillClimb"];
-  let data = JSON.parse(dataQ);
+ 
   if (localStorage["HillClimb"] !== JSON.stringify({})) {
+    let dataQ = localStorage["HillClimb"];
+    let data = JSON.parse(dataQ);
     localStorage["HillClimb"] = dataQ;
   } else {
     localStorage["HillClimb"] = dataS;
