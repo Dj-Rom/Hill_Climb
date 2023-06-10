@@ -1,8 +1,8 @@
 import { kontrole } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/JS/main.js";
 localStorage["HillClimb"] =  localStorage["HillClimb"]? localStorage["HillClimb"]: JSON.stringify({})
 let dataQ = localStorage["HillClimb"]
-console.log(dataQ);
-console.log(JSON.stringify(dataQ));
+
+let data = (JSON.stringify(dataQ));
 export let settingGame1 ={
         forwardKey: 'ArrowUp', 
            backKey: 'ArrowDown',
@@ -17,32 +17,32 @@ if( localStorage["HillClimb"]!== JSON.stringify({})){ localStorage["HillClimb"] 
 document.addEventListener("keydown", (event) => {
     event = event|| window.event;
     event.preventDefault();
-    if (event.key === dataQ.B_forwardKey ) {
+    if (event.key === data.B_forwardKey ) {
         kontrole.ArrowRight = 1;
     }
-    if (event.key === dataQ.B_BackKey ){
+    if (event.key === data.B_BackKey ){
         kontrole.ArrowLeft = 1;
     }
-    if (event.key === dataQ.forwardKey) {
+    if (event.key === data.forwardKey) {
         kontrole.ArrowUp = 1;
     }
-    if (event.key === dataQ.backKey){
+    if (event.key === data.backKey){
         kontrole.ArrowDown = 1;
     }
 });
 document.addEventListener("keyup", (event) => {
     event = event|| window.event;
     event.preventDefault();
-    if (event.key === dataQ.B_forwardKey) {
+    if (event.key === data.B_forwardKey) {
         kontrole.ArrowRight = 0;
     }
-    if (event.key === dataQ.B_BackKey) {
+    if (event.key === data.B_BackKey) {
         kontrole.ArrowLeft = 0;
     }
-    if (event.key === dataQ.forwardKey) {
+    if (event.key === data.forwardKey) {
         kontrole.ArrowUp = 0;
     }
-    if (event.key === dataQ.backKey) {
+    if (event.key === data.backKey) {
         kontrole.ArrowDown = 0;
     }
 });
