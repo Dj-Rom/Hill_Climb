@@ -1,6 +1,6 @@
 import { kontrole } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/JS/main.js";
 localStorage["HillClimb"] =  localStorage["HillClimb"]? localStorage["HillClimb"]: JSON.stringify({})
-let data = (JSON.parse(localStorage["HillClimb"]))?JSON.parse(localStorage["HillClimb"]):null;
+let data = JSON.parse(localStorage["HillClimb"])
 export let settingGame1 ={
         forwardKey: 'ArrowUp', 
            backKey: 'ArrowDown',
