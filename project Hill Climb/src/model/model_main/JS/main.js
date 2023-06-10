@@ -1,7 +1,6 @@
 "use strict";
 
-export let resultGetUserName;
-export let resultGetUserResult;
+
 
 
 let canvasGame = document.createElement('canvas');
@@ -13,6 +12,8 @@ export let kontrole = {
   ArrowLeft: 0,
   ArrowRight: 0
 };
+export let resultGetUserName;
+export let resultGetUserResult;
 window.onload = mobileKontrole();
 window.screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 function mobileKontrole() {
@@ -266,6 +267,7 @@ function game() {
     ctx.drawImage(finalPng, cvs.width / 2, cvs.height / 6);
   }
   let LocalStoregeNameUser = '';
+  
   function restart() {
     localStorage["HillClimbUser"] = localStorage["HillClimbUser"] ? localStorage["HillClimbUser"] : JSON.stringify({});
     if (localStorage["HillClimbUser"] === JSON.stringify({})) {
