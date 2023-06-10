@@ -23,12 +23,12 @@ soundAudio.loop = "loop";
 document.body.append(soundAudio);
 let aud = document.getElementById("audioT").muted;
 aud = new Audio("https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/music/menu.mp3");
-function playAudio(elem) {
+const audioControlePower = { on:function playAudio(elem) {
   elem.play()
-}
-function pauseAudio() {
+}, off:function pauseAudio() {
   aud.pause();
-}
+},}
+
 const on = document.getElementById("soundOn");
 const off = document.getElementById("soundOff");
 on.style.display = "block";
@@ -36,7 +36,8 @@ off.style.display = "none";
 function soundControl() {
   requestAnimationFrame(soundControl);
   if (off.style.display === "block") {
-    playAudio(aud);
+    // playAudio(aud);
+    audioControlePower.on(aud)
   }
   if (on.style.display === "block") {
     pauseAudio();
