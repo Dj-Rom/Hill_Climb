@@ -7,9 +7,10 @@ export let settingGame1 ={
         B_forwardKey: 'ArrowRight',
         B_BackKey: 'ArrowLeft'};
 
-  console.log(data);
-let dataS = JSON.stringify(settingGame1)
-  localStorage["HillClimb"] = dataS
+if(data){localStorage["HillClimb"] = data
+}else {let dataS = JSON.stringify(settingGame1)
+    localStorage["HillClimb"] = dataS}
+
 
 document.addEventListener("keydown", (event) => {
     event = event|| window.event;
