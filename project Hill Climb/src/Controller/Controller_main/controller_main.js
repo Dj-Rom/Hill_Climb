@@ -1,14 +1,16 @@
 import { kontrole } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/JS/main.js";
 localStorage["HillClimb"] = localStorage["HillClimb"] ? localStorage["HillClimb"] : JSON.stringify({});
+export let settingGame1 = {
+    forwardKey: 'ArrowUp',
+    backKey: 'ArrowDown',
+    B_forwardKey: 'ArrowRight',
+    B_BackKey: 'ArrowLeft'
+  };
+document.onload = () => {
 let dataQ = localStorage["HillClimb"];
 let data = JSON.parse(dataQ);
-export let settingGame1 = {
-  forwardKey: 'ArrowUp',
-  backKey: 'ArrowDown',
-  B_forwardKey: 'ArrowRight',
-  B_BackKey: 'ArrowLeft'
-};
-console.log(localStorage["HillClimb"] === JSON.stringify({}));
+
+
 if (localStorage["HillClimb"] !== JSON.stringify({})) {
   localStorage["HillClimb"] = dataQ;
 } else {
@@ -135,4 +137,4 @@ imgbr.addEventListener("mouseUp", event => {
   event = event || window.event;
   event.preventDefault();
   kontrole.ArrowDown = 0;
-}, false);
+}, false);}
