@@ -15,6 +15,7 @@ if (localStorage["HillClimb"] !== JSON.stringify({})) {
   let dataS = JSON.stringify(settingGame1);
   localStorage["HillClimb"] = dataS;
 }
+document.addEventListener("keydown", event => {event = event || window.event; console.log(event.key); console.log(event.key = data.B_forwardKey);}, false);
 document.addEventListener("keydown", event => {
   event = event || window.event;
   event.preventDefault();
