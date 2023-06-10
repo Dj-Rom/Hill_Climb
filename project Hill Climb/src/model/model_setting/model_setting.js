@@ -47,10 +47,10 @@ settingBtn1.addEventListener('click',()=>{
     settingGame.B_BackKey = BBack.value
     let dataS = JSON.stringify(settingGame)
       localStorage["HillClimb"] = dataS
-//     forward.value = settingGame.forwardKey
-// Bforward.value = settingGame.backKey
-// back.value = settingGame.B_forwardKey
-// BBack.value = settingGame.B_BackKey
+    forward.value = settingGame.forwardKey
+Bforward.value = settingGame.backKey
+back.value = settingGame.B_forwardKey
+BBack.value = settingGame.B_BackKey
 location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html"
 
 })
