@@ -15,32 +15,32 @@ if( localStorage["HillClimb"]!== JSON.stringify({})){ localStorage["HillClimb"] 
 document.addEventListener("keydown", (event) => {
     event = event|| window.event;
     event.preventDefault();
-    if (event.key === data.B_forwardKey  || event.key === settingGame1.B_forwardKey ) {
+    if (event.key === dataQ.B_forwardKey  || event.key === settingGame1.B_forwardKey ) {
         kontrole.ArrowRight = 1;
     }
-    if (event.key === data.B_BackKey || event.key === settingGame1.B_BackKey) {
+    if (event.key === dataQ.B_BackKey || event.key === settingGame1.B_BackKey) {
         kontrole.ArrowLeft = 1;
     }
-    if (event.key === data.forwardKey || event.key === settingGame1.forwardKey) {
+    if (event.key === dataQ.forwardKey || event.key === settingGame1.forwardKey) {
         kontrole.ArrowUp = 1;
     }
-    if (event.key === data.backKey || event.key === settingGame1.backKey ) {
+    if (event.key === dataQ.backKey || event.key === settingGame1.backKey ) {
         kontrole.ArrowDown = 1;
     }
 });
 document.addEventListener("keyup", (event) => {
     event = event|| window.event;
     event.preventDefault();
-    if (event.key === data.B_forwardKey || event.key === settingGame1.B_forwardKey) {
+    if (event.key === dataQ.B_forwardKey || event.key === settingGame1.B_forwardKey) {
         kontrole.ArrowRight = 0;
     }
-    if (event.key === data.B_BackKey || event.key === settingGame1.B_BackKey ) {
+    if (event.key === dataQ.B_BackKey || event.key === settingGame1.B_BackKey ) {
         kontrole.ArrowLeft = 0;
     }
-    if (event.key === data.forwardKey || event.key === settingGame1.forwardKey) {
+    if (event.key === dataQ.forwardKey || event.key === settingGame1.forwardKey) {
         kontrole.ArrowUp = 0;
     }
-    if (event.key === data.backKey || event.key === settingGame1.backsettingGame1) {
+    if (event.key === dataQ.backKey || event.key === settingGame1.backsettingGame1) {
         kontrole.ArrowDown = 0;
     }
 });
