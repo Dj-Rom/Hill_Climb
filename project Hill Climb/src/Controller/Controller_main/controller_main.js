@@ -6,7 +6,7 @@ export let settingGame1 ={
            backKey: 'ArrowDown',
         B_forwardKey: 'ArrowRight',
         B_BackKey: 'ArrowLeft'};
-
+console.log(!data);
 if( localStorage["HillClimb"] == JSON.stringify({})){localStorage["HillClimb"] = data
 }else {let dataS = JSON.stringify(settingGame1)
     localStorage["HillClimb"] = dataS}
