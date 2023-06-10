@@ -1,15 +1,17 @@
 import { kontrole } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/JS/main.js";
+localStorage["HillClimb"] =  localStorage["HillClimb"]? localStorage["HillClimb"]: JSON.stringify({})
 let data = (JSON.parse(localStorage["HillClimb"]))?JSON.parse(localStorage["HillClimb"]):null;
 
 if(!data|| data == null){
-    data.forwardKey = 'ArrowUp',
-    data.backKey = 'ArrowDown',
-    data.B_forwardKe ='ArrowRight',
+    data.forwardKey = 'ArrowUp'
+    data.backKey = 'ArrowDown'
+    data.B_forwardKe ='ArrowRight'
     data.B_BackKey = 'ArrowLeft'
     
 }
 
-document.addEventListener("keydown", () => {
+document.addEventListener("keydown", (event) => {
+    event = event|| window.event;
     event.preventDefault();
     if (event.key === data.B_forwardKey) {
         kontrole.ArrowRight = 1;
@@ -24,7 +26,8 @@ document.addEventListener("keydown", () => {
         kontrole.ArrowDown = 1;
     }
 });
-document.addEventListener("keyup", () => {
+document.addEventListener("keyup", (event) => {
+    event = event|| window.event;
     event.preventDefault();
     if (event.key === data.B_forwardKey) {
         kontrole.ArrowRight = 0;
@@ -44,6 +47,7 @@ let timer = null;
 // На первое срабатывание реагируем всегда
 let oldAngle = 1000;
 window.addEventListener('deviceorientation', function (event) {
+    event = event|| window.event;
     event.preventDefault();
     let angle = event.beta;
     let delta = Math.abs(angle - oldAngle);
@@ -74,19 +78,21 @@ window.addEventListener('deviceorientation', function (event) {
 
 const imgGaz = document.getElementById("imgGaz");
 
-imgGaz.addEventListener("touchstart", () => {
+imgGaz.addEventListener("touchstart", (event) => {
+    event = event|| window.event;
     event.preventDefault()
     window.navigator.vibrate(200)
     return kontrole.ArrowUp = 1
 }, false
 );
 imgGaz.addEventListener("touchend",
-    () => {
+    (event) => {event = event|| window.event;
         event.preventDefault()
         kontrole.ArrowUp = 0;
     }, false
 );
-imgGaz.addEventListener("click", () => {
+imgGaz.addEventListener("click", (event) => {
+    event = event|| window.event;
     event.preventDefault()
     window.navigator.vibrate(200)
     return kontrole.ArrowUp = 1
@@ -96,7 +102,8 @@ imgGaz.addEventListener("click", () => {
 
 const imgbr = document.getElementById("imgbr");
 
-imgbr.addEventListener("touchstart", () => {
+imgbr.addEventListener("touchstart", (event) => {
+    event = event|| window.event;
     event.preventDefault()
     window.navigator.vibrate(200)
     return kontrole.ArrowDown = 1
@@ -104,20 +111,23 @@ imgbr.addEventListener("touchstart", () => {
 
 );
 imgbr.addEventListener("touchend",
-    () => {
+    (event) => {
+        event = event|| window.event;
         event.preventDefault()
         kontrole.ArrowDown = 0;
     }, false
 );
 
-imgbr.addEventListener("click", () => {
+imgbr.addEventListener("click", (event) => {
+    event = event|| window.event;
     event.preventDefault()
     window.navigator.vibrate(200)
     return kontrole.ArrowDown = 1
 }, false
 );
 
-imgGaz.addEventListener("mouseDown", () => {
+imgGaz.addEventListener("mouseDown", (event) => {
+    event = event|| window.event;
     event.preventDefault()
     window.navigator.vibrate(200)
     return kontrole.ArrowUp = 1
@@ -133,7 +143,8 @@ imgGaz.addEventListener("MouseUp",
 
 
 
-imgbr.addEventListener("mouseDown", () => {
+imgbr.addEventListener("mouseDown", (event) => {
+    event = event|| window.event;
     event.preventDefault()
     window.navigator.vibrate(200)
     return kontrole.ArrowDown = 1
@@ -141,7 +152,8 @@ imgbr.addEventListener("mouseDown", () => {
 
 );
 imgbr.addEventListener("mouseUp",
-    () => {
+    (event) => {
+        event = event|| window.event;
         event.preventDefault()
         kontrole.ArrowDown = 0;
     }, false

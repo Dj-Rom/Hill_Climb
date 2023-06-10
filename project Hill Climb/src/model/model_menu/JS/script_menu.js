@@ -36,11 +36,11 @@ off.style.display = "none";
 function soundControl() {
   requestAnimationFrame(soundControl);
   if (off.style.display === "block") {
-    // playAudio(aud);
+  
     audioControlePower.on(aud)
   }
   if (on.style.display === "block") {
-    pauseAudio();
+    audioControlePower.off()
   }
 }
 soundControl();
