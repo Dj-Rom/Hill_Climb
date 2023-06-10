@@ -13,7 +13,6 @@ export let settingGame1 = {
  
 
 
-document.onload = () => {
 
 document.addEventListener("keydown", event => {event = event || window.event;console.log(data); console.log(event.key); console.log(event.key == data.B_forwardKey);}, false);
 document.addEventListener("keydown", event => {
@@ -135,4 +134,4 @@ imgbr.addEventListener("mouseUp", event => {
   event = event || window.event;
   event.preventDefault();
   kontrole.ArrowDown = 0;
-}, false);}
+}, false);
