@@ -16,13 +16,6 @@ export let settingGame1 = {
   }
 
 
-
-
-
-
-
-
-
 document.onload = () => {
 
 document.addEventListener("keydown", event => {event = event || window.event;console.log(data); console.log(event.key); console.log(event.key == data.B_forwardKey);}, false);
