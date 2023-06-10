@@ -268,7 +268,7 @@ function game() {
             "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
         ctx.drawImage(imgCloud4, 150 + 500, cvs.height - 750 - 50);
 
-
+return
 
 
     }
