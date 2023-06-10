@@ -1,7 +1,6 @@
 
 import { dataRecord } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_result/model_result.js";
 export let dataGetRecords;
-
 const ajaxHandlerScript="https://fe.it-academy.by/AjaxStringStorage2.php";
 
 let updatePassword;
