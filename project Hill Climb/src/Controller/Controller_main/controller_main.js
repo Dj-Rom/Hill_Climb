@@ -7,7 +7,7 @@ export let settingGame1 ={
         B_forwardKey: 'ArrowRight',
         B_BackKey: 'ArrowLeft'};
 
-  
+  console.log(data);
 let dataS = JSON.stringify(settingGame1)
   localStorage["HillClimb"] = dataS
 
