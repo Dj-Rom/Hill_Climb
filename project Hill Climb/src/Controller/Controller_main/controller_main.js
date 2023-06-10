@@ -1,7 +1,7 @@
 import { kontrole } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/JS/main.js";
-let data = JSON.parse(localStorage["HillClimb"])
-console.log(data)
-if(!data|| data === ""){
+let data = (JSON.parse(localStorage["HillClimb"]))?JSON.parse(localStorage["HillClimb"]):null;
+
+if(!data|| data == null){
     data.forwardKey = 'ArrowUp',
     data.backKey = 'ArrowDown',
     data.B_forwardKe ='ArrowRight',
