@@ -1,22 +1,28 @@
 import { kontrole } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/JS/main.js";
-localStorage["HillClimb"] = localStorage["HillClimb"] ? localStorage["HillClimb"] : JSON.stringify({});
 export let settingGame1 = {
     forwardKey: 'ArrowUp',
     backKey: 'ArrowDown',
     B_forwardKey: 'ArrowRight',
     B_BackKey: 'ArrowLeft'
   };
-document.onload = () => {
-let dataQ = localStorage["HillClimb"];
-let data = JSON.parse(dataQ);
-
-
-if (localStorage["HillClimb"] !== JSON.stringify({})) {
-  localStorage["HillClimb"] = dataQ;
-} else {
   let dataS = JSON.stringify(settingGame1);
-  localStorage["HillClimb"] = dataS;
-}
+  let dataQ = localStorage["HillClimb"];
+  let data = JSON.parse(dataQ);
+  if (localStorage["HillClimb"] !== JSON.stringify({})) {
+    localStorage["HillClimb"] = dataQ;
+  } else {
+    localStorage["HillClimb"] = dataS;
+  }
+
+
+localStorage["HillClimb"] = localStorage["HillClimb"] ? localStorage["HillClimb"] : localStorage["HillClimb"] = dataS;
+
+
+
+
+
+document.onload = () => {
+
 document.addEventListener("keydown", event => {event = event || window.event;console.log(data); console.log(event.key); console.log(event.key == data.B_forwardKey);}, false);
 document.addEventListener("keydown", event => {
   event = event || window.event;
