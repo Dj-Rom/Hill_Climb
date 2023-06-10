@@ -2,13 +2,19 @@ import { kontrole } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20C
 localStorage["HillClimb"] =  localStorage["HillClimb"]? localStorage["HillClimb"]: JSON.stringify({})
 let data = (JSON.parse(localStorage["HillClimb"]))?JSON.parse(localStorage["HillClimb"]):null;
 
-if(!data|| data == null){
-    data.forwardKey = 'ArrowUp'
-    data.backKey = 'ArrowDown'
-    data.B_forwardKe ='ArrowRight'
-    data.B_BackKey = 'ArrowLeft'
-    
-}
+  const   mainFirsSetting = {
+    forwardKey : 'ArrowUp',
+    backKey : 'ArrowDown',
+    B_forwardKe :'ArrowRight',
+    B_BackKey : 'ArrowLeft'
+    }
+
+settingGame.forwardKey = mainFirsSetting.forwardKey
+settingGame.backKey= mainFirsSetting.backKey
+settingGame.B_forwardKey = mainFirsSetting.B_forwardKe
+settingGame.B_BackKey = mainFirsSetting.B_BackKey
+let dataS = JSON.stringify(settingGame)
+  localStorage["HillClimb"] = dataS
 
 document.addEventListener("keydown", (event) => {
     event = event|| window.event;
