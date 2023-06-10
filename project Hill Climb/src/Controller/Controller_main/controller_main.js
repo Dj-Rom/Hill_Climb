@@ -1,9 +1,12 @@
 import { kontrole } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/JS/main.js";
 let data = JSON.parse(localStorage["HillClimb"])
-//      data.forwardKey
-//  data.backKey
-// data.B_forwardKey
-// data.B_BackKey
+if(!data|| data = ""){
+    data.forwardKey = 'ArrowUp',
+    data.backKey = 'ArrowDown',
+    data.B_forwardKe ='ArrowRight',
+    data.B_BackKey = 'ArrowLeft'
+    
+}
 
 document.addEventListener("keydown", () => {
     event.preventDefault();
