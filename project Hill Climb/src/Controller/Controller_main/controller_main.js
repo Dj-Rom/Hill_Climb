@@ -9,6 +9,8 @@ export let settingGame1 ={
 console.log(data);
 console.log(JSON.stringify(data))
 console.log(localStorage)
+console.log(settingGame1);
+console.log(JSON.stringify(settingGame1))
 if(data){localStorage["HillClimb"] = data
 }else {let dataS = JSON.stringify(settingGame1)
     localStorage["HillClimb"] = dataS}
