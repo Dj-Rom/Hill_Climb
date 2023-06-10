@@ -424,7 +424,7 @@ if (localStorage["HillClimbUser"] === JSON.stringify({})) {
             imgbrM.style.transform = "rotateX(17deg)" ; imgbrM.style.webkitTransform = "rotateX(17deg)" ; imgbrM.style.MozTransform = "rotateX(17deg)";
           
             pauseAudio(br);
-        } return
+        } 
     }
     loop();
 }
