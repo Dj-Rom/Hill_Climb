@@ -2,6 +2,8 @@
 
 export let resultGetUserName;
 export let resultGetUserResult;
+
+
 let canvasGame = document.createElement('canvas');
 canvasGame.id = "canvas";
 document.body.append(canvasGame);
@@ -276,6 +278,8 @@ function game() {
     localStorage["HillClimbUser"] = JSON.stringify({
       name: resultGetUserName
     });
+
+    alert(resultGetUserName, resultGetUserResult)
     return setTimeout(() => {
       location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";
     }, 500);
