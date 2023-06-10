@@ -173,7 +173,8 @@ function game() {
       restart();
       resultGetUserResult = secGame.toFixed(0);
       return secGame;
-    }
+    }resultGetUserResult = secGame.toFixed(0);
+    console.log(resultGetUserResult);
     requestAnimationFrame(loop);
   }
   function cloud() {
