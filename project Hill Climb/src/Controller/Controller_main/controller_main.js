@@ -7,13 +7,10 @@ export let settingGame1 = {
   };
   let dataS = JSON.stringify(settingGame1);
   localStorage["HillClimb"] = localStorage["HillClimb"] ? localStorage["HillClimb"] : localStorage["HillClimb"] = dataS;
-  if (localStorage["HillClimb"] !== JSON.stringify({})) {
-    let dataQ = localStorage["HillClimb"];
+   
+  let dataQ = localStorage["HillClimb"];
     let data = JSON.parse(dataQ);
-    localStorage["HillClimb"] = dataQ;
-  } else {
-    localStorage["HillClimb"] = dataS;
-  }
+ 
 
 
 
