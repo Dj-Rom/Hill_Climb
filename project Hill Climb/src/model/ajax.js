@@ -49,7 +49,7 @@ function lockGetReady(callresult) {
 }
 function updateReady(callresult) {
   if (callresult.error != undefined) alert(callresult.error);
-  storeInfo();
+  lockGetReady();
 }
 function restoreInfo() {
   $.ajax({
@@ -118,7 +118,6 @@ export function read() {
   }
   function errorHandler(jqXHR, statusStr, errorStr) {
     alert(statusStr + ' ' + errorStr);
-    console.log("www");
-    restoreInfo()
+    
   }
 }
