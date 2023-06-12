@@ -3,7 +3,7 @@
 import { dataGetRecords } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 
 import { read } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
-let passForDB = Math.random*0.1
+let passForDB = Math.random()
   localStorage["PassForDB"] = localStorage["PassForDB"] ? localStorage["PassForDB"] : localStorage["PassForDB"] = JSON.stringify(passForDB);
 
 const tblRecord = document.getElementById("result_tbl");
@@ -13,10 +13,13 @@ const btnR = document.createElement("button");
 btnR.id = "menuR";
 btnR.innerHTML = "MENU";
 cont.append(btnR);
+let dataPass = JSON.parse(localStorage["PassForDB"])
+let ajaxHandlerScript = "https://fe.it-academy.by/AjaxStringStorage2.php";
 window.onload = Read();
+
 function Read() {
-  let dataPass = JSON.parse(localStorage["PassForDB"])
-  let ajaxHandlerScript = "https://fe.it-academy.by/AjaxStringStorage2.php";
+
+
 
   const stringName = 'CHK123';
   $.ajax({
@@ -58,7 +61,6 @@ function Read() {
       for (let i = 0; i <= dataRecordTable.length; i++) {
         if (i <= dataRecordTable.length) {
           newData.push(dataRecordTable[i]);
-          delete newData[newData.indexOf(undefined)];
         } else if (i > 10) {
           break;
         }
