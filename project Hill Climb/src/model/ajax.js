@@ -15,10 +15,10 @@ head.appendChild(script);
 
   localStorage["PassForDB"] = localStorage["PassForDB"] ? localStorage["PassForDB"] : localStorage["PassForDB"] = JSON.stringify(passForDB);
 
-let updatePassword;
+let updatePassword = JSON.parse(localStorage["PassForDB"])
 const stringName = 'CHK123';
 export function storeInfo() {
-  updatePassword = JSON.parse(localStorage["PassForDB"])
+  
   $.ajax({
     url: ajaxHandlerScript,
     type: 'POST',
