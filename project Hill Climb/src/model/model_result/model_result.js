@@ -2,10 +2,7 @@
 
 import { dataGetRecords } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 
-const head = document.getElementsByTagName('head')[0];
-const script = document.createElement('script');
-script.type = 'text/javascript';
-script.src = "https://fe.it-academy.by/JQ/jquery.js";
+
 // import { read } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 let passForDB = Math.random()
   localStorage["PassForDB"] = localStorage["PassForDB"] ? localStorage["PassForDB"] : localStorage["PassForDB"] = JSON.stringify(passForDB);
