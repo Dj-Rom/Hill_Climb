@@ -4,112 +4,111 @@ const ajaxHandlerScript = "https://fe.it-academy.by/AjaxStringStorage2.php";
 let updatePassword;
 const stringName = 'CHK123';
 export function storeInfo() {
-  updatePassword = Math.random();
-  $.ajax({
-    url: ajaxHandlerScript,
-    type: 'POST',
-    cache: false,
-    dataType: 'json',
-    data: {
-      f: 'LOCKGET',
-      n: stringName,
-      p: updatePassword
-    },
-    success: lockGetReady,
-    error: errorHandler
-  });
+
+    updatePassword=Math.random();
+    $.ajax( {
+            url : ajaxHandlerScript, type : 'POST', cache : false, dataType:'json',
+            data : { f : 'LOCKGET', n : stringName, p : updatePassword },
+            success : lockGetReady, error : errorHandler
+        }
+    );
 }
-function lockGetReady(callresult) {
-  if (callresult.error != undefined) alert(callresult.error);else {
-    // нам всё равно, что было прочитано -
-    // всё равно перезаписываем
-    let info = new Object();
-    let record = new Array();
-    record.push(dataRecordPred);
-    record.push(dataGetRecords);
-    info.record = record.flat();
-    $.ajax({
-      url: ajaxHandlerScript,
-      type: 'POST',
-      cache: false,
-      dataType: 'json',
-      data: {
-        f: 'UPDATE',
-        n: stringName,
-        v: JSON.stringify(info),
-        p: updatePassword
-      },
-      success: updateReady,
-      error: errorHandler
-    });
-  }
-}
-function updateReady(callresult) {
-  if (callresult.error != undefined) alert(callresult.error);
-}
-function restoreInfo() {
-  $.ajax({
-    url: ajaxHandlerScript,
-    type: 'POST',
-    cache: false,
-    dataType: 'json',
-    data: {
-      f: 'READ',
-      n: stringName
-    },
-    success: readReady,
-    error: errorHandler
-  });
-}
-function readReady(callresult) {
-  if (callresult.error != undefined) alert(callresult.error);else if (callresult.result != "") {
-    const info = JSON.parse(callresult.result);
-    dataGetRecords = info.record;
-    console.log(info.record.flat()); //
-    return dataGetRecords;
-  }
-}
-function errorHandler(jqXHR, statusStr, errorStr) {
-  alert(statusStr + ' ' + errorStr);
-}
-restoreInfo();
-export function read() {
-  $.ajax({
-    url: ajaxHandlerScript,
-    type: 'POST',
-    cache: false,
-    dataType: 'json',
-    data: {
-      f: 'LOCKGET',
-      n: stringName,
-      p: updatePassword
-    },
-    success: restoreInfo,
-    error: errorHandler
-  });
-  function restoreInfo() {
-    $.ajax({
-      url: ajaxHandlerScript,
-      type: 'POST',
-      cache: false,
-      dataType: 'json',
-      data: {
-        f: 'READ',
-        n: stringName
-      },
-      success: readReady,
-      error: errorHandler
-    });
-  }
-  function readReady(callresult) {
-    if (callresult.error != undefined) alert(callresult.error);else if (callresult.result != "") {
-      const info = JSON.parse(callresult.result);
-      dataGetRecords = info.record;
-      console.log(info.record.flat()); //
-      return dataGetRecords;
+
+function lockGetReady(callresult, ) {
+    if ( callresult.error!=undefined )
+        alert(callresult.error);
+    else {
+       
+        // нам всё равно, что было прочитано -
+        // всё равно перезаписываем
+        let info = new Object()
+        let record = new Array()
+        record.push(dataRecordPred)
+     record.push(dataGetRecords)
+info.record = record.flat()
+        $.ajax( {
+                url : ajaxHandlerScript, type : 'POST', cache : false, dataType:'json',
+                data : { f : 'UPDATE', n : stringName,
+                    v : JSON.stringify(info), p : updatePassword },
+                success : updateReady, error : errorHandler
+            }
+        );
     }
-  }
-  function errorHandler(jqXHR, statusStr, errorStr) {
-    alert(statusStr + ' ' + errorStr);
-  }
 }
+
+
+function updateReady(callresult) {
+    if ( callresult.error!=undefined )
+        alert(callresult.error);
+        console.log('1');
+}
+
+function restoreInfo() {
+    $.ajax(
+        {
+            url : ajaxHandlerScript, type : 'POST', cache : false, dataType:'json',
+            data : { f : 'READ', n : stringName },
+            success : readReady, error : errorHandler
+        }
+    );
+}
+
+function readReady(callresult) {
+    if ( callresult.error!=undefined ){
+        alert(callresult.error);
+        console.log('2');}
+    else if ( callresult.result!="" ) {
+        const info=JSON.parse(callresult.result);
+
+            dataGetRecords =  info.record
+            console.log((info.record).flat()); //
+return dataGetRecords 
+    }
+}
+
+function errorHandler(jqXHR,statusStr,errorStr) {
+    alert(statusStr+' '+errorStr);
+}
+
+restoreInfo();
+
+
+export function read(){
+    $.ajax( {
+            url : ajaxHandlerScript, type : 'POST', cache : false, dataType:'json',
+            data : { f : 'LOCKGET', n : stringName, p : updatePassword },
+            success : restoreInfo, error : errorHandler
+        }
+    );
+
+    function restoreInfo() {
+        
+        $.ajax(
+            {
+                url : ajaxHandlerScript, type : 'POST', cache : false, dataType:'json',
+                data : { f : 'READ', n : stringName },
+                success : readReady, error : errorHandler
+            }
+        );
+    }
+    
+    function readReady(callresult) {
+        if ( callresult.error!=undefined ){
+            alert(callresult.error);
+            console.log('3');}
+        else if ( callresult.result!="" ) {
+            const info=JSON.parse(callresult.result);
+    
+                dataGetRecords =  info.record
+                console.log(info.record.flat()); //
+    return dataGetRecords 
+        }
+    }
+    
+    function errorHandler(jqXHR,statusStr,errorStr) {
+        alert(statusStr+' '+errorStr);
+    }
+   
+}
+
+
