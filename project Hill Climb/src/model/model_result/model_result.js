@@ -14,10 +14,10 @@ const btnR = document.createElement("button");
 btnR.id = "menuR";
 btnR.innerHTML = "MENU";
 cont.append(btnR);
-
-window.onload = Read();
 let dataPass = JSON.parse(localStorage["PassForDB"])
 let ajaxHandlerScript = "https://fe.it-academy.by/AjaxStringStorage2.php";
+Read();
+
 const stringName = 'CHK123';
 
 function Read() {
