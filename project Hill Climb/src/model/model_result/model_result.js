@@ -21,20 +21,6 @@ Read();
 const stringName = 'CHK123';
 
 function Read() {
-  $.ajax({
-    url: ajaxHandlerScript,
-    type: 'POST',
-    cache: false,
-    dataType: 'json',
-    data: {
-      f: 'LOCKGET',
-      n: 'CHK123',
-      p: dataPass
-    },
-    success: restoreInfo1,
-    error: errorHandler
-  });
-  function restoreInfo1() {
     $.ajax({
       url: ajaxHandlerScript,
       type: 'POST',
@@ -80,4 +66,4 @@ function Read() {
     location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html";
     Read();
   });
-}
+
