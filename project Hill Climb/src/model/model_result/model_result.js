@@ -20,12 +20,9 @@ cont.append(btnR);
 let dataPass = JSON.parse(localStorage["PassForDB"])
 let ajaxHandlerScript = "https://fe.it-academy.by/AjaxStringStorage2.php";
 window.onload = Read();
+const stringName = 'CHK123';
 
 function Read() {
-
-
-
-  const stringName = 'CHK123';
   $.ajax({
     url: ajaxHandlerScript,
     type: 'POST',
