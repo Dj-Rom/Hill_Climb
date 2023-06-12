@@ -76,8 +76,8 @@ function readReady(callresult) {
 }
 function errorHandler(jqXHR, statusStr, errorStr) {
   alert(statusStr + ' ' + errorStr);
-}
-restoreInfo();
+
+restoreInfo();}
 export function read() {
   $.ajax({
     url: ajaxHandlerScript,
@@ -118,5 +118,7 @@ export function read() {
   }
   function errorHandler(jqXHR, statusStr, errorStr) {
     alert(statusStr + ' ' + errorStr);
+    console.log("www");
+    restoreInfo()
   }
 }
