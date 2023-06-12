@@ -1,8 +1,10 @@
 "use strict";
 
-
-
-
+import { storeInfo } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
+import { dataGetRecords } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
+export let dataRecordPred = {};
+export let resultGetUserName = "";
+export let resultGetUserResult = 0;
 let canvasGame = document.createElement('canvas');
 canvasGame.id = "canvas";
 document.body.append(canvasGame);
@@ -12,8 +14,6 @@ export let kontrole = {
   ArrowLeft: 0,
   ArrowRight: 0
 };
-export let resultGetUserName;
-export let resultGetUserResult;
 window.onload = mobileKontrole();
 window.screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 function mobileKontrole() {
@@ -171,10 +171,8 @@ function game() {
       fon.pause();
       pauseAudio(fon);
       restart();
-      resultGetUserResult = secGame.toFixed(0);
-      return secGame;
-    }resultGetUserResult = secGame.toFixed(0);
-    console.log(resultGetUserResult);
+      return resultGetUserResult;
+    }
     requestAnimationFrame(loop);
   }
   function cloud() {
@@ -268,7 +266,6 @@ function game() {
     ctx.drawImage(finalPng, cvs.width / 2, cvs.height / 6);
   }
   let LocalStoregeNameUser = '';
-  
   function restart() {
     localStorage["HillClimbUser"] = localStorage["HillClimbUser"] ? localStorage["HillClimbUser"] : JSON.stringify({});
     if (localStorage["HillClimbUser"] === JSON.stringify({})) {
@@ -281,11 +278,13 @@ function game() {
     localStorage["HillClimbUser"] = JSON.stringify({
       name: resultGetUserName
     });
-
-    alert(resultGetUserName, resultGetUserResult)
+    resultGetUserResult = secGame.toFixed(0);
+    dataRecordPred.nameRecord = resultGetUserName;
+    dataRecordPred.score = resultGetUserResult;
+    storeInfo();
     return setTimeout(() => {
       location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";
-    }, 500);
+    }, 5500);
   }
   function musicFonAndGaz() {
     if (kontrole.ArrowUp === 1) {
