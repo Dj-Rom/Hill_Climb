@@ -1,7 +1,20 @@
 import { dataRecordPred } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/JS/main.js";
 export let dataGetRecords;
 const ajaxHandlerScript = "https://fe.it-academy.by/AjaxStringStorage2.php";
-let passForDB = Math.random*0.1
+let passForDB = Math.random();
+
+const head = document.getElementsByTagName('head')[0];
+const script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = "http://code.jquery.com/jquery-2.2.1.min.js";
+
+// Then bind the event to the callback function.
+// There are several events for cross browser compatibility.
+script.onreadystatechange = handler;
+
+// Fire the loading
+head.appendChild(script);
+
   localStorage["PassForDB"] = localStorage["PassForDB"] ? localStorage["PassForDB"] : localStorage["PassForDB"] = JSON.stringify(passForDB);
 
 let updatePassword;
