@@ -3,8 +3,8 @@
 import { storeInfo } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 
 export let dataRecordPred = {};
-export let resultGetUserName = "";
-export let resultGetUserResult = 0;
+
+let resultGetUserResult = 0;
 let canvasGame = document.createElement('canvas');
 canvasGame.id = "canvas";
 document.body.append(canvasGame);
