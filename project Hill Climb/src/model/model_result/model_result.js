@@ -3,6 +3,9 @@
 import { dataGetRecords } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 import { storeInfo } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 import { read } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
+let passForDB = Math.random*0.1
+  localStorage["PassForDB"] = localStorage["PassForDB"] ? localStorage["PassForDB"] : localStorage["PassForDB"] = JSON.stringify(passForDB);
+
 const tblRecord = document.getElementById("result_tbl");
 const cont = document.querySelector('.contener');
 let newData = [];
@@ -12,9 +15,9 @@ btnR.innerHTML = "MENU";
 cont.append(btnR);
 window.onload = Read();
 function Read() {
-  let dataPass;
+  let dataPass = JSON.parse(localStorage["PassForDB"])
   let ajaxHandlerScript = "https://fe.it-academy.by/AjaxStringStorage2.php";
-  dataPass = Math.random();
+
   const stringName = 'CHK123';
   $.ajax({
     url: ajaxHandlerScript,
