@@ -1,4 +1,6 @@
 window.addEventListener("load", () => {
+  let passForDB = Math.random*0.1
+  localStorage["PassForDB"] = localStorage["PassForDB"] ? localStorage["PassForDB"] : localStorage["PassForDB"] = passForDB;
   const welcom = document.createElement("div");
   welcom.id = "welcom";
   welcom.innerText = "Student project Hill Climb";
