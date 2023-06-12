@@ -1,7 +1,7 @@
 "use strict";
 
 import { storeInfo } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
-import { dataGetRecords } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
+
 export let dataRecordPred = {};
 export let resultGetUserName = "";
 export let resultGetUserResult = 0;
