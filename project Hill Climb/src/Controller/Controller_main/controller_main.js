@@ -83,7 +83,7 @@ window.addEventListener('deviceorientation', function (event) {
     }
   }, 16);
 });
-const imgGaz = document.getElementById("imgGaz");
+const imgGaz = document.querySelector("#imgGaz");
 if (imgGaz.style.display === "block") {
 
 imgGaz.addEventListener("touchstart", event => {

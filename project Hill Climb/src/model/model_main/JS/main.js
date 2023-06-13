@@ -22,8 +22,9 @@ export let kontrole = {
   ArrowLeft: 0,
   ArrowRight: 0
 };
-window.onload = function () {
+
 window.onload = mobileKontrole();
+
 window.screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 function mobileKontrole() {
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent) && window.orientation == 0) {
@@ -33,10 +34,12 @@ function mobileKontrole() {
     game();
   }
 }
+
 window.onscroll = function () {
   window.scrollTo(0, 0);
 };
 function game() {
+  window.onload = function () {
   const imgGaz = document.createElement("img");
   imgGaz.id = "imgGaz";
   imgGaz.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/forward (1).png";
