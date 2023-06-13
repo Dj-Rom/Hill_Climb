@@ -3,9 +3,12 @@
 localStorage["saveGamePos"] = localStorage["saveGamePos"]?localStorage["saveGamePos"]: JSON.stringify(0)
 import { dataGetRecords } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 import { storeInfo } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
-
-
-
+const GO = document.createElement('img');
+GO.id= 'gameOverSsvg';
+GO.src="./svg/GameOverSvg.svg";
+GO.alt="gameOver";
+GO.style.opacity = 0
+document.body.appendChild(GO);
 let secGame;
 export let dataRecordPred = {};
 
@@ -282,10 +285,7 @@ function game() {
 
 
   function restart() {;
-    const GO = document.createElement('img');
-    GO.id= 'gameOverSsvg';
-  GO.src="./svg/GameOverSvg.svg";
-GO.alt="gameOver";
+
 let gameOveSsvg = document.querySelector('#gameOverSsvg');
 
 gameOveSsvg .style.transition = "transition:  transform 3s;";
