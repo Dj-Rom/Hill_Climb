@@ -281,8 +281,11 @@ function game() {
   let LocalStoregeNameUser = '';
 
 
-  function restart() {
-let gameOveSsvg = document.querySelector('#gameOverSsvg')
+  function restart() {;
+    document.createElement('img').id= 'gameOverSsvg'
+let gameOveSsvg = document.querySelector('#gameOverSsvg');
+gameOveSsvg.src="./svg/GameOverSvg.svg";
+gameOveSsvg.alt="gameOver";
 gameOveSsvg .style.transition = "transition:  transform 3s;";
 gameOveSsvg.style.opacity = 0.01
 let timer = setInterval(() => {
