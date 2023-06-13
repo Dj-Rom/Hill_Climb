@@ -282,10 +282,12 @@ function game() {
 
 
   function restart() {;
-    document.createElement('img').id= 'gameOverSsvg'
+    const GO = document.createElement('img');
+    GO.id= 'gameOverSsvg';
+  GO.src="./svg/GameOverSvg.svg";
+GO.alt="gameOver";
 let gameOveSsvg = document.querySelector('#gameOverSsvg');
-gameOveSsvg.src="./svg/GameOverSvg.svg";
-gameOveSsvg.alt="gameOver";
+
 gameOveSsvg .style.transition = "transition:  transform 3s;";
 gameOveSsvg.style.opacity = 0.01
 let timer = setInterval(() => {
