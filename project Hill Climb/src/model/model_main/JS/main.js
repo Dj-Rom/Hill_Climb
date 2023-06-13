@@ -1,5 +1,5 @@
 "use strict";
-
+dataRecordPred 
 localStorage["saveGamePos"] = localStorage["saveGamePos"]?localStorage["saveGamePos"]: JSON.stringify(0)
 import { dataGetRecords } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 import { storeInfo } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
@@ -34,7 +34,7 @@ function mobileKontrole() {
   } else {
     game();
   }
-
+}
 
 window.onscroll = function () {
   window.scrollTo(0, 0);
@@ -351,7 +351,7 @@ function game() {
 
 
 
-}
+
 
 
 
