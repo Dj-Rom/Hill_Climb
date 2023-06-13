@@ -288,13 +288,7 @@ function game() {
 
   function restart() {;
 
-
-
-
-
- 
-  
-
+console.log("restart");
     localStorage["saveGamePos"]='0'
     localStorage["HillClimbUser"] = localStorage["HillClimbUser"] ? localStorage["HillClimbUser"] : JSON.stringify({});
     if (localStorage["HillClimbUser"] === JSON.stringify({})) {
