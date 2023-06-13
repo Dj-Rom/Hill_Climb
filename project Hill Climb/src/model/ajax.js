@@ -1,6 +1,4 @@
-var cors = require('cors')
 
-app.use(cors()) // Use this after the variable declaration
 import { dataRecordPred } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/JS/main.js";
 export let dataGetRecords;
 const ajaxHandlerScript = "https://fe.it-academy.by/AjaxStringStorage2.php";

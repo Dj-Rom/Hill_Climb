@@ -1,4 +1,7 @@
 "use strict";
+var cors = require('cors')
+
+app.use(cors())
 
 localStorage["saveGamePos"] = localStorage["saveGamePos"]?localStorage["saveGamePos"]: JSON.stringify(0)
 
