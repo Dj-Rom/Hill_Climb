@@ -336,7 +336,12 @@ function game() {
 
 }
 
-
+let btnGameinMenu = document.getElementById("btnGameinMenu")
+btnGameinMenu.addEventListener("click", ()=>{
+  btnMenuBoolean = true
+  console.log(btnMenuBoolean);
+  location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html"
+})
 
 
 

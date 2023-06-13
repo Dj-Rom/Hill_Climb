@@ -13,12 +13,7 @@ export let settingGame1 = {
     let data = JSON.parse(dataQ);
  
 
-    let btnGameinMenu = document.getElementById("btnGameinMenu")
-    btnGameinMenu.addEventListener("click", ()=>{
-      btnMenuBoolean = true
-      console.log(btnMenuBoolean);
-      location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html"
-    })
+  
 
 
 document.addEventListener("keydown", event => {
