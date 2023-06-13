@@ -315,3 +315,18 @@ function game() {
   }
   loop();
 }
+
+
+
+
+
+
+
+
+
+
+// save game if user push Menu
+
+export function saveInLocalStorageGameForCG () {
+  localStorage[saveGamePos] = JSON.stringify(resultGetUserResult)
+}
