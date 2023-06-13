@@ -42,17 +42,11 @@ function Read() {
       dataRecordTable.sort(function (a, b) {
         return b.score - a.score;
       });
-      for (let i = 0; i <= dataRecordTable.length; i++) {
-        if (i <= dataRecordTable.length) {
-          newData.push(dataRecordTable[i]);
-        } else if (i > 10) {
-          break;
-        }
-      }
-      for (let i = 0; i < newData.length;) {
+      
+      for (let i = 0; i < dataRecordTable.length;) {
         let pos = document.createElement("tr");
-        console.log(newData);
-        pos.innerHTML = `<tr >   <th>${[i + 1]}</th><th>${newData[i].score}</th><th>${newData[i].nameRecord}</th></tr>`;
+        console.log(dataRecordTable);
+        pos.innerHTML = `<tr >   <th>${[i + 1]}</th><th>${dataRecordTable[i].score}</th><th>${dataRecordTable[i].nameRecord}</th></tr>`;
         i++;
         tblRecord.append(pos);
         if(i==10)break;
