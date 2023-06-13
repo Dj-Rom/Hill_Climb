@@ -1,5 +1,6 @@
 "use strict";
-
+btnMenuBoolean
+import { btnMenuBoolean } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/Controller/Controller_main/controller_main.js";
 import { dataGetRecords } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 import { storeInfo } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 export let btnMenuBoolean = false;
