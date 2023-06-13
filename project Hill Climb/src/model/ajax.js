@@ -23,7 +23,8 @@ export function storeInfo() {
   });
 }
 function lockGetReady(callresult) {
-  if (callresult.error != undefined) alert(callresult.error);else {
+  if (callresult.error != undefined) {alert(callresult.error); storeInfo() 
+  }else {
     // нам всё равно, что было прочитано -
     // всё равно перезаписываем
     let info = new Object();
@@ -49,7 +50,7 @@ function lockGetReady(callresult) {
 }
 function updateReady(callresult) {
   if (callresult.error != undefined) alert(callresult.error111);
-  // storeInfo();
+  storeInfo();
 }
 function restoreInfo() {
   $.ajax({
