@@ -286,10 +286,10 @@ function game() {
 
   function restart() {;
 
-let gameOveSsvg = document.querySelector('#gameOverSsvg');
+let gameOveSsvg = document.getElementById('gameOverSsvg');
 
 
-  gameOveSsvg.style.opacity  == 0.97 ;
+  gameOveSsvg.style.opacity  = 0.97 ;
  
   
 
