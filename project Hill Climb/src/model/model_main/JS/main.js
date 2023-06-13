@@ -3,8 +3,8 @@
 localStorage["saveGamePos"] = localStorage["saveGamePos"]?localStorage["saveGamePos"]: JSON.stringify(0)
 import { dataGetRecords } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 import { storeInfo } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
-export  let btnMenuBoolean = false;
-// export let btnMenuBoolean = false;
+
+
 
 let secGame;
 export let dataRecordPred = {};
@@ -73,7 +73,7 @@ function game() {
 
 
  
-  let t = (JSON.parse(localStorage["saveGamePos"]))
+  let t = (JSON.parse(localStorage["saveGamePos"])/0.2)
   let speed = 0;
   let playing = true;
   let perm = [];
