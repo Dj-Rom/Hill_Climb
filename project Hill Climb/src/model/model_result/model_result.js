@@ -14,7 +14,7 @@ cont.append(btnR);
 let ajaxHandlerScript = "https://fe.it-academy.by/AjaxStringStorage2.php";
 Read();
 
-const stringName = 'CHK123';
+const stringName = 'CHK2023';
 
 function Read() {
     $.ajax({

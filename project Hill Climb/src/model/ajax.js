@@ -5,7 +5,7 @@ const ajaxHandlerScript = "https://fe.it-academy.by/AjaxStringStorage2.php";
 let passForDB = Math.random()
   localStorage["PassForDB"] = localStorage["PassForDB"] ? localStorage["PassForDB"] : localStorage["PassForDB"] = JSON.stringify(passForDB);
   let updatePassword = JSON.parse(localStorage["PassForDB"])
-const stringName = 'CHK123';
+const stringName = 'CHK2023';
 export function storeInfo() {
  
   $.ajax({
