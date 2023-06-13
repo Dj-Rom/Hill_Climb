@@ -15,7 +15,7 @@ export let settingGame1 = {
 
     let btnGameinMenu = document.getElementById("btnGameinMenu")
     btnGameinMenu.addEventListener("click", ()=>{
-      localStorage["HillClimb"] = resultGetUserResult ;
+      localStorage["saveGamePos"] = resultGetUserResult ;
     
       location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html"
     })
