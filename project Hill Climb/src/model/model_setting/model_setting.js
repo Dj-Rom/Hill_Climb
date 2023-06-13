@@ -1,10 +1,10 @@
 
 
-const settingBtn1 = document.getElementById('settingBtn')
 let forward = document.querySelector('#Forward');
 let Bforward = document.querySelector('#B_Forward');
 let  back= document.querySelector('#back');
 let  BBack= document.querySelector('#B_Back');
+const settingBtn1 = document.getElementById('settingBtn')
  let  settingGame  = {
     forwardKey: 'ArrowUp', 
        backKey: 'ArrowDown',
