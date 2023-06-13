@@ -286,8 +286,8 @@ let gameOveSsvg = document.getElementById('gameOveSsvg')
 gameOveSsvg .style.transition = "transition:  transform 3s;";
 
 let timer = setInterval(() => {
-  gameOveSsvg.style.opacity  +=0.01;
-  if(gameOveSsvg.style.opacity >= 0.97){
+  gameOveSsvg.style.opacity  += 0.11;
+  if(gameOveSsvg.style.opacity > 0.97){
   clearInterval(timer)
 
     localStorage["saveGamePos"]='0'
@@ -308,7 +308,7 @@ let timer = setInterval(() => {
     storeInfo();
 
       location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";
-    }},16.66)
+    }},10)
   }
   function musicFonAndGaz() {
     if (kontrole.ArrowUp === 1) {
