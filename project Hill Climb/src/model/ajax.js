@@ -22,13 +22,13 @@ export function storeInfo() {
     error: errorHandler
   });
 }
+;
 function lockGetReady(callresult) {
   if (callresult.error != undefined) {alert(callresult.error); storeInfo() 
   }else {
-    // нам всё равно, что было прочитано -
-    // всё равно перезаписываем
-    let info = new Object();
-    let record = new Array();
+    console.log('1')
+    let info = {};
+    let record = []
     record.push(dataRecordPred);
     record.push(dataGetRecords);
     info.record = record.flat().filter(item => item);
@@ -73,12 +73,13 @@ function readReady(callresult) {
     const info = JSON.parse(callresult.result);
     dataGetRecords = info.record;
     return dataGetRecords;
+    console.log('1')
   }
 }
 function errorHandler(jqXHR, statusStr, errorStr) {
   alert(statusStr + ' ' + errorStr);
 }
-restoreInfo();
+// restoreInfo();
 export function read() {
   $.ajax({
     url: ajaxHandlerScript,
