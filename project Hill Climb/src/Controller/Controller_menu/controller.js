@@ -1,4 +1,4 @@
-import { startGameVisualResult} from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/JS/main.js";
+import { startGameVisualResult } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/JS/main.js";
 
 
 "use strict";
