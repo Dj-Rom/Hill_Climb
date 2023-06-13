@@ -30,7 +30,7 @@ function lockGetReady(callresult) {
     let record = new Array();
     record.push(dataRecordPred);
     record.push(dataGetRecords);
-    info.record = record.flat();
+    info.record = record.flat().filter(item => item);
     $.ajax({
       url: ajaxHandlerScript,
       type: 'POST',
@@ -48,8 +48,8 @@ function lockGetReady(callresult) {
   }
 }
 function updateReady(callresult) {
-  if (callresult.error != undefined) alert(callresult.error);
-  storeInfo();
+  if (callresult.error != undefined) alert(callresult.error111);
+  // storeInfo();
 }
 function restoreInfo() {
   $.ajax({
