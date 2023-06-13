@@ -450,7 +450,7 @@ h1 {
     }
 
     #menu_Сontinue_Game:hover {
-        font-size: 41px
+        font-size: 40px
     }
 
     #menu_Сontinue_Game {
@@ -461,7 +461,7 @@ h1 {
         font-family: Bungee, Arial, 'Times New Roman';
         font-style: normal;
         font-weight: 400;
-        font-size: 40px;
+        font-size: 39px;
         line-height: 55px;
         text-align: center;
         color: #ff3541;
@@ -480,12 +480,12 @@ h1 {
         position: absolute;
         width: 300px;
         height: 48px;
-        top: 58%;
+        top: 63%;
         font-family: Bungee, Arial, 'Times New Roman';
         font-style: normal;
         font-weight: 400;
         font-size: 35px;
-        line-height: 75px;
+        line-height: 20px;
         text-align: center;
         color: #6c84ff;
         border: none;
@@ -501,14 +501,14 @@ h1 {
 
     #menu_Setting {
         position: absolute;
-        top: 70%;
+        top: 80%;
         width: 227px;
         height: 48px;
         font-family: Bungee, Arial, 'Times New Roman';
         font-style: normal;
         font-weight: 400;
         font-size: 40px;
-        line-height: 101px;
+        line-height:20px;
         text-align: center;
         color: #13a844;
         border: none;
