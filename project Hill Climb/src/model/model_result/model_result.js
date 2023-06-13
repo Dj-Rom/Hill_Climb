@@ -35,12 +35,12 @@ function Read() {
     });
   }
   function readReady(callresult) {
-    console.log("1");
+  
     if (callresult.error != undefined) alert(callresult.error);else if (callresult.result != "") {
       const info = JSON.parse(callresult.result);
       let dataRecordTable;
       dataRecordTable = info.record;
-      console.log("dataRecordTable");
+      console.log(dataRecordTable);
       dataRecordTable = dataRecordTable.filter(item => item);
       dataRecordTable.sort(function (a, b) {
         return b.score - a.score;
