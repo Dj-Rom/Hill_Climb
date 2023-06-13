@@ -44,7 +44,7 @@ function Read() {
       });
       for (let i = 0; i <= dataRecordTable.length; i++) {
         if (i <= dataRecordTable.length) {
-          newData.push(dataRecordTable[i]);
+          newData.push(dataRecordTable[i].filter(item => item));
         } else if (i > 10) {
           break;
         }
