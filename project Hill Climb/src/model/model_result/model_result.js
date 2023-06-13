@@ -38,13 +38,13 @@ function Read() {
       let dataRecordTable;
       dataRecordTable = info.record;
       console.log(dataRecordTable);
-      dataRecordTable = dataRecordTable
+      dataRecordTable = dataRecordTable.filter(item => item);
       dataRecordTable.sort(function (a, b) {
         return b.score - a.score;
       });
       for (let i = 0; i <= dataRecordTable.length; i++) {
         if (i <= dataRecordTable.length) {
-          newData.push(dataRecordTable[i].filter(item => item));
+          newData.push(dataRecordTable[i]);
         } else if (i > 10) {
           break;
         }
