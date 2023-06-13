@@ -17,7 +17,7 @@ Read();
 
 
 function Read() {
-  const stringName = 'CHK2023';
+  const stringName = 'CHK20';
     $.ajax({
       url: ajaxHandlerScript,
       type: 'POST',
