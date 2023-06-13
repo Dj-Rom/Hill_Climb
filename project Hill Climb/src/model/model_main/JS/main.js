@@ -159,10 +159,11 @@ function game() {
     };
   }();
   function loop() {
-    resultGetUserResult +=secGame.toFixed(0)
+
     gameTime();
     cloud();
     musicFonAndGaz();
+    resultGetUserResult +=secGame.toFixed(0)
     visualGameTime.innerHTML = secGame.toFixed(0);
     if (secGame < 30000) {
       const perc = Math.round(secGame / 30000 * 100);
