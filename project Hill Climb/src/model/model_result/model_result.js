@@ -41,7 +41,7 @@ function Read() {
       let dataRecordTable;
       dataRecordTable = info.record;
       console.log(dataRecordTable);
-      dataRecordTable = dataRecordTable.filter(item => item);
+      dataRecordTable = dataRecordTable
       dataRecordTable.sort(function (a, b) {
         return b.score - a.score;
       });
