@@ -291,7 +291,7 @@ let timer = setInterval(() => {
   gameOveSsvg.style.opacity  *=2 ;
  
   if(gameOveSsvg.style.opacity > 0.97){
-
+    
 
     localStorage["saveGamePos"]='0'
     localStorage["HillClimbUser"] = localStorage["HillClimbUser"] ? localStorage["HillClimbUser"] : JSON.stringify({});
