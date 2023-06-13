@@ -300,10 +300,10 @@ function game() {
     setTimeout(()=>{let resultGetUserName = prompt("Please write your name here.", LocalStoregeNameUser)
     localStorage["HillClimbUser"] = JSON.stringify({
       name: resultGetUserName
-    });},400)
+    });
     resultGetUserResult = secGame.toFixed(0);
     dataRecordPred.nameRecord = resultGetUserName;
-    dataRecordPred.score = resultGetUserResult;
+    dataRecordPred.score = resultGetUserResult;},400)
     storeInfo();
 
       location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";
