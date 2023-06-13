@@ -73,8 +73,7 @@ function game() {
 
 
  
-  let t = 0;
-  t += (JSON.parse(localStorage["saveGamePos"])*0.2)
+  let t = (JSON.parse(localStorage["saveGamePos"]))
   let speed = 0;
   let playing = true;
   let perm = [];
