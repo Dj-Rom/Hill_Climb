@@ -292,7 +292,7 @@ function game() {
 
   gameOveSsvg.style.opacity  = 0.97 ;
  
-  
+  setTimeout(()=>{
 
     localStorage["saveGamePos"]='0'
     localStorage["HillClimbUser"] = localStorage["HillClimbUser"] ? localStorage["HillClimbUser"] : JSON.stringify({});
@@ -314,6 +314,7 @@ function game() {
       location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";
     
       cancelAnimationFrame(RAF)
+    },500)
   }
   function musicFonAndGaz() {
     if (kontrole.ArrowUp === 1) {
