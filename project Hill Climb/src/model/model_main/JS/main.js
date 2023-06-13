@@ -9,6 +9,7 @@ GO.src="./svg/GameOverSvg.svg";
 GO.alt="gameOver";
 GO.style.opacity = 0
 document.body.appendChild(GO);
+let gameOveSsvg = document.getElementById('gameOverSsvg');
 let secGame;
 export let dataRecordPred = {};
 
@@ -286,7 +287,7 @@ function game() {
 
   function restart() {;
 
-let gameOveSsvg = document.getElementById('gameOverSsvg');
+
 
 
   gameOveSsvg.style.opacity  = 0.97 ;
