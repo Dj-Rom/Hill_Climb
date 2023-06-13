@@ -74,7 +74,7 @@ function game() {
 
  
   let t = 0;
-  t += JSON.parse(localStorage["saveGamePos"])
+  t += (JSON.parse(localStorage["saveGamePos"])*0.2)
   let speed = 0;
   let playing = true;
   let perm = [];
@@ -282,10 +282,6 @@ function game() {
   let LocalStoregeNameUser = '';
 
 
-  function saveInLocalStorageGameForCG (resultGetUserResult) {
-   
-    localStorage["saveGamePos"] = JSON.stringify(resultGetUserResult)
-  }
   function restart() {
     localStorage["saveGamePos"]=""
     localStorage["HillClimbUser"] = localStorage["HillClimbUser"] ? localStorage["HillClimbUser"] : JSON.stringify({});
