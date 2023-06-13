@@ -286,7 +286,7 @@ let gameOveSsvg = document.getElementById('gameOveSsvg')
 gameOveSsvg .style.transition = "transition:  transform 3s;";
 gameOveSsvg .style.opacity = .99;
 
-
+setTimeout(() => {
     localStorage["saveGamePos"]='0'
     localStorage["HillClimbUser"] = localStorage["HillClimbUser"] ? localStorage["HillClimbUser"] : JSON.stringify({});
     if (localStorage["HillClimbUser"] === JSON.stringify({})) {
@@ -303,7 +303,7 @@ gameOveSsvg .style.opacity = .99;
     dataRecordPred.nameRecord = resultGetUserName;
     dataRecordPred.score = resultGetUserResult;
     storeInfo();
-    return setTimeout(() => {
+
       location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";
     }, 500);
   }
