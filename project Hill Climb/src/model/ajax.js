@@ -23,7 +23,7 @@ export function storeInfo() {
   });
 }
 function lockGetReady(callresult) {
-  if (callresult.error != undefined) alert(callresult.error);else {
+  if (callresult.error != undefined) alert(callresult.error1);else {
     // нам всё равно, что было прочитано -
     // всё равно перезаписываем
     let info = new Object();
@@ -48,8 +48,9 @@ function lockGetReady(callresult) {
   }
 }
 function updateReady(callresult) {
-  if (callresult.error != undefined) alert(callresult.error111);
-  // storeInfo();
+  if (callresult.error != undefined) alert(callresult.error);
+  else {
+  restoreInfo();}
 }
 function restoreInfo() {
   $.ajax({
@@ -77,46 +78,46 @@ function readReady(callresult) {
 function errorHandler(jqXHR, statusStr, errorStr) {
   alert(statusStr + ' ' + errorStr);
 }
-restoreInfo();
-export function read() {
-  $.ajax({
-    url: ajaxHandlerScript,
-    type: 'POST',
-    cache: false,
-    dataType: 'json',
-    data: {
-      f: 'LOCKGET',
-      n: stringName,
-      p: updatePassword
-    },
-    success: restoreInfo,
-    error: errorHandler
-  });
-  function restoreInfo() {
-    $.ajax({
-      url: ajaxHandlerScript,
-      type: 'POST',
-      cache: false,
-      dataType: 'json',
-      data: {
-        f: 'READ',
-        n: stringName
-      },
-      success: readReady,
-      error: errorHandler
-    });
-  }
-  function readReady(callresult) {
-    if (callresult.error != undefined) {
-      alert(callresult.error);
-      console.log('3');
-    } else if (callresult.result != "") {
-      const info = JSON.parse(callresult.result);
-      dataGetRecords = info.record;
-      return dataGetRecords;
-    }
-  }
-  function errorHandler(jqXHR, statusStr, errorStr) {
-    alert(statusStr + ' ' + errorStr);
-  }
-}
+
+// export function read() {
+//   $.ajax({
+//     url: ajaxHandlerScript,
+//     type: 'POST',
+//     cache: false,
+//     dataType: 'json',
+//     data: {
+//       f: 'LOCKGET',
+//       n: stringName,
+//       p: updatePassword
+//     },
+//     success: restoreInfo,
+//     error: errorHandler
+//   });
+//   function restoreInfo() {
+//     $.ajax({
+//       url: ajaxHandlerScript,
+//       type: 'POST',
+//       cache: false,
+//       dataType: 'json',
+//       data: {
+//         f: 'READ',
+//         n: stringName
+//       },
+//       success: readReady,
+//       error: errorHandler
+//     });
+//   }
+//   function readReady(callresult) {
+//     if (callresult.error != undefined) {
+//       alert(callresult.error);
+//       console.log('3');
+//     } else if (callresult.result != "") {
+//       const info = JSON.parse(callresult.result);
+//       dataGetRecords = info.record;
+//       return dataGetRecords;
+//     }
+//   }
+//   function errorHandler(jqXHR, statusStr, errorStr) {
+//     alert(statusStr + ' ' + errorStr);
+//   }
+// }
