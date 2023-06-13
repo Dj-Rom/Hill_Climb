@@ -310,11 +310,11 @@ function game() {
     dataRecordPred.nameRecord = resultGetUserName;
     dataRecordPred.score = resultGetUserResult;
     storeInfo();
-
+setTimeout(function () {
       location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";
     
       cancelAnimationFrame(RAF)
-    
+},500)
   }
   function musicFonAndGaz() {
     if (kontrole.ArrowUp === 1) {
