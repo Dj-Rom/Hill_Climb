@@ -52,11 +52,12 @@ function Read() {
           break;
         }
       }
-      for (let i = 0; i < newData.length - 2;) {
+      for (let i = 0; i < newData.length;) {
         let pos = document.createElement("tr");
         pos.innerHTML = `<tr >   <th>${[i + 1]}</th><th>${newData[i].score}</th><th>${newData[i].nameRecord}</th></tr>`;
         i++;
         tblRecord.append(pos);
+        if(i==10)break;
       }
       return dataRecordTable;
     }
