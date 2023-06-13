@@ -29,7 +29,7 @@ window.onload = mobileKontrole();
 window.screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 function mobileKontrole() {
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent) && window.orientation == 0) {
-    const user = confirm(" \u20D4    You need to rotate your device!  ПЕРЕВЕРНИТЕ УСТРОЙСТВО  \u20D5");
+    const user = confirm(" \u20D4    You need to rotate your device!    \u20D5");
     user ? window.location.reload(true) : window.location.reload(true);
   } else {
     game();
@@ -185,7 +185,6 @@ function game() {
     }
     earthFunc(cvs.height);
     if (player.rSpeed === 1 || t < 0) {
-      gameOveSsvg.style.opacity  = 0.97 ;
       fon.pause();
       pauseAudio(fon);
       restart();
@@ -288,7 +287,13 @@ function game() {
 
   function restart() {;
 
-console.log("restart");
+
+
+
+  gameOveSsvg.style.opacity  = 0.97 ;
+ 
+  
+
     localStorage["saveGamePos"]='0'
     localStorage["HillClimbUser"] = localStorage["HillClimbUser"] ? localStorage["HillClimbUser"] : JSON.stringify({});
     if (localStorage["HillClimbUser"] === JSON.stringify({})) {
