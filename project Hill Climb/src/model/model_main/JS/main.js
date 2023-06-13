@@ -24,7 +24,7 @@ export let kontrole = {
 };
 
 window.onload = mobileKontrole();
-window.onload = function () {
+
 window.screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 function mobileKontrole() {
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent) && window.orientation == 0) {
@@ -33,7 +33,7 @@ function mobileKontrole() {
   } else {
     game();
   }
-}
+
 
 window.onscroll = function () {
   window.scrollTo(0, 0);
