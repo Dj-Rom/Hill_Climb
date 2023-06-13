@@ -44,14 +44,14 @@ BBack.addEventListener('keyup', (event) => {event =event||window.event;
 
 settingBtn1.addEventListener('click',()=>{
     settingGame.forwardKey = forward.value
-    settingGame.backKey= Bforward.value
-    settingGame.B_forwardKey = back.value
+    settingGame.backKey= back.value
+    settingGame.B_forwardKey = Bforward.value
     settingGame.B_BackKey = BBack.value
     let dataS = JSON.stringify(settingGame)
       localStorage["HillClimb"] = dataS
     forward.value = settingGame.forwardKey
-Bforward.value = settingGame.backKey
-back.value = settingGame.B_forwardKey
+Bforward.value = settingGame.B_forwardKey
+back.value = settingGame.backKey
 BBack.value = settingGame.B_BackKey
 location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html"
 
