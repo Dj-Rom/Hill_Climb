@@ -186,7 +186,8 @@ function game() {
     earthFunc(cvs.height);
     if (player.rSpeed === 1 || t < 0) {
       gameOveSsvg.style.opacity  = 0.97 ;
-     
+      fon.pause();
+      pauseAudio(fon);
       restart();
       return resultGetUserResult;
     }
@@ -286,9 +287,8 @@ function game() {
 
 
   function restart() {;
-    fon.pause();
-    pauseAudio(fon);
 
+console.log("restart");
     localStorage["saveGamePos"]='0'
     localStorage["HillClimbUser"] = localStorage["HillClimbUser"] ? localStorage["HillClimbUser"] : JSON.stringify({});
     if (localStorage["HillClimbUser"] === JSON.stringify({})) {
@@ -297,7 +297,7 @@ function game() {
       let data1 = JSON.parse(localStorage["HillClimbUser"]);
       LocalStoregeNameUser = data1.name;
     }
- let resultGetUserName = prompt("Please write your name here.", LocalStoregeNameUser)
+    let resultGetUserName = prompt("Please write your name here.", LocalStoregeNameUser);
     localStorage["HillClimbUser"] = JSON.stringify({
       name: resultGetUserName
     });
@@ -307,7 +307,7 @@ function game() {
     storeInfo();
 
       location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";
-
+    
       // cancelAnimationFrame(RAF)
 
   }
