@@ -1,9 +1,7 @@
 "use strict";
 
 localStorage["saveGamePos"] = localStorage["saveGamePos"]?localStorage["saveGamePos"]: JSON.stringify(0)
-export let dataRecordPred = {};
 
-export let resultGetUserResult = 0;
 import { storeInfo } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 const GO = document.createElement('img');
 GO.id= 'gameOverSsvg';
@@ -13,7 +11,9 @@ GO.style.opacity = 0
 document.body.appendChild(GO);
 let gameOveSsvg = document.getElementById('gameOverSsvg');
 let secGame;
+export let dataRecordPred = {};
 
+export let resultGetUserResult = 0;
 let canvasGame = document.createElement('canvas');
 canvasGame.id = "canvas";
 document.body.append(canvasGame);
@@ -313,8 +313,8 @@ function game() {
 
       location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";
     
-      // cancelAnimationFrame(RAF)
-
+      cancelAnimationFrame(RAF)
+    
   }
   function musicFonAndGaz() {
     if (kontrole.ArrowUp === 1) {
