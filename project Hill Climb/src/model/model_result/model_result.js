@@ -24,7 +24,7 @@ function Read() {
       dataType: 'json',
       data: {
         f: 'READ',
-        n: 'CHK123'
+        n: stringName
       },
       success: readReady,
       error: errorHandler
