@@ -159,7 +159,7 @@ function game() {
     };
   }();
   function loop() {
-    
+    resultGetUserResult +=secGame.toFixed(0)
     gameTime();
     cloud();
     musicFonAndGaz();
