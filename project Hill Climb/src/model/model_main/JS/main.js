@@ -284,7 +284,7 @@ function game() {
   function restart() {
 let gameOveSsvg = document.getElementById('gameOveSsvg')
 gameOveSsvg .style.transition = "transition:  transform 3s;";
-gameOveSsvg .style.opacity = .99;
+
 let timer = setInterval(() => {
   gameOveSsvg.style.opacity  +=0.001;
   if(gameOveSsvg.style.opacity >= 0.97){
