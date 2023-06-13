@@ -286,7 +286,10 @@ let gameOveSsvg = document.getElementById('gameOveSsvg')
 gameOveSsvg .style.transition = "transition:  transform 3s;";
 
 let timer = setInterval(() => {
-  gameOveSsvg.style.opacity  += 0.11;
+  let ttt = 0.01
+  ttt += 0.11
+  gameOveSsvg.style.opacity  = ttt ;
+ 
   if(gameOveSsvg.style.opacity > 0.97){
   clearInterval(timer)
 
