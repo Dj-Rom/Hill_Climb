@@ -1,7 +1,10 @@
 "use strict";
 import { dataGetRecords } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 import { storeInfo } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
-
+export function startGameVisualResult(startTime) {
+  let secGame = startTime;
+  return secGame
+}
 export let dataRecordPred = {};
 
 let resultGetUserResult = 0;
@@ -61,7 +64,8 @@ function game() {
     cvs.width = window.innerWidth;
     cvs.height = window.innerHeight;
   }
-  let secGame = 0;
+
+
   const visualGameTime = document.createElement('div');
   visualGameTime.id = "visualGameTime";
   document.body.append(visualGameTime);
@@ -267,6 +271,7 @@ function game() {
   }
   let LocalStoregeNameUser = '';
   function restart() {
+    localStorage["saveGamePos"]=""
     localStorage["HillClimbUser"] = localStorage["HillClimbUser"] ? localStorage["HillClimbUser"] : JSON.stringify({});
     if (localStorage["HillClimbUser"] === JSON.stringify({})) {
       LocalStoregeNameUser = ' ';
