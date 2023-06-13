@@ -13,12 +13,12 @@
     -webkit-touch-callout: none;
     -webkit-user-drag: none
 }
-#gameOveSsvg{
+#gameOverSsvg{
     position: absolute;
     top: 17%;
     left: 34%;
     height: 76%;
-    opacity: 0.01;
+    
 }
 html,
 body {
