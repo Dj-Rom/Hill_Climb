@@ -285,7 +285,7 @@ function game() {
 
 
   function restart() {;
-cancelAnimationFrame(RAF)
+
 let gameOveSsvg = document.querySelector('#gameOverSsvg');
 
 
@@ -312,7 +312,7 @@ let gameOveSsvg = document.querySelector('#gameOverSsvg');
 
       location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";
     
-    
+      cancelAnimationFrame(RAF)
   }
   function musicFonAndGaz() {
     if (kontrole.ArrowUp === 1) {
