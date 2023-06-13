@@ -1,15 +1,12 @@
 "use strict";
 
-startGameVisualResult(JSON.stringify(localStorage["saveGamePos"]))
+localStorage["saveGamePos"] = localStorage["saveGamePos"]?localStorage["saveGamePos"]: JSON.stringify(0)
 import { dataGetRecords } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 import { storeInfo } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 export  let btnMenuBoolean = false;
 // export let btnMenuBoolean = false;
-function startGameVisualResult(startTime) {
-  let secGame = startTime;
-  return secGame
-}
-let secGame = startGameVisualResult()
+
+let secGame;
 export let dataRecordPred = {};
 
 export let resultGetUserResult = 0;
@@ -75,6 +72,13 @@ function game() {
   }
 
 
+ 
+  let t = 0;
+  t += JSON.parse(localStorage["saveGamePos"])
+  let speed = 0;
+  let playing = true;
+  let perm = [];
+  let val;
   const visualGameTime = document.createElement('div');
   visualGameTime.id = "visualGameTime";
   document.body.append(visualGameTime);
@@ -82,11 +86,6 @@ function game() {
     secGame = t * 0.2;
     return secGame;
   }
-  let t = 0;
-  let speed = 0;
-  let playing = true;
-  let perm = [];
-  let val;
   let fon = document.getElementById("fon");
   fon = new Audio("https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/music_main/phantom.mp3");
   let br = document.getElementById("br");
