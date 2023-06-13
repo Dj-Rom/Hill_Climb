@@ -297,10 +297,10 @@ function game() {
       let data1 = JSON.parse(localStorage["HillClimbUser"]);
       LocalStoregeNameUser = data1.name;
     }
-    setTimeout(()=>{let resultGetUserName = prompt("Please write your name here.", LocalStoregeNameUser);return resultGetUserName},1000)
+    setTimeout(()=>{let resultGetUserName = prompt("Please write your name here.", LocalStoregeNameUser)
     localStorage["HillClimbUser"] = JSON.stringify({
       name: resultGetUserName
-    });
+    });},400)
     resultGetUserResult = secGame.toFixed(0);
     dataRecordPred.nameRecord = resultGetUserName;
     dataRecordPred.score = resultGetUserResult;
