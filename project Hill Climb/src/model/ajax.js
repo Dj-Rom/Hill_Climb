@@ -29,7 +29,7 @@ export function storeInfo() {
     dataType: 'json',
     data: {
       f: 'LOCKGET',
-      n: stringName,
+      n: 'CHK123',
       p: updatePassword
     },
     success: lockGetReady,
@@ -63,7 +63,7 @@ function lockGetReady(callresult) {
 }
 function updateReady(callresult) {
   if (callresult.error != undefined) alert(callresult.error);
-  lockGetReady();
+  // lockGetReady();
 }
 function restoreInfo() {
   $.ajax({
