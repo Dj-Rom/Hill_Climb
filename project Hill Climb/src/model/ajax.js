@@ -1,10 +1,13 @@
 import { dataRecordPred } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/JS/main.js";
 export let dataGetRecords;
 const ajaxHandlerScript = "https://fe.it-academy.by/AjaxStringStorage2.php";
-let updatePassword;
+
+let passForDB = Math.random()
+  localStorage["PassForDB"] = localStorage["PassForDB"] ? localStorage["PassForDB"] : localStorage["PassForDB"] = JSON.stringify(passForDB);
+  let updatePassword = JSON.parse(localStorage["PassForDB"])
 const stringName = 'CHK123';
 export function storeInfo() {
-  updatePassword = Math.random();
+ 
   $.ajax({
     url: ajaxHandlerScript,
     type: 'POST',
