@@ -24,12 +24,7 @@ html {
     overflow-y: hidden
 }
 
-#gameOveSsvg{
- position: absolute;
- top: 40%;
- left: 40%;
- width: 70%
-}
+
 
 @font-face {
     font-family: Bungee;

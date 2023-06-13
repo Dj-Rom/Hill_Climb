@@ -13,7 +13,12 @@
     -webkit-touch-callout: none;
     -webkit-user-drag: none
 }
-
+#gameOveSsvg{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 70%
+   }
 html,
 body {
     overflow-y: hidden
