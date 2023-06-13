@@ -40,9 +40,9 @@ function lockGetReady(callresult) {
   if (callresult.error != undefined) alert(callresult.error);
   else {
 
-    let info = new Object();
-    let record = new Array();
-    record.push(dataRecordPred);
+    let info={record:[]};
+
+    info.record.push(dataRecordPred);
     record.push(dataGetRecords);
     info.record = record.flat();
     $.ajax({
