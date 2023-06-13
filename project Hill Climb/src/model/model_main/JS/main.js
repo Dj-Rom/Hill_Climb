@@ -189,7 +189,7 @@ function game() {
       restart();
       return resultGetUserResult;
     }
-    requestAnimationFrame(loop);
+    const RAF = requestAnimationFrame(loop);
   }
   function cloud() {
     const imgCloud = new Image();
@@ -285,19 +285,13 @@ function game() {
 
 
   function restart() {;
-
+cancelAnimationFrame(RAF)
 let gameOveSsvg = document.querySelector('#gameOverSsvg');
 
-gameOveSsvg .style.transition = "transition:  transform 3s;";
 
-let timer = setInterval(() => {
-
-  
-  gameOveSsvg.style.opacity  *=2 ;
+  gameOveSsvg.style.opacity  == 0.97 ;
  
-  if(gameOveSsvg.style.opacity > 0.97){
-    clearInterval(timer)}
-  },10)
+  
 
     localStorage["saveGamePos"]='0'
     localStorage["HillClimbUser"] = localStorage["HillClimbUser"] ? localStorage["HillClimbUser"] : JSON.stringify({});
