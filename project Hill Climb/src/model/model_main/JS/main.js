@@ -2,6 +2,7 @@
 
 import { dataGetRecords } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 import { storeInfo } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
+export let btnMenuBoolean = false;
 export function startGameVisualResult(startTime) {
   let secGame = startTime;
   return secGame
@@ -153,6 +154,9 @@ function game() {
     };
   }();
   function loop() {
+    if (btnMenuBoolean){
+      saveInLocalStorageGameForCG (resultGetUserResult)
+    }
     gameTime();
     cloud();
     musicFonAndGaz();
@@ -273,6 +277,12 @@ function game() {
     ctx.drawImage(finalPng, cvs.width / 2, cvs.height / 6);
   }
   let LocalStoregeNameUser = '';
+
+
+  function saveInLocalStorageGameForCG (resultGetUserResult) {
+   
+    localStorage["saveGamePos"] = JSON.stringify(resultGetUserResult)
+  }
   function restart() {
     localStorage["saveGamePos"]=""
     localStorage["HillClimbUser"] = localStorage["HillClimbUser"] ? localStorage["HillClimbUser"] : JSON.stringify({});
@@ -322,7 +332,7 @@ function game() {
     }
   }
   loop();
-return gameTime()
+
 }
 
 
@@ -336,7 +346,3 @@ return gameTime()
 
 // save game if user push Menu
 
-export function saveInLocalStorageGameForCG () {
-  console.log(game());
-  localStorage["saveGamePos"] = JSON.stringify(resultGetUserResult)
-}
