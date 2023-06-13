@@ -283,7 +283,7 @@ function game() {
 
   function restart() {
 let gameOveSsvg = document.getElementById('gameOveSsvg')
-gameOveSsvg .style.transition = "transition: width 4s, height 2s, transform 1s;";
+gameOveSsvg .style.transition = "transition:  transform 3s;";
 gameOveSsvg .style.opacity = .99;
 
 
