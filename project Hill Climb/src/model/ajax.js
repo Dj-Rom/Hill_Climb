@@ -40,7 +40,7 @@ function lockGetReady(callresult) {
   if (callresult.error != undefined) alert(callresult.error);
   else {
 
-    let info={record:[]};
+    let info={};
 
     info.record.push(dataRecordPred);
     record.push(dataGetRecords);
