@@ -282,7 +282,12 @@ function game() {
 
 
   function restart() {
-    localStorage["saveGamePos"]=""
+let gameOveSsvg = document.getElementById('gameOveSsvg')
+gameOveSsvg .style.transition = "transition: width 4s, height 2s, transform 1s;";
+gameOveSsvg .style.opacity = .99;
+
+
+    localStorage["saveGamePos"]='0'
     localStorage["HillClimbUser"] = localStorage["HillClimbUser"] ? localStorage["HillClimbUser"] : JSON.stringify({});
     if (localStorage["HillClimbUser"] === JSON.stringify({})) {
       LocalStoregeNameUser = ' ';
