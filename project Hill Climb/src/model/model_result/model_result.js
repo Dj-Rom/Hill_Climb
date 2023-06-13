@@ -54,7 +54,7 @@ function Read() {
       }
       for (let i = 0; i < newData.length - 2;) {
         let pos = document.createElement("tr");
-        pos.innerHTML = `<tr >   <th>${[i + 1]}</th><th>${newData[i].nameRecord}</th><th>${newData[i].score}</th></tr>`;
+        pos.innerHTML = `<tr >   <th>${[i + 1]}</th><th>${newData[i].score}</th><th>${newData[i].nameRecord}</th></tr>`;
         i++;
         tblRecord.append(pos);
       }
