@@ -289,7 +289,7 @@ function game() {
 let gameOveSsvg = document.querySelector('#gameOverSsvg');
 
 gameOveSsvg .style.transition = "transition:  transform 3s;";
-gameOveSsvg.style.opacity = 0.01
+
 let timer = setInterval(() => {
 
   
@@ -317,7 +317,7 @@ let timer = setInterval(() => {
 
       location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";
       clearInterval(timer)
-    }},10)
+    }},50)
   }
   function musicFonAndGaz() {
     if (kontrole.ArrowUp === 1) {
