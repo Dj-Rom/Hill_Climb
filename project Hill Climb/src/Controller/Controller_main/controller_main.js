@@ -84,6 +84,8 @@ window.addEventListener('deviceorientation', function (event) {
   }, 16);
 });
 const imgGaz = document.getElementById("imgGaz");
+if (imgGaz.style.display === "block") {
+
 imgGaz.addEventListener("touchstart", event => {
   event = event || window.event;
   event.preventDefault();
@@ -119,25 +121,5 @@ imgbr.addEventListener("click", event => {
   window.navigator.vibrate(200);
   return kontrole.ArrowDown = 1;
 }, false);
-imgGaz.addEventListener("mouseDown", event => {
-  event = event || window.event;
-  event.preventDefault();
-  window.navigator.vibrate(200);
-  return kontrole.ArrowUp = 1;
-}, false);
-imgGaz.addEventListener("MouseUp", (event) => {
-  event = event || window.event;
-  event.preventDefault();
-  kontrole.ArrowUp = 0;
-}, false);
-imgbr.addEventListener("mouseDown", event => {
-  event = event || window.event;
-  event.preventDefault();
-  window.navigator.vibrate(200);
-  return kontrole.ArrowDown = 1;
-}, false);
-imgbr.addEventListener("mouseUp", event => {
-  event = event || window.event;
-  event.preventDefault();
-  kontrole.ArrowDown = 0;
-}, false);
+
+}
