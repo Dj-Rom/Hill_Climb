@@ -297,7 +297,7 @@ function game() {
       let data1 = JSON.parse(localStorage["HillClimbUser"]);
       LocalStoregeNameUser = data1.name;
     }
-    let resultGetUserName = prompt("Please write your name here.", LocalStoregeNameUser);
+    setTimeout(()=>{let resultGetUserName = prompt("Please write your name here.", LocalStoregeNameUser);return resultGetUserName},1000)
     localStorage["HillClimbUser"] = JSON.stringify({
       name: resultGetUserName
     });
