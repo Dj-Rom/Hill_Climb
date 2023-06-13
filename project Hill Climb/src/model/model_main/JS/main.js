@@ -185,6 +185,7 @@ function game() {
     }
     earthFunc(cvs.height);
     if (player.rSpeed === 1 || t < 0) {
+      gameOveSsvg.style.opacity  = 0.97 ;
       fon.pause();
       pauseAudio(fon);
       restart();
@@ -290,7 +291,7 @@ function game() {
 
 
 
-  gameOveSsvg.style.opacity  = 0.97 ;
+
  
   
 
