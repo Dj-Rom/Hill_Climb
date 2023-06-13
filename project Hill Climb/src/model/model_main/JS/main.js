@@ -19,6 +19,7 @@ export let kontrole = {
   ArrowLeft: 0,
   ArrowRight: 0
 };
+window.onload = function () {
 window.onload = mobileKontrole();
 window.screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 function mobileKontrole() {
@@ -327,7 +328,7 @@ function game() {
 
 
 
-
+}
 
 
 
