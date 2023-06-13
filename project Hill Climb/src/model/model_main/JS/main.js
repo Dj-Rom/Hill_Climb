@@ -163,7 +163,7 @@ function game() {
     gameTime();
     cloud();
     musicFonAndGaz();
-    resultGetUserResult +=secGame.toFixed(0)
+    resultGetUserResult =secGame.toFixed(0)
     visualGameTime.innerHTML = secGame.toFixed(0);
     if (secGame < 30000) {
       const perc = Math.round(secGame / 30000 * 100);

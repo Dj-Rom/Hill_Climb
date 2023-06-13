@@ -2,7 +2,7 @@ let forward = document.querySelector('#Forward');
 let Bforward = document.querySelector('#B_Forward');
 let  back= document.querySelector('#back');
 let  BBack= document.querySelector('#B_Back');
-// import { settingGame1 } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/Controller/Controller_main/controller_main.js";
+import { settingGame1 } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/Controller/Controller_main/controller_main.js";
 const settingBtn1 = document.getElementById('settingBtn')
  let  settingGame  = {
     forwardKey: 'ArrowUp', 
