@@ -328,5 +328,5 @@ function game() {
 // save game if user push Menu
 
 export function saveInLocalStorageGameForCG () {
-  localStorage[saveGamePos] = JSON.stringify(resultGetUserResult)
+  localStorage["saveGamePos"] = JSON.stringify(resultGetUserResult)
 }
