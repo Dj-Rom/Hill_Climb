@@ -1,8 +1,9 @@
 "use strict";
 
-import { btnMenuBoolean } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/Controller/Controller_main/controller_main.js";
+
 import { dataGetRecords } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 import { storeInfo } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
+export  let btnMenuBoolean = false;
 // export let btnMenuBoolean = false;
 export function startGameVisualResult(startTime) {
   let secGame = startTime;
@@ -336,12 +337,7 @@ function game() {
 
 }
 
-let btnGameinMenu = document.getElementById("btnGameinMenu")
-btnGameinMenu.addEventListener("click", ()=>{
-  btnMenuBoolean = true
-  console.log(btnMenuBoolean);
-  location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html"
-})
+
 
 
 

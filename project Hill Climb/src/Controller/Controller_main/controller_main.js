@@ -1,5 +1,5 @@
 import { kontrole } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/JS/main.js";
-export  let btnMenuBoolean = false;
+import { btnMenuBoolean } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/JS/main.js";
 
 export let settingGame1 = {
     forwardKey: 'ArrowUp',
@@ -13,7 +13,12 @@ export let settingGame1 = {
     let data = JSON.parse(dataQ);
  
 
-  
+    let btnGameinMenu = document.getElementById("btnGameinMenu")
+    btnGameinMenu.addEventListener("click", ()=>{
+      btnMenuBoolean = true
+      console.log(btnMenuBoolean);
+      location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html"
+    })
 
 
 document.addEventListener("keydown", event => {
