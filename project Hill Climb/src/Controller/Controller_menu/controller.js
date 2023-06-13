@@ -38,7 +38,7 @@ off.addEventListener("touch", (event) => {
 
 menuNewGame.addEventListener("click", (event) => {
     event = event || window.event; event.preventDefault()
-    
+    localStorage["saveGamePos"] = JSON.stringify(0)
     location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/main_game_start.html"
 });
 menuСontinueGame.addEventListener(
@@ -59,6 +59,7 @@ menuWorldResult.addEventListener("click", (event) => {
 
 menuNewGame.addEventListener("touch", (event) => {
     event = event || window.event; event.preventDefault();
+    localStorage["saveGamePos"] = JSON.stringify(0)
     location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/main_game_start.html";
     window.navigator.vibrate(200)
 });
