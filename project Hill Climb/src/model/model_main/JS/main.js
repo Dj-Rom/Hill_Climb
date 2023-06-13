@@ -1,18 +1,18 @@
 "use strict";
 
-
+startGameVisualResult(JSON.stringify(localStorage["saveGamePos"]))
 import { dataGetRecords } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 import { storeInfo } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 export  let btnMenuBoolean = false;
 // export let btnMenuBoolean = false;
-export function startGameVisualResult(startTime) {
+function startGameVisualResult(startTime) {
   let secGame = startTime;
   return secGame
 }
 let secGame = startGameVisualResult()
 export let dataRecordPred = {};
 
-let resultGetUserResult = 0;
+export let resultGetUserResult = 0;
 let canvasGame = document.createElement('canvas');
 canvasGame.id = "canvas";
 document.body.append(canvasGame);
@@ -156,9 +156,7 @@ function game() {
     };
   }();
   function loop() {
-    if (btnMenuBoolean){
-      saveInLocalStorageGameForCG (resultGetUserResult)
-    }
+    
     gameTime();
     cloud();
     musicFonAndGaz();
