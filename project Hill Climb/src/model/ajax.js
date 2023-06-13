@@ -37,9 +37,9 @@ export function storeInfo() {
   });
 }
 function lockGetReady(callresult) {
-  if (callresult.error != undefined) alert(callresult.error);else {
-    // нам всё равно, что было прочитано -
-    // всё равно перезаписываем
+  if (callresult.error != undefined) alert(callresult.error);
+  else {
+
     let info = new Object();
     let record = new Array();
     record.push(dataRecordPred);
