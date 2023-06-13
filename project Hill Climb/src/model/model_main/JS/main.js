@@ -322,6 +322,7 @@ function game() {
     }
   }
   loop();
+return gameTime()
 }
 
 
@@ -336,6 +337,6 @@ function game() {
 // save game if user push Menu
 
 export function saveInLocalStorageGameForCG () {
-  console.log(gameTime());
+  console.log(game());
   localStorage["saveGamePos"] = JSON.stringify(resultGetUserResult)
 }
