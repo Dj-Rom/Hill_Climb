@@ -215,11 +215,11 @@ function game() {
    function cloudCicl (device) {
  
   if(device){
-    ctx.drawImage(imgCloud,  (cvs.width/100*80), cvs.height /100 * 10);
+    ctx.drawImage(imgCloud2,  (cvs.width/100*80), cvs.height /100 * 10);
     ctx.drawImage(imgCloud,  (cvs.width/100*65), cvs.height /100 * 33);
     
     ctx.drawImage(imgCloud2,  (cvs.width/100*45), cvs.height /100 * 7);
-  ctx.drawImage(imgCloud,  (cvs.width/100*15), cvs.height /100 * 12);
+  ctx.drawImage(imgCloud2,  (cvs.width/100*15), cvs.height /100 * 22);
    ctx.drawImage(imgCloud, (cvs.width/100*1), cvs.height  /100 * 8);
   
   } else {
