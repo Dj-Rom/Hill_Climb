@@ -1,4 +1,4 @@
-import "core-js/modules/es.json.stringify.js";
+
 window.addEventListener("load", function () {
   var passForDB = Math.random();
   localStorage["PassForDB"] = localStorage["PassForDB"] ? localStorage["PassForDB"] : localStorage["PassForDB"] = JSON.stringify(passForDB);
