@@ -219,7 +219,7 @@ function game() {
     positionCloud = cvs.width - cvs.width - (sss - 1500 )
     ctx.drawImage(imgCloud, positionCloud, cvs.height - cvs.height + 60);
    }
-   cloudCicl ()}
+   }
     if (secGame.toFixed(0) > 30000) {
       final();
     }
