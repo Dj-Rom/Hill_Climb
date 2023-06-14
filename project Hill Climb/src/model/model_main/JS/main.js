@@ -215,19 +215,19 @@ function game() {
   ctx.drawImage(imgCloud, cvs.height - sss - sss*0.5, cvs.height - cvs.height + 60);
   }
   if(sss>700){
-    ctx.drawImage(imgCloud, cvs.height - sss - sss*0.5, cvs.height - cvs.height + 60);
+    ctx.drawImage(imgCloud, cvs.height - sss*0.2, cvs.height - cvs.height + 60);
   }
     if(sss>1300){
-      ctx.drawImage(imgCloud, cvs.height - sss - sss*0.5, cvs.height - cvs.height + 60);
+      ctx.drawImage(imgCloud,  cvs.height - sss*0.2, cvs.height - cvs.height + 60);
   }
     if(sss>1900 ){
-      ctx.drawImage(imgCloud, cvs.height - sss - sss*0.5, cvs.height - cvs.height + 60);
+      ctx.drawImage(imgCloud,  cvs.height - sss*0.2, cvs.height - cvs.height + 60);
   }
     if(sss>2500 ){
-      ctx.drawImage(imgCloud, cvs.height - sss - sss*0.5, cvs.height - cvs.height + 60);
+      ctx.drawImage(imgCloud,  cvs.height - sss*0.2, cvs.height - cvs.height + 60);
   }
     if(sss>3100){
-      ctx.drawImage(imgCloud, cvs.height - sss - sss*0.5, cvs.height - cvs.height + 60);
+      ctx.drawImage(imgCloud,  cvs.height - sss*0.2, cvs.height - cvs.height + 60);
   }
     
     
