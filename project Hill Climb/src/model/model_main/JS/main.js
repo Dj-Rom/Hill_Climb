@@ -42,7 +42,7 @@ window.onscroll = function () {
   window.scrollTo(0, 0);
 };
 function game() {
-
+  cloud();
   const imgGaz = document.createElement("img");
   imgGaz.id = "imgGaz";
   imgGaz.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/forward.svg";
