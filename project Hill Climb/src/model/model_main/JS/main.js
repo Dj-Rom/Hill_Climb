@@ -164,7 +164,23 @@ function game() {
       ctx.drawImage(this.img, -20, -20, 45, 45);
       ctx.restore();
       cloud();
-      
+      const imgCloud = new Image();
+      imgCloud.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
+      imgCloud.alt = "cloud";
+      ctx.drawImage(imgCloud, cvs.width - cvs.width + 500, cvs.height - cvs.height + 250);
+      const imgCloud2 = new Image();
+      imgCloud2.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
+      imgCloud2.alt = "cloud";
+      ctx.drawImage(imgCloud2, cvs.width - cvs.width / 2 + 500, cvs.height - cvs.height + 150);
+      const imgCloud3 = new Image();
+      imgCloud3.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
+      imgCloud3.alt = "cloud";
+      ctx.drawImage(imgCloud, cvs.width - cvs.width / 2.5 + 500, cvs.height - cvs.height + 10);
+      const imgCloud4 = new Image();
+      imgCloud4.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
+      imgCloud4.alt = "cloud"
+      ctx.drawImage(imgCloud4, 150 + 500, cvs.height - 750 - 50);
+
     };
   }();
   function loop() {
@@ -201,22 +217,7 @@ function game() {
     const RAF = requestAnimationFrame(loop);
   }
   function cloud() {
-    const imgCloud = new Image();
-    imgCloud.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
-    imgCloud.alt = "cloud";
-    ctx.drawImage(imgCloud, cvs.width - cvs.width + 500, cvs.height - cvs.height + 250);
-    const imgCloud2 = new Image();
-    imgCloud2.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
-    imgCloud2.alt = "cloud";
-    ctx.drawImage(imgCloud2, cvs.width - cvs.width / 2 + 500, cvs.height - cvs.height + 150);
-    const imgCloud3 = new Image();
-    imgCloud3.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
-    imgCloud3.alt = "cloud";
-    ctx.drawImage(imgCloud, cvs.width - cvs.width / 2.5 + 500, cvs.height - cvs.height + 10);
-    const imgCloud4 = new Image();
-    imgCloud4.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
-    imgCloud4.alt = "cloud"
-    ctx.drawImage(imgCloud4, 150 + 500, cvs.height - 750 - 50);
+   
     
   }
   function sound() {
