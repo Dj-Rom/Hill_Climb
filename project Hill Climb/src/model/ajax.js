@@ -28,10 +28,10 @@ function lockGetReady(callresult) {
     // нам всё равно, что было прочитано -
     // всё равно перезаписываем
     let info = new Object();
-    let record = [];
-    record.push(dataRecordPred);
-    record.push(dataGetRecords);
-    info.record = record.flat().filter(item => item);
+    let records = new Array();
+    records.push(dataRecordPred);
+    records.push(dataGetRecords);
+    info.record = records.flat().filter(item => item);
     $.ajax({
       url: ajaxHandlerScript,
       type: 'POST',
@@ -78,47 +78,4 @@ function readReady(callresult) {
 }
 function errorHandler(jqXHR, statusStr, errorStr) {
   alert(statusStr + ' ' + errorStr);
-}
-
-export function read() {
-  $.ajax({
-    url: ajaxHandlerScript,
-    type: 'POST',
-    cache: false,
-    dataType: 'json',
-    data: {
-      f: 'LOCKGET',
-      n: stringName,
-      p: updatePassword
-    },
-    success: restoreInfo,
-    error: errorHandler
-  });
-  function restoreInfo() {
-    $.ajax({
-      url: ajaxHandlerScript,
-      type: 'POST',
-      cache: false,
-      dataType: 'json',
-      data: {
-        f: 'READ',
-        n: stringName
-      },
-      success: readReady,
-      error: errorHandler
-    });
-  }
-  function readReady(callresult) {
-    if (callresult.error != undefined) {
-      alert(callresult.error);
-      console.log('3');
-    } else if (callresult.result != "") {
-      const info = JSON.parse(callresult.result);
-      dataGetRecords = info.record;
-      return dataGetRecords;
-    }
-  }
-  function errorHandler(jqXHR, statusStr, errorStr) {
-    alert(statusStr + ' ' + errorStr);
-  }
 }
