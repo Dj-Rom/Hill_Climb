@@ -213,7 +213,7 @@ function game() {
     console.log(positionCloud);
     ctx.drawImage(imgCloud, positionCloud, cvs.height - cvs.height + 60);
    if (positionCloud < 0) {
-    positionCloud = cvs.height-(cvs.width + secGame )
+    positionCloud = (1500 + secGame ) - secGame
     ctx.drawImage(imgCloud, positionCloud, cvs.height - cvs.height + 60);
    }
     
