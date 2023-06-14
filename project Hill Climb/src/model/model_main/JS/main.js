@@ -206,13 +206,13 @@ function game() {
     ctx.fillStyle = "#ecef54";
     ctx.strokeStyle = "#ecef54";
 
-    ctx.drawImage(imgCloud, cvs.width - cvs.width + 500, cvs.height - cvs.height + 150);
+    // ctx.drawImage(imgCloud, cvs.width - cvs.width + 500, cvs.height - cvs.height + 150);
    
     ctx.drawImage(imgCloud2, cvs.width - cvs.width / 2 + 500 - t, cvs.height - cvs.height + 900);
     
     ctx.drawImage(imgCloud, cvs.width - cvs.width / 2.5 + 500 - t, cvs.height - cvs.height + 60);
      
-    ctx.drawImage(imgCloud4, 650, 500);
+    
     
     if (secGame.toFixed(0) > 30000) {
       final();
