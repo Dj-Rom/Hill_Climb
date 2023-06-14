@@ -97,12 +97,7 @@ imgGaz.addEventListener("touchend", event => {
   event.preventDefault();
   kontrole.ArrowUp = 0;
 }, {passive: true});
-imgGaz.addEventListener("click", event => {
-  event = event || window.event;
-  event.preventDefault();
-  window.navigator.vibrate(200);
-  return kontrole.ArrowUp = 1;
-}, {passive: true});
+
 const imgbr = document.getElementById("imgbr");
 imgbr.addEventListener("touchstart", event => {
   event = event || window.event;
@@ -115,11 +110,6 @@ imgbr.addEventListener("touchend", event => {
   event.preventDefault();
   kontrole.ArrowDown = 0;
 }, {passive: true});
-imgbr.addEventListener("click", event => {
-  event = event || window.event;
-  event.preventDefault();
-  window.navigator.vibrate(200);
-  return kontrole.ArrowDown = 1;
-}, {passive: true});
+
 
 }
