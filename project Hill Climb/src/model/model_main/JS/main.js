@@ -217,8 +217,8 @@ function game() {
   if(sss>700){
     ctx.drawImage(imgCloud, cvs.height - sss*0.2, cvs.height - cvs.height + 60);
   }
-    if(sss>1300){
-      ctx.drawImage(imgCloud,  cvs.height - sss*0.2, cvs.height - cvs.height + 60);
+    if(sss>1000){
+      ctx.drawImage(imgCloud,  positionCloud + sss, cvs.height - cvs.height + 60);
   }
     if(sss>1900 ){
       ctx.drawImage(imgCloud,  cvs.height - sss*0.2, cvs.height - cvs.height + 60);
