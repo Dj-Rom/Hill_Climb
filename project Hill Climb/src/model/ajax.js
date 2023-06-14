@@ -54,7 +54,7 @@ function lockGetReady(callresult) {
 function updateReady(callresult) {
   if (callresult.error != undefined) alert(callresult.error);
   else {
-  restoreInfo();}
+  }
 }
 function restoreInfo() {
   $.ajax({
