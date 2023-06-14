@@ -36,7 +36,7 @@ function Read() {
       const info = JSON.parse(callresult.result);
       let dataRecordTable;
       dataRecordTable = info.record;
-      dataGetRecords = dataRecordTable
+     
       dataRecordTable = dataRecordTable.filter(item => item);
       dataRecordTable.sort(function (a, b) {
         return b.score - a.score;
@@ -44,7 +44,7 @@ function Read() {
       
       for (let i = 0; i < dataRecordTable.length;) {
         let pos = document.createElement("tr");
-        console.log(dataRecordTable);
+     
         pos.innerHTML = `<tr >   <th>${[i + 1]}</th><th>${dataRecordTable[i].score}</th><th>${dataRecordTable[i].nameRecord}</th></tr>`;
         i++;
         tblRecord.append(pos);
