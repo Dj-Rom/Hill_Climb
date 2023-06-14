@@ -163,6 +163,8 @@ function game() {
       ctx.rotate(this.rot);
       ctx.drawImage(this.img, -20, -20, 45, 45);
       ctx.restore();
+      cloud();
+      
     };
   }();
   function loop() {
@@ -188,7 +190,7 @@ function game() {
     if (secGame.toFixed(0) > 30000) {
       final();
     }
-    cloud();
+   
     earthFunc(cvs.height);
     if (player.rSpeed === 1 || t < 0) {
       fon.pause();
