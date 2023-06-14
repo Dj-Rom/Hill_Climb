@@ -215,7 +215,7 @@ function game() {
   ctx.drawImage(imgCloud, (cvs.height +positionCloud + sss)-sss*0.5, cvs.height - cvs.height + 60);
   }
   if(sss>500){
-    ctx.drawImage(imgCloud,  (cvs.height +positionCloud + sss)-sss*0.5, cvs.height - cvs.height + 60);
+    ctx.drawImage(imgCloud,  cvs.height - ((positionCloud+sss)*0.3), cvs.height - cvs.height + 60);
   }
     if(sss>700){
       ctx.drawImage(imgCloud,  (cvs.height +positionCloud + sss)-sss*0.5, cvs.height - cvs.height + 60);
