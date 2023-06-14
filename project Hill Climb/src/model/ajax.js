@@ -31,7 +31,9 @@ function lockGetReady(callresult) {
     let records = new Array();
     records.push(dataRecordPred);
     records.push(dataGetRecords);
-    info.record = records.flat().filter(item => item);
+    console.log(dataRecordPred);
+    console.log(dataGetRecords);
+    info.record = records.flat()
     $.ajax({
       url: ajaxHandlerScript,
       type: 'POST',
