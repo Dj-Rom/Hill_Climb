@@ -211,13 +211,15 @@ function game() {
     let sss = secGame
     let positionCloud = cvs.width - cvs.width /2 - sss
     // ctx.drawImage(imgCloud, cvs.width - cvs.width + 500, cvs.height - cvs.height + 150);
+    ctx.drawImage(imgCloud,  (cvs.width)- ((positionCloud+sss)*0.3), cvs.height - cvs.height + 60);
+    ctx.drawImage(imgCloud,  (cvs.width+100)- ((positionCloud+sss)*0.3), cvs.height - cvs.height + 160);
  if(sss>100 ){
   ctx.drawImage(imgCloud,  (cvs.width)- ((positionCloud+sss)*0.3), cvs.height - cvs.height + 60);
-   ctx.drawImage(imgCloud,  (cvs.width+10)- ((positionCloud+sss)*0.3), cvs.height - cvs.height + 160);
+   ctx.drawImage(imgCloud,  (cvs.width+100)- ((positionCloud+sss)*0.3), cvs.height - cvs.height + 160);
   }
   if(sss>500){
     ctx.drawImage(imgCloud,  (cvs.width)- ((positionCloud+sss)*0.3), cvs.height - cvs.height + 60);
-     ctx.drawImage(imgCloud,  (cvs.width+10)- ((positionCloud+sss)*0.3), cvs.height - cvs.height + 160);
+     ctx.drawImage(imgCloud,  (cvs.width+100)- ((positionCloud+sss)*0.3), cvs.height - cvs.height + 160);
   }
     if(sss>700){
       ctx.drawImage(imgCloud,  (cvs.width)- ((positionCloud+sss)*0.3), cvs.height - cvs.height + 60);
