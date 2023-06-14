@@ -205,19 +205,30 @@ function game() {
     ctx.stroke();
     ctx.fillStyle = "#ecef54";
     ctx.strokeStyle = "#ecef54";
-    cloudCicl ()
-   function cloudCicl () {
+
+
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)){
+      cloudCicl (true)
+    }else{ cloudCicl (false)
+    }
+   
+   function cloudCicl (device) {
  
-    // ctx.drawImage(imgCloud, cvs.width - cvs.width + 500, cvs.height - cvs.height + 150);
+  if(device){
     ctx.drawImage(imgCloud,  (cvs.width/100*80), cvs.height /100 * 10);
     ctx.drawImage(imgCloud,  (cvs.width/100*2), cvs.height /100 * 33);
     ctx.drawImage(imgCloud2,  (cvs.width/100*10), cvs.height /100 * 7);
-    ctx.drawImage(imgCloud2,  (cvs.width/100*30), cvs.height /100 * 23);
+    ctx.drawImage(imgCloud2,  (cvs.width/100*50), cvs.height /100 * 23);
     ctx.drawImage(imgCloud2,  (cvs.width/100*70), cvs.height /100 * 7);
   ctx.drawImage(imgCloud,  (cvs.width/100*60), cvs.height /100 * 12);
    ctx.drawImage(imgCloud, (cvs.width/100*14), cvs.height  /100 * 8);
   
-
+  } else {
+    ctx.drawImage(imgCloud2,  (cvs.width/100*30), cvs.height /100 * 23);
+    ctx.drawImage(imgCloud2,  (cvs.width/100*70), cvs.height /100 * 7);
+  ctx.drawImage(imgCloud,  (cvs.width/100*1), cvs.height /100 * 12);
+   ctx.drawImage(imgCloud, (cvs.width/100*14), cvs.height  /100 * 8);
+  }
    }
    
     if (secGame.toFixed(0) > 30000) {
