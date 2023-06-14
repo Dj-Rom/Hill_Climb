@@ -82,3 +82,4 @@ function readReady(callresult) {
 function errorHandler(jqXHR, statusStr, errorStr) {
   alert(statusStr + ' ' + errorStr);
 }
+restoreInfo();
