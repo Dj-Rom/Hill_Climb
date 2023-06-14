@@ -199,6 +199,7 @@ function game() {
       return resultGetUserResult;
     }
     const RAF = requestAnimationFrame(loop);
+    cloud();
   }
   function cloud() {
     const imgCloud = new Image();
@@ -218,7 +219,7 @@ function game() {
     imgCloud4.alt = "cloud"
     ctx.drawImage(imgCloud4, 150, 500);
 
-    cloud();
+    
     
   }
   function sound() {
