@@ -205,15 +205,15 @@ function game() {
     ctx.stroke();
     ctx.fillStyle = "#ecef54";
     ctx.strokeStyle = "#ecef54";
-  
-    let positionCloud = cvs.width - cvs.width / 2 + 500 - secGame
+    let sss = secGame
+    let positionCloud = cvs.width - cvs.width  - sss
     // ctx.drawImage(imgCloud, cvs.width - cvs.width + 500, cvs.height - cvs.height + 150);
    
     // ctx.drawImage(imgCloud2, cvs.width - cvs.width / 2 + 500 - t, cvs.height - cvs.height + 900);
-    console.log(secGame);
+   
     ctx.drawImage(imgCloud, positionCloud, cvs.height - cvs.height + 60);
    if (positionCloud < 0) {
-    positionCloud = (1500 + secGame ) - secGame
+    positionCloud = cvs.width - cvs.width - (sss - 1500 )
     ctx.drawImage(imgCloud, positionCloud, cvs.height - cvs.height + 60);
    }
     
