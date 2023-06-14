@@ -91,35 +91,35 @@ imgGaz.addEventListener("touchstart", event => {
   event.preventDefault();
   window.navigator.vibrate(200);
   return kontrole.ArrowUp = 1;
-}, false);
+}, {passive: true});
 imgGaz.addEventListener("touchend", event => {
   event = event || window.event;
   event.preventDefault();
   kontrole.ArrowUp = 0;
-}, false);
+}, {passive: true});
 imgGaz.addEventListener("click", event => {
   event = event || window.event;
   event.preventDefault();
   window.navigator.vibrate(200);
   return kontrole.ArrowUp = 1;
-}, false);
+}, {passive: true});
 const imgbr = document.getElementById("imgbr");
 imgbr.addEventListener("touchstart", event => {
   event = event || window.event;
   event.preventDefault();
   window.navigator.vibrate(200);
   return kontrole.ArrowDown = 1;
-}, false);
+}, {passive: true});
 imgbr.addEventListener("touchend", event => {
   event = event || window.event;
   event.preventDefault();
   kontrole.ArrowDown = 0;
-}, false);
+}, {passive: true});
 imgbr.addEventListener("click", event => {
   event = event || window.event;
   event.preventDefault();
   window.navigator.vibrate(200);
   return kontrole.ArrowDown = 1;
-}, false);
+}, {passive: true});
 
 }
