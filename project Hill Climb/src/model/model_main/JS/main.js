@@ -217,14 +217,7 @@ function game() {
   ctx.drawImage(imgCloud,  (cvs.width/100*60), cvs.height /100 * 12);
    ctx.drawImage(imgCloud, (cvs.width/100*44), cvs.height  /100 * 8);
   
- 
-    
-   
-    // ctx.drawImage(imgCloud2, cvs.width - cvs.width / 2 + 500 - t, cvs.height - cvs.height + 900);
 
-   console.log("ssss",sss);
-   console.log("positionCloud",positionCloud);
-  
    }
    
     if (secGame.toFixed(0) > 30000) {
