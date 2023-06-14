@@ -207,35 +207,17 @@ function game() {
     ctx.strokeStyle = "#ecef54";
     cloudCicl ()
    function cloudCicl () {
-   
-    let sss = secGame
-    let positionCloud = cvs.width - cvs.width /2 - sss
+ 
     // ctx.drawImage(imgCloud, cvs.width - cvs.width + 500, cvs.height - cvs.height + 150);
-    ctx.drawImage(imgCloud,  (cvs.width)- ((positionCloud+sss)*0.9), cvs.height - cvs.height + 60);
-    ctx.drawImage(imgCloud,  (cvs.width+100)- ((positionCloud+sss)*0.3), cvs.height - cvs.height + 160);
- if(sss>100 ){
-  ctx.drawImage(imgCloud,  (cvs.width)- ((positionCloud+sss)*0.9), cvs.height - cvs.height + 60);
-   ctx.drawImage(imgCloud,  (cvs.width+100)- ((positionCloud+sss)*0.3), cvs.height - cvs.height + 160);
-  }
-  if(sss>500){
-    ctx.drawImage(imgCloud,  (cvs.width)- ((positionCloud+sss)*0.9), cvs.height - cvs.height + 60);
-     ctx.drawImage(imgCloud,  (cvs.width+100)- ((positionCloud+sss)*0.3), cvs.height - cvs.height + 160);
-  }
-    if(sss>700){
-      ctx.drawImage(imgCloud,  (cvs.width)- ((positionCloud+sss)*0.9), cvs.height - cvs.height + 60);
-       ctx.drawImage(imgCloud,  (cvs.width+10)- ((positionCloud+sss)*0.3), cvs.height - cvs.height + 160);
-  }
-    if(sss>1000 ){
-      ctx.drawImage(imgCloud,    (cvs.height +positionCloud + sss)-sss*0.5, cvs.height - cvs.height + 60);
-       ctx.drawImage(imgCloud,  (cvs.width+10)- ((positionCloud+sss)*0.3), cvs.height - cvs.height + 160);
-  }
-    if(sss>2500 ){
-      ctx.drawImage(imgCloud,  (positionCloud + sss)-sss*0.02, cvs.height - cvs.height + 60);
-  }
-    if(sss>3100){
-      ctx.drawImage(imgCloud,   (positionCloud + sss)-sss*0.02, cvs.height - cvs.height + 60);
-  }
-    
+    ctx.drawImage(imgCloud,  (cvs.width/100*80), cvs.height /100 * 10);
+    ctx.drawImage(imgCloud,  (cvs.width/100*20), cvs.height /100 * 5);
+  
+    ctx.drawImage(imgCloud2,  (cvs.width/100*30), cvs.height /100 * 3);
+    ctx.drawImage(imgCloud2,  (cvs.width/100*70), cvs.height /100 * 7);
+  ctx.drawImage(imgCloud,  (cvs.width/100*60), cvs.height /100 * 12);
+   ctx.drawImage(imgCloud, (cvs.width/100*44), cvs.height  /100 * 8);
+  
+ 
     
    
     // ctx.drawImage(imgCloud2, cvs.width - cvs.width / 2 + 500 - t, cvs.height - cvs.height + 900);
