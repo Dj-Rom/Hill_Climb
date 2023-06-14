@@ -122,23 +122,7 @@ function game() {
   document.body.append(IProgress);
   document.body.append(IProgressPers);
 
-  const imgCloud = new Image();
-  imgCloud.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
-  imgCloud.alt = "cloud";
-  ctx.drawImage(imgCloud, cvs.width - cvs.width + 500, cvs.height - cvs.height + 250);
-  const imgCloud2 = new Image();
-  imgCloud2.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
-  imgCloud2.alt = "cloud";
-  ctx.drawImage(imgCloud2, cvs.width - cvs.width / 2 + 500, cvs.height - cvs.height + 150);
-  const imgCloud3 = new Image();
-  imgCloud3.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
-  imgCloud3.alt = "cloud";
-  ctx.drawImage(imgCloud, cvs.width - cvs.width / 2.5 + 500, cvs.height - cvs.height + 10);
-  const imgCloud4 = new Image();
-  imgCloud4.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
-  imgCloud4.alt = "cloud"
-  ctx.drawImage(imgCloud4, 150, 500);
-
+  
   let player = new function () {
     this.x = cvs.width / 2;
     this.y = cvs.height / 2;
@@ -196,6 +180,7 @@ function game() {
       const perc = Math.round(secGame / 30000 * 100);
       document.getElementById('IProgressPers').style.width = perc + "%";
     }
+
     speed -= (speed - (kontrole.ArrowUp - kontrole.ArrowDown)) * 0.009;
     t += 10 * speed;
     ctx.fillStyle = "#91EBFF";
@@ -205,6 +190,24 @@ function game() {
     ctx.stroke();
     ctx.fillStyle = "#ecef54";
     ctx.strokeStyle = "#ecef54";
+
+    const imgCloud = new Image();
+    imgCloud.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
+    imgCloud.alt = "cloud";
+    ctx.drawImage(imgCloud, cvs.width - cvs.width + 500, cvs.height - cvs.height + 250);
+    const imgCloud2 = new Image();
+    imgCloud2.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
+    imgCloud2.alt = "cloud";
+    ctx.drawImage(imgCloud2, cvs.width - cvs.width / 2 + 500, cvs.height - cvs.height + 150);
+    const imgCloud3 = new Image();
+    imgCloud3.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
+    imgCloud3.alt = "cloud";
+    ctx.drawImage(imgCloud, cvs.width - cvs.width / 2.5 + 500, cvs.height - cvs.height + 10);
+    const imgCloud4 = new Image();
+    imgCloud4.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
+    imgCloud4.alt = "cloud"
+    ctx.drawImage(imgCloud4, 150, 500);
+
     if (secGame.toFixed(0) > 30000) {
       final();
     }
