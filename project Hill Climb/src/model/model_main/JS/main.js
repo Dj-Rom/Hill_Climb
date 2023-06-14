@@ -208,9 +208,9 @@ function game() {
 
     ctx.drawImage(imgCloud, cvs.width - cvs.width + 500, cvs.height - cvs.height + 250);
    
-    ctx.drawImage(imgCloud2, cvs.width - cvs.width / 2 + 500, cvs.height - cvs.height + 150);
+    ctx.drawImage(imgCloud2, cvs.width - cvs.width / 2 + 500+t, cvs.height - cvs.height + 150);
     
-    ctx.drawImage(imgCloud, cvs.width - cvs.width / 2.5 + 500, cvs.height - cvs.height + 10);
+    ctx.drawImage(imgCloud, cvs.width - cvs.width / 2.5 + 500+t, cvs.height - cvs.height + 10);
     
     ctx.drawImage(imgCloud4, 150, 500);
     
