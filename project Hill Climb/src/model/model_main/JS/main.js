@@ -205,8 +205,11 @@ function game() {
     ctx.stroke();
     ctx.fillStyle = "#ecef54";
     ctx.strokeStyle = "#ecef54";
+    cloudCicl ()
+   function cloudCicl () {
+   
     let sss = secGame
-    let positionCloud = cvs.width - cvs.width  - sss
+    let positionCloud = cvs.width - cvs.width /2 - sss
     // ctx.drawImage(imgCloud, cvs.width - cvs.width + 500, cvs.height - cvs.height + 150);
    
     // ctx.drawImage(imgCloud2, cvs.width - cvs.width / 2 + 500 - t, cvs.height - cvs.height + 900);
@@ -216,7 +219,7 @@ function game() {
     positionCloud = cvs.width - cvs.width - (sss - 1500 )
     ctx.drawImage(imgCloud, positionCloud, cvs.height - cvs.height + 60);
    }
-    
+   cloudCicl ()}
     if (secGame.toFixed(0) > 30000) {
       final();
     }
