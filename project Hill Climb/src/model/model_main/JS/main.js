@@ -208,17 +208,16 @@ function game() {
     cloudCicl ()
    function cloudCicl () {
    
-    // let sss = secGame
-    // let positionCloud = cvs.width - cvs.width /2 - sss
+    let sss = secGame
+    let positionCloud = cvs.width - cvs.width /2 - sss
     // ctx.drawImage(imgCloud, cvs.width - cvs.width + 500, cvs.height - cvs.height + 150);
-   
+   while(sss>100||sss>700||sss>1300||sss>1900||sss>2500||sss>3100){
+    ctx.drawImage(imgCloud, sss, cvs.height - cvs.height + 60);
+   }
     // ctx.drawImage(imgCloud2, cvs.width - cvs.width / 2 + 500 - t, cvs.height - cvs.height + 900);
 
-    for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.95);
-    ctx.lineTo(cvs.width, cvs.height);
-    ctx.fill();
-    ctx.beginPath();
-    ctx.moveTo(0, cvs.height);
+   console.log("ssss",sss);
+   console.log("positionCloud",positionCloud);
     ctx.drawImage(imgCloud, positionCloud, cvs.height - cvs.height + 60);
    if (positionCloud < 0) {
     positionCloud = sss
