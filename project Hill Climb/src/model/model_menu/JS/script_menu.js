@@ -1,20 +1,20 @@
-window.addEventListener("load", () => {
-  
-  let passForDB = Math.random()
+import "core-js/modules/es.json.stringify.js";
+window.addEventListener("load", function () {
+  var passForDB = Math.random();
   localStorage["PassForDB"] = localStorage["PassForDB"] ? localStorage["PassForDB"] : localStorage["PassForDB"] = JSON.stringify(passForDB);
-  const welcom = document.createElement("div");
+  var welcom = document.createElement("div");
   welcom.id = "welcom";
   welcom.innerText = "Student project Hill Climb";
   welcom.style.opacity = 0.98;
   document.body.append(welcom);
-  let contener = document.querySelector(".contener");
-  let welcomGet = document.querySelector('#welcom');
-  let hw = 100;
+  var contener = document.querySelector(".contener");
+  var welcomGet = document.querySelector('#welcom');
+  var hw = 100;
   welcomGet.style.height = hw + "%";
   welcomGet.style.transition = "transition: width 4s, height 4s, transform 15s;";
   contener.style.transition = "transition: width 4s, height 2s, transform 15s;";
   contener.style.opacity = .01;
-  let timer = setInterval(() => {
+  var timer = setInterval(function () {
     contener.style.opacity *= 1.07;
     welcomGet.style.opacity -= 0.00999999;
     if (welcomGet.style.opacity <= 0.00 && contener.style.opacity > 0.90) {
@@ -22,13 +22,13 @@ window.addEventListener("load", () => {
       clearInterval(timer);
     }
   }, 20);
-  const soundAudio = document.createElement("audio");
+  var soundAudio = document.createElement("audio");
   soundAudio.id = "audioT";
   soundAudio.loop = "loop";
   document.body.append(soundAudio);
-  let aud = document.getElementById("audioT").muted;
+  var aud = document.getElementById("audioT").muted;
   aud = new Audio("https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/music/menu.mp3");
-  const audioControlePower = {
+  var audioControlePower = {
     on: function playAudio(elem) {
       elem.play();
     },
@@ -36,8 +36,8 @@ window.addEventListener("load", () => {
       aud.pause();
     }
   };
-  const on = document.getElementById("soundOn");
-  const off = document.getElementById("soundOff");
+  var on = document.getElementById("soundOn");
+  var off = document.getElementById("soundOff");
   on.style.display = "block";
   off.style.display = "none";
   function soundControl() {
