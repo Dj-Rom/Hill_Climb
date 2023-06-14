@@ -57,7 +57,7 @@ h1 {
 }
 
 #menu_New_Game:hover {
-    font-size: 57px
+    font-size: 56px
 }
 
 #menu_New_Game {
@@ -69,7 +69,7 @@ h1 {
     font-family: Bungee, Arial, 'Times New Roman';
     font-style: normal;
     font-weight: 400;
-    font-size: 56px;
+    font-size: 54px;
     line-height: 96px;
     text-align: center;
     background: 0 0;
@@ -82,7 +82,7 @@ h1 {
 }
 
 #menu_Сontinue_Game:hover {
-    font-size: 57px
+    font-size: 56px
 }
 
 #menu_Сontinue_Game {
@@ -95,7 +95,7 @@ h1 {
     font-family: Bungee, Arial, 'Times New Roman';
     font-style: normal;
     font-weight: 400;
-    font-size: 56px;
+    font-size: 54px;
     line-height: 96px;
     text-align: center;
     color: #ff3541;
@@ -107,7 +107,7 @@ h1 {
 }
 
 #menu_World_Result:hover {
-    font-size: 57px
+    font-size: 56px
 }
 
 #menu_World_Result {
@@ -118,7 +118,7 @@ h1 {
     font-family: Bungee, Arial, 'Times New Roman';
     font-style: normal;
     font-weight: 400;
-    font-size: 56px;
+    font-size: 54px;
     line-height: 96px;
     text-align: center;
     color: #6c84ff;
@@ -130,7 +130,7 @@ h1 {
 }
 
 #menu_Setting:hover {
-    font-size: 57px
+    font-size: 56px
 }
 
 #menu_Setting {
@@ -143,7 +143,7 @@ h1 {
     font-family: Bungee, Arial, 'Times New Roman';
     font-style: normal;
     font-weight: 400;
-    font-size: 56px;
+    font-size: 54px;
     line-height: 96px;
     text-align: center;
     color: #13a844;
@@ -165,13 +165,13 @@ h1 {
     position: absolute;
     top: -2%;
     background: 0 0;
-    left: 40%
+    left: 50%
 }
 
 #cloud3 {
     position: absolute;
     top: 6%;
-    left: 20%;
+    left: 30%;
     background: 0 0
 }
 
