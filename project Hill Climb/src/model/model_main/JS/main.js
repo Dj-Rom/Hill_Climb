@@ -163,14 +163,14 @@ function game() {
       ctx.rotate(this.rot);
       ctx.drawImage(this.img, -20, -20, 45, 45);
       ctx.restore();
-      cloud();
+      
       
     };
   }();
   function loop() {
 
     gameTime();
-    
+    cloud();
     musicFonAndGaz();
     resultGetUserResult =secGame.toFixed(0)
     visualGameTime.innerHTML = secGame.toFixed(0);
