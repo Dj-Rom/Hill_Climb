@@ -208,8 +208,8 @@ function game() {
 
 
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)){
-      cloudCicl (true)
-    }else{ cloudCicl (false)
+      cloudCicl (false)
+    }else{ cloudCicl (true)
     }
    
    function cloudCicl (device) {
