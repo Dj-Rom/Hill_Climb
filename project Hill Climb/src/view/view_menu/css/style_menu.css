@@ -1,7 +1,8 @@
 * {
     box-sizing: border-box;
     scroll-snap-stop: 0;
-    background-color:  "#91EBFF";
+    background-color: #91EBFF;
+    
     margin: 0;
     padding: 0
 }
