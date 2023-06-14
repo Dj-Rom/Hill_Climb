@@ -25,13 +25,14 @@ export let kontrole = {
   ArrowRight: 0
 };
 
-window.onload = mobileKontrole();
+mobileKontrole();
 
 window.screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 function mobileKontrole() {
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent) && window.orientation == 0) {
-    const user = confirm(" \u20D4    You need to rotate your device!    \u20D5");
-    user ? window.location.reload(true) : window.location.reload(true);
+    const user = confirm(" \u20D4    You need to rotate your device! ПЕРЕВЕРНИТЕ ВАШЕ УСТРОЙСТВО    \u20D5");
+
+    (user)? window.location.reload(true):window.location.reload(true);
   } else {
     game();
   }
@@ -63,7 +64,9 @@ function game() {
   imgbr.style.opacity = "0.56";
   document.body.append(imgbr);
   const imgGazM = document.getElementById("imgGaz");
+  imgGazM.alt = "Forward"
   const imgbrM = document.getElementById("imgbr");
+  imgbrM.alt = "back"
   const cvs = document.querySelector("#canvas");
   const ctx = cvs.getContext("2d");
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
@@ -127,6 +130,7 @@ function game() {
     this.cvsHeight = 0.95;
     this.img = new Image();
     this.img.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/Car15Silver.svg";
+    this.img.alt = "car";
     this.draw = function () {
       let p1 = cvs.height - noise(t + this.x) * this.cvsHeight;
       let p2 = cvs.height - noise(t + 5 + this.x) * this.cvsHeight;
@@ -196,17 +200,21 @@ function game() {
   function cloud() {
     const imgCloud = new Image();
     imgCloud.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
+    imgCloud.alt = "cloud";
     ctx.drawImage(imgCloud, cvs.width - cvs.width + 500, cvs.height - cvs.height + 250);
     const imgCloud2 = new Image();
     imgCloud2.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
+    imgCloud2.alt = "cloud";
     ctx.drawImage(imgCloud2, cvs.width - cvs.width / 2 + 500, cvs.height - cvs.height + 150);
     const imgCloud3 = new Image();
     imgCloud3.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
+    imgCloud3.alt = "cloud";
     ctx.drawImage(imgCloud, cvs.width - cvs.width / 2.5 + 500, cvs.height - cvs.height + 10);
     const imgCloud4 = new Image();
     imgCloud4.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
+    imgCloud4.alt = "cloud"
     ctx.drawImage(imgCloud4, 150 + 500, cvs.height - 750 - 50);
-    return;
+    
   }
   function sound() {
     const soundAudioFon = document.createElement("audio");
@@ -281,6 +289,7 @@ function game() {
   function final() {
     const finalPng = new Image();
     finalPng.src = " https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/fin.png";
+    finalPng.alt = "final";
     ctx.drawImage(finalPng, cvs.width / 2, cvs.height / 6);
   }
   let LocalStoregeNameUser = '';
