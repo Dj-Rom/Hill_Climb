@@ -7,6 +7,7 @@ let passForDB = Math.random()
   localStorage["PassForDB"] = localStorage["PassForDB"] ? localStorage["PassForDB"] : localStorage["PassForDB"] = JSON.stringify(passForDB);
   let updatePassword = JSON.parse(localStorage["PassForDB"])
   const stringName = 'CHK20';
+  let dataGetRecords=null
 export function storeInfo() {
   
   $.ajax({
@@ -32,7 +33,7 @@ function lockGetReady(callresult) {
     records.push(dataRecordPred);
     records.push(dataGetRecords);
     console.log(dataRecordPred);
-    console.log(readReady(callresult));
+    console.log(dataGetRecords);
     info.record = records.flat()
     $.ajax({
       url: ajaxHandlerScript,
@@ -74,7 +75,7 @@ function readReady(callresult) {
     alert(callresult.error);
   } else if (callresult.result != "") {
     const info = JSON.parse(callresult.result);
-    let dataGetRecords = info.record;
+     dataGetRecords = info.record;
     return dataGetRecords;
   }
 }
