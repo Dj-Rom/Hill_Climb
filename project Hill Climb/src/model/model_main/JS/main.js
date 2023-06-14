@@ -217,14 +217,13 @@ function game() {
   if(device){
     ctx.drawImage(imgCloud,  (cvs.width/100*80), cvs.height /100 * 10);
     ctx.drawImage(imgCloud,  (cvs.width/100*65), cvs.height /100 * 33);
-    ctx.drawImage(imgCloud2,  (cvs.width/100*55), cvs.height /100 * 7);
-    ctx.drawImage(imgCloud2,  (cvs.width/100*45), cvs.height /100 * 23);
-    ctx.drawImage(imgCloud2,  (cvs.width/100*35), cvs.height /100 * 7);
-  ctx.drawImage(imgCloud,  (cvs.width/100*25), cvs.height /100 * 12);
-   ctx.drawImage(imgCloud, (cvs.width/100*10), cvs.height  /100 * 8);
+    
+    ctx.drawImage(imgCloud2,  (cvs.width/100*45), cvs.height /100 * 7);
+  ctx.drawImage(imgCloud,  (cvs.width/100*15), cvs.height /100 * 12);
+   ctx.drawImage(imgCloud, (cvs.width/100*1), cvs.height  /100 * 8);
   
   } else {
-    ctx.drawImage(imgCloud2,  (cvs.width/100*20), cvs.height /100 * 23);
+    ctx.drawImage(imgCloud2,  (cvs.width/100*20), cvs.height /100 * 3);
     ctx.drawImage(imgCloud2,  (cvs.width/100*70), cvs.height /100 * 7);
 
    
