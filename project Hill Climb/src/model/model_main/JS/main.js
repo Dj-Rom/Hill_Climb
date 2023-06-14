@@ -168,7 +168,7 @@ function game() {
   function loop() {
 
     gameTime();
-    cloud();
+    
     musicFonAndGaz();
     resultGetUserResult =secGame.toFixed(0)
     visualGameTime.innerHTML = secGame.toFixed(0);
@@ -188,6 +188,7 @@ function game() {
     if (secGame.toFixed(0) > 30000) {
       final();
     }
+    cloud();
     earthFunc(cvs.height);
     if (player.rSpeed === 1 || t < 0) {
       fon.pause();
