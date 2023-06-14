@@ -206,7 +206,7 @@ function game() {
     ctx.fillStyle = "#ecef54";
     ctx.strokeStyle = "#ecef54";
   
-    let positionCloud = cvs.width - cvs.width / 2 + 500 - t
+    let positionCloud = cvs.width - cvs.width / 2 + 500 - secGame
     // ctx.drawImage(imgCloud, cvs.width - cvs.width + 500, cvs.height - cvs.height + 150);
    
     // ctx.drawImage(imgCloud2, cvs.width - cvs.width / 2 + 500 - t, cvs.height - cvs.height + 900);
