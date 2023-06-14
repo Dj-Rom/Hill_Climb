@@ -218,7 +218,7 @@ function game() {
     imgCloud4.alt = "cloud"
     ctx.drawImage(imgCloud4, 150, 500);
 
-    
+    cloud();
     
   }
   function sound() {
