@@ -210,12 +210,12 @@ function game() {
  
     // ctx.drawImage(imgCloud, cvs.width - cvs.width + 500, cvs.height - cvs.height + 150);
     ctx.drawImage(imgCloud,  (cvs.width/100*80), cvs.height /100 * 10);
-    ctx.drawImage(imgCloud,  (cvs.width/100*20), cvs.height /100 * 5);
-  
-    ctx.drawImage(imgCloud2,  (cvs.width/100*30), cvs.height /100 * 3);
+    ctx.drawImage(imgCloud,  (cvs.width/100*2), cvs.height /100 * 33);
+    ctx.drawImage(imgCloud2,  (cvs.width/100*10), cvs.height /100 * 7);
+    ctx.drawImage(imgCloud2,  (cvs.width/100*30), cvs.height /100 * 23);
     ctx.drawImage(imgCloud2,  (cvs.width/100*70), cvs.height /100 * 7);
   ctx.drawImage(imgCloud,  (cvs.width/100*60), cvs.height /100 * 12);
-   ctx.drawImage(imgCloud, (cvs.width/100*44), cvs.height  /100 * 8);
+   ctx.drawImage(imgCloud, (cvs.width/100*14), cvs.height  /100 * 8);
   
 
    }
