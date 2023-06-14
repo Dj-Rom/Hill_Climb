@@ -7,7 +7,7 @@ let passForDB = Math.random()
   localStorage["PassForDB"] = localStorage["PassForDB"] ? localStorage["PassForDB"] : localStorage["PassForDB"] = JSON.stringify(passForDB);
   let updatePassword = JSON.parse(localStorage["PassForDB"])
   const stringName = 'CHK20';
-  let dataGetRecords=null
+  export let dataGetRecords;
 export function storeInfo() {
   
   $.ajax({

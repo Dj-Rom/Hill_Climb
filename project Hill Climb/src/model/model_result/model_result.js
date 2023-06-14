@@ -1,5 +1,5 @@
 
-
+import { dataGetRecords } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 let passForDB = Math.random()
   localStorage["PassForDB"] = localStorage["PassForDB"] ? localStorage["PassForDB"] : localStorage["PassForDB"] = JSON.stringify(passForDB);
   let dataPass = JSON.parse(localStorage["PassForDB"])
@@ -37,7 +37,7 @@ function Read() {
       const info = JSON.parse(callresult.result);
       let dataRecordTable;
       dataRecordTable = info.record;
-      console.log(dataRecordTable);
+      dataGetRecords = dataRecordTable
       dataRecordTable = dataRecordTable.filter(item => item);
       dataRecordTable.sort(function (a, b) {
         return b.score - a.score;
