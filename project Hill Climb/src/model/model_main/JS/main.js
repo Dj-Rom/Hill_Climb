@@ -210,9 +210,11 @@ function game() {
     // ctx.drawImage(imgCloud, cvs.width - cvs.width + 500, cvs.height - cvs.height + 150);
    
     // ctx.drawImage(imgCloud2, cvs.width - cvs.width / 2 + 500 - t, cvs.height - cvs.height + 900);
-    
+    console.log(positionCloud);
     ctx.drawImage(imgCloud, positionCloud, cvs.height - cvs.height + 60);
-   
+   if (positionCloud< 0) {
+    ctx.drawImage(imgCloud, positionCloud, cvs.height - cvs.height + 60);
+   }
     
     if (secGame.toFixed(0) > 30000) {
       final();
