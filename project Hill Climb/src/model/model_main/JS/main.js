@@ -214,14 +214,14 @@ function game() {
  if(sss>100 ){
   ctx.drawImage(imgCloud, cvs.height - sss - sss*0.5, cvs.height - cvs.height + 60);
   }
-  if(sss>700){
-    ctx.drawImage(imgCloud, cvs.height - sss*0.2, cvs.height - cvs.height + 60);
+  if(sss>500){
+    ctx.drawImage(imgCloud,  (cvs.height +positionCloud + sss)-sss*0.2, cvs.height - cvs.height + 60);
   }
-    if(sss>1000){
-      ctx.drawImage(imgCloud,  (cvs.height/2 +positionCloud + sss)-sss*0.02, cvs.height - cvs.height + 60);
+    if(sss>7000){
+      ctx.drawImage(imgCloud,  (cvs.height +positionCloud + sss)-sss*0.2, cvs.height - cvs.height + 60);
   }
-    if(sss>1900 ){
-      ctx.drawImage(imgCloud,   (positionCloud + sss)-sss*0.02, cvs.height - cvs.height + 60);
+    if(sss>1000 ){
+      ctx.drawImage(imgCloud,    (cvs.height +positionCloud + sss)-sss*0.2, cvs.height - cvs.height + 60);
   }
     if(sss>2500 ){
       ctx.drawImage(imgCloud,  (positionCloud + sss)-sss*0.02, cvs.height - cvs.height + 60);
