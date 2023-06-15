@@ -197,7 +197,7 @@ function game() {
   }();
   function loop() {
     controleUserClosedPageBoolean = true 
-    console.log( controleUserClosedPageBoolean);
+    
     if(mobile){return controllOrientation()}
     gameTime();
     
