@@ -92,12 +92,12 @@ imgGaz.addEventListener("touchstart", eo => {
   eo.preventDefault();
   window.navigator.vibrate(200);
   return kontrole.ArrowUp = 1;
-}, {passive: true});
+}, {passive: false});
 imgGaz.addEventListener("touchend", eo => {
   eo = eo || window.event;
   eo.preventDefault();
   kontrole.ArrowUp = 0;
-}, {passive: true});
+}, {passive: false});
 
 const imgbr = document.getElementById("imgbr");
 imgbr.addEventListener("touchstart", eo => {
