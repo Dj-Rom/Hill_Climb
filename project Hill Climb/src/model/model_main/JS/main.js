@@ -28,14 +28,17 @@ export let kontrole = {
 
 mobileKontrole();
 
-window.screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+window.screen.lockOrientationUniversal = screen.lockOrientation() || screen.mozLockOrientation || screen.msLockOrientation;
+if(window.screen.lockOrientationUniversal(portrait-secondary)){
+  alert((" \u20D4    You need to rotate your device! ПЕРЕВЕРНИТЕ ВАШЕ УСТРОЙСТВО    \u20D5"))
+}
 function mobileKontrole() {
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent) && window.orientation == 0) {
     const user = confirm(" \u20D4    You need to rotate your device! ПЕРЕВЕРНИТЕ ВАШЕ УСТРОЙСТВО    \u20D5");
 
     (user)? window.location.reload(true):window.location.reload(true);
   } else {
-    window.screen.lockOrientationUniversal
+    h3.style.display = "none";
     game();
   }
 }
