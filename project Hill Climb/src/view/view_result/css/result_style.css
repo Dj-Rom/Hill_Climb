@@ -178,6 +178,17 @@ body {
     }
     @media only screen and ( max-width: 640px) {
    
+        #result_tbl {
+            font-family: Bungee, Arial, 'Times New Roman', Times, serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            text-align: center;
+            height: 40%;
+            width: 75%;
+            background-color: #9bf471;
+            border-radius: 20px
+        }
         #menuR:hover {
             height:30px;
         }
