@@ -1,7 +1,6 @@
 "use strict";
 // import-exports
-import { controleUserClosedPageBoolean } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/Controller/Controller_main/controller_main.js";
-
+export let controleUserClosedPageBoolean;
 
 
 localStorage["saveGamePos"] = localStorage["saveGamePos"]?localStorage["saveGamePos"]: JSON.stringify(0)
@@ -197,7 +196,7 @@ function game() {
   }();
   function loop() {
     controleUserClosedPageBoolean = true 
-    
+    console.log( controleUserClosedPageBoolean);
     if(mobile){return controllOrientation()}
     gameTime();
     
@@ -377,7 +376,6 @@ setTimeout(function () {
     
       cancelAnimationFrame(RAF)
 },500)
-
   }
   function musicFonAndGaz() {
     if (kontrole.ArrowUp === 1) {
