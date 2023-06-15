@@ -192,7 +192,7 @@ function game() {
   }();
   function loop() {
     console.log( controleUserClosedPageBoolean);
-    if(mobile){controllOrientation()}
+    if(mobile){return controllOrientation()}
     gameTime();
     
     musicFonAndGaz();
