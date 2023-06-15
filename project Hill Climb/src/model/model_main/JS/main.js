@@ -29,7 +29,7 @@ export let kontrole = {
 mobileKontrole();
 
 window.screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
-if(window.screen.lockOrientationUniversal(portrait-secondary)){
+if(window.screen.lockOrientationUniversal("portrait-secondary")){
   alert((" \u20D4    You need to rotate your device! ПЕРЕВЕРНИТЕ ВАШЕ УСТРОЙСТВО    \u20D5"))
 }
 function mobileKontrole() {
