@@ -3,7 +3,7 @@ localStorage["saveGamePos"] = localStorage["saveGamePos"]?localStorage["saveGame
 const main_Contener= document.querySelector(".main_Contener")
 const h3= document.querySelector("h3");
 h3.style.display = "none";
-
+let mobile = false
 import { storeInfo } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 const GO = document.createElement('img');
 GO.id= 'gameOverSsvg';
@@ -33,9 +33,11 @@ if(window.orientation == 0){
 }}
 function mobileKontrole() {
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent) && window.orientation == 0) {
+    mobile = true;
     const user = confirm(" \u20D4    You need to rotate your device! ПЕРЕВЕРНИТЕ ВАШЕ УСТРОЙСТВО    \u20D5");
 
     (user)? window.location.reload(true):window.location.reload(true);
+    return mobile
   } else {
     h3.style.display = "none";
     game();
@@ -189,7 +191,7 @@ function game() {
     };
   }();
   function loop() {
-    controllOrientation()
+    if(mobile){controllOrientation()}
     gameTime();
     
     musicFonAndGaz();
