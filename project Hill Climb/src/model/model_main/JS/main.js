@@ -1,6 +1,8 @@
 "use strict";
 localStorage["saveGamePos"] = localStorage["saveGamePos"]?localStorage["saveGamePos"]: JSON.stringify(0)
 const main_Contener= document.querySelector(".main_Contener")
+const h3= document.querySelector("h3");
+h3.style.display = "none";
 
 import { storeInfo } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 const GO = document.createElement('img');
@@ -52,7 +54,7 @@ function game() {
   imgGaz.style.bottom = "4%";
   imgGaz.style.zIndex = "10";
   imgGaz.style.opacity = "0.56";
-  document.body.append(imgGaz);
+  main_Contenerappend(imgGaz);
   const imgbr = document.createElement("img");
   imgbr.id = "imgbr";
   imgbr.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/back.svg";
@@ -62,7 +64,7 @@ function game() {
   imgbr.style.bottom = "4%";
   imgbr.style.zIndex = "10";
   imgbr.style.opacity = "0.56";
-  document.body.append(imgbr);
+  main_Contener.append(imgbr);
   const imgGazM = document.getElementById("imgGaz");
   imgGazM.alt = "Forward"
   const imgbrM = document.getElementById("imgbr");
@@ -134,8 +136,8 @@ function game() {
   const IProgressPers = document.createElement('div');
   IProgress.id = "IProgress";
   IProgressPers.id = "IProgressPers";
-  document.body.append(IProgress);
-  document.body.append(IProgressPers);
+  main_Contener.append(IProgress);
+  main_Contener.append(IProgressPers);
 
   
   let player = new function () {
@@ -258,8 +260,8 @@ function game() {
     const soundAudioGaz = document.createElement("audio");
     soundAudioGaz.id = "gaz";
     soundAudioGaz.loop = "loop";
-    document.body.append(soundAudioGaz);
-    document.body.append(soundAudioFon);
+    main_Contener.append(soundAudioGaz);
+    main_Contener.append(soundAudioFon);
   }
   function earthFunc(params) {
     if (params > 400) {

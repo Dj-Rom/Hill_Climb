@@ -40,13 +40,7 @@ body {
     font-size: 30px;
 }
 
-h3{
-    display:none;
-    font-family: Bungee, Arial, 'Times New Roman';
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 900;
-}
+
 #btnGameinMenu
      {
         color: orange;
