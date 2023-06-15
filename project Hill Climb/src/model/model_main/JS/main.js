@@ -32,7 +32,7 @@ function mobileKontrole() {
 
     (user)? window.location.reload(true):window.location.reload(true);
   } else {
-    window.screen.lockOrientationUniversal("landscape")
+    window.screen.lockOrientationUniversal
     game();
   }
 }
