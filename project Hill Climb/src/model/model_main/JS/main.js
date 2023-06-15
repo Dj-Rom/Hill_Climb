@@ -1,4 +1,9 @@
 "use strict";
+// import-exports
+import { controleUserClosedPageBoolean } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/Controller/Controller_main/controller_main.js";
+
+
+
 localStorage["saveGamePos"] = localStorage["saveGamePos"]?localStorage["saveGamePos"]: JSON.stringify(0)
 const main_Contener= document.querySelector(".main_Contener")
 const h3= document.querySelector("h3");
@@ -191,6 +196,7 @@ function game() {
     };
   }();
   function loop() {
+    controleUserClosedPageBoolean = true 
     console.log( controleUserClosedPageBoolean);
     if(mobile){return controllOrientation()}
     gameTime();
@@ -238,12 +244,14 @@ function game() {
    }
    
     if (secGame.toFixed(0) > 30000) {
+      controleUserClosedPageBoolean =  false
       final();
     }
    
     earthFunc(cvs.height);
     if (player.rSpeed === 1 || t < 0) {
       fon.pause();
+      controleUserClosedPageBoolean = false
       pauseAudio(fon);
       restart();
       return resultGetUserResult;
@@ -334,7 +342,7 @@ function game() {
     finalPng.src = " https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/fin.png";
     finalPng.alt = "final";
     ctx.drawImage(finalPng, cvs.width / 2, cvs.height / 6);
-    return  controleUserClosedPageBoolean = false
+   
   }
   let LocalStoregeNameUser = '';
 
@@ -369,7 +377,7 @@ setTimeout(function () {
     
       cancelAnimationFrame(RAF)
 },500)
-return  controleUserClosedPageBoolean = false
+
   }
   function musicFonAndGaz() {
     if (kontrole.ArrowUp === 1) {
