@@ -1,5 +1,6 @@
 import { kontrole } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/JS/main.js";
 import { resultGetUserResult } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/JS/main.js";
+import { controleUserClosedPageBoolean } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/JS/main.js";
 
 export let settingGame1 = {
     forwardKey: 'ArrowUp',
@@ -118,25 +119,18 @@ imgbr.addEventListener("touchend", eo => {
 
 
 // the user wants to close the page
-// const link_was_clicked = false;
-// document.addEventListener("click", function(e) {
-//    if (e.target.nodeName.toLowerCase() === 'a') {
-//       link_was_clicked = true;
-//    }
-// }, true);
 
-// window.onbeforeunload = function(e) {
-//     if(link_was_clicked) {
-//         return;
-//     }
-//     return confirm('Are you sure?');
-// }
-const btnEStore = document.getElementsByClassName('eStore_buy_now_button')
-btnEStore[0].addEventListener("click", ()=>{
-  window.btn_clicked = true;
-});
-window.onbeforeunload = function(){
-  if(!window.btn_clicked){
-      return 'You must click "Buy Now" to make payment and finish your order. If you leave now your order will be canceled.';
-  }
-};
+const link_was_clicked = false;
+document.addEventListener("click", function(e) {
+  if(controleUserClosedPageBoolean === true) {
+   if (e.target.nodeName.toLowerCase() === 'a') {
+      link_was_clicked = true;
+   }
+}}, true);
+
+window.onbeforeunload = function(e) {
+    if(link_was_clicked) {
+        return;
+    }
+    return confirm('Are you sure?');
+}

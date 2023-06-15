@@ -14,7 +14,7 @@ main_Contener.appendChild(GO);
 let gameOveSsvg = document.getElementById('gameOverSsvg');
 let secGame;
 export let dataRecordPred = {};
-
+export let controleUserClosedPageBoolean = true
 export let resultGetUserResult = 0;
 let canvasGame = document.createElement('canvas');
 canvasGame.id = "canvas";
@@ -328,6 +328,7 @@ function game() {
     }
   }
   function final() {
+    controleUserClosedPageBoolean = false;
     const finalPng = new Image();
     finalPng.src = " https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/fin.png";
     finalPng.alt = "final";
@@ -338,7 +339,7 @@ function game() {
 
   function restart() {;
 
-
+    controleUserClosedPageBoolean= false
 
 
   gameOveSsvg.style.opacity  = 0.97 ;
