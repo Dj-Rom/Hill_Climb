@@ -23,7 +23,7 @@ export let kontrole = {
   ArrowRight: 0
 };
 
-mobileKontrole("landscape");
+mobileKontrole();
 
 window.screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 function mobileKontrole() {
@@ -32,7 +32,7 @@ function mobileKontrole() {
 
     (user)? window.location.reload(true):window.location.reload(true);
   } else {
-    window.screen.lockOrientationUniversal()
+    window.screen.lockOrientationUniversal("landscape")
     game();
   }
 }
