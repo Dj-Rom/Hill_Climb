@@ -21,45 +21,45 @@ export let settingGame1 = {
     })
 
 
-document.addEventListener("keydown", event => {
-  event = event || window.event;
-  event.preventDefault();
-  if (event.key === data.B_forwardKey) {
+document.addEventListener("keydown", eo => {
+  eo = eo || window.event;
+  eo.preventDefault();
+  if (eo.key === data.B_forwardKey) {
     kontrole.ArrowRight = 1;
   }
-  if (event.key === data.B_BackKey) {
+  if (eo.key === data.B_BackKey) {
     kontrole.ArrowLeft = 1;
   }
-  if (event.key === data.forwardKey) {
+  if (eo.key === data.forwardKey) {
     kontrole.ArrowUp = 1;
   }
-  if (event.key === data.backKey) {
+  if (eo.key === data.backKey) {
     kontrole.ArrowDown = 1;
   }
 });
-document.addEventListener("keyup", event => {
-  event = event || window.event;
-  event.preventDefault();
-  if (event.key === data.B_forwardKey) {
+document.addEventListener("keyup", eo => {
+  eo = eo || window.event
+  eo.preventDefault();
+  if (eo.key === data.B_forwardKey) {
     kontrole.ArrowRight = 0;
   }
-  if (event.key === data.B_BackKey) {
+  if (eo.key === data.B_BackKey) {
     kontrole.ArrowLeft = 0;
   }
-  if (event.key === data.forwardKey) {
+  if (eo.key === data.forwardKey) {
     kontrole.ArrowUp = 0;
   }
-  if (event.key === data.backKey) {
+  if (eo.key === data.backKey) {
     kontrole.ArrowDown = 0;
   }
 });
 let timer = null;
 // На первое срабатывание реагируем всегда
 let oldAngle = 1000;
-window.addEventListener('deviceorientation', function (event) {
-  event = event || window.event;
-  event.preventDefault();
-  let angle = event.beta;
+window.addEventListener('deviceorientation', function (eo) {
+  eo = eo || window.event;
+  eo.preventDefault();
+  let angle = eo.beta;
   let delta = Math.abs(angle - oldAngle);
   oldAngle = angle;
   if (delta < 2)
@@ -81,33 +81,33 @@ window.addEventListener('deviceorientation', function (event) {
       kontrole.ArrowRight = 0;
       kontrole.ArrowLeft = 0;
     }
-  }, 16);
+  }, 200);
 });
 const imgGaz = document.querySelector("#imgGaz");
 if (imgGaz !== null) {
 
-imgGaz.addEventListener("touchstart", event => {
-  event = event || window.event;
-  event.preventDefault();
+imgGaz.addEventListener("touchstart", eo => {
+  eo = eo || window.event;
+  eo.preventDefault();
   window.navigator.vibrate(200);
   return kontrole.ArrowUp = 1;
 }, {passive: true});
-imgGaz.addEventListener("touchend", event => {
-  event = event || window.event;
-  event.preventDefault();
+imgGaz.addEventListener("touchend", eo => {
+  eo = eo || window.event;
+  eo.preventDefault();
   kontrole.ArrowUp = 0;
 }, {passive: true});
 
 const imgbr = document.getElementById("imgbr");
-imgbr.addEventListener("touchstart", event => {
-  event = event || window.event;
-  event.preventDefault();
+imgbr.addEventListener("touchstart", eo => {
+  eo = eo || window.event;
+  eo.preventDefault();
   window.navigator.vibrate(200);
   return kontrole.ArrowDown = 1;
 }, {passive: true});
-imgbr.addEventListener("touchend", event => {
-  event = event || window.event;
-  event.preventDefault();
+imgbr.addEventListener("touchend", eo => {
+  eo = eo || window.event;
+  eo.preventDefault();
   kontrole.ArrowDown = 0;
 }, {passive: true});
 
