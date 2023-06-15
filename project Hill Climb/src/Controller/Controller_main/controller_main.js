@@ -131,9 +131,10 @@ imgbr.addEventListener("touchend", eo => {
 //     }
 //     return confirm('Are you sure?');
 // }
-document.getElementsByClassName('eStore_buy_now_button')[0].onclick = function(){
+const btnEStore = document.getElementsByClassName('eStore_buy_now_button')
+btnEStore[0].addEventListener("click", ()=>{
   window.btn_clicked = true;
-};
+});
 window.onbeforeunload = function(){
   if(!window.btn_clicked){
       return 'You must click "Buy Now" to make payment and finish your order. If you leave now your order will be canceled.';
