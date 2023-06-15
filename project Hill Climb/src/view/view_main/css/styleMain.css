@@ -4,7 +4,7 @@
 } */
 
 @media (orientation: portrait) {
-    body {
+    #canvas {
       display: none;
     }
     h3{
