@@ -122,7 +122,8 @@ imgbr.addEventListener("touchend", eo => {
 
 const link_was_clicked = false;
 document.addEventListener("click", function(e) {
-  if(controleUserClosedPageBoolean === true) {
+  console.log(controleUserClosedPageBoolean);
+  if(controleUserClosedPageBoolean) {
    if (e.target.nodeName.toLowerCase() === 'a') {
       link_was_clicked = true;
    }

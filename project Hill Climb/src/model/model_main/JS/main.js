@@ -191,6 +191,7 @@ function game() {
     };
   }();
   function loop() {
+    console.log( controleUserClosedPageBoolean);
     if(mobile){controllOrientation()}
     gameTime();
     
@@ -328,18 +329,19 @@ function game() {
     }
   }
   function final() {
-    controleUserClosedPageBoolean = false;
+  
     const finalPng = new Image();
     finalPng.src = " https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/fin.png";
     finalPng.alt = "final";
     ctx.drawImage(finalPng, cvs.width / 2, cvs.height / 6);
+    return  controleUserClosedPageBoolean = false
   }
   let LocalStoregeNameUser = '';
 
 
   function restart() {;
 
-    controleUserClosedPageBoolean= false
+    
 
 
   gameOveSsvg.style.opacity  = 0.97 ;
@@ -367,6 +369,7 @@ setTimeout(function () {
     
       cancelAnimationFrame(RAF)
 },500)
+return  controleUserClosedPageBoolean = false
   }
   function musicFonAndGaz() {
     if (kontrole.ArrowUp === 1) {
