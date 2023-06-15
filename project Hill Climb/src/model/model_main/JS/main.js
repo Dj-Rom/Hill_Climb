@@ -54,7 +54,7 @@ function game() {
   imgGaz.style.bottom = "4%";
   imgGaz.style.zIndex = "10";
   imgGaz.style.opacity = "0.56";
-  main_Contenerappend(imgGaz);
+  main_Contener.append(imgGaz);
   const imgbr = document.createElement("img");
   imgbr.id = "imgbr";
   imgbr.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/back.svg";
