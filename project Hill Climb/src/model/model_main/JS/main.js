@@ -28,8 +28,6 @@ export let kontrole = {
 
 mobileKontrole();
 
-if(screen.orientation.type("portrait-primary")){
-  alert((" \u20D4    You need to rotate your device! ПЕРЕВЕРНИТЕ ВАШЕ УСТРОЙСТВО    \u20D5"))}
 
 function mobileKontrole() {
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent) && window.orientation == 0) {
@@ -189,7 +187,7 @@ function game() {
     };
   }();
   function loop() {
-
+    mobileKontrole()
     gameTime();
     
     musicFonAndGaz();
