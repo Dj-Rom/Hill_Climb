@@ -19,7 +19,7 @@ main_Contener.appendChild(GO);
 let gameOveSsvg = document.getElementById('gameOverSsvg');
 let secGame;
 export let dataRecordPred = {};
-export let controleUserClosedPageBoolean = true
+
 export let resultGetUserResult = 0;
 let canvasGame = document.createElement('canvas');
 canvasGame.id = "canvas";
