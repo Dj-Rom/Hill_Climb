@@ -1,6 +1,6 @@
 "use strict";
 localStorage["saveGamePos"] = localStorage["saveGamePos"]?localStorage["saveGamePos"]: JSON.stringify(0)
-main_Contener.document.querySelector(".main_Contener")
+main_Contener.querySelector(".main_Contener")
 
 import { storeInfo } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 const GO = document.createElement('img');
