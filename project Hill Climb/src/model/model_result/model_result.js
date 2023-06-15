@@ -3,12 +3,10 @@ let passForDB = Math.random()
   localStorage["PassForDB"] = localStorage["PassForDB"] ? localStorage["PassForDB"] : localStorage["PassForDB"] = JSON.stringify(passForDB);
   let dataPass = JSON.parse(localStorage["PassForDB"])
 const tblRecord = document.getElementById("result_tbl");
-const cont = document.querySelector('.contener');
+const cont = document.querySelector('.result_tblDiv');
 let newData = [];
-const btnR = document.createElement("button");
-btnR.id = "menuR";
-btnR.innerHTML = "MENU";
-cont.append(btnR);
+
+
 
 let ajaxHandlerScript = "https://fe.it-academy.by/AjaxStringStorage2.php";
 Read();
@@ -48,7 +46,10 @@ function Read() {
         pos.innerHTML = `<tr >   <th>${[i + 1]}</th><th>${dataRecordTable[i].score}</th><th>${dataRecordTable[i].nameRecord}</th></tr>`;
         i++;
         tblRecord.append(pos);
-        if(i==10)break;
+        if(i==10){
+          pos.innerHTML = ' <th></th><th> <button type="button" id="menuR">back</button></th><th></th> '
+          tblRecord.append(pos);
+          break;}
       }
       return dataRecordTable;
     }
