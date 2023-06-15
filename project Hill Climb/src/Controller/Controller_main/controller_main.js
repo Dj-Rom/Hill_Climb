@@ -118,16 +118,24 @@ imgbr.addEventListener("touchend", eo => {
 
 
 // the user wants to close the page
-const link_was_clicked = false;
-document.addEventListener("click", function(e) {
-   if (e.target.nodeName.toLowerCase() === 'a') {
-      link_was_clicked = true;
-   }
-}, true);
+// const link_was_clicked = false;
+// document.addEventListener("click", function(e) {
+//    if (e.target.nodeName.toLowerCase() === 'a') {
+//       link_was_clicked = true;
+//    }
+// }, true);
 
-window.onbeforeunload = function(e) {
-    if(link_was_clicked) {
-        return;
-    }
-    return confirm('Are you sure?');
-}
+// window.onbeforeunload = function(e) {
+//     if(link_was_clicked) {
+//         return;
+//     }
+//     return confirm('Are you sure?');
+// }
+document.getElementsByClassName('eStore_buy_now_button')[0].onclick = function(){
+  window.btn_clicked = true;
+};
+window.onbeforeunload = function(){
+  if(!window.btn_clicked){
+      return 'You must click "Buy Now" to make payment and finish your order. If you leave now your order will be canceled.';
+  }
+};
