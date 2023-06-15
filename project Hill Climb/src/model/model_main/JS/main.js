@@ -90,7 +90,7 @@ function game() {
   let val;
   const visualGameTime = document.createElement('div');
   visualGameTime.id = "visualGameTime";
-  document.body.append(visualGameTime);
+  main_Contener.append(visualGameTime);
   function gameTime() {
     secGame = t * 0.2;
     return secGame;
