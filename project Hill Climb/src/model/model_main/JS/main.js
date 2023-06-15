@@ -28,7 +28,7 @@ export let kontrole = {
 
 mobileKontrole();
 
-if(window.ScreenOrientation("portrait")){
+if(window.screen.orientation.type("portrait-primary")){
   alert((" \u20D4    You need to rotate your device! ПЕРЕВЕРНИТЕ ВАШЕ УСТРОЙСТВО    \u20D5"))}
 
 function mobileKontrole() {
