@@ -118,7 +118,8 @@ body {
         height: 40%;
         width: 28%;
         background-color: #9bf471;
-        border-radius: 20px
+        border-radius: 20px;
+        left: 48%;
     }
     #menuR:hover {
         height:30px;
@@ -195,7 +196,7 @@ body {
         #menuR {
             position: absolute;
             width: 99px;
-            height: 26px;
+            height: 20px;
             background: #ff3541;
             border-radius: 20px;
      
@@ -204,8 +205,8 @@ body {
             font-weight: 400;
             font-size: 12px;
             text-align: center;
-            left: 43%;
-            top: 72%;
+            
+            
         }
     }
 
