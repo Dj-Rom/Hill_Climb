@@ -108,7 +108,7 @@ body {
     }
 }
 
-@media only screen and (max-height:900px) {
+@media only screen and (max-height:990px) {
     #result_tbl {
         font-family: Bungee, Arial, 'Times New Roman', Times, serif;
         font-style: normal;
