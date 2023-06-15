@@ -83,6 +83,7 @@ window.addEventListener('deviceorientation', function (eo) {
     }
   }, 200);
 });
+document.addEventListener('touchmove', function() { e.preventDefault(); }, { passive:false });
 const imgGaz = document.querySelector("#imgGaz");
 if (imgGaz !== null) {
 
@@ -104,12 +105,12 @@ imgbr.addEventListener("touchstart", eo => {
   eo.preventDefault();
   window.navigator.vibrate(200);
   return kontrole.ArrowDown = 1;
-}, {passive: true});
+}, {passive: false });
 imgbr.addEventListener("touchend", eo => {
   eo = eo || window.event;
   eo.preventDefault();
   kontrole.ArrowDown = 0;
-}, {passive: true});
+}, {passive: false});
 
 
 }
