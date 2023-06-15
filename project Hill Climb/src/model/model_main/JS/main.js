@@ -1,5 +1,6 @@
 "use strict";
 localStorage["saveGamePos"] = localStorage["saveGamePos"]?localStorage["saveGamePos"]: JSON.stringify(0)
+main_Contener.document.querySelector(".main_Contener")
 
 import { storeInfo } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
 const GO = document.createElement('img');
@@ -7,7 +8,7 @@ GO.id= 'gameOverSsvg';
 GO.src="./svg/GameOverSvg.svg";
 GO.alt="gameOver";
 GO.style.opacity = 0
-document.body.appendChild(GO);
+main_Contener.appendChild(GO);
 let gameOveSsvg = document.getElementById('gameOverSsvg');
 let secGame;
 export let dataRecordPred = {};
@@ -15,7 +16,7 @@ export let dataRecordPred = {};
 export let resultGetUserResult = 0;
 let canvasGame = document.createElement('canvas');
 canvasGame.id = "canvas";
-document.body.append(canvasGame);
+main_Contener.append(canvasGame);
 export let kontrole = {
   ArrowUp: 0,
   ArrowDown: 0,
