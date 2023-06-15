@@ -43,7 +43,7 @@ body {
     font-size: 22px;
     text-align: center;
     height: 40%;
-    width: 28%;
+    width: 49%;
     background-color: #9bf471;
     border-radius: 20px
 }
@@ -57,7 +57,7 @@ body {
 }
 
 #menuR {
-    left: 48%;
+    left: 45%;
 }
 
 #menuR:hover {
