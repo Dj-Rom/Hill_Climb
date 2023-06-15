@@ -8,7 +8,11 @@
       display: none;
     }
     h3{
-        display:block
+        display:block;
+        font-family: Bungee, Arial, 'Times New Roman';
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 900;
     }
 }
 * {
