@@ -47,7 +47,9 @@ function Read() {
         i++;
         tblRecord.append(pos);
         if(i==10){
-          pos.innerHTML = ' <tr > <th> </th><th> <button type="button" id="menuR">back</button></th><th>  </th></tr>  <br> <tr > <th> </th><th>Hill Climb</th><th>  </th></tr> '
+          pos.innerHTML = ` <tr > <th> </th><th> <button type="button" id="menuR">back</button></th><th>  </th></tr>
+            <br> 
+            <tr > <th> </th><th> <p>Hill Climb </p> </th><th>  </th></tr> `
           tblRecord.append(pos);
           break;}
       }
