@@ -1,6 +1,4 @@
 "use strict";
-
-
 localStorage["saveGamePos"] = localStorage["saveGamePos"]?localStorage["saveGamePos"]: JSON.stringify(0)
 
 import { storeInfo } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/ajax.js";
@@ -25,7 +23,7 @@ export let kontrole = {
   ArrowRight: 0
 };
 
-mobileKontrole();
+mobileKontrole("landscape");
 
 window.screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 function mobileKontrole() {
@@ -34,6 +32,7 @@ function mobileKontrole() {
 
     (user)? window.location.reload(true):window.location.reload(true);
   } else {
+    window.screen.lockOrientationUniversal()
     game();
   }
 }
