@@ -124,7 +124,7 @@ imgbr.addEventListener("touchend", eo => {
 const link_was_clicked = false;
 document.addEventListener("click", function(e) {
 
-   if (e.target.nodeName.toLowerCase() !== 'a') {
+   if (e.target.nodeName.toLowerCase() === 'a') {
       link_was_clicked = true;
    }
 }, true);
