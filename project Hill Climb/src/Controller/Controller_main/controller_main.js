@@ -111,8 +111,6 @@ imgbr.addEventListener("touchend", eo => {
   eo.preventDefault();
   kontrole.ArrowDown = 0;
 }, {passive: false});
-
-
 }
 
 
@@ -122,7 +120,6 @@ imgbr.addEventListener("touchend", eo => {
 
 let link_was_clicked = false;
 document.addEventListener("click", function(e) {
-console.log(e.target.nodeName);
    if (e.target.nodeName.toLowerCase() === 'a'||e.target.nodeName.toLowerCase() === 'button') {
       link_was_clicked = true;
    }

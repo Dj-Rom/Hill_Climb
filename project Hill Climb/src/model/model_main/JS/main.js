@@ -196,9 +196,7 @@ function game() {
   }();
   function loop() {
     const RAF = requestAnimationFrame(loop);
-    controleUserClosedPageBoolean = true 
-    console.log( controleUserClosedPageBoolean);
-    if(mobile){return controllOrientation()}
+  
     gameTime();
     
     musicFonAndGaz();
@@ -244,7 +242,6 @@ function game() {
    }
    
     if (secGame.toFixed(0) > 30000) {
-      controleUserClosedPageBoolean =  false
       final();
       cancelAnimationFrame(RAF)
     }
@@ -253,7 +250,6 @@ function game() {
     if (player.rSpeed === 1 || t < 0) {
       fon.pause();
       cancelAnimationFrame(RAF)
-      controleUserClosedPageBoolean = false
       pauseAudio(fon);
       setTimeout(restart(),200)
       return resultGetUserResult;
