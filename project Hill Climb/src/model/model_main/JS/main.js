@@ -121,7 +121,9 @@ function mobileKontrole() {
 // window.onscroll = function () {
 //   window.scrollTo(0, 0);
 // };
- // create player
+
+function game() {
+   // create player
  let player = new function () {
   this.x = cvs.width / 2;
   this.y = cvs.height / 2;
@@ -168,7 +170,6 @@ function mobileKontrole() {
     
   };
 }();
-function game() {
 // for mobile ios
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
     cvs.width = document.documentElement.clientWidth;
