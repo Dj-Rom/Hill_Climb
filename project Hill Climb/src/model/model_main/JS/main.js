@@ -256,15 +256,8 @@ function game() {
       return resultGetUserResult;
     }
     const RAF = requestAnimationFrame(loop);
-    cloud();
   }
-  function cloud() {
  
-   
-
-    
-    
-  }
   function sound() {
     const soundAudioFon = document.createElement("audio");
     soundAudioFon.id = "fon";

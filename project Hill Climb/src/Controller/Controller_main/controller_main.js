@@ -128,10 +128,10 @@ document.addEventListener("click", function(e) {
       link_was_clicked = true;
    }
 }}, true);
-
+if(controleUserClosedPageBoolean) {
 window.onbeforeunload = function(e) {
     if(link_was_clicked) {
         return;
     }
     return confirm('Are you sure?');
-}
+}}
