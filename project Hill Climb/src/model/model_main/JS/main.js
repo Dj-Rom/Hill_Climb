@@ -296,7 +296,7 @@ function pauseAudio(elem) {
   }
   function earthFunc(params) {
     if (params > 400) {
-      player.cvsHeight = 1.10
+      player.cvsHeight = 1.001
       ctx.lineTo(cvs.width, cvs.height);
       ctx.fill();
       ctx.fillStyle = "#70c100";
