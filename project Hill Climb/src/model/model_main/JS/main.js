@@ -206,7 +206,7 @@ function game() {
       x = x / 155;
       return lerp(perm[Math.floor(x)], perm[Math.ceil(x)], x - Math.floor(x));
     };
-    earthFunc(cvs.height);
+   
 sound();
 gameTime();
 musicFonAndGaz();
@@ -227,7 +227,7 @@ musicFonAndGaz();
     ctx.fillStyle = "#ecef54";
     ctx.strokeStyle = "#ecef54";
 
-
+    earthFunc(cvs.height);
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)){
       cloudCicl (false)
     }else cloudCicl (true)
