@@ -144,9 +144,10 @@ function game() {
       this.ySpeed += 0.158;
     } else {
       // horizontal player
-      this.ySpeed -= this.y - (p1 - 14);
-      this.y = p1 - 14;
-      grounded = .99;
+      this.ySpeed -= this.y - (p1 - 12.7);
+      this.y = p1 - 12.7;
+      // 
+      grounded = 1.44;
     }
     let angle = Math.atan2(p2 - 12 - this.y, this.x + 5 - this.x);
     this.y += this.ySpeed;
