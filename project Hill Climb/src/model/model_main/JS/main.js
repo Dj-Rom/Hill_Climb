@@ -243,7 +243,7 @@ musicFonAndGaz();
    
   
    
-    if (secGame.toFixed(0) > 800) {
+    if (secGame.toFixed(0) > 7800) {
   
 ctx.drawImage( finalPng,  (cvs.width/100*40), cvs.height /100 * 40);
 setTimeout(()=>{
@@ -263,7 +263,7 @@ resultGetUserResult = secGame.toFixed(0);
 dataRecordPred.nameRecord = resultGetUserName;
 dataRecordPred.score = resultGetUserResult;
 storeInfo();
-
+location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";
 }, 1000);
 cancelAnimationFrame(RAF)
     }
