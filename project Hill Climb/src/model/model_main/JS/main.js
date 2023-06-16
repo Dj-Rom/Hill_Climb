@@ -131,6 +131,10 @@ function mobileKontrole() {
 // };
 
 function game() {
+
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)){
+    cloudCicl (false)
+  }else cloudCicl (true)
    // create player
  player = new function () {
   this.x = cvs.width / 2;
@@ -196,6 +200,8 @@ function game() {
 
   function loop() {
     const RAF = requestAnimationFrame(loop);
+
+
     while (perm.length < 255) {
       while (perm.includes(val = Math.floor(Math.random() * 255)));
       perm.push(val);
@@ -227,9 +233,7 @@ musicFonAndGaz();
     ctx.strokeStyle = "#ecef54";
 
     earthFunc(cvs.height);
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)){
-      cloudCicl (false)
-    }else cloudCicl (true)
+  
     
    
   
