@@ -1,6 +1,5 @@
 import { kontrole } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/JS/main.js";
 import { resultGetUserResult } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/JS/main.js";
-import { controleUserClosedPageBoolean } from "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/JS/main.js";
 
 export let settingGame1 = {
     forwardKey: 'ArrowUp',
@@ -124,7 +123,7 @@ imgbr.addEventListener("touchend", eo => {
 let link_was_clicked = false;
 document.addEventListener("click", function(e) {
 console.log(e.target.nodeName);
-   if (e.target.nodeName.toLowerCase() === 'a') {
+   if (e.target.nodeName.toLowerCase() === 'a'||e.target.nodeName.toLowerCase() === 'button') {
       link_was_clicked = true;
    }
 }, true);
