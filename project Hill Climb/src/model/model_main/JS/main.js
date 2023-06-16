@@ -299,7 +299,7 @@ function game() {
       ctx.fillStyle = "#70c100";
       ctx.beginPath();
       ctx.moveTo(0, cvs.height);
-      for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.955);
+      for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.963);
       ctx.lineTo(cvs.width, cvs.height);
       ctx.fill();
       ctx.beginPath();
@@ -328,7 +328,7 @@ function game() {
       ctx.fillStyle = "#70c100";
       ctx.beginPath();
       ctx.moveTo(0, cvs.height);
-      for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.655);
+      for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.659);
       ctx.lineTo(cvs.width, cvs.height);
       ctx.fill();
       ctx.beginPath();
