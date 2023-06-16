@@ -108,7 +108,6 @@ function mobileKontrole() {
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent) && window.orientation == 0) {
     const user = confirm(" \u20D4    You need to rotate your device! ПЕРЕВЕРНИТЕ ВАШЕ УСТРОЙСТВО    \u20D5");
     (user)? window.location.reload(true):window.location.reload(true);
-    return mobile
   } else {
     h3.style.display = "none";
     game();
@@ -116,57 +115,57 @@ function mobileKontrole() {
 }
 
 
-let player = new function () {
-  this.x = cvs.width / 2;
-  this.y = cvs.height / 2;
-  this.ySpeed = 0;
-  this.rot = 0;
-  this.rSpeed = 0;
-  this.cvsHeight = 0.95;
-  this.img = new Image();
-  this.img.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/Car15Silver.svg";
-  this.img.alt = "car";
-  this.draw = function () {
-    let p1 = cvs.height - noise(t + this.x) * this.cvsHeight;
-    let p2 = cvs.height - noise(t + 5 + this.x) * this.cvsHeight;
-    let grounded = 0;
-    if (p1 - 12 > this.y) {
-      this.ySpeed += 0.158;
-    } else {
-      this.ySpeed -= this.y - (p1 - 12);
-      this.y = p1 - 12;
-      grounded = 1.99;
-    }
-    let angle = Math.atan2(p2 - 12 - this.y, this.x + 5 - this.x);
-    this.y += this.ySpeed;
-    if (!playing || grounded && Math.abs(this.rot) > Math.PI * 0.5) {
-      playing = false;
-      this.rSpeed = 1;
-      kontrole.ArrowUp = 0.12;
-      this.x -= speed * 5;
-    }
-    if (grounded && playing) {
-      this.rot -= (this.rot - angle) * 0.65;
-      this.rSpeed = this.rSpeed - (angle - this.rot);
-    }
-    this.rSpeed += (kontrole.ArrowLeft - kontrole.ArrowRight) * 0.05;
-    this.rot -= this.rSpeed * 0.1;
-    if (this.rot > Math.PI) this.rot = -Math.PI;
-    if (this.rot < -Math.PI) this.rot = Math.PI;
-    ctx.save();
-    ctx.translate(this.x, this.y - 14);
-    ctx.rotate(this.rot);
-    ctx.drawImage(this.img, -20, -20, 45, 45);
-    ctx.restore();
-    
-    
-  };
-}();
 
 // window.onscroll = function () {
 //   window.scrollTo(0, 0);
 // };
 function game() {
+  let player = new function () {
+    this.x = cvs.width / 2;
+    this.y = cvs.height / 2;
+    this.ySpeed = 0;
+    this.rot = 0;
+    this.rSpeed = 0;
+    this.cvsHeight = 0.95;
+    this.img = new Image();
+    this.img.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/Car15Silver.svg";
+    this.img.alt = "car";
+    this.draw = function () {
+      let p1 = cvs.height - noise(t + this.x) * this.cvsHeight;
+      let p2 = cvs.height - noise(t + 5 + this.x) * this.cvsHeight;
+      let grounded = 0;
+      if (p1 - 12 > this.y) {
+        this.ySpeed += 0.158;
+      } else {
+        this.ySpeed -= this.y - (p1 - 12);
+        this.y = p1 - 12;
+        grounded = 1.99;
+      }
+      let angle = Math.atan2(p2 - 12 - this.y, this.x + 5 - this.x);
+      this.y += this.ySpeed;
+      if (!playing || grounded && Math.abs(this.rot) > Math.PI * 0.5) {
+        playing = false;
+        this.rSpeed = 1;
+        kontrole.ArrowUp = 0.12;
+        this.x -= speed * 5;
+      }
+      if (grounded && playing) {
+        this.rot -= (this.rot - angle) * 0.65;
+        this.rSpeed = this.rSpeed - (angle - this.rot);
+      }
+      this.rSpeed += (kontrole.ArrowLeft - kontrole.ArrowRight) * 0.05;
+      this.rot -= this.rSpeed * 0.1;
+      if (this.rot > Math.PI) this.rot = -Math.PI;
+      if (this.rot < -Math.PI) this.rot = Math.PI;
+      ctx.save();
+      ctx.translate(this.x, this.y - 14);
+      ctx.rotate(this.rot);
+      ctx.drawImage(this.img, -20, -20, 45, 45);
+      ctx.restore();
+      
+      
+    };
+  }();
   
  
   // mobile? add imgGazM and imgbrM
