@@ -160,12 +160,13 @@ function game() {
     if (!playing || grounded && Math.abs(this.rot) > Math.PI * 0.5) {
       playing = false;
       this.rSpeed = 1;
-      kontrole.ArrowUp = 0.12;
+      kontrole.ArrowUp = 1.12;
       this.x -= speed * 2;
     }
+    // TILT ANGLE
     if (grounded && playing) {
       this.rot -= (this.rot - angle) * 0.65;
-      this.rSpeed = this.rSpeed - (angle - this.rot)-100;
+      this.rSpeed = this.rSpeed - (angle - this.rot);
     }
     // balance the rotation when flying
     this.rSpeed += (kontrole.ArrowLeft - kontrole.ArrowRight) * 0.015;
