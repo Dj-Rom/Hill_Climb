@@ -24,6 +24,13 @@ let player;
 const h3= document.querySelector("h3");
 h3.style.display = "none";
 
+const finalPng = new Image();
+    finalPng.src = " https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/fin.png";
+    finalPng.id = 'finalPng'
+    finalPng.alt = "final";
+    finalPng.style.display = "none";
+    ctx.drawImage(finalPng, cvs.width / 2, cvs.height / 6);
+
 const GO = document.createElement('img');
 GO.id= 'gameOverSsvg';
 GO.src="./svg/GameOverSvg.svg";
@@ -156,7 +163,7 @@ function game() {
       playing = false;
       this.rSpeed = 1;
       kontrole.ArrowUp = 0.12;
-      this.x -= speed * 1;
+      this.x -= speed * 2;
     }
     if (grounded && playing) {
       this.rot -= (this.rot - angle) * 0.65;
@@ -356,10 +363,9 @@ function pauseAudio(elem) {
   }
   function final() {
   
-    const finalPng = new Image();
-    finalPng.src = " https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/fin.png";
-    finalPng.alt = "final";
-    ctx.drawImage(finalPng, cvs.width / 2, cvs.height / 6);
+    
+    document.querySelector('#finalPng').style.display = "block";
+ 
    
   }
   function restart() {;
