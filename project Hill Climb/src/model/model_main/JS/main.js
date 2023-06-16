@@ -155,7 +155,7 @@ function game() {
       playing = false;
       this.rSpeed = 1;
       kontrole.ArrowUp = 0.12;
-      this.x -= speed * 115;
+      this.x -= speed * .05;
     }
     if (grounded && playing) {
       this.rot -= (this.rot - angle) * 0.65;
