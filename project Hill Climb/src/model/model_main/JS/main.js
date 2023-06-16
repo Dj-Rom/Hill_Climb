@@ -167,7 +167,7 @@ function game() {
     }
     if (grounded && playing) {
       this.rot -= (this.rot - angle) * 0.65;
-      this.rSpeed = this.rSpeed - (angle - this.rot);
+      this.rSpeed = this.rSpeed - (angle - this.rot)-100;
     }
     // balance the rotation when flying
     this.rSpeed += (kontrole.ArrowLeft - kontrole.ArrowRight) * 0.015;
@@ -206,7 +206,7 @@ function game() {
       x = x / 155;
       return lerp(perm[Math.floor(x)], perm[Math.ceil(x)], x - Math.floor(x));
     };
-earthFunc(cvs.height);
+    earthFunc(cvs.height);
 sound();
 gameTime();
 musicFonAndGaz();
