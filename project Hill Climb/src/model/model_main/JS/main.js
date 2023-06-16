@@ -241,8 +241,23 @@ musicFonAndGaz();
    finalPng.src= " https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/fin.png"
    finalPng.alt = "fin";
 ctx.drawImage( finalPng,  (cvs.width/100*40), cvs.height /100 * 40);
-restart()
-      
+fon.pause();
+pauseAudio(fon);
+if (localStorage["HillClimbUser"] === JSON.stringify({})) {
+  LocalStoregeNameUser = ' ';
+} else {
+  let data1 = JSON.parse(localStorage["HillClimbUser"]);
+  LocalStoregeNameUser = data1.name;
+}
+let resultGetUserName = prompt("Please write your name here.", LocalStoregeNameUser);
+localStorage["HillClimbUser"] = JSON.stringify({
+  name: resultGetUserName
+});
+resultGetUserResult = secGame.toFixed(0);
+dataRecordPred.nameRecord = resultGetUserName;
+dataRecordPred.score = resultGetUserResult;
+storeInfo();
+cancelAnimationFrame(RAF)
     }
    
  
