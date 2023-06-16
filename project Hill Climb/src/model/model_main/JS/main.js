@@ -126,7 +126,7 @@ function game() {
    // create player
  let player = new function () {
   this.x = cvs.width / 2;
-  this.y = (cvs.height / 2) + 10;
+  this.y = (cvs.height / 2) + 100;
   this.ySpeed = 0;
   this.rot = 0;
   this.rSpeed = 0;
