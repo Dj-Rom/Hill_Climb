@@ -220,6 +220,7 @@ gameTime();
 musicFonAndGaz();
     resultGetUserResult =secGame.toFixed(0)
     visualGameTime.innerHTML = secGame.toFixed(0);
+    //progress game
     if (secGame < 7800) {
       const perc = Math.round(secGame / 7800 * 100);
       document.getElementById('IProgressPers').style.width = perc + "%";
@@ -234,6 +235,7 @@ musicFonAndGaz();
     ctx.stroke();
     ctx.fillStyle = "#ecef54";
     ctx.strokeStyle = "#ecef54";
+    // how much clouds mobile/desktop
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)){
       cloudCicl (false)
     }else cloudCicl (true)
@@ -312,7 +314,7 @@ function pauseAudio(elem) {
   
   function earthFunc(params) {
     if (params > 400) {
-      player.cvsHeight = 1.019
+      player.cvsHeight = 1.039
       ctx.lineTo(cvs.width, cvs.height);
       ctx.fill();
       ctx.fillStyle = "#70c100";
