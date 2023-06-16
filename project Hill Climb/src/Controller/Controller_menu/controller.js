@@ -79,3 +79,22 @@ menuWorldResult.addEventListener("touch", (event) => {
     location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_result/result.html";
     window.navigator.vibrate(200)
 });
+
+
+
+// the user wants to close the page
+
+
+let link_was_clicked = false;
+document.addEventListener("click", function(e) {
+   if (e.target.nodeName.toLowerCase() === 'a'&& e.target.nodeName.toLowerCase() === 'button') {
+      link_was_clicked = true;
+   }
+}, true);
+
+window.onbeforeunload = function(e) {
+    if(link_was_clicked) {
+        return;
+    }
+    return confirm('Are you sure?');
+}
