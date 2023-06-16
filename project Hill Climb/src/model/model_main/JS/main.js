@@ -54,7 +54,10 @@ let br = document.getElementById("br");
 let gaz = document.getElementById("gaz");
   gaz = new Audio("https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/music_main/gas.mp3");
 
-
+    
+  const finalPng = new Image ();
+  finalPng.src= " https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/fin.png"
+  finalPng.alt = "fin";
   const imgCloud4 = new Image();
   imgCloud4.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
   imgCloud4.alt = "cloud"
@@ -241,11 +244,7 @@ musicFonAndGaz();
   
    
     if (secGame.toFixed(0) > 800) {
-      
-   const finalPng = new Image ();
-
-   finalPng.src= " https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/fin.png"
-   finalPng.alt = "fin";
+  
 ctx.drawImage( finalPng,  (cvs.width/100*40), cvs.height /100 * 40);
 setTimeout(()=>{
 fon.pause();
