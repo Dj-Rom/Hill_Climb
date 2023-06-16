@@ -104,7 +104,14 @@ IProgress.style.opacity=.32
   imgbrM.alt = "back"
   const cvs = document.querySelector("#canvas");
   const ctx = cvs.getContext("2d");
-
+  const soundAudioFon = document.createElement("audio");
+    soundAudioFon.id = "fon";
+    soundAudioFon.loop = "loop";
+    const soundAudioGaz = document.createElement("audio");
+    soundAudioGaz.id = "gaz";
+    soundAudioGaz.loop = "loop";
+    main_Contener.append(soundAudioGaz);
+    main_Contener.append(soundAudioFon);
 mobileKontrole();
 // fuction for what kind of device?
 
@@ -206,7 +213,6 @@ function game() {
       return lerp(perm[Math.floor(x)], perm[Math.ceil(x)], x - Math.floor(x));
     };
    
-sound();
 gameTime();
 musicFonAndGaz();
     resultGetUserResult =secGame.toFixed(0)
@@ -300,16 +306,7 @@ function pauseAudio(elem) {
      
     }
   }
-  function sound() {
-    const soundAudioFon = document.createElement("audio");
-    soundAudioFon.id = "fon";
-    soundAudioFon.loop = "loop";
-    const soundAudioGaz = document.createElement("audio");
-    soundAudioGaz.id = "gaz";
-    soundAudioGaz.loop = "loop";
-    main_Contener.append(soundAudioGaz);
-    main_Contener.append(soundAudioFon);
-  }
+  
   function earthFunc(params) {
     if (params > 400) {
       player.cvsHeight = 1.001
