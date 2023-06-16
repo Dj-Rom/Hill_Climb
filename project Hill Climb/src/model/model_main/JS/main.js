@@ -69,7 +69,9 @@ let gaz = document.getElementById("gaz");
 
 
   const IProgress = document.createElement('div');
+IProgress.style.opacity=.66
   const IProgressPers = document.createElement('div');
+ IProgressPers.style.opacity=.66 
   IProgress.id = "IProgress";
   IProgressPers.id = "IProgressPers";
   main_Contener.append(IProgress);
@@ -224,8 +226,8 @@ function game() {
     musicFonAndGaz();
     resultGetUserResult =secGame.toFixed(0)
     visualGameTime.innerHTML = secGame.toFixed(0);
-    if (secGame < 30000) {
-      const perc = Math.round(secGame / 30000 * 100);
+    if (secGame < 7800) {
+      const perc = Math.round(secGame / 7800 * 100);
       document.getElementById('IProgressPers').style.width = perc + "%";
     }
 
@@ -263,7 +265,7 @@ function game() {
   }
    }
    
-    if (secGame.toFixed(0) > 30000) {
+    if (secGame.toFixed(0) > 7800) {
       final();
       cancelAnimationFrame(RAF)
     }
