@@ -21,8 +21,6 @@ localStorage["HillClimbUser"] = localStorage["HillClimbUser"] ? localStorage["Hi
 const main_Contener= document.querySelector(".main_Contener")
 let noise;
 let player;
-const h3= document.querySelector("h3");
-h3.style.display = "none";
 
 const finalPng = document.createElement('img');
     finalPng.src = " https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/fin.png";
