@@ -96,5 +96,5 @@ window.onbeforeunload = function(e) {
     if(link_was_clicked) {
         return;
     }
-    return console.log('Are you sure?');
+    return Alert('Are you sure?');
 }
