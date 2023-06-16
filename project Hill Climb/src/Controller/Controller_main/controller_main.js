@@ -119,7 +119,7 @@ imgbr.addEventListener("touchend", eo => {
 
 
 // the user wants to close the page
-console.log(controleUserClosedPageBoolean);
+
 if(controleUserClosedPageBoolean) {
 const link_was_clicked = false;
 document.addEventListener("click", function(e) {
@@ -127,11 +127,12 @@ document.addEventListener("click", function(e) {
    if (e.target.nodeName.toLowerCase() === 'a') {
       link_was_clicked = true;
    }
-}, true);}
-if(controleUserClosedPageBoolean) {
+}, true);
+
 window.onbeforeunload = function(e) {
     if(link_was_clicked) {
         return;
     }
     return confirm('Are you sure?');
-}}
+}
+}
