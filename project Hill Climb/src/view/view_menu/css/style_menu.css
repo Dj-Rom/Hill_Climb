@@ -41,20 +41,19 @@ html {
 }
 
 h1 {
-    justify-content: center;
-    top: 40%;
+    position: absolute;
+    width: 60%;
+    text-align: center;
+    top: 0;
     display: block;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
     font-family: Bungee, Arial, 'Times New Roman';
     font-style: normal;
     font-weight: 400;
-    font-size: 450%;
+    font-size: 40px;
     line-height: 48px;
-    z-index: 1;
+    color: #b0f;
     background: 0 0;
-    text-align: center
+    z-index: 1;
 }
 
 #menu_New_Game:hover {

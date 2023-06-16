@@ -7,13 +7,7 @@
     .main_Contener {
       display: none;
     }
-    h3{
-        display:block;
-        font-family: Bungee, Arial, 'Times New Roman';
-        font-size: 25px;
-        font-style: normal;
-        font-weight: 900;
-    }
+
 }
 * {
     cursore: none;
