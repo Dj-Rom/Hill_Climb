@@ -242,7 +242,7 @@ musicFonAndGaz();
     
    
   
-   
+  //  this finish the game
     if (secGame.toFixed(0) > 7800) {
       localStorage["saveGamePos"]='0'
 ctx.drawImage( finalPng,  (cvs.width/100*40), cvs.height /100 * 40);
@@ -312,7 +312,7 @@ function pauseAudio(elem) {
   
   function earthFunc(params) {
     if (params > 400) {
-      player.cvsHeight = 1.001
+      player.cvsHeight = 1.019
       ctx.lineTo(cvs.width, cvs.height);
       ctx.fill();
       ctx.fillStyle = "#70c100";
@@ -375,7 +375,7 @@ function pauseAudio(elem) {
   function restart() {;
   gameOveSsvg.style.opacity  = 0.97 ;
  
-    if (localStorage["HillClimbUser"] === JSON.stringify({})) {
+  setTimeout(function () {  if (localStorage["HillClimbUser"] === JSON.stringify({})) {
       LocalStoregeNameUser = ' ';
     } else {
       let data1 = JSON.parse(localStorage["HillClimbUser"]);
@@ -389,10 +389,11 @@ function pauseAudio(elem) {
     dataRecordPred.nameRecord = resultGetUserName;
     dataRecordPred.score = resultGetUserResult;
     storeInfo();
-setTimeout(function () {
+
       location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";
     
 },500)
+cancelAnimationFrame(RAF)
   }
   function musicFonAndGaz() {
     if (kontrole.ArrowUp === 1) {
