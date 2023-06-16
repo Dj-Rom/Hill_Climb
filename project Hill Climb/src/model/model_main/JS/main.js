@@ -13,21 +13,21 @@ export let kontrole = {
 
 
 // localStorage
-localStorage["saveGamePos"] = localStorage["saveGamePos"]?localStorage["saveGamePos"]: JSON.stringify(0)
+localStorage["saveGamePos"] = localStorage["saveGamePos"] ? localStorage["saveGamePos"] : JSON.stringify(0)
 let LocalStoregeNameUser = '';
 
 localStorage["HillClimbUser"] = localStorage["HillClimbUser"] ? localStorage["HillClimbUser"] : JSON.stringify({});
 // const
-const main_Contener= document.querySelector(".main_Contener")
+const main_Contener = document.querySelector(".main_Contener")
 let noise;
 let player;
 
 
 
 const GO = document.createElement('img');
-GO.id= 'gameOverSsvg';
-GO.src="./svg/GameOverSvg.svg";
-GO.alt="gameOver";
+GO.id = 'gameOverSsvg';
+GO.src = "./svg/GameOverSvg.svg";
+GO.alt = "gameOver";
 GO.style.opacity = 0
 main_Contener.appendChild(GO);
 
@@ -37,7 +37,7 @@ let canvasGame = document.createElement('canvas');
 canvasGame.id = "canvas";
 main_Contener.append(canvasGame);
 
-let t = (JSON.parse(localStorage["saveGamePos"])/0.2)
+let t = (JSON.parse(localStorage["saveGamePos"]) / 0.2)
 let speed = 0;
 let playing = true;
 let perm = [];
@@ -48,73 +48,73 @@ visualGameTime.id = "visualGameTime";
 main_Contener.append(visualGameTime);
 
 let fon = document.getElementById("fon");
-  fon = new Audio("https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/music_main/phantom.mp3");
+fon = new Audio("https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/music_main/phantom.mp3");
 let br = document.getElementById("br");
-  br = new Audio("https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/music_main/br.mp3");
+br = new Audio("https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/music_main/br.mp3");
 let gaz = document.getElementById("gaz");
-  gaz = new Audio("https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/music_main/gas.mp3");
-
-    
-  const finalPng = new Image ();
-  finalPng.src= " https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/fin.png"
-  finalPng.alt = "fin";
-  const imgCloud4 = new Image();
-  imgCloud4.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
-  imgCloud4.alt = "cloud"
-  const imgCloud3 = new Image();
-  imgCloud3.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
-  imgCloud3.alt = "cloud";
-  const imgCloud2 = new Image();
-  imgCloud2.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
-  imgCloud2.alt = "cloud";
-  const imgCloud = new Image();
-  imgCloud.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
-  imgCloud.alt = "cloud";
+gaz = new Audio("https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/model/model_main/music_main/gas.mp3");
 
 
-  const IProgress = document.createElement('div');
-IProgress.style.opacity=.32
-  const IProgressPers = document.createElement('div');
- IProgressPers.style.opacity=.32
-  IProgress.id = "IProgress";
-  IProgressPers.id = "IProgressPers";
-  main_Contener.append(IProgress);
-  main_Contener.append(IProgressPers);
+const finalPng = new Image();
+finalPng.src = " https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/fin.png"
+finalPng.alt = "fin";
+const imgCloud4 = new Image();
+imgCloud4.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
+imgCloud4.alt = "cloud"
+const imgCloud3 = new Image();
+imgCloud3.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
+imgCloud3.alt = "cloud";
+const imgCloud2 = new Image();
+imgCloud2.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud2.svg";
+imgCloud2.alt = "cloud";
+const imgCloud = new Image();
+imgCloud.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/cloud.svg";
+imgCloud.alt = "cloud";
 
-  const imgGaz = document.createElement("img");
-  imgGaz.id = "imgGaz";
-  imgGaz.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/forward.svg";
-  imgGaz.style.display = "none";
-  imgGaz.style.position = "absolute";
-  imgGaz.style.right = "4%";
-  imgGaz.style.bottom = "4%";
-  imgGaz.style.zIndex = "10";
-  imgGaz.style.opacity = "0.56";
-  main_Contener.append(imgGaz);
-  const imgbr = document.createElement("img");
-  imgbr.id = "imgbr";
-  imgbr.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/back.svg";
-  imgbr.style.display = "none";
-  imgbr.style.position = "absolute";
-  imgbr.style.left = "4%";
-  imgbr.style.bottom = "4%";
-  imgbr.style.zIndex = "10";
-  imgbr.style.opacity = "0.56";
-  main_Contener.append(imgbr);
-  const imgGazM = document.getElementById("imgGaz");
-  imgGazM.alt = "Forward"
-  const imgbrM = document.getElementById("imgbr");
-  imgbrM.alt = "back"
-  const cvs = document.querySelector("#canvas");
-  const ctx = cvs.getContext("2d");
-  const soundAudioFon = document.createElement("audio");
-    soundAudioFon.id = "fon";
-    soundAudioFon.loop = "loop";
-    const soundAudioGaz = document.createElement("audio");
-    soundAudioGaz.id = "gaz";
-    soundAudioGaz.loop = "loop";
-    main_Contener.append(soundAudioGaz);
-    main_Contener.append(soundAudioFon);
+
+const IProgress = document.createElement('div');
+IProgress.style.opacity = .32
+const IProgressPers = document.createElement('div');
+IProgressPers.style.opacity = .32
+IProgress.id = "IProgress";
+IProgressPers.id = "IProgressPers";
+main_Contener.append(IProgress);
+main_Contener.append(IProgressPers);
+
+const imgGaz = document.createElement("img");
+imgGaz.id = "imgGaz";
+imgGaz.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/forward.svg";
+imgGaz.style.display = "none";
+imgGaz.style.position = "absolute";
+imgGaz.style.right = "4%";
+imgGaz.style.bottom = "4%";
+imgGaz.style.zIndex = "10";
+imgGaz.style.opacity = "0.56";
+main_Contener.append(imgGaz);
+const imgbr = document.createElement("img");
+imgbr.id = "imgbr";
+imgbr.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/svg/back.svg";
+imgbr.style.display = "none";
+imgbr.style.position = "absolute";
+imgbr.style.left = "4%";
+imgbr.style.bottom = "4%";
+imgbr.style.zIndex = "10";
+imgbr.style.opacity = "0.56";
+main_Contener.append(imgbr);
+const imgGazM = document.getElementById("imgGaz");
+imgGazM.alt = "Forward"
+const imgbrM = document.getElementById("imgbr");
+imgbrM.alt = "back"
+const cvs = document.querySelector("#canvas");
+const ctx = cvs.getContext("2d");
+const soundAudioFon = document.createElement("audio");
+soundAudioFon.id = "fon";
+soundAudioFon.loop = "loop";
+const soundAudioGaz = document.createElement("audio");
+soundAudioGaz.id = "gaz";
+soundAudioGaz.loop = "loop";
+main_Contener.append(soundAudioGaz);
+main_Contener.append(soundAudioFon);
 mobileKontrole();
 // fuction for what kind of device?
 
@@ -122,10 +122,12 @@ mobileKontrole();
 function mobileKontrole() {
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent) && window.orientation == 0) {
     const user = confirm(" \u20D4    You need to rotate your device! ПЕРЕВЕРНИТЕ ВАШЕ УСТРОЙСТВО    \u20D5");
-    (user)? window.location.reload(true):window.location.reload(true);}
-  
-  
-    else { game();
+    (user) ? window.location.reload(true) : window.location.reload(true);
+  }
+
+
+  else {
+    game();
   }
 }
 
@@ -137,72 +139,72 @@ function mobileKontrole() {
 
 function game() {
 
-   // create player
- player = new function () {
-  this.x = cvs.width / 2;
-  this.y = (cvs.height / 2);
-  this.ySpeed = 0;
-  this.rot = 0;
-  this.rSpeed = 0;
-  this.cvsHeight = 0.95;
-  this.img = new Image();
-  this.img.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/moto.png";
-  this.img.alt = "car";
-  this.draw = function () {
-    let p1 = cvs.height - noise(t + this.x) * this.cvsHeight;
-    let p2 = cvs.height - noise(t + 5 + this.x) * this.cvsHeight;
-    let grounded = 0;
-    if (p1 - 12 > this.y) {
-      this.ySpeed += 0.158;
-    } else {
-      // horizontal player
-      this.ySpeed -= this.y - (p1 - 12.3);
-      this.y = p1 - 12.3;
-      // 
-      grounded = 1.44;
-    }
-    let angle = Math.atan2(p2 - 12 - this.y, this.x + 5 - this.x);
-    this.y += this.ySpeed;
-    if (!playing || grounded && Math.abs(this.rot) > Math.PI * 0.5) {
-      playing = false;
-      this.rSpeed = 1;
-      kontrole.ArrowUp = 0.0001;
-      this.x -= speed * 2;
-    }
-    // TILT ANGLE
-    if (grounded && playing) {
-      this.rot -= (this.rot - angle) * 0.65;
-      this.rSpeed = this.rSpeed - (angle - this.rot);
-    }
-    // balance the rotation when flying
-    this.rSpeed += (kontrole.ArrowLeft - kontrole.ArrowRight) * 0.015;
-    this.rot -= this.rSpeed * 0.1;
-    if (this.rot > Math.PI) this.rot = -Math.PI;
-    if (this.rot < -Math.PI) this.rot = Math.PI;
-    ctx.save();
-    ctx.translate(this.x, this.y - 1);
-    ctx.rotate(this.rot);
-    ctx.drawImage(this.img, -20, -20, 55, 55);
-    ctx.restore();
-    
-    
-  };
-}();
-// for mobile ios
+  // create player
+  player = new function () {
+    this.x = cvs.width / 2;
+    this.y = (cvs.height / 2);
+    this.ySpeed = 0;
+    this.rot = 0;
+    this.rSpeed = 0;
+    this.cvsHeight = 0.95;
+    this.img = new Image();
+    this.img.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/moto.png";
+    this.img.alt = "car";
+    this.draw = function () {
+      let p1 = cvs.height - noise(t + this.x) * this.cvsHeight;
+      let p2 = cvs.height - noise(t + 5 + this.x) * this.cvsHeight;
+      let grounded = 0;
+      if (p1 - 12 > this.y) {
+        this.ySpeed += 0.158;
+      } else {
+        // horizontal player
+        this.ySpeed -= this.y - (p1 - 12.3);
+        this.y = p1 - 12.3;
+        // 
+        grounded = 1.44;
+      }
+      let angle = Math.atan2(p2 - 12 - this.y, this.x + 5 - this.x);
+      this.y += this.ySpeed;
+      if (!playing || grounded && Math.abs(this.rot) > Math.PI * 0.5) {
+        playing = false;
+        this.rSpeed = 1;
+        kontrole.ArrowUp = 0.0001;
+        this.x -= speed * 2;
+      }
+      // TILT ANGLE
+      if (grounded && playing) {
+        this.rot -= (this.rot - angle) * 0.65;
+        this.rSpeed = this.rSpeed - (angle - this.rot);
+      }
+      // balance the rotation when flying
+      this.rSpeed += (kontrole.ArrowLeft - kontrole.ArrowRight) * 0.015;
+      this.rot -= this.rSpeed * 0.1;
+      if (this.rot > Math.PI) this.rot = -Math.PI;
+      if (this.rot < -Math.PI) this.rot = Math.PI;
+      ctx.save();
+      ctx.translate(this.x, this.y - 1);
+      ctx.rotate(this.rot);
+      ctx.drawImage(this.img, -20, -20, 55, 55);
+      ctx.restore();
+
+
+    };
+  }();
+  // for mobile ios
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
     cvs.width = document.documentElement.clientWidth;
     cvs.height = document.documentElement.clientHeight;
     imgGazM.style.display = "block";
     imgbrM.style.display = "block";
-  } else{
+  } else {
     cvs.width = window.innerWidth;
     cvs.height = window.innerHeight;
   }
 
 
   function loop() {
-    
- 
+
+
     const RAF = requestAnimationFrame(loop);
 
 
@@ -215,10 +217,10 @@ function game() {
       x = x / 155;
       return lerp(perm[Math.floor(x)], perm[Math.ceil(x)], x - Math.floor(x));
     };
-   
-gameTime();
-musicFonAndGaz();
-    resultGetUserResult =secGame.toFixed(0)
+
+    gameTime();
+    musicFonAndGaz();
+    resultGetUserResult = secGame.toFixed(0)
     visualGameTime.innerHTML = secGame.toFixed(0);
     //progress game
     if (secGame < 7800) {
@@ -236,47 +238,47 @@ musicFonAndGaz();
     ctx.fillStyle = "#ecef54";
     ctx.strokeStyle = "#ecef54";
     // how much clouds mobile/desktop
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)){
-      cloudCicl (false)
-    }else cloudCicl (true)
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+      cloudCicl(false)
+    } else cloudCicl(true)
     earthFunc(cvs.height);
-  
-    
-   
-  
-  //  this finish the game
+
+
+
+
+    //  this finish the game
     if (secGame.toFixed(0) > 7800) {
-      localStorage["saveGamePos"]='0'
-ctx.drawImage( finalPng,  (cvs.width/100*40), cvs.height /100 * 40);
-setTimeout(()=>{
-fon.pause();
-pauseAudio(fon);
-if (localStorage["HillClimbUser"] === JSON.stringify({})) {
-  LocalStoregeNameUser = ' ';
-} else {
-  let data1 = JSON.parse(localStorage["HillClimbUser"]);
-  LocalStoregeNameUser = data1.name;
-}
-let resultGetUserName = prompt("Please write your name here.", LocalStoregeNameUser);
-localStorage["HillClimbUser"] = JSON.stringify({
-  name: resultGetUserName
-});
-resultGetUserResult = secGame.toFixed(0);
-dataRecordPred.nameRecord = resultGetUserName;
-dataRecordPred.score = resultGetUserResult;
-storeInfo();
-location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";
-}, 1000);
-cancelAnimationFrame(RAF)
+      localStorage["saveGamePos"] = '0'
+      ctx.drawImage(finalPng, (cvs.width / 100 * 40), cvs.height / 100 * 40);
+      setTimeout(() => {
+        fon.pause();
+        pauseAudio(fon);
+        if (localStorage["HillClimbUser"] === JSON.stringify({})) {
+          LocalStoregeNameUser = ' ';
+        } else {
+          let data1 = JSON.parse(localStorage["HillClimbUser"]);
+          LocalStoregeNameUser = data1.name;
+        }
+        let resultGetUserName = prompt("Please write your name here.", LocalStoregeNameUser);
+        localStorage["HillClimbUser"] = JSON.stringify({
+          name: resultGetUserName
+        });
+        resultGetUserResult = secGame.toFixed(0);
+        dataRecordPred.nameRecord = resultGetUserName;
+        dataRecordPred.score = resultGetUserResult;
+        storeInfo();
+        location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";
+      }, 1000);
+      cancelAnimationFrame(RAF)
     }
-   
- 
+
+
     if (player.rSpeed === 1 || t < 0) {
       fon.pause();
-      localStorage["saveGamePos"]='0'
+      localStorage["saveGamePos"] = '0'
       cancelAnimationFrame(RAF)
       pauseAudio(fon);
-      setTimeout(restart(),200)
+      setTimeout(restart(), 200)
       return resultGetUserResult;
     }
 
@@ -295,89 +297,91 @@ function playAudio(elem) {
 function pauseAudio(elem) {
   elem.pause();
 }
-  function cloudCicl (device) {
- 
-    if(device){
-      ctx.drawImage(imgCloud2,  (cvs.width/100*80), cvs.height /100 * 10);
-      ctx.drawImage(imgCloud,  (cvs.width/100*65), cvs.height /100 * 33);
-      ctx.drawImage(imgCloud2,  (cvs.width/100*45), cvs.height /100 * 7);
-    ctx.drawImage(imgCloud2,  (cvs.width/100*15), cvs.height /100 * 22);
-     ctx.drawImage(imgCloud, (cvs.width/100*1), cvs.height  /100 * 8);
-    
-    } else {
-      ctx.drawImage(imgCloud2,  (cvs.width/100*20), cvs.height /100 * 3);
-      ctx.drawImage(imgCloud2,  (cvs.width/100*70), cvs.height /100 * 7);
-  
-     
-    }
+function cloudCicl(device) {
+
+  if (device) {
+    ctx.drawImage(imgCloud2, (cvs.width / 100 * 80), cvs.height / 100 * 10);
+    ctx.drawImage(imgCloud, (cvs.width / 100 * 65), cvs.height / 100 * 33);
+    ctx.drawImage(imgCloud2, (cvs.width / 100 * 45), cvs.height / 100 * 7);
+    ctx.drawImage(imgCloud2, (cvs.width / 100 * 15), cvs.height / 100 * 22);
+    ctx.drawImage(imgCloud, (cvs.width / 100 * 1), cvs.height / 100 * 8);
+
+  } else {
+    ctx.drawImage(imgCloud2, (cvs.width / 100 * 20), cvs.height / 100 * 3);
+    ctx.drawImage(imgCloud2, (cvs.width / 100 * 70), cvs.height / 100 * 7);
+
+
   }
-  
-  function earthFunc(params) {
-    if (params > 400) {
-      player.cvsHeight = 1.039
-      ctx.lineTo(cvs.width, cvs.height);
-      ctx.fill();
-      ctx.fillStyle = "#70c100";
-      ctx.beginPath();
-      ctx.moveTo(0, cvs.height);
-      for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.963);
-      ctx.lineTo(cvs.width, cvs.height);
-      ctx.fill();
-      ctx.beginPath();
-      ctx.fillStyle = "#527b52";
-      ctx.moveTo(0, cvs.height);
-      for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.75);
-      ctx.lineTo(cvs.width, cvs.height);
-      ctx.fill();
-      ctx.beginPath();
-      ctx.fillStyle = "#c89566";
-      ctx.moveTo(0, cvs.height);
-      for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.65);
-      ctx.lineTo(cvs.width, cvs.height);
-      ctx.fill();
-      ctx.beginPath();
-      ctx.fillStyle = "#a9794d";
-      ctx.moveTo(0, cvs.height);
-      for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.25);
-      ctx.lineTo(cvs.width, cvs.height);
-      ctx.fill();
-      player.draw();
-    } else {
-      ctx.lineTo(cvs.width, cvs.height);
-      ctx.fill();
-      player.cvsHeight = 0.761
-      ctx.fillStyle = "#70c100";
-      ctx.beginPath();
-      ctx.moveTo(0, cvs.height);
-      for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.659);
-      ctx.lineTo(cvs.width, cvs.height);
-      ctx.fill();
-      ctx.beginPath();
-      ctx.fillStyle = "#527b52";
-      ctx.moveTo(0, cvs.height);
-      for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.45);
-      ctx.lineTo(cvs.width, cvs.height);
-      ctx.fill();
-      ctx.beginPath();
-      ctx.fillStyle = "#c89566";
-      ctx.moveTo(0, cvs.height);
-      for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.35);
-      ctx.lineTo(cvs.width, cvs.height);
-      ctx.fill();
-      ctx.beginPath();
-      ctx.fillStyle = "#a9794d";
-      ctx.moveTo(0, cvs.height);
-      for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.5);
-      ctx.lineTo(cvs.width, cvs.height);
-      ctx.fill();
-      player.draw();
-    }
+}
+
+function earthFunc(params) {
+  if (params > 400) {
+    player.cvsHeight = 1.039
+    ctx.lineTo(cvs.width, cvs.height);
+    ctx.fill();
+    ctx.fillStyle = "#70c100";
+    ctx.beginPath();
+    ctx.moveTo(0, cvs.height);
+    for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.963);
+    ctx.lineTo(cvs.width, cvs.height);
+    ctx.fill();
+    ctx.beginPath();
+    ctx.fillStyle = "#527b52";
+    ctx.moveTo(0, cvs.height);
+    for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.75);
+    ctx.lineTo(cvs.width, cvs.height);
+    ctx.fill();
+    ctx.beginPath();
+    ctx.fillStyle = "#c89566";
+    ctx.moveTo(0, cvs.height);
+    for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.65);
+    ctx.lineTo(cvs.width, cvs.height);
+    ctx.fill();
+    ctx.beginPath();
+    ctx.fillStyle = "#a9794d";
+    ctx.moveTo(0, cvs.height);
+    for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.25);
+    ctx.lineTo(cvs.width, cvs.height);
+    ctx.fill();
+    player.draw();
+  } else {
+    ctx.lineTo(cvs.width, cvs.height);
+    ctx.fill();
+    player.cvsHeight = 0.761
+    ctx.fillStyle = "#70c100";
+    ctx.beginPath();
+    ctx.moveTo(0, cvs.height);
+    for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.659);
+    ctx.lineTo(cvs.width, cvs.height);
+    ctx.fill();
+    ctx.beginPath();
+    ctx.fillStyle = "#527b52";
+    ctx.moveTo(0, cvs.height);
+    for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.45);
+    ctx.lineTo(cvs.width, cvs.height);
+    ctx.fill();
+    ctx.beginPath();
+    ctx.fillStyle = "#c89566";
+    ctx.moveTo(0, cvs.height);
+    for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.35);
+    ctx.lineTo(cvs.width, cvs.height);
+    ctx.fill();
+    ctx.beginPath();
+    ctx.fillStyle = "#a9794d";
+    ctx.moveTo(0, cvs.height);
+    for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.5);
+    ctx.lineTo(cvs.width, cvs.height);
+    ctx.fill();
+    player.draw();
   }
- 
-  function restart() {;
-  gameOveSsvg.style.opacity  = 0.97 ;
- 
-  setTimeout(function () {  if (localStorage["HillClimbUser"] === JSON.stringify({})) {
+}
+
+function restart() {
+  ;
+  gameOveSsvg.style.opacity = 0.97;
+
+  setTimeout(function () {
+    if (localStorage["HillClimbUser"] === JSON.stringify({})) {
       LocalStoregeNameUser = ' ';
     } else {
       let data1 = JSON.parse(localStorage["HillClimbUser"]);
@@ -392,39 +396,39 @@ function pauseAudio(elem) {
     dataRecordPred.score = resultGetUserResult;
     storeInfo();
 
-      location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";
-    
-},500)
-cancelAnimationFrame(RAF)
+    location = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_menu/menu.html ";
+
+  }, 500)
+  cancelAnimationFrame(RAF)
+}
+function musicFonAndGaz() {
+  if (kontrole.ArrowUp === 1) {
+    imgGazM.style.transform = "rotateX(47deg)";
+    imgGazM.style.webkitTransform = "rotateX(47deg)";
+    imgGazM.style.MozTransform = "rotateX(47deg)";
+    playAudio(fon);
+    playAudio(gaz);
+  } else {
+    imgGazM.style.transform = "rotateX(17deg)";
+    imgGazM.style.webkitTransform = "rotateX(17deg)";
+    imgGazM.style.MozTransform = "rotateX(17deg)";
+    pauseAudio(gaz);
   }
-  function musicFonAndGaz() {
-    if (kontrole.ArrowUp === 1) {
-      imgGazM.style.transform = "rotateX(47deg)";
-      imgGazM.style.webkitTransform = "rotateX(47deg)";
-      imgGazM.style.MozTransform = "rotateX(47deg)";
-      playAudio(fon);
-      playAudio(gaz);
-    } else {
-      imgGazM.style.transform = "rotateX(17deg)";
-      imgGazM.style.webkitTransform = "rotateX(17deg)";
-      imgGazM.style.MozTransform = "rotateX(17deg)";
-      pauseAudio(gaz);
-    }
-    if (kontrole.ArrowDown === 1) {
-      imgbrM.style.transform = "rotateX(47deg)";
-      imgbrM.style.webkitTransform = "rotateX(47deg)";
-      imgbrM.style.MozTransform = "rotateX(47deg)";
-      playAudio(fon);
-      pauseAudio(gaz);
-      playAudio(br);
-    } else {
-      imgbrM.style.transform = "rotateX(17deg)";
-      imgbrM.style.webkitTransform = "rotateX(17deg)";
-      imgbrM.style.MozTransform = "rotateX(17deg)";
-      pauseAudio(br);
-    }
+  if (kontrole.ArrowDown === 1) {
+    imgbrM.style.transform = "rotateX(47deg)";
+    imgbrM.style.webkitTransform = "rotateX(47deg)";
+    imgbrM.style.MozTransform = "rotateX(47deg)";
+    playAudio(fon);
+    pauseAudio(gaz);
+    playAudio(br);
+  } else {
+    imgbrM.style.transform = "rotateX(17deg)";
+    imgbrM.style.webkitTransform = "rotateX(17deg)";
+    imgbrM.style.MozTransform = "rotateX(17deg)";
+    pauseAudio(br);
   }
- 
+}
+
 
 
 
