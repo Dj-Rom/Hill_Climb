@@ -131,41 +131,7 @@ function mobileKontrole() {
 // };
 
 function game() {
-  
-// for mobile ios
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-    cvs.width = document.documentElement.clientWidth;
-    cvs.height = document.documentElement.clientHeight;
-    imgGazM.style.display = "block";
-    imgbrM.style.display = "block";
-  } else{
-    cvs.width = window.innerWidth;
-    cvs.height = window.innerHeight;
-  }
-
-
-  function loop() {
-    const RAF = requestAnimationFrame(loop);
-    while (perm.length < 255) {
-      while (perm.includes(val = Math.floor(Math.random() * 255)));
-      perm.push(val);
-    }
-    let lerp = (a, b, t) => a + (b - a) * (1 - Math.cos(t * Math.PI)) / 2;
-    noise = x => {
-      x = x / 155;
-      return lerp(perm[Math.floor(x)], perm[Math.ceil(x)], x - Math.floor(x));
-    };
-   
-sound();
-gameTime();
-musicFonAndGaz();
-    resultGetUserResult =secGame.toFixed(0)
-    visualGameTime.innerHTML = secGame.toFixed(0);
-    if (secGame < 7800) {
-      const perc = Math.round(secGame / 7800 * 100);
-      document.getElementById('IProgressPers').style.width = perc + "%";
-    }
- // create player
+   // create player
  player = new function () {
   this.x = cvs.width / 2;
   this.y = (cvs.height / 2);
@@ -216,6 +182,40 @@ musicFonAndGaz();
     
   };
 }();
+// for mobile ios
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+    cvs.width = document.documentElement.clientWidth;
+    cvs.height = document.documentElement.clientHeight;
+    imgGazM.style.display = "block";
+    imgbrM.style.display = "block";
+  } else{
+    cvs.width = window.innerWidth;
+    cvs.height = window.innerHeight;
+  }
+
+
+  function loop() {
+    const RAF = requestAnimationFrame(loop);
+    while (perm.length < 255) {
+      while (perm.includes(val = Math.floor(Math.random() * 255)));
+      perm.push(val);
+    }
+    let lerp = (a, b, t) => a + (b - a) * (1 - Math.cos(t * Math.PI)) / 2;
+    noise = x => {
+      x = x / 155;
+      return lerp(perm[Math.floor(x)], perm[Math.ceil(x)], x - Math.floor(x));
+    };
+   
+sound();
+gameTime();
+musicFonAndGaz();
+    resultGetUserResult =secGame.toFixed(0)
+    visualGameTime.innerHTML = secGame.toFixed(0);
+    if (secGame < 7800) {
+      const perc = Math.round(secGame / 7800 * 100);
+      document.getElementById('IProgressPers').style.width = perc + "%";
+    }
+
     speed -= (speed - (kontrole.ArrowUp - kontrole.ArrowDown)) * 0.009;
     t += 10 * speed;
     ctx.fillStyle = "#91EBFF";
