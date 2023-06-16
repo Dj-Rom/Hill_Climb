@@ -156,7 +156,7 @@ function game() {
       playing = false;
       this.rSpeed = 1;
       kontrole.ArrowUp = 0.12;
-      this.x -= speed * 5;
+      this.x -= speed * 1;
     }
     if (grounded && playing) {
       this.rot -= (this.rot - angle) * 0.65;
@@ -170,7 +170,7 @@ function game() {
     ctx.save();
     ctx.translate(this.x, this.y - 14);
     ctx.rotate(this.rot);
-    ctx.drawImage(this.img, -20, -20, 45, 45);
+    ctx.drawImage(this.img, -20, -20, 65, 65);
     ctx.restore();
     
     
@@ -207,7 +207,7 @@ function game() {
     }
     let lerp = (a, b, t) => a + (b - a) * (1 - Math.cos(t * Math.PI)) / 2;
     noise = x => {
-      x = x / 155;
+      x = x / 255;
       return lerp(perm[Math.floor(x)], perm[Math.ceil(x)], x - Math.floor(x));
     };
   
@@ -422,5 +422,5 @@ setTimeout(function () {
 
 
 
-// save game if user push Menu
+
 
