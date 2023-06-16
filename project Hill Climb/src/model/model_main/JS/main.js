@@ -77,7 +77,7 @@ let gaz = document.getElementById("gaz");
   const IProgress = document.createElement('div');
 IProgress.style.opacity=.66
   const IProgressPers = document.createElement('div');
- IProgressPers.style.opacity=.66 
+ IProgressPers.style.opacity=.32
   IProgress.id = "IProgress";
   IProgressPers.id = "IProgressPers";
   main_Contener.append(IProgress);
@@ -296,7 +296,7 @@ function pauseAudio(elem) {
   }
   function earthFunc(params) {
     if (params > 400) {
-      player.cvsHeight = 1.03
+      player.cvsHeight = 1.01
       ctx.lineTo(cvs.width, cvs.height);
       ctx.fill();
       ctx.fillStyle = "#70c100";
