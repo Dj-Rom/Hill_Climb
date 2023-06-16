@@ -194,18 +194,7 @@ function game() {
     cvs.height = window.innerHeight;
   }
 
- 
-  
 
- 
-
-
- 
-  
-
- 
-  
- 
   function loop() {
     const RAF = requestAnimationFrame(loop);
     while (perm.length < 255) {
@@ -303,6 +292,7 @@ function pauseAudio(elem) {
   }
   function earthFunc(params) {
     if (params > 400) {
+      player.cvsHeight = 1.15
       ctx.lineTo(cvs.width, cvs.height);
       ctx.fill();
       ctx.fillStyle = "#70c100";
