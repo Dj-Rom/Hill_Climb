@@ -155,10 +155,10 @@ function game() {
       playing = false;
       this.rSpeed = 1;
       kontrole.ArrowUp = 0.12;
-      this.x -= speed * .05;
+      this.x -= speed * 5;
     }
     if (grounded && playing) {
-      this.rot -= (this.rot - angle) * 2.65;
+      this.rot -= (this.rot - angle) * 0.65;
       this.rSpeed = this.rSpeed - (angle - this.rot);
     }
     // balance the rotation when flying
@@ -249,23 +249,7 @@ function game() {
     }else cloudCicl (true)
     
    
-   function cloudCicl (device) {
- 
-  if(device){
-    ctx.drawImage(imgCloud2,  (cvs.width/100*80), cvs.height /100 * 10);
-    ctx.drawImage(imgCloud,  (cvs.width/100*65), cvs.height /100 * 33);
-    
-    ctx.drawImage(imgCloud2,  (cvs.width/100*45), cvs.height /100 * 7);
-  ctx.drawImage(imgCloud2,  (cvs.width/100*15), cvs.height /100 * 22);
-   ctx.drawImage(imgCloud, (cvs.width/100*1), cvs.height  /100 * 8);
   
-  } else {
-    ctx.drawImage(imgCloud2,  (cvs.width/100*20), cvs.height /100 * 3);
-    ctx.drawImage(imgCloud2,  (cvs.width/100*70), cvs.height /100 * 7);
-
-   
-  }
-   }
    
     if (secGame.toFixed(0) > 7800) {
       final();
@@ -280,9 +264,24 @@ function game() {
       setTimeout(restart(),200)
       return resultGetUserResult;
     }
-   
+
   }
+  function cloudCicl (device) {
  
+    if(device){
+      ctx.drawImage(imgCloud2,  (cvs.width/100*80), cvs.height /100 * 10);
+      ctx.drawImage(imgCloud,  (cvs.width/100*65), cvs.height /100 * 33);
+      ctx.drawImage(imgCloud2,  (cvs.width/100*45), cvs.height /100 * 7);
+    ctx.drawImage(imgCloud2,  (cvs.width/100*15), cvs.height /100 * 22);
+     ctx.drawImage(imgCloud, (cvs.width/100*1), cvs.height  /100 * 8);
+    
+    } else {
+      ctx.drawImage(imgCloud2,  (cvs.width/100*20), cvs.height /100 * 3);
+      ctx.drawImage(imgCloud2,  (cvs.width/100*70), cvs.height /100 * 7);
+  
+     
+    }
+  }
   function sound() {
     const soundAudioFon = document.createElement("audio");
     soundAudioFon.id = "fon";
@@ -300,7 +299,7 @@ function game() {
       ctx.fillStyle = "#70c100";
       ctx.beginPath();
       ctx.moveTo(0, cvs.height);
-      for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.95);
+      for (let i = 0; i < cvs.width; i++) ctx.lineTo(i, cvs.height - noise(t + i) * 0.77);
       ctx.lineTo(cvs.width, cvs.height);
       ctx.fill();
       ctx.beginPath();
