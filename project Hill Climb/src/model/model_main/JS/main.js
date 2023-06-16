@@ -175,7 +175,7 @@ function game() {
     if (this.rot > Math.PI) this.rot = -Math.PI;
     if (this.rot < -Math.PI) this.rot = Math.PI;
     ctx.save();
-    ctx.translate(this.x, this.y - 14);
+    ctx.translate(this.x, this.y - 1);
     ctx.rotate(this.rot);
     ctx.drawImage(this.img, -20, -20, 55, 55);
     ctx.restore();
