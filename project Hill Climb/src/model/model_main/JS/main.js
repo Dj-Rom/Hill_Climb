@@ -236,11 +236,14 @@ musicFonAndGaz();
    
     if (secGame.toFixed(0) > 800) {
       
-   const finalPng = new Image (" https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/fin.png");
+   const finalPng = new Image ();
+
+   finalPng.src= " https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/fin.png"
+   finalPng.alt = "fin";
 
 ctx.drawImage( finalPng,  (cvs.width/100*40), cvs.height /100 * 40);
 
-      cancelAnimationFrame(RAF)
+      
     }
    
  
