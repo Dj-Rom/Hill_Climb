@@ -75,7 +75,7 @@ let gaz = document.getElementById("gaz");
 
 
   const IProgress = document.createElement('div');
-IProgress.style.opacity=.66
+IProgress.style.opacity=.32
   const IProgressPers = document.createElement('div');
  IProgressPers.style.opacity=.32
   IProgress.id = "IProgress";
@@ -161,7 +161,7 @@ function game() {
     if (!playing || grounded && Math.abs(this.rot) > Math.PI * 0.5) {
       playing = false;
       this.rSpeed = 1;
-      kontrole.ArrowUp = 1.12;
+      kontrole.ArrowUp = 100.12;
       this.x -= speed * 2;
     }
     // TILT ANGLE
