@@ -255,7 +255,7 @@ function game() {
       cancelAnimationFrame(RAF)
       controleUserClosedPageBoolean = false
       pauseAudio(fon);
-      restart();
+      setTimeout(restart(),200)
       return resultGetUserResult;
     }
    
