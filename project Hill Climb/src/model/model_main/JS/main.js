@@ -170,7 +170,7 @@ function game() {
       this.rSpeed = this.rSpeed - (angle - this.rot);
     }
     // balance the rotation when flying
-    this.rSpeed += (kontrole.ArrowLeft - kontrole.ArrowRight) * 0.05;
+    this.rSpeed += (kontrole.ArrowLeft - kontrole.ArrowRight) * 0.09;
     this.rot -= this.rSpeed * 0.1;
     if (this.rot > Math.PI) this.rot = -Math.PI;
     if (this.rot < -Math.PI) this.rot = Math.PI;
@@ -203,7 +203,7 @@ function game() {
     }
     let lerp = (a, b, t) => a + (b - a) * (1 - Math.cos(t * Math.PI)) / 2;
     noise = x => {
-      x = x / 255;
+      x = x / 155;
       return lerp(perm[Math.floor(x)], perm[Math.ceil(x)], x - Math.floor(x));
     };
   
@@ -292,7 +292,7 @@ function pauseAudio(elem) {
   }
   function earthFunc(params) {
     if (params > 400) {
-      player.cvsHeight = 1.15
+      player.cvsHeight = 1.12
       ctx.lineTo(cvs.width, cvs.height);
       ctx.fill();
       ctx.fillStyle = "#70c100";
