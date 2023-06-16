@@ -343,7 +343,7 @@ function pauseAudio(elem) {
     } else {
       ctx.lineTo(cvs.width, cvs.height);
       ctx.fill();
-      player.cvsHeight = 0.57;
+      player.cvsHeight = 0.73;
       ctx.fillStyle = "#70c100";
       ctx.beginPath();
       ctx.moveTo(0, cvs.height);
