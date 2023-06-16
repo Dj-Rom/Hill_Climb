@@ -24,12 +24,12 @@ let player;
 const h3= document.querySelector("h3");
 h3.style.display = "none";
 
-const finalPng = new Image();
+const finalPng = document.createElement('img');
     finalPng.src = " https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/fin.png";
     finalPng.id = 'finalPng'
     finalPng.alt = "final";
     finalPng.style.display = "none";
-    ctx.drawImage(finalPng, cvs.width / 2, cvs.height / 6);
+    main_Contener.appendChild(finalPng);
 
 const GO = document.createElement('img');
 GO.id= 'gameOverSsvg';
