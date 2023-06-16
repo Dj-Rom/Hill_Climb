@@ -195,6 +195,7 @@ function game() {
     };
   }();
   function loop() {
+    const RAF = requestAnimationFrame(loop);
     controleUserClosedPageBoolean = true 
     console.log( controleUserClosedPageBoolean);
     if(mobile){return controllOrientation()}
@@ -245,17 +246,19 @@ function game() {
     if (secGame.toFixed(0) > 30000) {
       controleUserClosedPageBoolean =  false
       final();
+      cancelAnimationFrame(RAF)
     }
    
     earthFunc(cvs.height);
     if (player.rSpeed === 1 || t < 0) {
       fon.pause();
+      cancelAnimationFrame(RAF)
       controleUserClosedPageBoolean = false
       pauseAudio(fon);
       restart();
       return resultGetUserResult;
     }
-    const RAF = requestAnimationFrame(loop);
+   
   }
  
   function sound() {
