@@ -104,13 +104,23 @@ let gaz = document.getElementById("gaz");
 
 mobileKontrole();
 // fuction for what kind of device?
+
+
 function mobileKontrole() {
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent) && window.orientation == 0) {
     const user = confirm(" \u20D4    You need to rotate your device! ПЕРЕВЕРНИТЕ ВАШЕ УСТРОЙСТВО    \u20D5");
-    (user)? window.location.reload(true):window.location.reload(true);
-  } else {
-    h3.style.display = "none";
-    game();
+    (user)? window.location.reload(true):window.location.reload(true);}
+  
+    else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent) && window.orientation == 90) {
+      cvs.width = document.documentElement.clientWidth;
+      cvs.height = document.documentElement.clientHeight;
+      imgGazM.style.display = "block";
+      imgbrM.style.display = "block";
+    } else if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent))) {
+      cvs.width = window.innerWidth;
+      cvs.height = window.innerHeight;
+    }
+    else { game();
   }
 }
 
@@ -169,15 +179,7 @@ function game() {
   
  
   // mobile? add imgGazM and imgbrM
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-    cvs.width = document.documentElement.clientWidth;
-    cvs.height = document.documentElement.clientHeight;
-    imgGazM.style.display = "block";
-    imgbrM.style.display = "block";
-  } else {
-    cvs.width = window.innerWidth;
-    cvs.height = window.innerHeight;
-  }
+ 
 
 
  
