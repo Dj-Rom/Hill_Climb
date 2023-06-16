@@ -22,12 +22,7 @@ const main_Contener= document.querySelector(".main_Contener")
 let noise;
 let player;
 
-const finalPng = document.createElement('img');
-    finalPng.src = " https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/fin.png";
-    finalPng.id = 'finalPng'
-    finalPng.alt = "final";
-    finalPng.style.display = "none";
-    main_Contener.appendChild(finalPng);
+
 
 const GO = document.createElement('img');
 GO.id= 'gameOverSsvg';
@@ -240,7 +235,11 @@ musicFonAndGaz();
   
    
     if (secGame.toFixed(0) > 800) {
-      final();
+      
+   const finalPng = new Image (" https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/fin.png");
+
+ctx.drawImage( finalPng,  (cvs.width/100*40), cvs.height /100 * 40);
+
       cancelAnimationFrame(RAF)
     }
    
@@ -355,13 +354,7 @@ function pauseAudio(elem) {
       player.draw();
     }
   }
-  function final() {
-  
-    
-    document.querySelector('#finalPng').style.display = "block";
  
-   
-  }
   function restart() {;
   gameOveSsvg.style.opacity  = 0.97 ;
  
