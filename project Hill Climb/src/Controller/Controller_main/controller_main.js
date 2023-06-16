@@ -121,7 +121,7 @@ imgbr.addEventListener("touchend", eo => {
 // the user wants to close the page
 
 
-const link_was_clicked = false;
+let link_was_clicked = false;
 document.addEventListener("click", function(e) {
 
    if (e.target.nodeName.toLowerCase() === 'a') {
