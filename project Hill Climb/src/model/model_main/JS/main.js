@@ -158,7 +158,7 @@ function game() {
       this.x -= speed * .05;
     }
     if (grounded && playing) {
-      this.rot -= (this.rot - angle) * 0.65;
+      this.rot -= (this.rot - angle) * 2.65;
       this.rSpeed = this.rSpeed - (angle - this.rot);
     }
     // balance the rotation when flying
