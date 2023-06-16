@@ -266,6 +266,9 @@ function game() {
     }
 
   }
+  loop();
+
+}
   function cloudCicl (device) {
  
     if(device){
@@ -409,9 +412,7 @@ setTimeout(function () {
       pauseAudio(br);
     }
   }
-  loop();
-
-}
+ 
 
 
 
