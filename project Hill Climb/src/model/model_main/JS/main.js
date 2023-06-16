@@ -138,7 +138,7 @@ function game() {
     this.rSpeed = 0;
     this.cvsHeight = 0.95;
     this.img = new Image();
-    this.img.src = "https://.pngtree.com/so/Красивый";
+    this.img.src = "https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/moto.png";
     this.img.alt = "car";
     this.draw = function () {
       let p1 = cvs.height - noise(t + this.x) * this.cvsHeight;
