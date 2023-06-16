@@ -87,7 +87,7 @@ menuWorldResult.addEventListener("touch", (event) => {
 
 let link_was_clicked = false;
 document.addEventListener("click", function(e) {
-   if (e.target.nodeName.toLowerCase() !== 'button') {
+   if (e.target.nodeName.toLowerCase() == 'button') {
       link_was_clicked = true;
    }
 }, true);
@@ -96,5 +96,5 @@ window.onbeforeunload = function(e) {
     if(link_was_clicked) {
         return;
     }
-    return confirm('Are you sure?');
+    return console.log('Are you sure?');
 }

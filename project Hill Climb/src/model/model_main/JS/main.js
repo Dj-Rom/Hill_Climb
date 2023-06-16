@@ -197,9 +197,7 @@ function game() {
 
   function loop() {
     
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)){
-    cloudCicl (false)
-  }else cloudCicl (true)
+ 
     const RAF = requestAnimationFrame(loop);
 
 
@@ -232,7 +230,9 @@ musicFonAndGaz();
     ctx.stroke();
     ctx.fillStyle = "#ecef54";
     ctx.strokeStyle = "#ecef54";
-
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)){
+      cloudCicl (false)
+    }else cloudCicl (true)
     earthFunc(cvs.height);
   
     
