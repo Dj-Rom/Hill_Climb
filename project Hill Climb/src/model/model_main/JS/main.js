@@ -132,9 +132,6 @@ function mobileKontrole() {
 
 function game() {
 
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)){
-    cloudCicl (false)
-  }else cloudCicl (true)
    // create player
  player = new function () {
   this.x = cvs.width / 2;
@@ -199,6 +196,10 @@ function game() {
 
 
   function loop() {
+    
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)){
+    cloudCicl (false)
+  }else cloudCicl (true)
     const RAF = requestAnimationFrame(loop);
 
 
