@@ -16,7 +16,7 @@ const settingBtn1 = document.getElementById('settingBtn')
     const link_was_clicked = false;
     document.addEventListener("click", function(e) {
     
-       if (e.target.nodeName.toLowerCase() != 'button') {
+       if (e.target.nodeName.toLowerCase() != 'button'&&e.target.nodeName.toLowerCase() !='a') {
           link_was_clicked = true;
        }
     }, true);
