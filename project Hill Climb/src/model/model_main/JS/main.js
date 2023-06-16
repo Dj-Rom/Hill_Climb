@@ -15,7 +15,7 @@ export let kontrole = {
 // localStorage
 localStorage["saveGamePos"] = localStorage["saveGamePos"]?localStorage["saveGamePos"]: JSON.stringify(0)
 let LocalStoregeNameUser = '';
-localStorage["saveGamePos"]='0'
+
 localStorage["HillClimbUser"] = localStorage["HillClimbUser"] ? localStorage["HillClimbUser"] : JSON.stringify({});
 // const
 const main_Contener= document.querySelector(".main_Contener")
@@ -244,7 +244,7 @@ musicFonAndGaz();
   
    
     if (secGame.toFixed(0) > 7800) {
-  
+      localStorage["saveGamePos"]='0'
 ctx.drawImage( finalPng,  (cvs.width/100*40), cvs.height /100 * 40);
 setTimeout(()=>{
 fon.pause();
@@ -271,6 +271,7 @@ cancelAnimationFrame(RAF)
  
     if (player.rSpeed === 1 || t < 0) {
       fon.pause();
+      localStorage["saveGamePos"]='0'
       cancelAnimationFrame(RAF)
       pauseAudio(fon);
       setTimeout(restart(),200)

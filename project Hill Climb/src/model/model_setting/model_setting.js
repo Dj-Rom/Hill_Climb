@@ -13,20 +13,20 @@ const settingBtn1 = document.getElementById('settingBtn')
 
 
 
-    let link_was_clicked = false;
-    document.addEventListener("click", function(e) {
+    // let link_was_clicked = false;
+//     document.addEventListener("click", function(e) {
     
-       if (e.target.nodeName.toLowerCase() != 'button') {
-          link_was_clicked = true;
-       }
-    }, true);
+//        if (e.target.nodeName.toLowerCase() != 'button') {
+//           link_was_clicked = true;
+//        }
+//     }, true);
     
-  window.onbeforeunload = function(e) {
+//   window.onbeforeunload = function(e) {
 //         if(link_was_clicked) {
-//             return;
-//         }
-        return confirm('Are you sure?');
-    }
+//            return;
+//       }
+//         return confirm('Are you sure?');
+//     }
 
 localStorage["HillClimb"] =  localStorage["HillClimb"]? localStorage["HillClimb"]: JSON.stringify({})
 if(localStorage["HillClimb"] == JSON.stringify({})){
