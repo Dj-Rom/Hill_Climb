@@ -170,7 +170,7 @@ function game() {
       this.rSpeed = this.rSpeed - (angle - this.rot);
     }
     // balance the rotation when flying
-    this.rSpeed += (kontrole.ArrowLeft - kontrole.ArrowRight) * 0.009;
+    this.rSpeed += (kontrole.ArrowLeft - kontrole.ArrowRight) * 0.015;
     this.rot -= this.rSpeed * 0.1;
     if (this.rot > Math.PI) this.rot = -Math.PI;
     if (this.rot < -Math.PI) this.rot = Math.PI;
