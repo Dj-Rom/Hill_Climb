@@ -195,18 +195,7 @@ function game() {
 
  
   
-  function gameTime() {
-    secGame = t * 0.2;
-    return secGame;
-  }
-  
-  sound();
-  function playAudio(elem) {
-    elem.play();
-  }
-  function pauseAudio(elem) {
-    elem.pause();
-  }
+
   while (perm.length < 255) {
     while (perm.includes(val = Math.floor(Math.random() * 255)));
     perm.push(val);
@@ -223,6 +212,7 @@ function game() {
   function loop() {
     const RAF = requestAnimationFrame(loop);
   
+sound();
     gameTime();
     
     musicFonAndGaz();
@@ -268,6 +258,17 @@ function game() {
   }
   loop();
 
+}
+function gameTime() {
+  secGame = t * 0.2;
+  return secGame;
+}
+
+function playAudio(elem) {
+  elem.play();
+}
+function pauseAudio(elem) {
+  elem.pause();
 }
   function cloudCicl (device) {
  
