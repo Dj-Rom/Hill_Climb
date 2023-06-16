@@ -120,7 +120,7 @@ imgbr.addEventListener("touchend", eo => {
 
 // the user wants to close the page
 
-if(controleUserClosedPageBoolean) {
+if(controleUserClosedPageBoolean===true) {
 const link_was_clicked = false;
 document.addEventListener("click", function(e) {
 
