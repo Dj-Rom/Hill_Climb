@@ -21,10 +21,10 @@ const settingBtn1 = document.getElementById('settingBtn')
        }
     }, true);
     
-    window.onbeforeunload = function(e) {
-        if(link_was_clicked) {
-            return;
-        }
+//     window.onbeforeunload = function(e) {
+//         if(link_was_clicked) {
+//             return;
+//         }
         return confirm('Are you sure?');
     }
 
