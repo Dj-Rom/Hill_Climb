@@ -107,7 +107,7 @@ body {
         text-align: center
     }
 }
-
+@media only screen and (max-width:1200px) {
 @media only screen and (max-height:990px) {
     #result_tbl {
         font-family: Bungee, Arial, 'Times New Roman', Times, serif;
@@ -210,7 +210,7 @@ body {
         }
     }
 
-
+}
 
 
 }
