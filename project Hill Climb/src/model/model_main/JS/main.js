@@ -20,6 +20,7 @@ localStorage["HillClimbUser"] = localStorage["HillClimbUser"] ? localStorage["Hi
 // const
 const main_Contener= document.querySelector(".main_Contener")
 let noise;
+let player;
 const h3= document.querySelector("h3");
 h3.style.display = "none";
 
@@ -126,7 +127,7 @@ function mobileKontrole() {
 
 function game() {
    // create player
- let player = new function () {
+ player = new function () {
   this.x = cvs.width / 2;
   this.y = (cvs.height / 2);
   this.ySpeed = 0;
@@ -200,7 +201,6 @@ function game() {
  
   function loop() {
     const RAF = requestAnimationFrame(loop);
-  
     while (perm.length < 255) {
       while (perm.includes(val = Math.floor(Math.random() * 255)));
       perm.push(val);
