@@ -111,15 +111,7 @@ function mobileKontrole() {
     const user = confirm(" \u20D4    You need to rotate your device! ПЕРЕВЕРНИТЕ ВАШЕ УСТРОЙСТВО    \u20D5");
     (user)? window.location.reload(true):window.location.reload(true);}
   
-    else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent) && window.orientation == 90) {
-      cvs.width = document.documentElement.clientWidth;
-      cvs.height = document.documentElement.clientHeight;
-      imgGazM.style.display = "block";
-      imgbrM.style.display = "block";
-    } else if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent))) {
-      cvs.width = window.innerWidth;
-      cvs.height = window.innerHeight;
-    }
+  
     else { game();
   }
 }
@@ -130,6 +122,18 @@ function mobileKontrole() {
 //   window.scrollTo(0, 0);
 // };
 function game() {
+// for mobile ios
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+    cvs.width = document.documentElement.clientWidth;
+    cvs.height = document.documentElement.clientHeight;
+    imgGazM.style.display = "block";
+    imgbrM.style.display = "block";
+  } else{
+    cvs.width = window.innerWidth;
+    cvs.height = window.innerHeight;
+  }
+
+  // create player
   let player = new function () {
     this.x = cvs.width / 2;
     this.y = cvs.height / 2;
