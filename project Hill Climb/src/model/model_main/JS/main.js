@@ -144,8 +144,8 @@ function game() {
       this.ySpeed += 0.158;
     } else {
       // horizontal player
-      this.ySpeed -= this.y - (p1 - 12.7);
-      this.y = p1 - 12.7;
+      this.ySpeed -= this.y - (p1 - 12.3);
+      this.y = p1 - 12.3;
       // 
       grounded = 1.44;
     }
