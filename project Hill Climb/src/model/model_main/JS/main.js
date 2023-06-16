@@ -19,7 +19,7 @@ localStorage["saveGamePos"]='0'
 localStorage["HillClimbUser"] = localStorage["HillClimbUser"] ? localStorage["HillClimbUser"] : JSON.stringify({});
 // const
 const main_Contener= document.querySelector(".main_Contener")
-
+let noise;
 const h3= document.querySelector("h3");
 h3.style.display = "none";
 
@@ -188,23 +188,12 @@ function game() {
 
  
   
- 
-  // mobile? add imgGazM and imgbrM
+
  
 
 
  
   
-
-  while (perm.length < 255) {
-    while (perm.includes(val = Math.floor(Math.random() * 255)));
-    perm.push(val);
-  }
-  let lerp = (a, b, t) => a + (b - a) * (1 - Math.cos(t * Math.PI)) / 2;
-  let noise = x => {
-    x = x / 155;
-    return lerp(perm[Math.floor(x)], perm[Math.ceil(x)], x - Math.floor(x));
-  };
 
  
   
@@ -212,10 +201,19 @@ function game() {
   function loop() {
     const RAF = requestAnimationFrame(loop);
   
+    while (perm.length < 255) {
+      while (perm.includes(val = Math.floor(Math.random() * 255)));
+      perm.push(val);
+    }
+    let lerp = (a, b, t) => a + (b - a) * (1 - Math.cos(t * Math.PI)) / 2;
+    noise = x => {
+      x = x / 155;
+      return lerp(perm[Math.floor(x)], perm[Math.ceil(x)], x - Math.floor(x));
+    };
+  
 sound();
-    gameTime();
-    
-    musicFonAndGaz();
+gameTime();
+musicFonAndGaz();
     resultGetUserResult =secGame.toFixed(0)
     visualGameTime.innerHTML = secGame.toFixed(0);
     if (secGame < 7800) {
