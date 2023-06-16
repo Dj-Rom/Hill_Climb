@@ -239,7 +239,7 @@ musicFonAndGaz();
    
   
    
-    if (secGame.toFixed(0) > 7800) {
+    if (secGame.toFixed(0) > 800) {
       final();
       cancelAnimationFrame(RAF)
     }
