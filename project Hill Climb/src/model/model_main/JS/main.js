@@ -126,7 +126,7 @@ function game() {
    // create player
  let player = new function () {
   this.x = cvs.width / 2;
-  this.y = (cvs.height / 2) + 100;
+  this.y = (cvs.height / 2);
   this.ySpeed = 0;
   this.rot = 0;
   this.rSpeed = 0;
@@ -141,8 +141,8 @@ function game() {
     if (p1 - 12 > this.y) {
       this.ySpeed += 0.158;
     } else {
-      this.ySpeed -= this.y - (p1 - 12);
-      this.y = p1 - 12;
+      this.ySpeed -= this.y - (p1 - 1);
+      this.y = p1 - 1;
       grounded = 1.99;
     }
     let angle = Math.atan2(p2 - 12 - this.y, this.x + 5 - this.x);
