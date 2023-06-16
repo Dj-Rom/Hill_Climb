@@ -247,7 +247,7 @@ musicFonAndGaz();
    finalPng.src= " https://dj-rom.github.io/Hill_Climb/project%20Hill%20Climb/src/view/view_main/png/fin.png"
    finalPng.alt = "fin";
 ctx.drawImage( finalPng,  (cvs.width/100*40), cvs.height /100 * 40);
-
+setTimeout(()=>{
 fon.pause();
 pauseAudio(fon);
 if (localStorage["HillClimbUser"] === JSON.stringify({})) {
@@ -265,6 +265,8 @@ dataRecordPred.nameRecord = resultGetUserName;
 dataRecordPred.score = resultGetUserResult;
 storeInfo();
 
+}, 1000);
+cancelAnimationFrame(RAF)
     }
    
  
