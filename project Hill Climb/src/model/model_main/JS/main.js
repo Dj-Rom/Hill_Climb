@@ -161,7 +161,7 @@ function game() {
     if (!playing || grounded && Math.abs(this.rot) > Math.PI * 0.5) {
       playing = false;
       this.rSpeed = 1;
-      kontrole.ArrowUp = 100.12;
+      kontrole.ArrowUp = 0.0001;
       this.x -= speed * 2;
     }
     // TILT ANGLE
