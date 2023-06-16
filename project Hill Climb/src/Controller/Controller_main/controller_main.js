@@ -69,11 +69,11 @@ window.addEventListener('deviceorientation', function (eo) {
   timer = setTimeout(function () {
     timer = null;
     if (angle > 10) {
-      kontrole.ArrowRight = 1;
+      kontrole.ArrowRight = .3;
       kontrole.ArrowLeft = 0;
     } else if (angle < -10) {
       kontrole.ArrowRight = 0;
-      kontrole.ArrowLeft = 1;
+      kontrole.ArrowLeft = .3;
     } else if (angle < 10 && angle > -10) {
       kontrole.ArrowRight = 0;
       kontrole.ArrowLeft = 0;
