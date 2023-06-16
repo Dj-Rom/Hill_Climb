@@ -141,9 +141,9 @@ function game() {
     if (p1 - 12 > this.y) {
       this.ySpeed += 0.158;
     } else {
-      this.ySpeed -= this.y - (p1 - 1);
-      this.y = p1 - 1;
-      grounded = 1.99;
+      this.ySpeed -= this.y - (p1 - 11);
+      this.y = p1 - 11;
+      grounded = .99;
     }
     let angle = Math.atan2(p2 - 12 - this.y, this.x + 5 - this.x);
     this.y += this.ySpeed;
